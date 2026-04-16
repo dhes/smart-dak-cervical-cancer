@@ -1,0 +1,7 @@
+output/
+temp/
+template/
+fsh-generated/
+.DS_Store
+*.jar
+input-cache/

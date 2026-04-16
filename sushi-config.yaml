@@ -1,0 +1,68 @@
+id: dhes.dak.cervical-cancer
+canonical: https://dhes.github.io/smart-dak-cervical-cancer
+name: CervicalCancerDAK
+title: "WHO SMART DAK — Cervical Cancer Screening (L2)"
+description: >-
+  Layer 2 (decision logic) artifacts for cervical cancer screening,
+  Algorithm 5 (HPV DNA primary with VIA triage), authored using
+  a textualist/purposive methodology with an interpretation register.
+  L3 (FHIR profiles, CQL, terminology bindings) not yet authored.
+status: draft
+version: 0.1.0
+fhirVersion: 4.0.1
+copyrightYear: 2026+
+releaseLabel: ci-build
+publisher:
+  name: Dan Heslinga
+  url: https://github.com/dhes
+license: CC-BY-4.0
+
+menu:
+  Home: index.html
+  Business Requirements:
+    Interpretation Register: register.html
+    Scope Declaration (cc-000): cc-000.html
+    WLHIV Operationalisation (cc-002): cc-002.html
+    Cancer Suspected (cc-003): cc-003.html
+    Vaccination Status (cc-004): cc-004.html
+    Screening Interval (cc-005): cc-005.html
+    Population and Inclusion (cc-001): cc-001.html
+    Pregnancy Handling (cc-006): cc-006.html
+    Sexual Exposure Precondition (cc-007): cc-007.html
+  Data Dictionary: dictionary.html
+  Decision Logic: decision-logic.html
+  Algorithm Selection: algorithm-selection.html
+  Methodology: methodology.html
+  Downloads: downloads.html
+
+pages:
+  index.md:
+    title: Home
+  register.md:
+    title: Interpretation Register
+  cc-000.md:
+    title: "cc-000: Scope Declaration"
+  cc-001.md:
+    title: "cc-001: Population and Inclusion"
+  cc-002.md:
+    title: "cc-002: WLHIV Operationalisation"
+  cc-003.md:
+    title: "cc-003: Cancer Suspected"
+  cc-004.md:
+    title: "cc-004: Vaccination Status"
+  cc-005.md:
+    title: "cc-005: Screening Interval"
+  cc-006.md:
+    title: "cc-006: Pregnancy Handling"
+  cc-007.md:
+    title: "cc-007: Sexual Exposure Precondition"
+  dictionary.md:
+    title: Data Dictionary
+  decision-logic.md:
+    title: Decision Logic
+  algorithm-selection.md:
+    title: Algorithm Selection Analysis
+  methodology.md:
+    title: Methodology
+  downloads.md:
+    title: Downloads
