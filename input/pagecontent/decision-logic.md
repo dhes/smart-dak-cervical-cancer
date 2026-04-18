@@ -2,6 +2,14 @@ This page describes the decision-support logic for cervical cancer screening Alg
 
 ### Decision Requirements Diagram
 
+#### Purposive DRD
+
+![Purposive DRD — Algorithm 5 with cc-005 interval resolution and cc-006 pregnancy handling](drd-purposive.png)
+
+#### Textualist DRD
+
+![Textualist DRD — Algorithm 5 faithful to 2021-07 guideline language](drd-textualist.png)
+
 The DAK models six decisions in a cascade:
 
 1. **Eligible For Screening** (`CC.A.eligibility_{t,p}`) — by age, sex/anatomy, HIV status
@@ -38,6 +46,10 @@ Every rule in both DMN files carries a `<description>` element documenting the c
 ### DMN format note
 
 The L2 decision logic is encoded as DMN XML executable on Camunda 8. This is a methodology choice for this case study, not a WHO SMART Guidelines convention. Published WHO DAKs represent L2 as structured decision-support tables in Excel/spreadsheet format within the DAK document. The DMN encoding is a parallel representation that enables automated testing against a DMN engine. See the [Methodology](methodology.html) page for discussion of this format choice and its implications.
+
+### Decision Tables
+
+The full rule-by-rule decision tables for both the purposive and textualist DMN files are rendered on the [Decision Tables](decision-tables.html) page. These tables are auto-generated from the DMN XML by `render-decision-tables.py` and stay in sync with the source artifacts.
 
 ### Downloads
 

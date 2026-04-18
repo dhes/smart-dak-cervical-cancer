@@ -30,7 +30,9 @@ menu:
     Pregnancy Handling (cc-006): cc-006.html
     Sexual Exposure Precondition (cc-007): cc-007.html
   Data Dictionary: dictionary.html
-  Decision Logic: decision-logic.html
+  Decision Logic:
+    Overview: decision-logic.html
+    Decision Tables: decision-tables.html
   Algorithm Selection: algorithm-selection.html
   Methodology: methodology.html
   Downloads: downloads.html
@@ -60,6 +62,8 @@ pages:
     title: Data Dictionary
   decision-logic.md:
     title: Decision Logic
+  decision-tables.md:
+    title: Decision Tables
   algorithm-selection.md:
     title: Algorithm Selection Analysis
   methodology.md:

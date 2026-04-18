@@ -30,7 +30,7 @@ The IG is organised by reading order, not by entry number. A reader encountering
 
 ### Background
 
-This DAK was authored as a case study for a methodology that examines how WHO guideline narratives are translated into computable decision logic, with particular attention to the interpretive decisions that are typically invisible in published SMART DAKs. The methodology is documented in a [separate repository](https://github.com/dhes/dak-authoring-methodology) and summarised on the [Methodology](methodology.html) page.
+This DAK was authored as a case study for a methodology that examines how WHO guideline narratives are translated into computable decision logic, with particular attention to the interpretive decisions that are typically invisible in published SMART DAKs. The methodology is summarized on the [Methodology](methodology.html) page.
 
 ### Status
 
