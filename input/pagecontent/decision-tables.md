@@ -18,7 +18,7 @@ This page presents the decision tables from both the purposive and textualist DM
 |---|---|---|---|---|---|---|
 | 1 | true | [30..49] | false | true | every 10 years | Rec 1; GPS 7 prioritizes age 30–49. Interval resolved per cc-005 to 10 years (upper bound of Rec 8 range). |
 | 2 | true | <30 | false | false | *null* | Below general population screening age |
-| 3 | true | >49 | *(any)* | false | *null* | Above screening age range (both populations) |
+| 3 | true | >49 | not(null) | false | *null* | Above screening age range, HIV status known (both populations); null-HIV at age>49 delegated to catch-all per cc-008 |
 | 4 | true | [25..49] | true | true | every 5 years | Rec 21; WLHIV screening starts at age 25. Interval resolved per cc-005 to 5 years (upper bound of Rec 28 range). |
 | 5 | true | <25 | true | false | *null* | Below WLHIV screening age |
 | 6 | false | *(any)* | *(any)* | false | *null* | Per L1 terminology; see Interpretation Register |
@@ -136,8 +136,7 @@ This page presents the decision tables from both the purposive and textualist DM
 | 5 | true | <25 | true | false | *null* | Below WLHIV screening age |
 | 6 | false | *(any)* | *(any)* | false | *null* | Per L1 terminology; see Interpretation Register |
 | 7 | true | *null* | *(any)* | false | *null* | Catch-all: woman with null age |
-| 8 | true | not(null) | *null* | false | *null* | Catch-all: woman with valid age but null HIV status |
-| 9 | *null* | *(any)* | *(any)* | false | *null* | Catch-all: null Client Is Woman |
+| 8 | *null* | *(any)* | *(any)* | false | *null* | Catch-all: null Client Is Woman |
 
 ### Due for Screening
 
