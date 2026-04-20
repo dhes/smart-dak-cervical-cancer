@@ -158,6 +158,24 @@
           <text>null</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_catchall_s_nullhiv">
+        <description>Catch-all: woman with valid age but null HIV status</description>
+        <inputEntry id="UnaryTests_catchall_s_nh1">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_catchall_s_nh2">
+          <text>not(null)</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_catchall_s_nh3">
+          <text>null</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_catchall_s_nh1">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_catchall_s_nh2">
+          <text>null</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_catchall_s_nullwoman">
         <description>Catch-all: null Client Is Woman</description>
         <inputEntry id="UnaryTests_catchall_s_nw1">

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="Definitions_0u0u9to" name="DRD-textualist" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.41.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.8.0">
-  <decision id="CC.A.eligibility_t" name="Eligible For Screening">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="Definitions_0u0u9to_purposive" name="DRD-purposive" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.41.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.8.0">
+  <decision id="CC.A.eligibility_p" name="Eligible For Screening">
     <variable id="Variable_ScreeningDecision" name="ScreeningDecision" typeRef="Any" />
     <informationRequirement id="InformationRequirement_1vzu5r0">
       <requiredInput href="#InputData_02fg14t" />
@@ -33,7 +33,7 @@
       <output id="Output_1" label="Eligible for Screening" name="EligibleForScreening" typeRef="boolean" />
       <output id="OutputClause_0hq9puu" label="Screening Interval" name="ScreeningInterval" typeRef="string" />
       <rule id="DecisionRule_1yry35i">
-        <description>Rec 1; GPS 7 prioritizes age 30–49</description>
+        <description>Rec 1; GPS 7 prioritizes age 30–49. Interval resolved per cc-005 to 10 years (upper bound of Rec 8 range).</description>
         <inputEntry id="UnaryTests_06y1alu">
           <text>true</text>
         </inputEntry>
@@ -47,7 +47,7 @@
           <text>true</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0t64403">
-          <text>"every 5 to 10 years"</text>
+          <text>"every 10 years"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_17r1uyq">
@@ -87,7 +87,7 @@
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1925hkc">
-        <description>Rec 21; WLHIV screening starts at age 25</description>
+        <description>Rec 21; WLHIV screening starts at age 25. Interval resolved per cc-005 to 5 years (upper bound of Rec 28 range).</description>
         <inputEntry id="UnaryTests_1vi22f4">
           <text>true</text>
         </inputEntry>
@@ -101,7 +101,7 @@
           <text>true</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ajt3ys">
-          <text>"every 3 to 5 years"</text>
+          <text>"every 5 years"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1gyepae">
@@ -158,6 +158,24 @@
           <text>null</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_catchall_s_nullhiv">
+        <description>Catch-all: woman with valid age but null HIV status</description>
+        <inputEntry id="UnaryTests_catchall_s_nh1">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_catchall_s_nh2">
+          <text>not(null)</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_catchall_s_nh3">
+          <text>null</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_catchall_s_nh1">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_catchall_s_nh2">
+          <text>null</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_catchall_s_nullwoman">
         <description>Catch-all: null Client Is Woman</description>
         <inputEntry id="UnaryTests_catchall_s_nw1">
@@ -184,7 +202,7 @@
   <knowledgeSource id="KnowledgeSource_1mbjkyq" name="WHO Cervical Cancer Screening Guidelines, July 2021" />
   <inputData id="InputData_1j6wfhx" name="Years Since Last Screen" />
   <inputData id="InputData_0sltltj" name="Prior Screen Result" />
-  <decision id="CC.B.due_screening_t" name="Due for Screening">
+  <decision id="CC.B.due_screening_p" name="Due for Screening">
     <informationRequirement id="InformationRequirement_1xfw83b">
       <requiredInput href="#InputData_1j6wfhx" />
     </informationRequirement>
@@ -192,7 +210,7 @@
       <requiredInput href="#InputData_0sltltj" />
     </informationRequirement>
     <informationRequirement id="InformationRequirement_0qktxth">
-      <requiredDecision href="#CC.A.eligibility_t" />
+      <requiredDecision href="#CC.A.eligibility_p" />
     </informationRequirement>
     <decisionTable id="DecisionTable_1jr7lzl" hitPolicy="UNIQUE">
       <input id="InputClause_0gwq2vr" label="Eligible For Screening">
@@ -217,7 +235,7 @@
       </input>
       <output id="OutputClause_1ij1iar" label="Screening Status" name="ScreeningStatus" typeRef="string">
         <outputValues id="UnaryTests_1h5h3n3">
-          <text>"never screened — screen now","not yet due","within screening window","past screening window","prior positive — enter triage pathway","not eligible"</text>
+          <text>"never screened — screen now","not yet due","due","prior positive — enter triage pathway","not eligible"</text>
         </outputValues>
       </output>
       <rule id="DecisionRule_0hrknh0">
@@ -239,15 +257,15 @@
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1kowjor">
-        <description>General population, negative prior, before rescreen window (&lt;5 years since last screen)</description>
+        <description>General population, negative prior, before rescreen target (cc-005: &lt;10 years since last screen)</description>
         <inputEntry id="UnaryTests_1aqowrs">
           <text>true</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0jfvzb4">
-          <text>"every 5 to 10 years"</text>
+          <text>"every 10 years"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_05y5kmc">
-          <text>&lt;5</text>
+          <text>&lt;10</text>
         </inputEntry>
         <inputEntry id="UnaryTests_00moxyz">
           <text>"negative"</text>
@@ -257,51 +275,33 @@
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1623wc6">
-        <description>General population, negative prior, within rescreen window (5–10 years since last screen)</description>
+        <description>General population, negative prior, at or past rescreen target (cc-005: &gt;=10 years; point-estimate two-bucket encoding — see cc-005 rationale)</description>
         <inputEntry id="UnaryTests_1tp0715">
           <text>true</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1sjaw6k">
-          <text>"every 5 to 10 years"</text>
+          <text>"every 10 years"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1wlnt85">
-          <text>[5..10]</text>
+          <text>&gt;=10</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1hzecyw">
           <text>"negative"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1u6jvno">
-          <text>"within screening window"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0d7mryk">
-        <description>General population, negative prior, past rescreen window (&gt;10 years) — overdue</description>
-        <inputEntry id="UnaryTests_191qtal">
-          <text>true</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0odoq5l">
-          <text>"every 5 to 10 years"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_068ydxa">
-          <text>&gt;10</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1lmvn8h">
-          <text>"negative"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0nis0rx">
-          <text>"past screening window"</text>
+          <text>"due"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0v20651">
-        <description>WLHIV, negative prior, before rescreen window (&lt;3 years since last screen)</description>
+        <description>WLHIV, negative prior, before rescreen target (cc-005: &lt;5 years since last screen)</description>
         <inputEntry id="UnaryTests_1dcdrz3">
           <text>true</text>
         </inputEntry>
         <inputEntry id="UnaryTests_17zaw3k">
-          <text>"every 3 to 5 years"</text>
+          <text>"every 5 years"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0mqdyzv">
-          <text>&lt;3</text>
+          <text>&lt;5</text>
         </inputEntry>
         <inputEntry id="UnaryTests_15940j8">
           <text>"negative"</text>
@@ -311,39 +311,21 @@
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0esotny">
-        <description>WLHIV, negative prior, within rescreen window (3–5 years since last screen)</description>
+        <description>WLHIV, negative prior, at or past rescreen target (cc-005: &gt;=5 years; point-estimate two-bucket encoding — see cc-005 rationale)</description>
         <inputEntry id="UnaryTests_0j86ajs">
           <text>true</text>
         </inputEntry>
         <inputEntry id="UnaryTests_02732l5">
-          <text>"every 3 to 5 years"</text>
+          <text>"every 5 years"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_17jdzki">
-          <text>[3..5]</text>
+          <text>&gt;=5</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ks34zt">
           <text>"negative"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0xaboal">
-          <text>"within screening window"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_018yt1f">
-        <description>WLHIV, negative prior, past rescreen window (&gt;5 years) — overdue</description>
-        <inputEntry id="UnaryTests_1w0akbk">
-          <text>true</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0hzicpu">
-          <text>"every 3 to 5 years"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0z8d9w1">
-          <text>&gt;5</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_07o9o98">
-          <text>"negative"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_065bg2z">
-          <text>"past screening window"</text>
+          <text>"due"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1cti1wm">
@@ -388,7 +370,8 @@
   <inputData id="InputData_suspicion" name="Suspicion of Cancer" />
   <inputData id="InputData_tztype" name="TZ Type" />
   <inputData id="InputData_histology" name="Histology Result" />
-  <decision id="CC.C.triage_t" name="Triage Decision">
+  <inputData id="InputData_pregnancy" name="Is Pregnant" />
+  <decision id="CC.C.triage_p" name="Triage Decision">
     <variable id="Variable_triage" name="TriageDecision" typeRef="Any" />
     <informationRequirement id="InformationRequirement_triage_via">
       <requiredInput href="#InputData_via" />
@@ -470,7 +453,7 @@
       </rule>
     </decisionTable>
   </decision>
-  <decision id="CC.D.ablation_t" name="Ablation Eligibility">
+  <decision id="CC.D.ablation_p" name="Ablation Eligibility">
     <variable id="Variable_ablation" name="AblationDecision" typeRef="Any" />
     <informationRequirement id="InformationRequirement_ablation_suspicion">
       <requiredInput href="#InputData_suspicion" />
@@ -564,15 +547,18 @@
       </rule>
     </decisionTable>
   </decision>
-  <decision id="CC.D.treatment_t" name="Treatment Decision">
+  <decision id="CC.D.treatment_p" name="Treatment Decision">
     <variable id="Variable_treatment" name="TreatmentDecision" typeRef="Any" />
     <informationRequirement id="InformationRequirement_treatment_triage">
-      <requiredDecision href="#CC.C.triage_t" />
+      <requiredDecision href="#CC.C.triage_p" />
     </informationRequirement>
     <informationRequirement id="InformationRequirement_treatment_ablation">
-      <requiredDecision href="#CC.D.ablation_t" />
+      <requiredDecision href="#CC.D.ablation_p" />
     </informationRequirement>
-    <decisionTable id="DecisionTable_treatment" hitPolicy="UNIQUE">
+    <informationRequirement id="InformationRequirement_treatment_pregnancy">
+      <requiredInput href="#InputData_pregnancy" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_treatment" hitPolicy="FIRST">
       <input id="InputClause_treatment_triage" label="Triage Status">
         <inputExpression id="LiteralExpression_treatment_triage" typeRef="string">
           <text>TriageDecision</text>
@@ -583,37 +569,66 @@
           <text>AblationDecision</text>
         </inputExpression>
       </input>
+      <input id="InputClause_treatment_pregnancy" label="Is Pregnant">
+        <inputExpression id="LiteralExpression_treatment_pregnancy" typeRef="boolean">
+          <text>IsPregnant</text>
+        </inputExpression>
+      </input>
       <output id="OutputClause_treatment" label="Treatment Plan" name="TreatmentPlan" typeRef="string" />
+      <rule id="DecisionRule_treatment_pregnancy_defer">
+        <description>Pregnancy deferral per GPS 41 (cc-006): defer ablation or LLETZ until after pregnancy. Fires before ablate/lletz rules under FIRST hit policy.</description>
+        <inputEntry id="UnaryTests_treatment_pd1">
+          <text>"VIA positive — eligible for treatment"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_treatment_pd2">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_treatment_pd3">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_treatment_pd">
+          <text>"defer treatment until after pregnancy"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_treatment_ablate">
-        <description>VIA positive, eligible for ablation — ablative treatment</description>
+        <description>VIA positive, eligible for ablation — ablative treatment (non-pregnant or pregnancy status unknown; null IsPregnant falls through to this rule per cc-006 implementation note)</description>
         <inputEntry id="UnaryTests_treatment_ablate1">
           <text>"VIA positive — eligible for treatment"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_treatment_ablate2">
           <text>true</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_treatment_ablate3">
+          <text>-</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_treatment_ablate">
           <text>"ablative treatment"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_treatment_lletz">
-        <description>VIA positive, not eligible for ablation — LLETZ</description>
+        <description>VIA positive, not eligible for ablation — LLETZ (non-pregnant or pregnancy status unknown)</description>
         <inputEntry id="UnaryTests_treatment_lletz1">
           <text>"VIA positive — eligible for treatment"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_treatment_lletz2">
           <text>false</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_treatment_lletz3">
+          <text>-</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_treatment_lletz">
           <text>"LLETZ"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_treatment_repeat_gen">
-        <description>VIA negative, general population — no treatment, repeat HPV</description>
+        <description>VIA negative, general population — no treatment, repeat HPV (pregnancy irrelevant; no procedure to defer)</description>
         <inputEntry id="UnaryTests_treatment_rg1">
           <text>"VIA negative — repeat HPV test in 2 years"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_treatment_rg2">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_treatment_rg3">
           <text>-</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_treatment_rg">
@@ -621,11 +636,14 @@
         </outputEntry>
       </rule>
       <rule id="DecisionRule_treatment_repeat_hiv">
-        <description>VIA negative, WLHIV — no treatment, repeat HPV</description>
+        <description>VIA negative, WLHIV — no treatment, repeat HPV (pregnancy irrelevant; no procedure to defer)</description>
         <inputEntry id="UnaryTests_treatment_rh1">
           <text>"VIA negative — repeat HPV test in 1 year"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_treatment_rh2">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_treatment_rh3">
           <text>-</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_treatment_rh">
@@ -633,11 +651,14 @@
         </outputEntry>
       </rule>
       <rule id="DecisionRule_treatment_refer">
-        <description>Suspected cancer — refer for evaluation</description>
+        <description>Suspected cancer — refer for evaluation (per cc-006: pregnancy does NOT defer cancer evaluation; urgency is clinically appropriate regardless of pregnancy status)</description>
         <inputEntry id="UnaryTests_treatment_refer1">
           <text>"suspected cancer — refer for evaluation and biopsy"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_treatment_refer2">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_treatment_refer3">
           <text>-</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_treatment_refer">
@@ -652,16 +673,19 @@
         <inputEntry id="UnaryTests_treatment_ca2">
           <text>-</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_treatment_ca3">
+          <text>-</text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_treatment_ca">
           <text>"unknown triage status"</text>
         </outputEntry>
       </rule>
     </decisionTable>
   </decision>
-  <decision id="CC.E.followup_t" name="Follow-up Decision">
+  <decision id="CC.E.followup_p" name="Follow-up Decision">
     <variable id="Variable_followup" name="FollowUpDecision" typeRef="Any" />
     <informationRequirement id="InformationRequirement_followup_treatment">
-      <requiredDecision href="#CC.D.treatment_t" />
+      <requiredDecision href="#CC.D.treatment_p" />
     </informationRequirement>
     <informationRequirement id="InformationRequirement_followup_histology">
       <requiredInput href="#InputData_histology" />
@@ -777,15 +801,15 @@
     </decisionTable>
   </decision>
   <textAnnotation id="TextAnnotation_1e54xb6">
-    <text>L2 textualist representation. Interpretive decisions documented in Interpretation Register and resolved at L3.</text>
+    <text>L2 purposive representation. Interpretive decisions documented in Interpretation Register and resolved at L3.</text>
   </textAnnotation>
   <association id="Association_0s55ib7">
     <sourceRef href="#TextAnnotation_1e54xb6" />
-    <targetRef href="#CC.A.eligibility_t" />
+    <targetRef href="#CC.A.eligibility_p" />
   </association>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
-      <dmndi:DMNShape dmnElementRef="CC.A.eligibility_t">
+      <dmndi:DMNShape dmnElementRef="CC.A.eligibility_p">
         <dc:Bounds height="80" width="180" x="365" y="240" />
       </dmndi:DMNShape>
       <dmndi:DMNShape id="DMNShape_073d14p" dmnElementRef="InputData_02fg14t">
@@ -847,13 +871,13 @@
         <di:waypoint x="455" y="440" />
         <di:waypoint x="455" y="460" />
       </dmndi:DMNEdge>
-      <dmndi:DMNShape id="DMNShape_0isqtw1" dmnElementRef="CC.B.due_screening_t">
+      <dmndi:DMNShape id="DMNShape_0isqtw1" dmnElementRef="CC.B.due_screening_p">
         <dc:Bounds height="80" width="180" x="365" y="460" />
       </dmndi:DMNShape>
       <dmndi:DMNShape id="DMNShape_via" dmnElementRef="InputData_via">
         <dc:Bounds height="45" width="125" x="100" y="800" />
       </dmndi:DMNShape>
-      <dmndi:DMNShape id="DMNShape_triage" dmnElementRef="CC.C.triage_t">
+      <dmndi:DMNShape id="DMNShape_triage" dmnElementRef="CC.C.triage_p">
         <dc:Bounds height="80" width="180" x="200" y="700" />
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="DMNEdge_triage_via" dmnElementRef="InformationRequirement_triage_via">
@@ -873,7 +897,7 @@
       <dmndi:DMNShape id="DMNShape_tztype" dmnElementRef="InputData_tztype">
         <dc:Bounds height="45" width="125" x="720" y="800" />
       </dmndi:DMNShape>
-      <dmndi:DMNShape id="DMNShape_ablation" dmnElementRef="CC.D.ablation_t">
+      <dmndi:DMNShape id="DMNShape_ablation" dmnElementRef="CC.D.ablation_p">
         <dc:Bounds height="80" width="180" x="600" y="700" />
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="DMNEdge_ablation_suspicion" dmnElementRef="InformationRequirement_ablation_suspicion">
@@ -884,7 +908,7 @@
         <di:waypoint x="783" y="800" />
         <di:waypoint x="735" y="780" />
       </dmndi:DMNEdge>
-      <dmndi:DMNShape id="DMNShape_treatment" dmnElementRef="CC.D.treatment_t">
+      <dmndi:DMNShape id="DMNShape_treatment" dmnElementRef="CC.D.treatment_p">
         <dc:Bounds height="80" width="180" x="365" y="900" />
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="DMNEdge_treatment_triage" dmnElementRef="InformationRequirement_treatment_triage">
@@ -897,10 +921,17 @@
         <di:waypoint x="860" y="860" />
         <di:waypoint x="545" y="940" />
       </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_pregnancy" dmnElementRef="InputData_pregnancy">
+        <dc:Bounds height="45" width="125" x="140" y="960" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_treatment_pregnancy" dmnElementRef="InformationRequirement_treatment_pregnancy">
+        <di:waypoint x="265" y="960" />
+        <di:waypoint x="365" y="940" />
+      </dmndi:DMNEdge>
       <dmndi:DMNShape id="DMNShape_histology" dmnElementRef="InputData_histology">
         <dc:Bounds height="45" width="125" x="570" y="1050" />
       </dmndi:DMNShape>
-      <dmndi:DMNShape id="DMNShape_followup" dmnElementRef="CC.E.followup_t">
+      <dmndi:DMNShape id="DMNShape_followup" dmnElementRef="CC.E.followup_p">
         <dc:Bounds height="80" width="180" x="365" y="1100" />
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="DMNEdge_followup_treatment" dmnElementRef="InformationRequirement_followup_treatment">

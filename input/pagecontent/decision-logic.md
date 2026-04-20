@@ -4,11 +4,11 @@ This page describes the decision-support logic for cervical cancer screening Alg
 
 #### Purposive DRD
 
-![Purposive DRD — Algorithm 5 with cc-005 interval resolution and cc-006 pregnancy handling](drd-purposive.png)
+![Purposive DRD — Algorithm 5 with cc-005 interval resolution and cc-006 pregnancy handling](drd-purposive.svg)
 
 #### Textualist DRD
 
-![Textualist DRD — Algorithm 5 faithful to 2021-07 guideline language](drd-textualist.png)
+![Textualist DRD — Algorithm 5 faithful to 2021-07 guideline language](drd-textualist.svg)
 
 The DAK models six decisions in a cascade:
 
@@ -45,7 +45,7 @@ Every rule in both DMN files carries a `<description>` element documenting the c
 
 ### DMN format note
 
-The L2 decision logic is encoded as DMN XML executable on Camunda 8. This is a methodology choice for this case study, not a WHO SMART Guidelines convention. Published WHO DAKs represent L2 as structured decision-support tables in Excel/spreadsheet format within the DAK document. The DMN encoding is a parallel representation that enables automated testing against a DMN engine. See the [Methodology](methodology.html) page for discussion of this format choice and its implications.
+The L2 decision logic is encoded as DMN XML executable on Camunda 8. This is a methodology choice for this case study. Published WHO DAKs represent L2 as structured decision-support tables in xlsx spreadsheet format within the DAK document. The DMN encoding is a parallel representation that enables automated testing against a DMN engine. See the [Methodology](methodology.html) page for discussion of this format choice and its implications.
 
 ### Decision Tables
 

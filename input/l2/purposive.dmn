@@ -69,7 +69,7 @@
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1l3rrvn">
-        <description>Above screening age range (both populations)</description>
+        <description>Above screening age range, HIV status known (both populations); null-HIV at age&gt;49 delegated to catch-all per cc-008</description>
         <inputEntry id="UnaryTests_1makmp4">
           <text>true</text>
         </inputEntry>
@@ -77,7 +77,7 @@
           <text>&gt;49</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0orbcmr">
-          <text>-</text>
+          <text>not(null)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1wiayor">
           <text>false</text>

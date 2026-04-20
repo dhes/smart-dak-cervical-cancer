@@ -215,9 +215,9 @@ The scope declaration in `cc-000` should be read with this analysis as backgroun
 
 ### Primary guideline documents
 
-- **WHO 2021 (July):** WHO guideline for screening and treatment of cervical pre-cancer lesions for cervical cancer prevention, second edition. Geneva: World Health Organization; 2021. ISBN 9789240030824. [`who-cervical-cancer-guideline-2021-07.pdf`](who-cervical-cancer-guideline-2021-07.pdf)
-- **WHO 2021 (December):** WHO guideline for screening and treatment of cervical pre-cancer lesions for cervical cancer prevention, second edition: use of mRNA tests for human papillomavirus (HPV). Geneva: World Health Organization; 2021. ISBN 9789240040434. [`who-cervical-cancer-addendum-2021-12.pdf`](who-cervical-cancer-addendum-2021-12.pdf)
-- **WHO 2024 (June):** WHO guideline for screening and treatment of cervical pre-cancer lesions for cervical cancer prevention: use of dual-stain cytology to triage women after a positive test for human papillomavirus (HPV). Geneva: World Health Organization; 2024. ISBN 9789240091658. [`who-cervical-cancer-addendum-2024-06.pdf`](who-cervical-cancer-addendum-2024-06.pdf)
+- **WHO 2021 (July):** WHO guideline for screening and treatment of cervical pre-cancer lesions for cervical cancer prevention, second edition. Geneva: World Health Organization; 2021. ISBN 9789240030824. [WHO publication page](https://www.who.int/publications/i/item/9789240030824)
+- **WHO 2021 (December):** WHO guideline for screening and treatment of cervical pre-cancer lesions for cervical cancer prevention, second edition: use of mRNA tests for human papillomavirus (HPV). Geneva: World Health Organization; 2021. ISBN 9789240040434. [WHO publication page](https://www.who.int/publications/i/item/9789240040434)
+- **WHO 2024 (June):** WHO guideline for screening and treatment of cervical pre-cancer lesions for cervical cancer prevention: use of dual-stain cytology to triage women after a positive test for human papillomavirus (HPV). Geneva: World Health Organization; 2024. ISBN 9789240091658. [WHO publication page](https://www.who.int/publications/i/item/9789240091658)
 
 ### Implementation experience
 

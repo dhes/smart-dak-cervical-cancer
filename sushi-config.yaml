@@ -29,6 +29,7 @@ menu:
     Population and Inclusion (cc-001): cc-001.html
     Pregnancy Handling (cc-006): cc-006.html
     Sexual Exposure Precondition (cc-007): cc-007.html
+    HIV Status Absent/Unknown (cc-008): cc-008.html
   Data Dictionary: dictionary.html
   Decision Logic:
     Overview: decision-logic.html
@@ -58,8 +59,12 @@ pages:
     title: "cc-006: Pregnancy Handling"
   cc-007.md:
     title: "cc-007: Sexual Exposure Precondition"
+  cc-008.md:
+    title: "cc-008: HIV Status Absent/Unknown"
   dictionary.md:
     title: Data Dictionary
+  README.md:
+    title: Data Dictionary — README
   decision-logic.md:
     title: Decision Logic
   decision-tables.md:

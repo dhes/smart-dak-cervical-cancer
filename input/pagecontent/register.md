@@ -40,6 +40,7 @@ Entries are listed in **reading order**, not by numerical ID. Entry IDs (`cc-000
 |---|---|---|---|
 | [cc-006](cc-006.html) | inference | Pregnancy handling across the cascade | proposed |
 | [cc-007](cc-007.html) | inference (deliberate simplification) | Sexual exposure precondition implicit in age thresholds | proposed |
+| [cc-008](cc-008.html) | inference | HIV status absent/unknown: semantics and handling | proposed |
 
 ### Status Legend
 
