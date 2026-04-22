@@ -83,7 +83,7 @@
       <bpmndi:BPMNShape id="Gateway_FollowupType_di" bpmnElement="Gateway_FollowupType" isMarkerVisible="true">
         <dc:Bounds x="320" y="245" width="50" height="50" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="276" y="236" width="48" height="27" />
+          <dc:Bounds x="287" y="234" width="48" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_ScheduleRoutine_di" bpmnElement="Task_ScheduleRoutine">
@@ -163,7 +163,7 @@
         <di:waypoint x="820" y="160" />
         <di:waypoint x="820" y="500" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="720" y="140" width="130" height="14" />
+          <dc:Bounds x="829" y="166" width="84" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="MessageFlow_TriageRetestReminder_di" bpmnElement="MessageFlow_TriageRetestReminder">
@@ -171,7 +171,7 @@
         <di:waypoint x="840" y="270" />
         <di:waypoint x="840" y="500" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="720" y="250" width="120" height="14" />
+          <dc:Bounds x="849" y="276" width="62" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="MessageFlow_PostTreatmentReminder_di" bpmnElement="MessageFlow_PostTreatmentReminder">
@@ -179,7 +179,7 @@
         <di:waypoint x="860" y="380" />
         <di:waypoint x="860" y="500" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="720" y="360" width="160" height="14" />
+          <dc:Bounds x="869" y="386" width="75" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>

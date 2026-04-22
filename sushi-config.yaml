@@ -23,6 +23,7 @@ menu:
   Generic Personas: generic-personas.html
   User Scenarios: user-scenarios.html
   Business Processes: business-processes.html
+  Scheduling Logic: scheduling-logic.html
   Algorithm Selection: algorithm-selection.html
   Business Requirements:
     Interpretation Register: register.html
@@ -53,6 +54,8 @@ pages:
     title: User Scenarios
   business-processes.md:
     title: Business Processes
+  scheduling-logic.md:
+    title: Scheduling Logic
   register.md:
     title: Interpretation Register
   cc-000.md:
