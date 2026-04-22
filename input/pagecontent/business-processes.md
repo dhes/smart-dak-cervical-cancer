@@ -44,6 +44,8 @@ Transitions between processes:
 
 The overview diagram depicts the five processes as BPMN call activities linked by the gateways listed above, with a terminal end event for the suspected-invasive-cancer referral exit. It is the navigational map for the page and the spine from which Components 5–7 will read triggers.
 
+![Algorithm 5 cascade overview — call activities for the five process modules (Invitation, Primary Screening, Triage, Treatment, Follow-up) connected by HPV-result and VIA-result gateways; terminal end events for routine cycle completion and suspected-cancer referral](workflow-overview.svg)
+
 **Diagram file:** `input/bpmn/workflow-overview.bpmn` (source) → `input/images/workflow-overview.svg` (rendered).
 
 ## Workflow 1 — Invitation
@@ -68,6 +70,8 @@ The overview diagram depicts the five processes as BPMN call activities linked b
 **Calls sub-process.** None.
 
 **Activity references.** `Identify overdue rescreen candidate`, `Issue screening invitation`.
+
+![Invitation workflow — Community pool with CHW lane containing start event, routine-or-overdue gateway, identify-overdue-rescreen-candidate task, issue-screening-invitation task, end event; Client pool as recipient of the invitation-delivered message flow](workflow-invitation.svg)
 
 **Diagram file:** `input/bpmn/workflow-invitation.bpmn` → `input/images/workflow-invitation.svg`.
 
@@ -95,6 +99,8 @@ The overview diagram depicts the five processes as BPMN call activities linked b
 **Calls sub-process.** *Counselling and informed consent* (between steps 1 and 3).
 
 **Activity references.** `Collect HPV sample`, `Run HPV DNA assay`, `Report HPV result`.
+
+![Primary Screening workflow — three pools (Facility, Laboratory, Client); Facility sequence: start, counselling call activity, collect HPV sample, intermediate message-catch for HPV result received, end event; Laboratory sequence: message-start sample-received, run HPV DNA assay, report HPV result, end event; two cross-pool message flows for sample handoff and result return](workflow-primary-screening.svg)
 
 **Diagram file:** `input/bpmn/workflow-primary-screening.bpmn` → `input/images/workflow-primary-screening.svg`.
 
@@ -127,6 +133,8 @@ The overview diagram depicts the five processes as BPMN call activities linked b
 
 **Register references.** [cc-003](cc-003.html) (operational definition of "suspected invasive cancer" governing the third gateway branch).
 
+![Triage workflow — Facility pool with Nurse/midwife lane: start event (prior HPV result positive), schedule triage encounter, intermediate event for client attendance, counselling call activity, perform VIA triage, record triage result, three-way exclusive gateway branching to end events for triage-negative, triage-positive, and suspected invasive cancer; Client pool receives recall-for-triage message flow](workflow-triage.svg)
+
 **Diagram file:** `input/bpmn/workflow-triage.bpmn` → `input/images/workflow-triage.svg`.
 
 ## Workflow 4 — Treatment
@@ -158,6 +166,8 @@ The overview diagram depicts the five processes as BPMN call activities linked b
 
 **Register references.** [cc-003](cc-003.html) (suspected invasive cancer branch), [cc-006](cc-006.html) (pregnancy-deferral branch).
 
+![Treatment workflow — three pools (Facility, District Hospital, Client); Facility branch: start, suspected-cancer gateway routing to refer-for-cancer task and cascade-exit end event OR to counselling call activity, determine treatment eligibility, disposition gateway routing to thermal ablation, sent-for-excision end event, or defer-treatment task; District Hospital: message-start received-for-excision, lesion-type gateway routing to LLETZ/LEEP or cold-knife conization tasks, each to its own end event; cross-pool message flows for cancer referral and excision handoff](workflow-treatment.svg)
+
 **Diagram file:** `input/bpmn/workflow-treatment.bpmn` → `input/images/workflow-treatment.svg`.
 
 ## Workflow 5 — Follow-up
@@ -183,6 +193,8 @@ The overview diagram depicts the five processes as BPMN call activities linked b
 
 **Register references.** [cc-002](cc-002.html) (WLHIV intervals), [cc-005](cc-005.html) (all three interval values).
 
+![Follow-up workflow — Facility pool with Nurse/midwife lane: start event (referred to Follow-up), follow-up-type gateway routing to three parallel schedule tasks (schedule next routine screening, schedule triage-negative retest, schedule post-treatment retest), each leading to a message-throw end event; Client pool receives three reminder message flows from the end events](workflow-follow-up.svg)
+
 **Diagram file:** `input/bpmn/workflow-follow-up.bpmn` → `input/images/workflow-follow-up.svg`.
 
 ## Sub-process — Counselling and informed consent
@@ -202,6 +214,8 @@ The overview diagram depicts the five processes as BPMN call activities linked b
 **Called from.** Workflow 2 (Primary Screening, before sample collection); Workflow 3 (Triage, before VIA); Workflow 4 (Treatment, before ablation, LLETZ/LEEP, or CKC — not before referral for suspected invasive cancer, which involves a different counselling conversation about suspected malignancy that programmes typically handle in a separate pathway outside the DAK's scope).
 
 **Activity references.** Sub-process-internal only — not present in the main action vocabulary, consistent with the SOP's framing of counselling/consent as a cross-cutting concern rather than a cascade-activity-proper.
+
+![Counselling and informed consent sub-process — linear sequence of start event, explain procedure, confirm understanding, obtain informed consent, end event](subprocess-counselling-consent.svg)
 
 **Diagram file:** `input/bpmn/subprocess-counselling-consent.bpmn` → `input/images/subprocess-counselling-consent.svg`.
 
