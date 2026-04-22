@@ -21,6 +21,7 @@ menu:
   Home: index.html
   Interventions & Recommendations: interventions-and-recommendations.html
   Generic Personas: generic-personas.html
+  User Scenarios: user-scenarios.html
   Algorithm Selection: algorithm-selection.html
   Business Requirements:
     Interpretation Register: register.html
@@ -47,6 +48,8 @@ pages:
     title: Interventions & Recommendations
   generic-personas.md:
     title: Generic Personas
+  user-scenarios.md:
+    title: User Scenarios
   register.md:
     title: Interpretation Register
   cc-000.md:
