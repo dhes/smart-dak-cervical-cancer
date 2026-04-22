@@ -19,6 +19,8 @@ license: CC-BY-4.0
 
 menu:
   Home: index.html
+  Interventions & Recommendations: interventions-and-recommendations.html
+  Algorithm Selection: algorithm-selection.html
   Business Requirements:
     Interpretation Register: register.html
     Scope Declaration (cc-000): cc-000.html
@@ -34,13 +36,14 @@ menu:
   Decision Logic:
     Overview: decision-logic.html
     Decision Tables: decision-tables.html
-  Algorithm Selection: algorithm-selection.html
   Methodology: methodology.html
   Downloads: downloads.html
 
 pages:
   index.md:
     title: Home
+  interventions-and-recommendations.md:
+    title: Interventions & Recommendations
   register.md:
     title: Interpretation Register
   cc-000.md:

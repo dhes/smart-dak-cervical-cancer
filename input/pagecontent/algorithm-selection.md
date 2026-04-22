@@ -87,6 +87,8 @@ This is WHO explicitly declining to pick a triage method on evidence grounds and
 | Colposcopy | 6 |
 | Cytology (then colposcopy) | 7 |
 
+The 2021 guideline's Annex 4 contains the detailed per-algorithm flowcharts for all four triage options.
+
 **After Recs 3b/23:** All four triage algorithms remain viable. The choice is infrastructure-dependent.
 
 ### Recommendation 4 / 24: Self-collection
