@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_Followup" targetNamespace="http://dhes.github.io/smart-dak-cervical-cancer/bpmn/follow-up" exporter="Hand-authored for smart-dak-cervical-cancer" exporterVersion="1.0">
+  <bpmn:collaboration id="Collaboration_Followup">
+    <bpmn:participant id="Participant_FacilityFU" name="Facility" processRef="Process_FacilityFU" />
+    <bpmn:participant id="Participant_ClientFU" name="Client" processRef="Process_ClientFU" />
+    <bpmn:messageFlow id="MessageFlow_RoutineReminder" name="Routine rescreen reminder" sourceRef="EndEvent_RoutineScheduled" targetRef="Participant_ClientFU" />
+    <bpmn:messageFlow id="MessageFlow_TriageRetestReminder" name="Triage retest reminder" sourceRef="EndEvent_TriageRetestScheduled" targetRef="Participant_ClientFU" />
+    <bpmn:messageFlow id="MessageFlow_PostTreatmentReminder" name="Post-treatment retest reminder" sourceRef="EndEvent_PostTreatmentScheduled" targetRef="Participant_ClientFU" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_FacilityFU" isExecutable="false">
+    <bpmn:laneSet id="LaneSet_FacilityFU">
+      <bpmn:lane id="Lane_NurseFU" name="Nurse/midwife">
+        <bpmn:flowNodeRef>StartEvent_ReferredToFollowup</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_FollowupType</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_ScheduleRoutine</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_RoutineScheduled</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_ScheduleTriageRetest</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_TriageRetestScheduled</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_SchedulePostTreatment</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_PostTreatmentScheduled</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="StartEvent_ReferredToFollowup" name="Referred to Follow-up">
+      <bpmn:outgoing>Flow_FU1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:exclusiveGateway id="Gateway_FollowupType" name="Follow-up&#10;type?">
+      <bpmn:incoming>Flow_FU1</bpmn:incoming>
+      <bpmn:outgoing>Flow_FU_HPVNeg</bpmn:outgoing>
+      <bpmn:outgoing>Flow_FU_TriageNeg</bpmn:outgoing>
+      <bpmn:outgoing>Flow_FU_PostTreatment</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:task id="Task_ScheduleRoutine" name="Schedule next routine screening">
+      <bpmn:incoming>Flow_FU_HPVNeg</bpmn:incoming>
+      <bpmn:outgoing>Flow_FU_ToRoutineEnd</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="EndEvent_RoutineScheduled" name="Routine rescreen scheduled">
+      <bpmn:incoming>Flow_FU_ToRoutineEnd</bpmn:incoming>
+      <bpmn:messageEventDefinition id="MessageEventDef_RoutineReminder" />
+    </bpmn:endEvent>
+    <bpmn:task id="Task_ScheduleTriageRetest" name="Schedule triage-negative retest">
+      <bpmn:incoming>Flow_FU_TriageNeg</bpmn:incoming>
+      <bpmn:outgoing>Flow_FU_ToTriageRetestEnd</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="EndEvent_TriageRetestScheduled" name="Triage-negative retest scheduled">
+      <bpmn:incoming>Flow_FU_ToTriageRetestEnd</bpmn:incoming>
+      <bpmn:messageEventDefinition id="MessageEventDef_TriageRetestReminder" />
+    </bpmn:endEvent>
+    <bpmn:task id="Task_SchedulePostTreatment" name="Schedule post-treatment retest">
+      <bpmn:incoming>Flow_FU_PostTreatment</bpmn:incoming>
+      <bpmn:outgoing>Flow_FU_ToPostTreatmentEnd</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="EndEvent_PostTreatmentScheduled" name="Post-treatment retest scheduled">
+      <bpmn:incoming>Flow_FU_ToPostTreatmentEnd</bpmn:incoming>
+      <bpmn:messageEventDefinition id="MessageEventDef_PostTreatmentReminder" />
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_FU1" sourceRef="StartEvent_ReferredToFollowup" targetRef="Gateway_FollowupType" />
+    <bpmn:sequenceFlow id="Flow_FU_HPVNeg" name="Post-HPV-negative" sourceRef="Gateway_FollowupType" targetRef="Task_ScheduleRoutine" />
+    <bpmn:sequenceFlow id="Flow_FU_TriageNeg" name="Post-triage-negative" sourceRef="Gateway_FollowupType" targetRef="Task_ScheduleTriageRetest" />
+    <bpmn:sequenceFlow id="Flow_FU_PostTreatment" name="Post-&#10;treatment" sourceRef="Gateway_FollowupType" targetRef="Task_SchedulePostTreatment" />
+    <bpmn:sequenceFlow id="Flow_FU_ToRoutineEnd" sourceRef="Task_ScheduleRoutine" targetRef="EndEvent_RoutineScheduled" />
+    <bpmn:sequenceFlow id="Flow_FU_ToTriageRetestEnd" sourceRef="Task_ScheduleTriageRetest" targetRef="EndEvent_TriageRetestScheduled" />
+    <bpmn:sequenceFlow id="Flow_FU_ToPostTreatmentEnd" sourceRef="Task_SchedulePostTreatment" targetRef="EndEvent_PostTreatmentScheduled" />
+  </bpmn:process>
+  <bpmn:process id="Process_ClientFU" isExecutable="false">
+    <bpmn:laneSet id="LaneSet_ClientFU">
+      <bpmn:lane id="Lane_TargetClientFU" name="Target client" />
+    </bpmn:laneSet>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_Followup">
+    <bpmndi:BPMNPlane id="BPMNPlane_Followup" bpmnElement="Collaboration_Followup">
+      <bpmndi:BPMNShape id="Participant_FacilityFU_di" bpmnElement="Participant_FacilityFU" isHorizontal="true">
+        <dc:Bounds x="160" y="80" width="840" height="380" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_NurseFU_di" bpmnElement="Lane_NurseFU" isHorizontal="true">
+        <dc:Bounds x="190" y="80" width="810" height="380" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="StartEvent_ReferredToFollowup_di" bpmnElement="StartEvent_ReferredToFollowup">
+        <dc:Bounds x="240" y="252" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="216" y="295" width="90" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_FollowupType_di" bpmnElement="Gateway_FollowupType" isMarkerVisible="true">
+        <dc:Bounds x="320" y="245" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="276" y="236" width="48" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_ScheduleRoutine_di" bpmnElement="Task_ScheduleRoutine">
+        <dc:Bounds x="450" y="120" width="160" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_RoutineScheduled_di" bpmnElement="EndEvent_RoutineScheduled">
+        <dc:Bounds x="660" y="142" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="636" y="185" width="90" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_ScheduleTriageRetest_di" bpmnElement="Task_ScheduleTriageRetest">
+        <dc:Bounds x="450" y="230" width="160" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_TriageRetestScheduled_di" bpmnElement="EndEvent_TriageRetestScheduled">
+        <dc:Bounds x="660" y="252" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="636" y="295" width="100" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_SchedulePostTreatment_di" bpmnElement="Task_SchedulePostTreatment">
+        <dc:Bounds x="450" y="340" width="160" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_PostTreatmentScheduled_di" bpmnElement="EndEvent_PostTreatmentScheduled">
+        <dc:Bounds x="660" y="362" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="636" y="405" width="100" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_FU1_di" bpmnElement="Flow_FU1">
+        <di:waypoint x="276" y="270" />
+        <di:waypoint x="320" y="270" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_FU_HPVNeg_di" bpmnElement="Flow_FU_HPVNeg">
+        <di:waypoint x="345" y="245" />
+        <di:waypoint x="345" y="160" />
+        <di:waypoint x="450" y="160" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="374" y="129" width="52" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_FU_TriageNeg_di" bpmnElement="Flow_FU_TriageNeg">
+        <di:waypoint x="370" y="270" />
+        <di:waypoint x="450" y="270" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="375" y="239" width="57" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_FU_PostTreatment_di" bpmnElement="Flow_FU_PostTreatment">
+        <di:waypoint x="345" y="295" />
+        <di:waypoint x="345" y="380" />
+        <di:waypoint x="450" y="380" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="377" y="350" width="47" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_FU_ToRoutineEnd_di" bpmnElement="Flow_FU_ToRoutineEnd">
+        <di:waypoint x="610" y="160" />
+        <di:waypoint x="660" y="160" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_FU_ToTriageRetestEnd_di" bpmnElement="Flow_FU_ToTriageRetestEnd">
+        <di:waypoint x="610" y="270" />
+        <di:waypoint x="660" y="270" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_FU_ToPostTreatmentEnd_di" bpmnElement="Flow_FU_ToPostTreatmentEnd">
+        <di:waypoint x="610" y="380" />
+        <di:waypoint x="660" y="380" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Participant_ClientFU_di" bpmnElement="Participant_ClientFU" isHorizontal="true">
+        <dc:Bounds x="160" y="500" width="840" height="100" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_TargetClientFU_di" bpmnElement="Lane_TargetClientFU" isHorizontal="true">
+        <dc:Bounds x="190" y="500" width="810" height="100" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="MessageFlow_RoutineReminder_di" bpmnElement="MessageFlow_RoutineReminder">
+        <di:waypoint x="696" y="160" />
+        <di:waypoint x="820" y="160" />
+        <di:waypoint x="820" y="500" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="720" y="140" width="130" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="MessageFlow_TriageRetestReminder_di" bpmnElement="MessageFlow_TriageRetestReminder">
+        <di:waypoint x="696" y="270" />
+        <di:waypoint x="840" y="270" />
+        <di:waypoint x="840" y="500" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="720" y="250" width="120" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="MessageFlow_PostTreatmentReminder_di" bpmnElement="MessageFlow_PostTreatmentReminder">
+        <di:waypoint x="696" y="380" />
+        <di:waypoint x="860" y="380" />
+        <di:waypoint x="860" y="500" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="720" y="360" width="160" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

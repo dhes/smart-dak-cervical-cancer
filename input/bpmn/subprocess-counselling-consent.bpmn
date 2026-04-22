@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+                  xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+                  xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+                  xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  id="Definitions_CounsellingConsent"
+                  targetNamespace="http://dhes.github.io/smart-dak-cervical-cancer/bpmn/counselling-consent"
+                  exporter="Hand-authored for smart-dak-cervical-cancer"
+                  exporterVersion="1.0">
+
+  <bpmn:process id="Process_CounsellingConsent"
+                name="Counselling and informed consent"
+                isExecutable="false">
+
+    <bpmn:startEvent id="StartEvent_Counselling">
+      <bpmn:outgoing>Flow_StartToExplain</bpmn:outgoing>
+    </bpmn:startEvent>
+
+    <bpmn:task id="Task_ExplainProcedure" name="Explain procedure">
+      <bpmn:incoming>Flow_StartToExplain</bpmn:incoming>
+      <bpmn:outgoing>Flow_ExplainToConfirm</bpmn:outgoing>
+    </bpmn:task>
+
+    <bpmn:task id="Task_ConfirmUnderstanding" name="Confirm understanding">
+      <bpmn:incoming>Flow_ExplainToConfirm</bpmn:incoming>
+      <bpmn:outgoing>Flow_ConfirmToConsent</bpmn:outgoing>
+    </bpmn:task>
+
+    <bpmn:task id="Task_ObtainConsent" name="Obtain informed consent">
+      <bpmn:incoming>Flow_ConfirmToConsent</bpmn:incoming>
+      <bpmn:outgoing>Flow_ConsentToEnd</bpmn:outgoing>
+    </bpmn:task>
+
+    <bpmn:endEvent id="EndEvent_Counselling">
+      <bpmn:incoming>Flow_ConsentToEnd</bpmn:incoming>
+    </bpmn:endEvent>
+
+    <bpmn:sequenceFlow id="Flow_StartToExplain"
+                       sourceRef="StartEvent_Counselling"
+                       targetRef="Task_ExplainProcedure"/>
+    <bpmn:sequenceFlow id="Flow_ExplainToConfirm"
+                       sourceRef="Task_ExplainProcedure"
+                       targetRef="Task_ConfirmUnderstanding"/>
+    <bpmn:sequenceFlow id="Flow_ConfirmToConsent"
+                       sourceRef="Task_ConfirmUnderstanding"
+                       targetRef="Task_ObtainConsent"/>
+    <bpmn:sequenceFlow id="Flow_ConsentToEnd"
+                       sourceRef="Task_ObtainConsent"
+                       targetRef="EndEvent_Counselling"/>
+  </bpmn:process>
+
+  <bpmndi:BPMNDiagram id="BPMNDiagram_Counselling">
+    <bpmndi:BPMNPlane id="BPMNPlane_Counselling" bpmnElement="Process_CounsellingConsent">
+
+      <bpmndi:BPMNShape id="StartEvent_Counselling_di" bpmnElement="StartEvent_Counselling">
+        <dc:Bounds x="160" y="100" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_ExplainProcedure_di" bpmnElement="Task_ExplainProcedure">
+        <dc:Bounds x="250" y="78" width="140" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_ConfirmUnderstanding_di" bpmnElement="Task_ConfirmUnderstanding">
+        <dc:Bounds x="440" y="78" width="140" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_ObtainConsent_di" bpmnElement="Task_ObtainConsent">
+        <dc:Bounds x="630" y="78" width="140" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_Counselling_di" bpmnElement="EndEvent_Counselling">
+        <dc:Bounds x="830" y="100" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNEdge id="Flow_StartToExplain_di" bpmnElement="Flow_StartToExplain">
+        <di:waypoint x="196" y="118"/>
+        <di:waypoint x="250" y="118"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_ExplainToConfirm_di" bpmnElement="Flow_ExplainToConfirm">
+        <di:waypoint x="390" y="118"/>
+        <di:waypoint x="440" y="118"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_ConfirmToConsent_di" bpmnElement="Flow_ConfirmToConsent">
+        <di:waypoint x="580" y="118"/>
+        <di:waypoint x="630" y="118"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_ConsentToEnd_di" bpmnElement="Flow_ConsentToEnd">
+        <di:waypoint x="770" y="118"/>
+        <di:waypoint x="830" y="118"/>
+      </bpmndi:BPMNEdge>
+
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</bpmn:definitions>

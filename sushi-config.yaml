@@ -22,6 +22,7 @@ menu:
   Interventions & Recommendations: interventions-and-recommendations.html
   Generic Personas: generic-personas.html
   User Scenarios: user-scenarios.html
+  Business Processes: business-processes.html
   Algorithm Selection: algorithm-selection.html
   Business Requirements:
     Interpretation Register: register.html
@@ -50,6 +51,8 @@ pages:
     title: Generic Personas
   user-scenarios.md:
     title: User Scenarios
+  business-processes.md:
+    title: Business Processes
   register.md:
     title: Interpretation Register
   cc-000.md:

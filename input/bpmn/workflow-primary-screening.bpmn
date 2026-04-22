@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+                  xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+                  xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+                  xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  id="Definitions_PrimaryScreening"
+                  targetNamespace="http://dhes.github.io/smart-dak-cervical-cancer/bpmn/primary-screening"
+                  exporter="Hand-authored for smart-dak-cervical-cancer"
+                  exporterVersion="1.0">
+
+  <bpmn:collaboration id="Collaboration_PrimaryScreening">
+    <bpmn:participant id="Participant_Facility"
+                      name="Facility"
+                      processRef="Process_Facility"/>
+    <bpmn:participant id="Participant_Laboratory"
+                      name="Laboratory"
+                      processRef="Process_Laboratory"/>
+    <bpmn:participant id="Participant_Client"
+                      name="Client"
+                      processRef="Process_Client"/>
+
+    <bpmn:messageFlow id="MessageFlow_SampleHandoff"
+                      name="Sample handoff"
+                      sourceRef="Task_CollectSample"
+                      targetRef="StartEvent_LabReceivesSample"/>
+    <bpmn:messageFlow id="MessageFlow_ResultReturn"
+                      name="Result return"
+                      sourceRef="Task_ReportResult"
+                      targetRef="IntermediateCatch_ResultReceived"/>
+  </bpmn:collaboration>
+
+  <bpmn:process id="Process_Facility" isExecutable="false">
+    <bpmn:laneSet id="LaneSet_Facility">
+      <bpmn:lane id="Lane_NurseFacility" name="Nurse/midwife">
+        <bpmn:flowNodeRef>StartEvent_ClientAttends</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>CallActivity_CounsellingFacility</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_CollectSample</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>IntermediateCatch_ResultReceived</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_ResultRecorded</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+
+    <bpmn:startEvent id="StartEvent_ClientAttends" name="Client attends facility">
+      <bpmn:outgoing>Flow_F1</bpmn:outgoing>
+    </bpmn:startEvent>
+
+    <bpmn:callActivity id="CallActivity_CounsellingFacility"
+                       name="Counselling and informed consent"
+                       calledElement="Process_CounsellingConsent">
+      <bpmn:incoming>Flow_F1</bpmn:incoming>
+      <bpmn:outgoing>Flow_F2</bpmn:outgoing>
+    </bpmn:callActivity>
+
+    <bpmn:task id="Task_CollectSample" name="Collect HPV sample">
+      <bpmn:incoming>Flow_F2</bpmn:incoming>
+      <bpmn:outgoing>Flow_F3</bpmn:outgoing>
+    </bpmn:task>
+
+    <bpmn:intermediateCatchEvent id="IntermediateCatch_ResultReceived"
+                                 name="HPV result received">
+      <bpmn:incoming>Flow_F3</bpmn:incoming>
+      <bpmn:outgoing>Flow_F4</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDef_ResultReceived"/>
+    </bpmn:intermediateCatchEvent>
+
+    <bpmn:endEvent id="EndEvent_ResultRecorded" name="HPV result recorded at facility">
+      <bpmn:incoming>Flow_F4</bpmn:incoming>
+    </bpmn:endEvent>
+
+    <bpmn:sequenceFlow id="Flow_F1"
+                       sourceRef="StartEvent_ClientAttends"
+                       targetRef="CallActivity_CounsellingFacility"/>
+    <bpmn:sequenceFlow id="Flow_F2"
+                       sourceRef="CallActivity_CounsellingFacility"
+                       targetRef="Task_CollectSample"/>
+    <bpmn:sequenceFlow id="Flow_F3"
+                       sourceRef="Task_CollectSample"
+                       targetRef="IntermediateCatch_ResultReceived"/>
+    <bpmn:sequenceFlow id="Flow_F4"
+                       sourceRef="IntermediateCatch_ResultReceived"
+                       targetRef="EndEvent_ResultRecorded"/>
+  </bpmn:process>
+
+  <bpmn:process id="Process_Laboratory" isExecutable="false">
+    <bpmn:laneSet id="LaneSet_Laboratory">
+      <bpmn:lane id="Lane_LabTech" name="Laboratory technician">
+        <bpmn:flowNodeRef>StartEvent_LabReceivesSample</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_RunAssay</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_ReportResult</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_LabComplete</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+
+    <bpmn:startEvent id="StartEvent_LabReceivesSample" name="Sample received">
+      <bpmn:outgoing>Flow_L1</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDef_SampleReceived"/>
+    </bpmn:startEvent>
+
+    <bpmn:task id="Task_RunAssay" name="Run HPV DNA assay">
+      <bpmn:incoming>Flow_L1</bpmn:incoming>
+      <bpmn:outgoing>Flow_L2</bpmn:outgoing>
+    </bpmn:task>
+
+    <bpmn:task id="Task_ReportResult" name="Report HPV result">
+      <bpmn:incoming>Flow_L2</bpmn:incoming>
+      <bpmn:outgoing>Flow_L3</bpmn:outgoing>
+    </bpmn:task>
+
+    <bpmn:endEvent id="EndEvent_LabComplete" name="Result reported">
+      <bpmn:incoming>Flow_L3</bpmn:incoming>
+    </bpmn:endEvent>
+
+    <bpmn:sequenceFlow id="Flow_L1"
+                       sourceRef="StartEvent_LabReceivesSample"
+                       targetRef="Task_RunAssay"/>
+    <bpmn:sequenceFlow id="Flow_L2"
+                       sourceRef="Task_RunAssay"
+                       targetRef="Task_ReportResult"/>
+    <bpmn:sequenceFlow id="Flow_L3"
+                       sourceRef="Task_ReportResult"
+                       targetRef="EndEvent_LabComplete"/>
+  </bpmn:process>
+
+  <bpmn:process id="Process_Client" isExecutable="false">
+    <bpmn:laneSet id="LaneSet_Client">
+      <bpmn:lane id="Lane_TargetClientPS" name="Target client"/>
+    </bpmn:laneSet>
+  </bpmn:process>
+
+  <bpmndi:BPMNDiagram id="BPMNDiagram_PrimaryScreening">
+    <bpmndi:BPMNPlane id="BPMNPlane_PrimaryScreening" bpmnElement="Collaboration_PrimaryScreening">
+
+      <bpmndi:BPMNShape id="Participant_Facility_di" bpmnElement="Participant_Facility" isHorizontal="true">
+        <dc:Bounds x="160" y="80" width="860" height="180"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_NurseFacility_di" bpmnElement="Lane_NurseFacility" isHorizontal="true">
+        <dc:Bounds x="190" y="80" width="830" height="180"/>
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNShape id="StartEvent_ClientAttends_di" bpmnElement="StartEvent_ClientAttends">
+        <dc:Bounds x="240" y="152" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="218" y="195" width="80" height="27"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="CallActivity_CounsellingFacility_di" bpmnElement="CallActivity_CounsellingFacility">
+        <dc:Bounds x="320" y="130" width="140" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_CollectSample_di" bpmnElement="Task_CollectSample">
+        <dc:Bounds x="500" y="130" width="140" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="IntermediateCatch_ResultReceived_di" bpmnElement="IntermediateCatch_ResultReceived">
+        <dc:Bounds x="690" y="152" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="672" y="195" width="80" height="27"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_ResultRecorded_di" bpmnElement="EndEvent_ResultRecorded">
+        <dc:Bounds x="780" y="152" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="755" y="195" width="90" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNEdge id="Flow_F1_di" bpmnElement="Flow_F1">
+        <di:waypoint x="276" y="170"/>
+        <di:waypoint x="320" y="170"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_F2_di" bpmnElement="Flow_F2">
+        <di:waypoint x="460" y="170"/>
+        <di:waypoint x="500" y="170"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_F3_di" bpmnElement="Flow_F3">
+        <di:waypoint x="640" y="170"/>
+        <di:waypoint x="690" y="170"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_F4_di" bpmnElement="Flow_F4">
+        <di:waypoint x="726" y="170"/>
+        <di:waypoint x="780" y="170"/>
+      </bpmndi:BPMNEdge>
+
+      <bpmndi:BPMNShape id="Participant_Laboratory_di" bpmnElement="Participant_Laboratory" isHorizontal="true">
+        <dc:Bounds x="160" y="300" width="860" height="160"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_LabTech_di" bpmnElement="Lane_LabTech" isHorizontal="true">
+        <dc:Bounds x="190" y="300" width="830" height="160"/>
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNShape id="StartEvent_LabReceivesSample_di" bpmnElement="StartEvent_LabReceivesSample">
+        <dc:Bounds x="320" y="362" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="303" y="405" width="70" height="14"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_RunAssay_di" bpmnElement="Task_RunAssay">
+        <dc:Bounds x="400" y="340" width="140" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_ReportResult_di" bpmnElement="Task_ReportResult">
+        <dc:Bounds x="580" y="340" width="140" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_LabComplete_di" bpmnElement="EndEvent_LabComplete">
+        <dc:Bounds x="760" y="362" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="743" y="405" width="70" height="14"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNEdge id="Flow_L1_di" bpmnElement="Flow_L1">
+        <di:waypoint x="356" y="380"/>
+        <di:waypoint x="400" y="380"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_L2_di" bpmnElement="Flow_L2">
+        <di:waypoint x="540" y="380"/>
+        <di:waypoint x="580" y="380"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_L3_di" bpmnElement="Flow_L3">
+        <di:waypoint x="720" y="380"/>
+        <di:waypoint x="760" y="380"/>
+      </bpmndi:BPMNEdge>
+
+      <bpmndi:BPMNShape id="Participant_Client_di" bpmnElement="Participant_Client" isHorizontal="true">
+        <dc:Bounds x="160" y="500" width="860" height="100"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_TargetClientPS_di" bpmnElement="Lane_TargetClientPS" isHorizontal="true">
+        <dc:Bounds x="190" y="500" width="830" height="100"/>
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNEdge id="MessageFlow_SampleHandoff_di" bpmnElement="MessageFlow_SampleHandoff">
+        <di:waypoint x="570" y="210"/>
+        <di:waypoint x="570" y="280"/>
+        <di:waypoint x="338" y="280"/>
+        <di:waypoint x="338" y="362"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="390" y="262" width="90" height="14"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="MessageFlow_ResultReturn_di" bpmnElement="MessageFlow_ResultReturn">
+        <di:waypoint x="650" y="340"/>
+        <di:waypoint x="650" y="260"/>
+        <di:waypoint x="708" y="260"/>
+        <di:waypoint x="708" y="188"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="660" y="245" width="80" height="14"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</bpmn:definitions>

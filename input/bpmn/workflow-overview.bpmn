@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+                  xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+                  xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+                  xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  id="Definitions_Overview"
+                  targetNamespace="http://dhes.github.io/smart-dak-cervical-cancer/bpmn/overview"
+                  exporter="Hand-authored for smart-dak-cervical-cancer"
+                  exporterVersion="1.0">
+
+  <bpmn:process id="Process_Overview"
+                name="Algorithm 5 cascade — overview"
+                isExecutable="false">
+
+    <bpmn:startEvent id="StartEvent_Cascade" name="Woman eligible for screening">
+      <bpmn:outgoing>Flow_O_1</bpmn:outgoing>
+    </bpmn:startEvent>
+
+    <bpmn:callActivity id="CallActivity_Invitation"
+                       name="Invitation"
+                       calledElement="Process_Community">
+      <bpmn:incoming>Flow_O_1</bpmn:incoming>
+      <bpmn:outgoing>Flow_O_2</bpmn:outgoing>
+    </bpmn:callActivity>
+
+    <bpmn:callActivity id="CallActivity_PrimaryScreening"
+                       name="Primary Screening"
+                       calledElement="Process_Facility">
+      <bpmn:incoming>Flow_O_2</bpmn:incoming>
+      <bpmn:outgoing>Flow_O_3</bpmn:outgoing>
+    </bpmn:callActivity>
+
+    <bpmn:exclusiveGateway id="Gateway_HPVResult" name="HPV result?">
+      <bpmn:incoming>Flow_O_3</bpmn:incoming>
+      <bpmn:outgoing>Flow_O_HPV_Positive</bpmn:outgoing>
+      <bpmn:outgoing>Flow_O_HPV_Negative</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+
+    <bpmn:callActivity id="CallActivity_Triage"
+                       name="Triage"
+                       calledElement="Process_FacilityTriage">
+      <bpmn:incoming>Flow_O_HPV_Positive</bpmn:incoming>
+      <bpmn:outgoing>Flow_O_4</bpmn:outgoing>
+    </bpmn:callActivity>
+
+    <bpmn:exclusiveGateway id="Gateway_VIAResult" name="VIA result?">
+      <bpmn:incoming>Flow_O_4</bpmn:incoming>
+      <bpmn:outgoing>Flow_O_VIA_Positive</bpmn:outgoing>
+      <bpmn:outgoing>Flow_O_VIA_Negative</bpmn:outgoing>
+      <bpmn:outgoing>Flow_O_VIA_Suspicious</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+
+    <bpmn:callActivity id="CallActivity_Treatment"
+                       name="Treatment"
+                       calledElement="Process_FacilityTreatment">
+      <bpmn:incoming>Flow_O_VIA_Positive</bpmn:incoming>
+      <bpmn:outgoing>Flow_O_5</bpmn:outgoing>
+    </bpmn:callActivity>
+
+    <bpmn:callActivity id="CallActivity_Followup"
+                       name="Follow-up"
+                       calledElement="Process_FacilityFU">
+      <bpmn:incoming>Flow_O_5</bpmn:incoming>
+      <bpmn:incoming>Flow_O_HPV_Negative</bpmn:incoming>
+      <bpmn:incoming>Flow_O_VIA_Negative</bpmn:incoming>
+      <bpmn:outgoing>Flow_O_6</bpmn:outgoing>
+    </bpmn:callActivity>
+
+    <bpmn:endEvent id="EndEvent_CycleComplete" name="Screening cycle complete">
+      <bpmn:incoming>Flow_O_6</bpmn:incoming>
+    </bpmn:endEvent>
+
+    <bpmn:endEvent id="EndEvent_ReferredOut" name="Referred to oncology — cascade exit">
+      <bpmn:incoming>Flow_O_VIA_Suspicious</bpmn:incoming>
+    </bpmn:endEvent>
+
+    <bpmn:sequenceFlow id="Flow_O_1" sourceRef="StartEvent_Cascade" targetRef="CallActivity_Invitation"/>
+    <bpmn:sequenceFlow id="Flow_O_2" sourceRef="CallActivity_Invitation" targetRef="CallActivity_PrimaryScreening"/>
+    <bpmn:sequenceFlow id="Flow_O_3" sourceRef="CallActivity_PrimaryScreening" targetRef="Gateway_HPVResult"/>
+    <bpmn:sequenceFlow id="Flow_O_HPV_Positive" name="HPV positive" sourceRef="Gateway_HPVResult" targetRef="CallActivity_Triage"/>
+    <bpmn:sequenceFlow id="Flow_O_HPV_Negative" name="HPV negative" sourceRef="Gateway_HPVResult" targetRef="CallActivity_Followup"/>
+    <bpmn:sequenceFlow id="Flow_O_4" sourceRef="CallActivity_Triage" targetRef="Gateway_VIAResult"/>
+    <bpmn:sequenceFlow id="Flow_O_VIA_Positive" name="VIA positive" sourceRef="Gateway_VIAResult" targetRef="CallActivity_Treatment"/>
+    <bpmn:sequenceFlow id="Flow_O_VIA_Negative" name="VIA negative" sourceRef="Gateway_VIAResult" targetRef="CallActivity_Followup"/>
+    <bpmn:sequenceFlow id="Flow_O_VIA_Suspicious" name="Suspicious" sourceRef="Gateway_VIAResult" targetRef="EndEvent_ReferredOut"/>
+    <bpmn:sequenceFlow id="Flow_O_5" sourceRef="CallActivity_Treatment" targetRef="CallActivity_Followup"/>
+    <bpmn:sequenceFlow id="Flow_O_6" sourceRef="CallActivity_Followup" targetRef="EndEvent_CycleComplete"/>
+  </bpmn:process>
+
+  <bpmndi:BPMNDiagram id="BPMNDiagram_Overview">
+    <bpmndi:BPMNPlane id="BPMNPlane_Overview" bpmnElement="Process_Overview">
+
+      <bpmndi:BPMNShape id="StartEvent_Cascade_di" bpmnElement="StartEvent_Cascade">
+        <dc:Bounds x="240" y="212" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="212" y="255" width="95" height="27"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="CallActivity_Invitation_di" bpmnElement="CallActivity_Invitation">
+        <dc:Bounds x="310" y="200" width="130" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="CallActivity_PrimaryScreening_di" bpmnElement="CallActivity_PrimaryScreening">
+        <dc:Bounds x="480" y="200" width="160" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_HPVResult_di" bpmnElement="Gateway_HPVResult" isMarkerVisible="true">
+        <dc:Bounds x="680" y="205" width="50" height="50"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="670" y="175" width="70" height="14"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="CallActivity_Triage_di" bpmnElement="CallActivity_Triage">
+        <dc:Bounds x="770" y="200" width="130" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_VIAResult_di" bpmnElement="Gateway_VIAResult" isMarkerVisible="true">
+        <dc:Bounds x="940" y="205" width="50" height="50"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="930" y="175" width="70" height="14"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="CallActivity_Treatment_di" bpmnElement="CallActivity_Treatment">
+        <dc:Bounds x="1030" y="200" width="140" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="CallActivity_Followup_di" bpmnElement="CallActivity_Followup">
+        <dc:Bounds x="1220" y="200" width="130" height="60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_CycleComplete_di" bpmnElement="EndEvent_CycleComplete">
+        <dc:Bounds x="1400" y="212" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1377" y="255" width="95" height="27"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_ReferredOut_di" bpmnElement="EndEvent_ReferredOut">
+        <dc:Bounds x="1400" y="112" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1365" y="75" width="115" height="27"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNEdge id="Flow_O_1_di" bpmnElement="Flow_O_1">
+        <di:waypoint x="276" y="230"/>
+        <di:waypoint x="310" y="230"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_O_2_di" bpmnElement="Flow_O_2">
+        <di:waypoint x="440" y="230"/>
+        <di:waypoint x="480" y="230"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_O_3_di" bpmnElement="Flow_O_3">
+        <di:waypoint x="640" y="230"/>
+        <di:waypoint x="680" y="230"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_O_HPV_Positive_di" bpmnElement="Flow_O_HPV_Positive">
+        <di:waypoint x="730" y="230"/>
+        <di:waypoint x="770" y="230"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="735" y="212" width="70" height="14"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_O_HPV_Negative_di" bpmnElement="Flow_O_HPV_Negative">
+        <di:waypoint x="705" y="255"/>
+        <di:waypoint x="705" y="340"/>
+        <di:waypoint x="1285" y="340"/>
+        <di:waypoint x="1285" y="260"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="710" y="295" width="80" height="14"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_O_4_di" bpmnElement="Flow_O_4">
+        <di:waypoint x="900" y="230"/>
+        <di:waypoint x="940" y="230"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_O_VIA_Positive_di" bpmnElement="Flow_O_VIA_Positive">
+        <di:waypoint x="990" y="230"/>
+        <di:waypoint x="1030" y="230"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="992" y="212" width="70" height="14"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_O_VIA_Negative_di" bpmnElement="Flow_O_VIA_Negative">
+        <di:waypoint x="965" y="255"/>
+        <di:waypoint x="965" y="380"/>
+        <di:waypoint x="1285" y="380"/>
+        <di:waypoint x="1285" y="260"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="970" y="335" width="80" height="14"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_O_VIA_Suspicious_di" bpmnElement="Flow_O_VIA_Suspicious">
+        <di:waypoint x="965" y="205"/>
+        <di:waypoint x="965" y="130"/>
+        <di:waypoint x="1400" y="130"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="968" y="158" width="70" height="14"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_O_5_di" bpmnElement="Flow_O_5">
+        <di:waypoint x="1170" y="230"/>
+        <di:waypoint x="1220" y="230"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_O_6_di" bpmnElement="Flow_O_6">
+        <di:waypoint x="1350" y="230"/>
+        <di:waypoint x="1400" y="230"/>
+      </bpmndi:BPMNEdge>
+
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</bpmn:definitions>
