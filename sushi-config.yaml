@@ -24,6 +24,8 @@ menu:
   User Scenarios: user-scenarios.html
   Business Processes: business-processes.html
   Scheduling Logic: scheduling-logic.html
+  Indicators: indicators.html
+  Requirements: requirements.html
   Algorithm Selection: algorithm-selection.html
   Business Requirements:
     Interpretation Register: register.html
@@ -56,6 +58,10 @@ pages:
     title: Business Processes
   scheduling-logic.md:
     title: Scheduling Logic
+  indicators.md:
+    title: Indicators
+  requirements.md:
+    title: Requirements
   register.md:
     title: Interpretation Register
   cc-000.md:
