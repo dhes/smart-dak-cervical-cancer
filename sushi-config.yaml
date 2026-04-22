@@ -20,6 +20,7 @@ license: CC-BY-4.0
 menu:
   Home: index.html
   Interventions & Recommendations: interventions-and-recommendations.html
+  Generic Personas: generic-personas.html
   Algorithm Selection: algorithm-selection.html
   Business Requirements:
     Interpretation Register: register.html
@@ -44,6 +45,8 @@ pages:
     title: Home
   interventions-and-recommendations.md:
     title: Interventions & Recommendations
+  generic-personas.md:
+    title: Generic Personas
   register.md:
     title: Interpretation Register
   cc-000.md:
