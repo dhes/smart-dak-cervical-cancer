@@ -18,7 +18,7 @@ Each row below names a cascade event that produces a scheduled next encounter, t
 | Suspected invasive cancer identified at triage | Cascade exit; no scheduled DAK-side retest | [cc-003](cc-003.html) |
 | Pregnancy identified at treatment | Defer treatment; re-enter Triage after pregnancy and defined recovery interval | [cc-006](cc-006.html); rec 41 (GPS) |
 
-The BPMN [Follow-up workflow](business-processes.html#workflow-5-follow-up) is where these rules manifest as concrete *Schedule next routine screening*, *Schedule triage-negative retest*, and *Schedule post-treatment retest* activities. The DMN decision tables under [Decision Logic](decision-logic.html) compute whether a given woman is due for a next encounter given her cascade state and the applicable interval.
+The BPMN [Follow-up workflow](business-processes.html#workflow-5--follow-up) is where these rules manifest as concrete *Schedule next routine screening*, *Schedule triage-negative retest*, and *Schedule post-treatment retest* activities. The DMN decision tables under [Decision Logic](decision-logic.html) compute whether a given woman is due for a next encounter given her cascade state and the applicable interval.
 
 ## Programme-level parameters (deferred)
 

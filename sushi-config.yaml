@@ -62,6 +62,8 @@ pages:
     title: Indicators
   requirements.md:
     title: Requirements
+  license.md:
+    title: License
   register.md:
     title: Interpretation Register
   cc-000.md:
