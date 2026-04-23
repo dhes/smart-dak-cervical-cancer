@@ -1,0 +1,10 @@
+# Suppressions for HL7 IG Publisher messages expected for this IG's deployment pattern.
+# Each suppression is the exact message text (substring match).
+
+# The canonical URL https://dhes.github.io/smart-dak-cervical-cancer is versionless by
+# GitHub Pages convention (only the current build is served; versioned subpaths are not
+# published). The version is embedded in page titles and metadata. The IG Publisher's
+# "canonical link is unsafe with regard to versions" warning is acknowledged and
+# deliberately accepted for this deployment pattern.
+== Suppressed Messages ==
+The link 'https://dhes.github.io/smart-dak-cervical-cancer' for "https://dhes.github.io/smart-dak-cervical-cancer" is a canonical link and is therefore unsafe with regard to versions

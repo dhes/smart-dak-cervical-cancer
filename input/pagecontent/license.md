@@ -18,7 +18,7 @@ These rights extend to the narrative pages, the interpretation register, the Cor
 
 Please cite as:
 
-> Heslinga, D. *WHO SMART DAK — Cervical Cancer Screening (L2), version 0.1.0.* Available at <https://dhes.github.io/smart-dak-cervical-cancer/0.1.0/>, licensed under CC-BY-4.0.
+> Heslinga, D. *WHO SMART DAK — Cervical Cancer Screening (L2), version 0.1.0.* Available at <https://dhes.github.io/smart-dak-cervical-cancer>, licensed under CC-BY-4.0.
 
 ## Third-party content
 
