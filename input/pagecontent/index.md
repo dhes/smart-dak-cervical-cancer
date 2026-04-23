@@ -1,3 +1,15 @@
+<div class="stu-note" markdown="1">
+
+**Status and Maturity**
+
+This implementation guide is a **draft** (version 0.1.0, CI build) at **FHIR Maturity Model (FMM) level 0** — initial, pre-implementation. The content has not undergone WHO SMART Guidelines submission, has not been reviewed by clinical subject-matter experts, and all register entries are in `proposed` status. Material changes are expected in subsequent versions until the first formally-released version is cut.
+
+**Versioning policy**
+
+This IG follows [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html): `major.minor.patch`. All FHIR artifacts defined in the IG inherit the IG's version number. Material changes to any artifact trigger a patch bump; backwards-incompatible changes trigger a major bump. See the [Change Log](changes.html) for version history.
+
+</div>
+
 This implementation guide presents Layer 2 (decision logic) artifacts for cervical cancer screening, modelling **Algorithm 5** (HPV DNA primary screening with VIA triage) from the [WHO 2021 Cervical Cancer Screening Guideline (2nd ed.)](https://www.who.int/publications/i/item/9789240030824).
 
 ### What this IG contains

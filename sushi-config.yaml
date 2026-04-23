@@ -20,6 +20,7 @@ license: CC-BY-4.0
 menu:
   Home: index.html
   Components:
+    Concepts: concepts.html
     Interventions & Recommendations (1): interventions-and-recommendations.html
     Generic Personas (2): generic-personas.html
     User Scenarios (3): user-scenarios.html
@@ -45,12 +46,17 @@ menu:
     HIV Status Absent/Unknown (cc-008): cc-008.html
   Resources:
     Downloads: downloads.html
+    Change Log: changes.html
     Dependencies: dependencies.html
     License: license.html
 
 pages:
   index.md:
     title: Home
+  concepts.md:
+    title: Concepts
+  changes.md:
+    title: Change Log
   interventions-and-recommendations.md:
     title: Interventions & Recommendations
   generic-personas.md:
