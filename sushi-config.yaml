@@ -44,6 +44,7 @@ menu:
     Decision Tables: decision-tables.html
   Methodology: methodology.html
   Downloads: downloads.html
+  Dependencies: dependencies.html
 
 pages:
   index.md:
@@ -64,6 +65,8 @@ pages:
     title: Requirements
   license.md:
     title: License
+  dependencies.md:
+    title: Dependencies
   register.md:
     title: Interpretation Register
   cc-000.md:
