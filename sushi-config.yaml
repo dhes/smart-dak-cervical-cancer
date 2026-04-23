@@ -19,32 +19,34 @@ license: CC-BY-4.0
 
 menu:
   Home: index.html
-  Interventions & Recommendations: interventions-and-recommendations.html
-  Generic Personas: generic-personas.html
-  User Scenarios: user-scenarios.html
-  Business Processes: business-processes.html
-  Scheduling Logic: scheduling-logic.html
-  Indicators: indicators.html
-  Requirements: requirements.html
-  Algorithm Selection: algorithm-selection.html
-  Business Requirements:
-    Interpretation Register: register.html
+  Components:
+    Interventions & Recommendations (1): interventions-and-recommendations.html
+    Generic Personas (2): generic-personas.html
+    User Scenarios (3): user-scenarios.html
+    Business Processes (4): business-processes.html
+    Data Dictionary (5): dictionary.html
+    Decision Logic (6): decision-logic.html
+    Scheduling Logic (7): scheduling-logic.html
+    Indicators (8): indicators.html
+    Requirements (9): requirements.html
+  Methodology:
+    Methodology: methodology.html
+    Algorithm Selection: algorithm-selection.html
+  Interpretation Register:
+    Overview: register.html
     Scope Declaration (cc-000): cc-000.html
+    Population and Inclusion (cc-001): cc-001.html
     WLHIV Operationalisation (cc-002): cc-002.html
     Cancer Suspected (cc-003): cc-003.html
     Vaccination Status (cc-004): cc-004.html
     Screening Interval (cc-005): cc-005.html
-    Population and Inclusion (cc-001): cc-001.html
     Pregnancy Handling (cc-006): cc-006.html
     Sexual Exposure Precondition (cc-007): cc-007.html
     HIV Status Absent/Unknown (cc-008): cc-008.html
-  Data Dictionary: dictionary.html
-  Decision Logic:
-    Overview: decision-logic.html
-    Decision Tables: decision-tables.html
-  Methodology: methodology.html
-  Downloads: downloads.html
-  Dependencies: dependencies.html
+  Resources:
+    Downloads: downloads.html
+    Dependencies: dependencies.html
+    License: license.html
 
 pages:
   index.md:
