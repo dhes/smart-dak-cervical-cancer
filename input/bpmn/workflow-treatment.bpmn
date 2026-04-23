@@ -1,34 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
-                  xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
-                  xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
-                  xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
-                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                  id="Definitions_Treatment"
-                  targetNamespace="http://dhes.github.io/smart-dak-cervical-cancer/bpmn/treatment"
-                  exporter="Hand-authored for smart-dak-cervical-cancer"
-                  exporterVersion="1.0">
-
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_Treatment" targetNamespace="http://dhes.github.io/smart-dak-cervical-cancer/bpmn/treatment" exporter="Hand-authored for smart-dak-cervical-cancer" exporterVersion="1.0">
   <bpmn:collaboration id="Collaboration_Treatment">
-    <bpmn:participant id="Participant_FacilityTreatment"
-                      name="Facility"
-                      processRef="Process_FacilityTreatment"/>
-    <bpmn:participant id="Participant_DistrictHospital"
-                      name="District Hospital"
-                      processRef="Process_DistrictHospital"/>
-    <bpmn:participant id="Participant_ClientTreatment"
-                      name="Client"
-                      processRef="Process_ClientTreatment"/>
-    <bpmn:messageFlow id="MessageFlow_ReferralCancer"
-                      name="Referral for suspected cancer"
-                      sourceRef="Task_ReferCancer"
-                      targetRef="Participant_DistrictHospital"/>
-    <bpmn:messageFlow id="MessageFlow_SendForExcision"
-                      name="Sent for excision"
-                      sourceRef="EndEvent_SentForExcision"
-                      targetRef="StartEvent_ReceivedForExcision"/>
+    <bpmn:participant id="Participant_FacilityTreatment" name="Facility" processRef="Process_FacilityTreatment" />
+    <bpmn:participant id="Participant_DistrictHospital" name="District Hospital" processRef="Process_DistrictHospital" />
+    <bpmn:participant id="Participant_ClientTreatment" name="Client" processRef="Process_ClientTreatment" />
+    <bpmn:messageFlow id="MessageFlow_ReferralCancer" name="Referral&#10;for suspected cancer" sourceRef="Task_ReferCancer" targetRef="Participant_DistrictHospital" />
+    <bpmn:messageFlow id="MessageFlow_SendForExcision" name="Sent for excision" sourceRef="EndEvent_SentForExcision" targetRef="StartEvent_ReceivedForExcision" />
   </bpmn:collaboration>
-
   <bpmn:process id="Process_FacilityTreatment" isExecutable="false">
     <bpmn:laneSet id="LaneSet_FacilityTreatment">
       <bpmn:lane id="Lane_NurseTreatment" name="Nurse/midwife">
@@ -46,80 +24,64 @@
         <bpmn:flowNodeRef>EndEvent_TreatmentDeferred</bpmn:flowNodeRef>
       </bpmn:lane>
     </bpmn:laneSet>
-
     <bpmn:startEvent id="StartEvent_TreatmentTrigger" name="Triage-positive or suspected cancer">
       <bpmn:outgoing>Flow_TR1</bpmn:outgoing>
     </bpmn:startEvent>
-
-    <bpmn:exclusiveGateway id="Gateway_Suspected" name="Suspected invasive cancer?">
+    <bpmn:exclusiveGateway id="Gateway_Suspected" name="Suspected invasive&#10;cancer?">
       <bpmn:incoming>Flow_TR1</bpmn:incoming>
       <bpmn:outgoing>Flow_TR_Suspected</bpmn:outgoing>
       <bpmn:outgoing>Flow_TR_NotSuspected</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-
     <bpmn:task id="Task_ReferCancer" name="Refer for suspected invasive cancer">
       <bpmn:incoming>Flow_TR_Suspected</bpmn:incoming>
       <bpmn:outgoing>Flow_TR_ToReferredEnd</bpmn:outgoing>
     </bpmn:task>
-
     <bpmn:endEvent id="EndEvent_ReferredCancer" name="Referred — cascade exit">
       <bpmn:incoming>Flow_TR_ToReferredEnd</bpmn:incoming>
     </bpmn:endEvent>
-
-    <bpmn:callActivity id="CallActivity_CounsellingTreatment"
-                       name="Counselling and informed consent"
-                       calledElement="Process_CounsellingConsent">
+    <bpmn:callActivity id="CallActivity_CounsellingTreatment" name="Counselling and informed consent" calledElement="Process_CounsellingConsent">
       <bpmn:incoming>Flow_TR_NotSuspected</bpmn:incoming>
       <bpmn:outgoing>Flow_TR_CounsellingToDetermine</bpmn:outgoing>
     </bpmn:callActivity>
-
     <bpmn:task id="Task_DetermineEligibility" name="Determine treatment eligibility">
       <bpmn:incoming>Flow_TR_CounsellingToDetermine</bpmn:incoming>
       <bpmn:outgoing>Flow_TR_DetermineToDisposition</bpmn:outgoing>
     </bpmn:task>
-
+    <bpmn:sequenceFlow id="Flow_TR1" sourceRef="StartEvent_TreatmentTrigger" targetRef="Gateway_Suspected" />
+    <bpmn:sequenceFlow id="Flow_TR_Suspected" name="Yes" sourceRef="Gateway_Suspected" targetRef="Task_ReferCancer" />
+    <bpmn:sequenceFlow id="Flow_TR_NotSuspected" name="No" sourceRef="Gateway_Suspected" targetRef="CallActivity_CounsellingTreatment" />
+    <bpmn:sequenceFlow id="Flow_TR_ToReferredEnd" sourceRef="Task_ReferCancer" targetRef="EndEvent_ReferredCancer" />
+    <bpmn:sequenceFlow id="Flow_TR_CounsellingToDetermine" sourceRef="CallActivity_CounsellingTreatment" targetRef="Task_DetermineEligibility" />
+    <bpmn:sequenceFlow id="Flow_TR_DetermineToDisposition" sourceRef="Task_DetermineEligibility" targetRef="Gateway_Disposition" />
     <bpmn:exclusiveGateway id="Gateway_Disposition" name="Disposition?">
       <bpmn:incoming>Flow_TR_DetermineToDisposition</bpmn:incoming>
       <bpmn:outgoing>Flow_TR_Ablation</bpmn:outgoing>
       <bpmn:outgoing>Flow_TR_NonAblation</bpmn:outgoing>
       <bpmn:outgoing>Flow_TR_Pregnant</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-
     <bpmn:task id="Task_ThermalAblation" name="Perform thermal ablation">
       <bpmn:incoming>Flow_TR_Ablation</bpmn:incoming>
       <bpmn:outgoing>Flow_TR_ToAblationEnd</bpmn:outgoing>
     </bpmn:task>
-
     <bpmn:endEvent id="EndEvent_AblationDelivered" name="Treatment delivered (ablation)">
       <bpmn:incoming>Flow_TR_ToAblationEnd</bpmn:incoming>
     </bpmn:endEvent>
-
     <bpmn:endEvent id="EndEvent_SentForExcision" name="Sent for excision">
       <bpmn:incoming>Flow_TR_NonAblation</bpmn:incoming>
     </bpmn:endEvent>
-
     <bpmn:task id="Task_DeferTreatment" name="Defer treatment (pregnancy)">
       <bpmn:incoming>Flow_TR_Pregnant</bpmn:incoming>
       <bpmn:outgoing>Flow_TR_ToDeferredEnd</bpmn:outgoing>
     </bpmn:task>
-
     <bpmn:endEvent id="EndEvent_TreatmentDeferred" name="Treatment deferred">
       <bpmn:incoming>Flow_TR_ToDeferredEnd</bpmn:incoming>
     </bpmn:endEvent>
-
-    <bpmn:sequenceFlow id="Flow_TR1" sourceRef="StartEvent_TreatmentTrigger" targetRef="Gateway_Suspected"/>
-    <bpmn:sequenceFlow id="Flow_TR_Suspected" name="Yes" sourceRef="Gateway_Suspected" targetRef="Task_ReferCancer"/>
-    <bpmn:sequenceFlow id="Flow_TR_NotSuspected" name="No" sourceRef="Gateway_Suspected" targetRef="CallActivity_CounsellingTreatment"/>
-    <bpmn:sequenceFlow id="Flow_TR_ToReferredEnd" sourceRef="Task_ReferCancer" targetRef="EndEvent_ReferredCancer"/>
-    <bpmn:sequenceFlow id="Flow_TR_CounsellingToDetermine" sourceRef="CallActivity_CounsellingTreatment" targetRef="Task_DetermineEligibility"/>
-    <bpmn:sequenceFlow id="Flow_TR_DetermineToDisposition" sourceRef="Task_DetermineEligibility" targetRef="Gateway_Disposition"/>
-    <bpmn:sequenceFlow id="Flow_TR_Ablation" name="Ablation-eligible" sourceRef="Gateway_Disposition" targetRef="Task_ThermalAblation"/>
-    <bpmn:sequenceFlow id="Flow_TR_NonAblation" name="Non-ablation-eligible" sourceRef="Gateway_Disposition" targetRef="EndEvent_SentForExcision"/>
-    <bpmn:sequenceFlow id="Flow_TR_Pregnant" name="Pregnant" sourceRef="Gateway_Disposition" targetRef="Task_DeferTreatment"/>
-    <bpmn:sequenceFlow id="Flow_TR_ToAblationEnd" sourceRef="Task_ThermalAblation" targetRef="EndEvent_AblationDelivered"/>
-    <bpmn:sequenceFlow id="Flow_TR_ToDeferredEnd" sourceRef="Task_DeferTreatment" targetRef="EndEvent_TreatmentDeferred"/>
+    <bpmn:sequenceFlow id="Flow_TR_Ablation" name="Ablation-&#10;eligible" sourceRef="Gateway_Disposition" targetRef="Task_ThermalAblation" />
+    <bpmn:sequenceFlow id="Flow_TR_NonAblation" name="Not ablation-eligible" sourceRef="Gateway_Disposition" targetRef="EndEvent_SentForExcision" />
+    <bpmn:sequenceFlow id="Flow_TR_Pregnant" name="Pregnant" sourceRef="Gateway_Disposition" targetRef="Task_DeferTreatment" />
+    <bpmn:sequenceFlow id="Flow_TR_ToAblationEnd" sourceRef="Task_ThermalAblation" targetRef="EndEvent_AblationDelivered" />
+    <bpmn:sequenceFlow id="Flow_TR_ToDeferredEnd" sourceRef="Task_DeferTreatment" targetRef="EndEvent_TreatmentDeferred" />
   </bpmn:process>
-
   <bpmn:process id="Process_DistrictHospital" isExecutable="false">
     <bpmn:laneSet id="LaneSet_DistrictHospital">
       <bpmn:lane id="Lane_AdvancedClinician" name="Advanced clinician">
@@ -131,275 +93,256 @@
         <bpmn:flowNodeRef>EndEvent_CKCDelivered</bpmn:flowNodeRef>
       </bpmn:lane>
     </bpmn:laneSet>
-
     <bpmn:startEvent id="StartEvent_ReceivedForExcision" name="Received for excision">
       <bpmn:outgoing>Flow_DH1</bpmn:outgoing>
-      <bpmn:messageEventDefinition id="MessageEventDef_ReceivedForExcision"/>
+      <bpmn:messageEventDefinition id="MessageEventDef_ReceivedForExcision" />
     </bpmn:startEvent>
-
     <bpmn:exclusiveGateway id="Gateway_LesionType" name="Lesion type?">
       <bpmn:incoming>Flow_DH1</bpmn:incoming>
       <bpmn:outgoing>Flow_DH_Precancer</bpmn:outgoing>
       <bpmn:outgoing>Flow_DH_AIS</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-
     <bpmn:task id="Task_LLETZ" name="Perform LLETZ/LEEP">
       <bpmn:incoming>Flow_DH_Precancer</bpmn:incoming>
       <bpmn:outgoing>Flow_DH_ToLLETZEnd</bpmn:outgoing>
     </bpmn:task>
-
     <bpmn:task id="Task_CKC" name="Perform cold-knife conization">
       <bpmn:incoming>Flow_DH_AIS</bpmn:incoming>
       <bpmn:outgoing>Flow_DH_ToCKCEnd</bpmn:outgoing>
     </bpmn:task>
-
     <bpmn:endEvent id="EndEvent_LLETZDelivered" name="Treatment delivered (LLETZ)">
       <bpmn:incoming>Flow_DH_ToLLETZEnd</bpmn:incoming>
     </bpmn:endEvent>
-
     <bpmn:endEvent id="EndEvent_CKCDelivered" name="Treatment delivered (CKC)">
       <bpmn:incoming>Flow_DH_ToCKCEnd</bpmn:incoming>
     </bpmn:endEvent>
-
-    <bpmn:sequenceFlow id="Flow_DH1" sourceRef="StartEvent_ReceivedForExcision" targetRef="Gateway_LesionType"/>
-    <bpmn:sequenceFlow id="Flow_DH_Precancer" name="Precancer" sourceRef="Gateway_LesionType" targetRef="Task_LLETZ"/>
-    <bpmn:sequenceFlow id="Flow_DH_AIS" name="AIS" sourceRef="Gateway_LesionType" targetRef="Task_CKC"/>
-    <bpmn:sequenceFlow id="Flow_DH_ToLLETZEnd" sourceRef="Task_LLETZ" targetRef="EndEvent_LLETZDelivered"/>
-    <bpmn:sequenceFlow id="Flow_DH_ToCKCEnd" sourceRef="Task_CKC" targetRef="EndEvent_CKCDelivered"/>
+    <bpmn:sequenceFlow id="Flow_DH1" sourceRef="StartEvent_ReceivedForExcision" targetRef="Gateway_LesionType" />
+    <bpmn:sequenceFlow id="Flow_DH_Precancer" name="Precancer" sourceRef="Gateway_LesionType" targetRef="Task_LLETZ" />
+    <bpmn:sequenceFlow id="Flow_DH_AIS" name="AIS" sourceRef="Gateway_LesionType" targetRef="Task_CKC" />
+    <bpmn:sequenceFlow id="Flow_DH_ToLLETZEnd" sourceRef="Task_LLETZ" targetRef="EndEvent_LLETZDelivered" />
+    <bpmn:sequenceFlow id="Flow_DH_ToCKCEnd" sourceRef="Task_CKC" targetRef="EndEvent_CKCDelivered" />
   </bpmn:process>
-
   <bpmn:process id="Process_ClientTreatment" isExecutable="false">
     <bpmn:laneSet id="LaneSet_ClientTreatment">
-      <bpmn:lane id="Lane_TargetClientTreatment" name="Target client"/>
+      <bpmn:lane id="Lane_TargetClientTreatment" name="Target client" />
     </bpmn:laneSet>
   </bpmn:process>
-
   <bpmndi:BPMNDiagram id="BPMNDiagram_Treatment">
     <bpmndi:BPMNPlane id="BPMNPlane_Treatment" bpmnElement="Collaboration_Treatment">
-
       <bpmndi:BPMNShape id="Participant_FacilityTreatment_di" bpmnElement="Participant_FacilityTreatment" isHorizontal="true">
-        <dc:Bounds x="160" y="80" width="1200" height="420"/>
+        <dc:Bounds x="160" y="80" width="1200" height="420" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_NurseTreatment_di" bpmnElement="Lane_NurseTreatment" isHorizontal="true">
-        <dc:Bounds x="190" y="80" width="1170" height="420"/>
+        <dc:Bounds x="190" y="80" width="1170" height="420" />
       </bpmndi:BPMNShape>
-
       <bpmndi:BPMNShape id="StartEvent_TreatmentTrigger_di" bpmnElement="StartEvent_TreatmentTrigger">
-        <dc:Bounds x="240" y="262" width="36" height="36"/>
+        <dc:Bounds x="240" y="262" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="216" y="305" width="90" height="40"/>
+          <dc:Bounds x="216" y="305" width="90" height="40" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_Suspected_di" bpmnElement="Gateway_Suspected" isMarkerVisible="true">
-        <dc:Bounds x="320" y="255" width="50" height="50"/>
+        <dc:Bounds x="320" y="255" width="50" height="50" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="295" y="220" width="100" height="27"/>
+          <dc:Bounds x="284" y="230" width="52" height="40" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-
       <bpmndi:BPMNShape id="Task_ReferCancer_di" bpmnElement="Task_ReferCancer">
-        <dc:Bounds x="420" y="120" width="140" height="80"/>
+        <dc:Bounds x="420" y="120" width="140" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="EndEvent_ReferredCancer_di" bpmnElement="EndEvent_ReferredCancer">
-        <dc:Bounds x="610" y="142" width="36" height="36"/>
+        <dc:Bounds x="610" y="142" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="586" y="185" width="90" height="27"/>
+          <dc:Bounds x="586" y="185" width="90" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-
       <bpmndi:BPMNShape id="CallActivity_CounsellingTreatment_di" bpmnElement="CallActivity_CounsellingTreatment">
-        <dc:Bounds x="420" y="240" width="140" height="80"/>
+        <dc:Bounds x="420" y="240" width="140" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_DetermineEligibility_di" bpmnElement="Task_DetermineEligibility">
-        <dc:Bounds x="600" y="240" width="140" height="80"/>
+        <dc:Bounds x="600" y="240" width="140" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_Disposition_di" bpmnElement="Gateway_Disposition" isMarkerVisible="true">
-        <dc:Bounds x="780" y="255" width="50" height="50"/>
+        <dc:Bounds x="805" y="255" width="50" height="50" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="770" y="220" width="70" height="14"/>
+          <dc:Bounds x="754" y="256" width="60" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-
       <bpmndi:BPMNShape id="Task_ThermalAblation_di" bpmnElement="Task_ThermalAblation">
-        <dc:Bounds x="880" y="140" width="140" height="80"/>
+        <dc:Bounds x="905" y="140" width="140" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="EndEvent_AblationDelivered_di" bpmnElement="EndEvent_AblationDelivered">
-        <dc:Bounds x="1070" y="162" width="36" height="36"/>
+        <dc:Bounds x="1095" y="162" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1048" y="205" width="90" height="27"/>
+          <dc:Bounds x="1093" y="205" width="50" height="40" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="EndEvent_SentForExcision_di" bpmnElement="EndEvent_SentForExcision">
-        <dc:Bounds x="900" y="262" width="36" height="36"/>
+        <dc:Bounds x="925" y="262" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="878" y="305" width="90" height="27"/>
+          <dc:Bounds x="907" y="305" width="82" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_DeferTreatment_di" bpmnElement="Task_DeferTreatment">
-        <dc:Bounds x="880" y="360" width="140" height="80"/>
+        <dc:Bounds x="905" y="360" width="140" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="EndEvent_TreatmentDeferred_di" bpmnElement="EndEvent_TreatmentDeferred">
-        <dc:Bounds x="1070" y="382" width="36" height="36"/>
+        <dc:Bounds x="1095" y="382" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1046" y="425" width="90" height="27"/>
+          <dc:Bounds x="1091" y="425" width="50" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-
       <bpmndi:BPMNEdge id="Flow_TR1_di" bpmnElement="Flow_TR1">
-        <di:waypoint x="276" y="280"/>
-        <di:waypoint x="320" y="280"/>
+        <di:waypoint x="276" y="280" />
+        <di:waypoint x="320" y="280" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_TR_Suspected_di" bpmnElement="Flow_TR_Suspected">
-        <di:waypoint x="345" y="255"/>
-        <di:waypoint x="345" y="160"/>
-        <di:waypoint x="420" y="160"/>
+        <di:waypoint x="345" y="255" />
+        <di:waypoint x="345" y="160" />
+        <di:waypoint x="420" y="160" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="355" y="198" width="30" height="14"/>
+          <dc:Bounds x="355" y="198" width="30" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_TR_NotSuspected_di" bpmnElement="Flow_TR_NotSuspected">
-        <di:waypoint x="370" y="280"/>
-        <di:waypoint x="420" y="280"/>
+        <di:waypoint x="370" y="280" />
+        <di:waypoint x="420" y="280" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="380" y="262" width="30" height="14"/>
+          <dc:Bounds x="380" y="262" width="30" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_TR_ToReferredEnd_di" bpmnElement="Flow_TR_ToReferredEnd">
-        <di:waypoint x="560" y="160"/>
-        <di:waypoint x="610" y="160"/>
+        <di:waypoint x="560" y="160" />
+        <di:waypoint x="610" y="160" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_TR_CounsellingToDetermine_di" bpmnElement="Flow_TR_CounsellingToDetermine">
-        <di:waypoint x="560" y="280"/>
-        <di:waypoint x="600" y="280"/>
+        <di:waypoint x="560" y="280" />
+        <di:waypoint x="600" y="280" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_TR_DetermineToDisposition_di" bpmnElement="Flow_TR_DetermineToDisposition">
-        <di:waypoint x="740" y="280"/>
-        <di:waypoint x="780" y="280"/>
+        <di:waypoint x="740" y="280" />
+        <di:waypoint x="805" y="280" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_TR_Ablation_di" bpmnElement="Flow_TR_Ablation">
-        <di:waypoint x="805" y="255"/>
-        <di:waypoint x="805" y="180"/>
-        <di:waypoint x="880" y="180"/>
+        <di:waypoint x="830" y="255" />
+        <di:waypoint x="830" y="180" />
+        <di:waypoint x="905" y="180" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="810" y="218" width="100" height="14"/>
+          <dc:Bounds x="849" y="211" width="44" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_TR_NonAblation_di" bpmnElement="Flow_TR_NonAblation">
-        <di:waypoint x="830" y="280"/>
-        <di:waypoint x="900" y="280"/>
+        <di:waypoint x="855" y="280" />
+        <di:waypoint x="925" y="280" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="840" y="262" width="110" height="14"/>
+          <dc:Bounds x="858" y="251" width="63" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_TR_Pregnant_di" bpmnElement="Flow_TR_Pregnant">
-        <di:waypoint x="805" y="305"/>
-        <di:waypoint x="805" y="400"/>
-        <di:waypoint x="880" y="400"/>
+        <di:waypoint x="830" y="305" />
+        <di:waypoint x="830" y="400" />
+        <di:waypoint x="905" y="400" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="815" y="343" width="60" height="14"/>
+          <dc:Bounds x="848" y="343" width="45" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_TR_ToAblationEnd_di" bpmnElement="Flow_TR_ToAblationEnd">
-        <di:waypoint x="1020" y="180"/>
-        <di:waypoint x="1070" y="180"/>
+        <di:waypoint x="1045" y="180" />
+        <di:waypoint x="1095" y="180" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_TR_ToDeferredEnd_di" bpmnElement="Flow_TR_ToDeferredEnd">
-        <di:waypoint x="1020" y="400"/>
-        <di:waypoint x="1070" y="400"/>
+        <di:waypoint x="1045" y="400" />
+        <di:waypoint x="1095" y="400" />
       </bpmndi:BPMNEdge>
-
       <bpmndi:BPMNShape id="Participant_DistrictHospital_di" bpmnElement="Participant_DistrictHospital" isHorizontal="true">
-        <dc:Bounds x="160" y="540" width="1200" height="300"/>
+        <dc:Bounds x="160" y="540" width="1200" height="300" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_AdvancedClinician_di" bpmnElement="Lane_AdvancedClinician" isHorizontal="true">
-        <dc:Bounds x="190" y="540" width="1170" height="300"/>
+        <dc:Bounds x="190" y="540" width="1170" height="300" />
       </bpmndi:BPMNShape>
-
       <bpmndi:BPMNShape id="StartEvent_ReceivedForExcision_di" bpmnElement="StartEvent_ReceivedForExcision">
-        <dc:Bounds x="240" y="672" width="36" height="36"/>
+        <dc:Bounds x="240" y="672" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="216" y="715" width="90" height="27"/>
+          <dc:Bounds x="216" y="715" width="90" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_LesionType_di" bpmnElement="Gateway_LesionType" isMarkerVisible="true">
-        <dc:Bounds x="330" y="665" width="50" height="50"/>
+        <dc:Bounds x="330" y="665" width="50" height="50" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="315" y="630" width="80" height="14"/>
+          <dc:Bounds x="278" y="663" width="63" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_LLETZ_di" bpmnElement="Task_LLETZ">
-        <dc:Bounds x="440" y="570" width="140" height="80"/>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="EndEvent_LLETZDelivered_di" bpmnElement="EndEvent_LLETZDelivered">
-        <dc:Bounds x="630" y="592" width="36" height="36"/>
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="608" y="635" width="90" height="27"/>
-        </bpmndi:BPMNLabel>
+        <dc:Bounds x="440" y="570" width="140" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Task_CKC_di" bpmnElement="Task_CKC">
-        <dc:Bounds x="440" y="720" width="140" height="80"/>
+        <dc:Bounds x="440" y="720" width="140" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="EndEvent_CKCDelivered_di" bpmnElement="EndEvent_CKCDelivered">
-        <dc:Bounds x="630" y="742" width="36" height="36"/>
+      <bpmndi:BPMNShape id="EndEvent_LLETZDelivered_di" bpmnElement="EndEvent_LLETZDelivered">
+        <dc:Bounds x="630" y="592" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="610" y="785" width="90" height="27"/>
+          <dc:Bounds x="608" y="635" width="90" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-
+      <bpmndi:BPMNShape id="EndEvent_CKCDelivered_di" bpmnElement="EndEvent_CKCDelivered">
+        <dc:Bounds x="630" y="742" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="610" y="785" width="90" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_DH1_di" bpmnElement="Flow_DH1">
-        <di:waypoint x="276" y="690"/>
-        <di:waypoint x="330" y="690"/>
+        <di:waypoint x="276" y="690" />
+        <di:waypoint x="330" y="690" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_DH_Precancer_di" bpmnElement="Flow_DH_Precancer">
-        <di:waypoint x="355" y="665"/>
-        <di:waypoint x="355" y="610"/>
-        <di:waypoint x="440" y="610"/>
+        <di:waypoint x="355" y="665" />
+        <di:waypoint x="355" y="610" />
+        <di:waypoint x="440" y="610" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="365" y="628" width="70" height="14"/>
+          <dc:Bounds x="365" y="628" width="70" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_DH_AIS_di" bpmnElement="Flow_DH_AIS">
-        <di:waypoint x="355" y="715"/>
-        <di:waypoint x="355" y="760"/>
-        <di:waypoint x="440" y="760"/>
+        <di:waypoint x="355" y="715" />
+        <di:waypoint x="355" y="760" />
+        <di:waypoint x="440" y="760" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="365" y="728" width="40" height="14"/>
+          <dc:Bounds x="365" y="728" width="40" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_DH_ToLLETZEnd_di" bpmnElement="Flow_DH_ToLLETZEnd">
-        <di:waypoint x="580" y="610"/>
-        <di:waypoint x="630" y="610"/>
+        <di:waypoint x="580" y="610" />
+        <di:waypoint x="630" y="610" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_DH_ToCKCEnd_di" bpmnElement="Flow_DH_ToCKCEnd">
-        <di:waypoint x="580" y="760"/>
-        <di:waypoint x="630" y="760"/>
+        <di:waypoint x="580" y="760" />
+        <di:waypoint x="630" y="760" />
       </bpmndi:BPMNEdge>
-
       <bpmndi:BPMNShape id="Participant_ClientTreatment_di" bpmnElement="Participant_ClientTreatment" isHorizontal="true">
-        <dc:Bounds x="160" y="880" width="1200" height="100"/>
+        <dc:Bounds x="160" y="880" width="1200" height="100" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_TargetClientTreatment_di" bpmnElement="Lane_TargetClientTreatment" isHorizontal="true">
-        <dc:Bounds x="190" y="880" width="1170" height="100"/>
+        <dc:Bounds x="190" y="880" width="1170" height="100" />
       </bpmndi:BPMNShape>
-
       <bpmndi:BPMNEdge id="MessageFlow_ReferralCancer_di" bpmnElement="MessageFlow_ReferralCancer">
-        <di:waypoint x="490" y="200"/>
-        <di:waypoint x="490" y="540"/>
+        <di:waypoint x="490" y="120" />
+        <di:waypoint x="490" y="100" />
+        <di:waypoint x="1210" y="100" />
+        <di:waypoint x="1210" y="540" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="430" y="360" width="130" height="14"/>
+          <dc:Bounds x="1214" y="311" width="67" height="40" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="MessageFlow_SendForExcision_di" bpmnElement="MessageFlow_SendForExcision">
-        <di:waypoint x="918" y="298"/>
-        <di:waypoint x="918" y="470"/>
-        <di:waypoint x="258" y="470"/>
-        <di:waypoint x="258" y="672"/>
+        <di:waypoint x="961" y="280" />
+        <di:waypoint x="1170" y="280" />
+        <di:waypoint x="1170" y="470" />
+        <di:waypoint x="258" y="470" />
+        <di:waypoint x="258" y="672" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="530" y="452" width="90" height="14"/>
+          <dc:Bounds x="639" y="452" width="82" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
-
 </bpmn:definitions>
