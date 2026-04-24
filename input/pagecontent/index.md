@@ -14,7 +14,7 @@ This implementation guide presents Layer 2 (decision logic) artifacts for cervic
 
 ### What this IG contains
 
-This IG publishes the L2 artifacts of a cervical cancer screening Digital Adaptation Kit (DAK) authored using a textualist/purposive methodology:
+This IG publishes the L2 artifacts of a cervical cancer screening Digital Adaptation Kit (DAK), repackaging the WHO 2021 guideline using textualist and purposive interpretive strategies:
 
 - **Interpretation Register** — 8 entries documenting every interpretive decision made in translating the WHO guideline narrative (L1) into decision logic (L2). Each entry records the options considered, the option selected, and the rationale.
 - **Core Data Dictionary** — 19 data elements covering every input and output of the decision logic, with linkages to harvested elements from existing WHO SMART DAKs (HIV, ANC, Immunizations).
@@ -42,7 +42,7 @@ The IG is organised by reading order, not by entry number. A reader encountering
 
 ### Background
 
-This DAK was authored as a case study for a methodology that examines how WHO guideline narratives are translated into computable decision logic, with particular attention to the interpretive decisions that are typically invisible in published SMART DAKs. The methodology is summarized on the [Methodology](methodology.html) page.
+This DAK repackages and integrates the WHO 2021 Cervical Cancer Screening Guideline into L2 artifacts per [Section 3.1 of the WHO SMART Guidelines IG Starter Kit](https://smart.who.int/ig-starter-kit/l2_dak_authoring.html). The interpretive choices made during repackaging are documented as register entries (`cc-000` through `cc-008`); the two interpretive strategies applied — textualist and purposive — are explained on the [Methodology](methodology.html) page.
 
 ### Status
 

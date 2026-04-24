@@ -10,7 +10,7 @@ This document walks through the WHO 2021 cervical cancer screening guideline's r
 
 > "Given what you know about our country, which of the seven screening algorithms should we look at first?"
 
-The answer is not a single algorithm. The guideline deliberately leaves the triage method to country discretion. But it narrows the field systematically, and this document traces the narrowing logic so that it is visible rather than implicit in the case study's choice of Algorithm 5.
+The answer is not a single algorithm. The guideline deliberately leaves the triage method to country discretion. But it narrows the field systematically, and this document traces the narrowing logic so that it is visible rather than implicit in this DAK's choice of Algorithm 5.
 
 This document supports the scope declaration in [`../interpretation-register/cc-000-scope-declaration.md`](cc-000.html), which discloses the choice of Algorithm 5 and its biases. That entry summarises; this document shows the work.
 
@@ -183,7 +183,7 @@ For countries with moderate-to-high HIV prevalence, limited laboratory infrastru
 
 The choice between Algorithms 4 and 5 is then a platform question (does the HPV DNA test support genotyping?) and a workforce question (is the existing VIA workforce adequate for triage-level performance?), not an evidence question. The guideline explicitly declines to answer it.
 
-## Methodology note: when does a guideline require an algorithm selection step?
+## Comparison with other WHO SMART DAKs
 
 The cervical cancer guideline's multi-algorithm structure is not unique among WHO guidelines — but the fact that it **leaves the selection open** may be. A comparison across three DAK domains illustrates the point.
 
@@ -201,17 +201,15 @@ The three cases represent three distinct structural patterns:
 | **Additive composition** | HIV (2024) | Multiple guidelines, single cascade with parameter-level country choices | No — no structural alternatives to choose among |
 | **Guideline delegates** | Cervical cancer (2021) | Single guideline, multiple algorithms, selection delegated to country | **Yes** — DAK must scope to one algorithm and document the choice |
 
-The distinction that matters for DAK authoring methodology is not whether the source guideline considered alternative pathways — most do — but whether the guideline **selects among them or delegates the selection to countries**. When the guideline selects (as ANC did), the DAK can proceed directly to interpretive work within the chosen pathway. When the source material composes additively (as HIV does), there is no structural fork to resolve. When the guideline delegates (as cervical cancer does), the DAK authoring process needs an explicit upstream step to document which pathway was chosen, on what grounds, and with what consequences for the DAK's scope.
+The three cases differ in how the DAK author engages with the source material. When a source guideline **selects among alternative pathways** (as the ANC guideline did by recommending the 8-contact model), the DAK proceeds within that chosen pathway. When the source material **composes additively** (as the HIV guidelines do, across multiple publications), there are no structural alternatives to choose among. When the guideline **delegates the selection to countries** (as the 2021 cervical cancer guideline does), the DAK has to pick a pathway and document the choice — which is what this DAK does for Algorithm 5 in [cc-000](cc-000.html).
 
-The current DAK authoring methodology ([`authoring-workflow.md` (see [Methodology](methodology.html))](https://github.com/dhes/dak-authoring-methodology/blob/main/methodology/authoring-workflow.md)) does not include such a step, and the register schema ([`register-schema.md` (see [Methodology](methodology.html))](https://github.com/dhes/dak-authoring-methodology/blob/main/methodology/register-schema.md)) has no interpretive category for it. The `scope` category introduced for `cc-000` is the closest approximation, but it treats the selection as a scoping boundary rather than as a structured decision with documented alternatives and selection criteria. The three-DAK comparison suggests the gap is real but narrow: it surfaces only for guidelines that present discrete alternative pathways and decline to choose among them. Whether this pattern recurs in other WHO guideline domains (STI, immunisations, family planning) has not been verified in this analysis.
+## Implications for this DAK
 
-## Implications for this case study
+This analysis supports the choice of Algorithm 5 as this DAK's modelled algorithm, while making the reasoning path explicit. The choice is not arbitrary and not driven by evidence-preference — it is driven by the infrastructure-dependent narrowing the guideline itself prescribes.
 
-This analysis supports the choice of Algorithm 5 as the case study's modelled algorithm, while making the reasoning path explicit. The choice is not arbitrary and not driven by evidence-preference — it is driven by the infrastructure-dependent narrowing the guideline itself prescribes.
+However, Algorithm 4 is an equally defensible choice for the same countries, and a fuller analysis might eventually model both. The difference between the two is not in the screening or treatment cascade but in the triage step, which affects the data inputs required (genotyping result versus VIA finding) and the point-of-care workflow (laboratory triage versus clinical triage).
 
-However, Algorithm 4 is an equally defensible choice for the same countries, and a complete methodology exercise might eventually model both. The difference between the two is not in the screening or treatment cascade but in the triage step, which affects the data inputs required (genotyping result versus VIA finding) and the point-of-care workflow (laboratory triage versus clinical triage).
-
-The scope declaration in `cc-000` should be read with this analysis as background. The disclosure of biases in that entry — the case study author's high-resource-setting perspective, the selection of a "comfortable middle ground" — remains valid but can now be understood alongside the systematic narrowing that makes Algorithm 5 a reasonable choice on infrastructure grounds, not just a convenient one.
+The scope declaration in `cc-000` should be read with this analysis as background. The disclosure of biases in that entry — the author's high-resource-setting perspective, the selection of a "comfortable middle ground" — remains valid but can now be understood alongside the systematic narrowing that makes Algorithm 5 a reasonable choice on infrastructure grounds, not just a convenient one.
 
 ## References
 

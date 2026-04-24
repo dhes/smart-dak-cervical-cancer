@@ -1,4 +1,4 @@
-This page defines the key terms and concepts used across the IG — clinical vocabulary from the WHO 2021 cervical cancer guideline, methodology terms introduced by this DAK's textualist/purposive framing, WHO SMART Guidelines conventions, and the programmatic frameworks (GRADE, 90-70-90) the DAK references.
+This page defines the key terms and concepts used across the IG — clinical vocabulary from the WHO 2021 cervical cancer guideline, interpretive terms this DAK uses when recording its repackaging of the guideline, WHO SMART Guidelines conventions, and the programmatic frameworks (GRADE, 90-70-90) the DAK references.
 
 Terms are grouped by domain. Where a concept has its own page in this IG, the entry links to that page rather than duplicating content.
 
@@ -19,7 +19,7 @@ Terms are grouped by domain. Where a concept has its own page in this IG, the en
 | **Cascade** | The end-to-end cervical cancer screening-and-treatment flow: invitation → primary screening → triage → treatment → follow-up. "Cascade attrition" refers to women lost between steps. |
 | **Transformation zone** | The region of the cervix where glandular epithelium meets squamous epithelium — the site where most precancerous lesions arise. Visibility of the transformation zone is one of the criteria for ablation-eligibility. |
 
-## Methodology concepts (introduced by this DAK)
+## Interpretive work
 
 | Term | Definition |
 |---|---|
@@ -30,7 +30,7 @@ Terms are grouped by domain. Where a concept has its own page in this IG, the en
 | **Scope declaration** | The register entry ([cc-000](cc-000.html)) that establishes what this DAK models, what it explicitly excludes, and what epidemiological regime it assumes. The most important single entry for understanding the DAK's applicability. |
 | **Kind 1 / Kind 2 / Kind 3** | Classification applied to Core Data Dictionary elements: **Kind 1** — authored locally to this DAK; **Kind 2** — harvested from another WHO SMART DAK with provenance; **Kind 3** — proposed for a shared canonical dictionary. Full definition in the [Data Dictionary README](README.html). |
 | **Tier A / Tier B indicators** | Classification applied to indicators (Component 8): **Tier A** — computable from period counts, feasible from paper-based registers; **Tier B** — requires longitudinal tracking by stable patient identifier. See [Indicators scope](indicators.html#scope-and-authoring-posture). |
-| **Algorithm selection analysis** | The recommendation-by-recommendation walk-through ([Algorithm Selection](algorithm-selection.html)) demonstrating how the 2021 guideline narrows the field from seven candidate algorithms to Algorithm 5 for countries with the epidemiological profile in cc-000. Methodology-layer content, not a SOP-mandated component. |
+| **Algorithm selection analysis** | The recommendation-by-recommendation walk-through ([Algorithm Selection](algorithm-selection.html)) showing how the 2021 guideline narrows the field from seven candidate algorithms to Algorithm 5 for countries with the epidemiological profile in cc-000. |
 
 ## WHO SMART Guidelines conventions
 

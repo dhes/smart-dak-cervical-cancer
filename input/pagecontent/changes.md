@@ -8,7 +8,7 @@ This page lists the versions of this IG with a brief description of the major ch
 
 - **Interpretation Register** — 9 entries (`cc-000` through `cc-008`) documenting every interpretive decision in translating the WHO 2021 guideline narrative into decision logic.
 - **Nine Tier-1 SOP components** — Interventions and Recommendations (Component 1), Generic Personas (Component 2), User Scenarios (Component 3), Business Processes and Workflows (Component 4 — including seven BPMN source files), Core Data Dictionary (Component 5), Decision Logic (Component 6 — DMN, textualist and purposive parallel artifacts), Scheduling Logic (Component 7), Indicators and Performance Metrics (Component 8 — 10 indicators), High-level Functional and Non-functional Requirements (Component 9 — 20 FRs and 12 NFRs).
-- **Algorithm Selection Analysis** — methodology-layer walk-through of why Algorithm 5 was selected for this case study's epidemiological regime.
+- **Algorithm Selection Analysis** — recommendation-by-recommendation walk-through of why Algorithm 5 was selected for the epidemiological regime this DAK assumes.
 - **Supporting narrative** — scope declaration, methodology description, data-dictionary README, glossary of concepts, dependencies, license.
 - **One placeholder FHIR resource** — `Library/cervical-cancer-decision-logic`, a semantic anchor for future L3 CQL authoring.
 

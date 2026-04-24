@@ -45,7 +45,7 @@ Every rule in both DMN files carries a `<description>` element documenting the c
 
 ### DMN format note
 
-The L2 decision logic is encoded as DMN XML executable on Camunda 8. This is a methodology choice for this case study. Published WHO DAKs represent L2 as structured decision-support tables in xlsx spreadsheet format within the DAK document. The DMN encoding is a parallel representation that enables automated testing against a DMN engine. See the [Methodology](methodology.html) page for discussion of this format choice and its implications.
+The L2 decision logic is encoded as DMN XML executable on Camunda 8. This is a format choice for this DAK. Published WHO DAKs represent L2 as structured decision-support tables in xlsx spreadsheet format within the DAK document. The DMN encoding is a parallel representation that enables automated testing against a DMN engine. See the [Methodology](methodology.html) page for discussion of this format choice and its implications.
 
 ### Decision Tables
 
