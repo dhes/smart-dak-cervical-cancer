@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Indicators - WHO SMART DAK — Cervical Cancer Screening (L2) v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+    <link href="assets/css/fa-all.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/who.css" rel="stylesheet"/>
+    <link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"9"}
+    h3,h4,h5,h6{--heading-prefix:"9"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">  <!-- container -->
+          <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+            <!--status-bar-->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Components
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="concepts.html">Concepts</a>
+      </li>
+      <li>
+        <a href="interventions-and-recommendations.html">Interventions &amp; Recommendations (1)</a>
+      </li>
+      <li>
+        <a href="generic-personas.html">Generic Personas (2)</a>
+      </li>
+      <li>
+        <a href="user-scenarios.html">User Scenarios (3)</a>
+      </li>
+      <li>
+        <a href="business-processes.html">Business Processes (4)</a>
+      </li>
+      <li>
+        <a href="dictionary.html">Data Dictionary (5)</a>
+      </li>
+      <li>
+        <a href="decision-logic.html">Decision Logic (6)</a>
+      </li>
+      <li>
+        <a href="scheduling-logic.html">Scheduling Logic (7)</a>
+      </li>
+      <li>
+        <a href="indicators.html">Indicators (8)</a>
+      </li>
+      <li>
+        <a href="requirements.html">Requirements (9)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Methodology
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="methodology.html">Methodology</a>
+      </li>
+      <li>
+        <a href="algorithm-selection.html">Algorithm Selection</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Interpretation Register
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="register.html">Overview</a>
+      </li>
+      <li>
+        <a href="cc-000.html">Scope Declaration (cc-000)</a>
+      </li>
+      <li>
+        <a href="cc-001.html">Population and Inclusion (cc-001)</a>
+      </li>
+      <li>
+        <a href="cc-002.html">WLHIV Operationalisation (cc-002)</a>
+      </li>
+      <li>
+        <a href="cc-003.html">Cancer Suspected (cc-003)</a>
+      </li>
+      <li>
+        <a href="cc-004.html">Vaccination Status (cc-004)</a>
+      </li>
+      <li>
+        <a href="cc-005.html">Screening Interval (cc-005)</a>
+      </li>
+      <li>
+        <a href="cc-006.html">Pregnancy Handling (cc-006)</a>
+      </li>
+      <li>
+        <a href="cc-007.html">Sexual Exposure Precondition (cc-007)</a>
+      </li>
+      <li>
+        <a href="cc-008.html">HIV Status Absent/Unknown (cc-008)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Resources
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="changes.html">Change Log</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+      <li>
+        <a href="license.html">License</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+              </div>  <!-- /.nav-collapse -->
+
+              <div class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch" data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;">
+                <!-- This div will be pushed to the right -->
+                <div class="language-selector" style="margin-left: auto; background-color: #00477d; color: white;">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" id="language-selector" name="language-selector">
+                    <option disabled selected>Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <!-- Search Content -->
+              </div>
+            </div>  <!-- /.container -->
+          </nav>  <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+        </div>  <!-- /container -->
+      </div>  <!-- /segment-navbar -->
+      
+
+      <div class="container" style=" justify-content: space-between; align-items: left;">
+
+        <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+    <a id="who-logo" no-external="true" href="index.html">
+        
+    </a>
+</div>
+
+ <div id="family-nav">
+  <a id="fhir-logo" no-external="true" href="http://hl7.org/fhir">  </a>
+</div> 
+
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">WHO SMART DAK — Cervical Cancer Screening (L2)</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Indicators</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">WHO SMART DAK — Cervical Cancer Screening (L2), published by Dan Heslinga. This guide is not an authorized publication; it is the continuous build for version 0.1.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/dhes/smart-dak-cervical-cancer/tree/main'>https://github.com/dhes/smart-dak-cervical-cancer/tree/main</a> and changes regularly. See the <a href='https://dhes.github.io/smart-dak-cervical-cancer/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Indicators</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#scope-and-authoring-posture" id="markdown-toc-scope-and-authoring-posture">Scope and authoring posture</a></li>
+  <li><a href="#standard-disaggregations" id="markdown-toc-standard-disaggregations">Standard disaggregations</a></li>
+  <li><a href="#indicators" id="markdown-toc-indicators">Indicators</a>    <ul>
+      <li><a href="#coverage-cluster--maps-to-who-90-70-90-70-screened" id="markdown-toc-coverage-cluster--maps-to-who-90-70-90-70-screened">Coverage cluster — maps to WHO 90-70-90 "70% screened"</a></li>
+      <li><a href="#ind-01--screening-coverage-within-recommended-interval" id="markdown-toc-ind-01--screening-coverage-within-recommended-interval">IND-01 — Screening coverage within recommended interval</a></li>
+      <li><a href="#ind-02--lifetime-coverage-by-elimination-strategy-milestone-ages" id="markdown-toc-ind-02--lifetime-coverage-by-elimination-strategy-milestone-ages">IND-02 — Lifetime coverage by elimination-strategy milestone ages</a></li>
+      <li><a href="#cascade-follow-through-cluster--maps-to-who-90-70-90-90-pre-cancer-treated" id="markdown-toc-cascade-follow-through-cluster--maps-to-who-90-70-90-90-pre-cancer-treated">Cascade follow-through cluster — maps to WHO 90-70-90 "90% pre-cancer treated"</a></li>
+      <li><a href="#ind-03--hpv-positivity-rate" id="markdown-toc-ind-03--hpv-positivity-rate">IND-03 — HPV positivity rate</a></li>
+      <li><a href="#ind-04--triage-attendance-rate" id="markdown-toc-ind-04--triage-attendance-rate">IND-04 — Triage attendance rate</a></li>
+      <li><a href="#ind-05--treatment-attendance-rate" id="markdown-toc-ind-05--treatment-attendance-rate">IND-05 — Treatment attendance rate</a></li>
+      <li><a href="#cascade-loss-cluster--the-inverse-of-follow-through-programme-manager-facing" id="markdown-toc-cascade-loss-cluster--the-inverse-of-follow-through-programme-manager-facing">Cascade loss cluster — the inverse of follow-through; programme-manager-facing</a></li>
+      <li><a href="#ind-06--attrition-hpv-positive-without-triage" id="markdown-toc-ind-06--attrition-hpv-positive-without-triage">IND-06 — Attrition: HPV-positive without triage</a></li>
+      <li><a href="#ind-07--attrition-triage-positive-without-treatment" id="markdown-toc-ind-07--attrition-triage-positive-without-treatment">IND-07 — Attrition: triage-positive without treatment</a></li>
+      <li><a href="#ind-08--retest-adherence" id="markdown-toc-ind-08--retest-adherence">IND-08 — Retest adherence</a></li>
+      <li><a href="#clinical-signal-cluster" id="markdown-toc-clinical-signal-cluster">Clinical-signal cluster</a></li>
+      <li><a href="#ind-09--suspected-invasive-cancer-detection-rate-at-triage" id="markdown-toc-ind-09--suspected-invasive-cancer-detection-rate-at-triage">IND-09 — Suspected invasive cancer detection rate at triage</a></li>
+      <li><a href="#quality-assurance-cluster" id="markdown-toc-quality-assurance-cluster">Quality-assurance cluster</a></li>
+      <li><a href="#ind-10--via-adequacy-rate" id="markdown-toc-ind-10--via-adequacy-rate">IND-10 — VIA adequacy rate</a></li>
+    </ul>
+  </li>
+  <li><a href="#data-element-dependencies" id="markdown-toc-data-element-dependencies">Data element dependencies</a></li>
+  <li><a href="#relation-to-other-components" id="markdown-toc-relation-to-other-components">Relation to other components</a></li>
+  <li><a href="#status" id="markdown-toc-status">Status</a></li>
+</ul>
+
+</div>
+<p><strong>Component 8 of the WHO SMART Guidelines L2 DAK structure.</strong> This page enumerates the core indicators and performance metrics by which an implementation of Algorithm 5 can be monitored — screening coverage, cascade follow-through, losses to follow-up, clinical signal, and quality assurance.</p>
+
+<p>Per <a href="https://smart.who.int/ig-starter-kit/l2_dak_authoring.html">Section 3.1 of the SOP</a>, Component 8 is a <em>"core set of indicators that need to be aggregated for decision-making, performance metrics, and subnational and national reporting, based on data that can feasibly be captured from a routine digital system, rather than survey-based tools."</em> Its organising principle is <strong>collect once, use many</strong> — indicators should reuse cascade data elements already captured in the course of clinical work, not require separate data collection exercises.</p>
+
+<h2 id="scope-and-authoring-posture">Scope and authoring posture</h2>
+
+<p><strong>Algorithm-5 scope.</strong> Consistent with the scope discipline applied across the DAK (see <a href="cc-000.html">cc-000</a>), the indicators below are operationalised in Algorithm 5 cascade vocabulary — HPV DNA primary screening, VIA triage, thermal ablation / LLETZ / CKC treatment. Indicators whose numerators or denominators would require cascade artifacts this DAK does not model (cytology inadequate-sample rate, HPV mRNA positivity, dual-stain equivocal rate, colposcopy biopsy yield) are out of scope on the same grounds as recs 3a / 9 / 12 / 29 / 32 in the <a href="interventions-and-recommendations.html#2021-07-guideline--general-population">recommendations table</a>.</p>
+
+<p><strong>Purpose versus definition.</strong> The <em>purposes</em> behind most of these indicators are algorithm-neutral — screening coverage, cascade follow-through, suspected-cancer detection, and the WHO <a href="interventions-and-recommendations.html#source-documents">Cervical Cancer Elimination Strategy</a> 90-70-90 targets do not prescribe an algorithm. The <em>definitions</em> in the table below are Algorithm-5-specific. A programme running a different cascade family would be pursuing the same targets but would need to re-express numerators in its own cascade vocabulary.</p>
+
+<p><strong>Feasibility tiering — A versus B.</strong> The SOP's <em>"feasibly captured from a routine digital system"</em> clause matters because cascade-tracking indicators and timing-based indicators place substantially higher infrastructure demands than period-count indicators. Each indicator below is tagged:</p>
+
+<ul>
+  <li><strong>Tier A</strong> — computable from counts within a single reporting period. Feasible from paper-based registers or minimally-integrated digital systems.</li>
+  <li><strong>Tier B</strong> — requires <strong>longitudinal tracking of individual women</strong> across multiple encounters within a cascade instance. Feasible only when the digital system links records across visits by stable patient identifier.</li>
+</ul>
+
+<p>A programme may adopt Tier A indicators immediately and Tier B indicators as digital-system maturity allows. This staging is a deliberate feature of the indicator set, not a compromise.</p>
+
+<p><strong>CDD gap, acknowledged.</strong> Several indicators below reference data elements that are <strong>not yet authored</strong> in the <a href="dictionary.html">Core Data Dictionary</a> — notably HPV DNA result, HPV sample date, triage date, treatment type and date, retest scheduled date, and retest actual date. These are listed in the <a href="#data-element-dependencies">Data element dependencies</a> section and flagged as Phase-2 CDD work (either Kind-1 local authoring or Kind-3 proposals to a shared canonical dictionary).</p>
+
+<p><strong>Phase-1 posture.</strong> The ten indicators below are analytically derived from the Algorithm 5 cascade structure, the WHO elimination-strategy targets, and the operational concerns surfaced by the <a href="scheduling-logic.html">Scheduling Logic</a> and <a href="business-processes.html">Business Processes</a> components. SME validation inherits the same stratified deferral pattern as the earlier components — a screening programme manager in a low- or middle-income country setting is the specific SME domain whose consultation would close the validation gap on this page.</p>
+
+<h2 id="standard-disaggregations">Standard disaggregations</h2>
+
+<p>Declared once and referenced by every indicator below. Programmes are expected to report each indicator stratified across these dimensions.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dimension</th>
+      <th>Categories</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Age band</strong></td>
+      <td>25–29 (WLHIV only), 30–34, 35–39, 40–49, 50–64, 65+</td>
+    </tr>
+    <tr>
+      <td><strong>HIV status</strong></td>
+      <td>General population, women living with HIV, HIV status unknown</td>
+    </tr>
+    <tr>
+      <td><strong>Facility</strong></td>
+      <td>By reporting facility; district and regional aggregations constructed from facility totals</td>
+    </tr>
+    <tr>
+      <td><strong>Reporting period</strong></td>
+      <td>Monthly, quarterly, annual — cohort windows as appropriate to the indicator</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The age bands align with the guideline's start-age thresholds (30 general, 25 WLHIV) and with the elimination-strategy 35-and-45 milestones. <em>HIV status unknown</em> is a deliberate third category; it should be treated as a data-quality flag, not folded into "general population", and its prevalence is itself an indirect programme-quality signal.</p>
+
+<h2 id="indicators">Indicators</h2>
+
+<p>Ten indicators, organised in four clusters. Each indicator carries a numerator-and-denominator specification written at the prose-level of precision an L3 CQL author would need, but does not itself contain CQL.</p>
+
+<h3 id="coverage-cluster--maps-to-who-90-70-90-70-screened">Coverage cluster — maps to WHO 90-70-90 "70% screened"</h3>
+
+<h3 id="ind-01--screening-coverage-within-recommended-interval">IND-01 — Screening coverage within recommended interval</h3>
+
+<p><strong>Purpose.</strong> Period-based coverage — the fraction of eligible women currently "up to date" on cervical cancer screening under the Algorithm 5 HPV DNA primary regime.</p>
+
+<p><strong>Numerator.</strong> Women in the denominator who have a valid HPV DNA primary-screen result recorded within the last 5 years (general population) or 3 years (WLHIV) as of the reporting date.</p>
+
+<p><strong>Denominator.</strong> All women in the facility catchment who are eligible for screening as of the reporting date — i.e., aged 30 or older (general population) or 25 or older (WLHIV) and not aged out of the programme per <a href="cc-005.html">cc-005</a>'s stopping rule.</p>
+
+<p><strong>Disaggregations.</strong> Apply the standard disaggregations (age band × HIV status × facility × reporting period).</p>
+
+<p><strong>Tier.</strong> A — computable from a cross-sectional snapshot of the facility register plus HPV result records within the look-back window.</p>
+
+<p><strong>Provenance.</strong> <a href="interventions-and-recommendations.html#source-documents">WHO Cervical Cancer Elimination Strategy</a> 70% target; interval values from <a href="cc-005.html">cc-005</a>.</p>
+
+<h3 id="ind-02--lifetime-coverage-by-elimination-strategy-milestone-ages">IND-02 — Lifetime coverage by elimination-strategy milestone ages</h3>
+
+<p><strong>Purpose.</strong> Milestone-based coverage — the elimination-strategy phrasing ("each woman screened by age 35, and again by age 45") rather than rolling-window coverage. Captures programmes where women transit through the milestone ages during the reporting period.</p>
+
+<p><strong>Numerator.</strong> Women reaching age 35 (or 45) during the reporting period who have at least one HPV DNA primary-screen result recorded at any point before reaching that age.</p>
+
+<p><strong>Denominator.</strong> All women reaching age 35 (or 45) during the reporting period, in the facility catchment.</p>
+
+<p><strong>Disaggregations.</strong> Standard; split by milestone (35 vs 45) as an additional dimension.</p>
+
+<p><strong>Tier.</strong> A — birth-cohort-based. Feasible if the digital system holds a date of birth plus any recorded screening event.</p>
+
+<p><strong>Provenance.</strong> <a href="interventions-and-recommendations.html#source-documents">WHO Cervical Cancer Elimination Strategy</a> milestone ages.</p>
+
+<h3 id="cascade-follow-through-cluster--maps-to-who-90-70-90-90-pre-cancer-treated">Cascade follow-through cluster — maps to WHO 90-70-90 "90% pre-cancer treated"</h3>
+
+<h3 id="ind-03--hpv-positivity-rate">IND-03 — HPV positivity rate</h3>
+
+<p><strong>Purpose.</strong> Epidemiological baseline — the underlying prevalence of HPV DNA positivity in the screened population. Informs cascade capacity planning (how many triage encounters per 1000 screens) and serves as a data-quality check (implausible values indicate assay or reporting issues).</p>
+
+<p><strong>Numerator.</strong> Primary screens in the reporting period with a valid HPV DNA result of <em>positive</em>.</p>
+
+<p><strong>Denominator.</strong> All primary screens in the reporting period with a valid HPV DNA result (positive or negative). Invalid / indeterminate results are excluded from both numerator and denominator and reported separately (IND-10's adequacy concept applies at the lab layer too).</p>
+
+<p><strong>Disaggregations.</strong> Standard.</p>
+
+<p><strong>Tier.</strong> A.</p>
+
+<p><strong>Provenance.</strong> Operational; aligns with national epidemiology reporting.</p>
+
+<h3 id="ind-04--triage-attendance-rate">IND-04 — Triage attendance rate</h3>
+
+<p><strong>Purpose.</strong> First cascade-integrity indicator — the fraction of HPV-positive women who return for VIA triage within the programme-defined window.</p>
+
+<p><strong>Numerator.</strong> HPV-positive women whose result was reported in the period AND who had a VIA triage encounter recorded within the programme-defined reminder-plus-overdue window (see <a href="scheduling-logic.html#programme-level-parameters-deferred">Scheduling Logic — programme-level parameters</a>).</p>
+
+<p><strong>Denominator.</strong> HPV-positive women whose result was reported in the period.</p>
+
+<p><strong>Disaggregations.</strong> Standard; additionally by <em>time since HPV+ result</em> for programmes that want to monitor the attendance curve.</p>
+
+<p><strong>Tier.</strong> B — requires linking HPV-result records to subsequent triage-encounter records by stable patient identifier.</p>
+
+<p><strong>Provenance.</strong> Operational cascade integrity.</p>
+
+<h3 id="ind-05--treatment-attendance-rate">IND-05 — Treatment attendance rate</h3>
+
+<p><strong>Purpose.</strong> Second cascade-integrity indicator — the fraction of triage-positive women who receive treatment within the programme-defined window. Primary measure against the 90% pre-cancer treatment target.</p>
+
+<p><strong>Numerator.</strong> Triage-positive women (result coded as ablation-eligible or non-ablation-eligible per <a href="cc-003.html">cc-003</a>) in the period AND who received thermal ablation, LLETZ/LEEP, or cold-knife conization within the programme-defined window.</p>
+
+<p><strong>Denominator.</strong> Triage-positive women in the period, <strong>excluding</strong> those with the "suspected invasive cancer" result (routed to referral under <a href="cc-003.html">cc-003</a>, not to cascade treatment) and those with pregnancy-deferral under <a href="cc-006.html">cc-006</a>.</p>
+
+<p><strong>Disaggregations.</strong> Standard; additionally by triage-result stratum (ablation-eligible vs non-ablation-eligible).</p>
+
+<p><strong>Tier.</strong> B — requires linking triage results to treatment records.</p>
+
+<p><strong>Provenance.</strong> <a href="interventions-and-recommendations.html#source-documents">WHO Cervical Cancer Elimination Strategy</a> 90% pre-cancer-treatment target.</p>
+
+<h3 id="cascade-loss-cluster--the-inverse-of-follow-through-programme-manager-facing">Cascade loss cluster — the inverse of follow-through; programme-manager-facing</h3>
+
+<h3 id="ind-06--attrition-hpv-positive-without-triage">IND-06 — Attrition: HPV-positive without triage</h3>
+
+<p><strong>Purpose.</strong> Programme operational — where losses occur, and to what magnitude. Complementary to IND-04.</p>
+
+<p><strong>Numerator.</strong> HPV-positive women in the period with <strong>no</strong> VIA triage encounter recorded within the programme-defined window.</p>
+
+<p><strong>Denominator.</strong> Same as IND-04's denominator.</p>
+
+<p><strong>Disaggregations.</strong> Standard; additionally by facility-level stratification to surface which facilities are driving losses.</p>
+
+<p><strong>Tier.</strong> B.</p>
+
+<p><strong>Provenance.</strong> Operational; directly surfaces the cascade point where the <a href="business-processes.html#workflow-1--invitation">Invitation workflow's <em>Identify overdue rescreen candidate</em></a> outreach should activate.</p>
+
+<h3 id="ind-07--attrition-triage-positive-without-treatment">IND-07 — Attrition: triage-positive without treatment</h3>
+
+<p><strong>Purpose.</strong> Programme operational — second-stage cascade loss. Complementary to IND-05.</p>
+
+<p><strong>Numerator.</strong> Triage-positive women in the period with no treatment record within the programme-defined window. Same exclusions as IND-05 (cancer referrals, pregnancy deferrals).</p>
+
+<p><strong>Denominator.</strong> Same as IND-05's denominator.</p>
+
+<p><strong>Disaggregations.</strong> Standard; additionally by triage-result stratum.</p>
+
+<p><strong>Tier.</strong> B.</p>
+
+<p><strong>Provenance.</strong> Operational.</p>
+
+<h3 id="ind-08--retest-adherence">IND-08 — Retest adherence</h3>
+
+<p><strong>Purpose.</strong> Third cascade-integrity dimension — do women return for their scheduled retest? Applies to both the triage-negative retest (rec 11 / 31) and the post-treatment retest (rec 13 / 33).</p>
+
+<p><strong>Numerator.</strong> Women whose retest interval (triage-negative at 24/12 months, or post-treatment at 12 months per <a href="cc-005.html">cc-005</a>) elapsed during the reporting period AND who have a subsequent cascade encounter recorded (a new primary screen or a retest-specific encounter, depending on programme configuration).</p>
+
+<p><strong>Denominator.</strong> All women whose retest interval elapsed during the reporting period.</p>
+
+<p><strong>Disaggregations.</strong> Standard; additionally by retest type (triage-negative vs post-treatment).</p>
+
+<p><strong>Tier.</strong> B.</p>
+
+<p><strong>Provenance.</strong> Operational; draws on the interval values owned by <a href="cc-005.html">cc-005</a> and <a href="cc-002.html">cc-002</a>.</p>
+
+<h3 id="clinical-signal-cluster">Clinical-signal cluster</h3>
+
+<h3 id="ind-09--suspected-invasive-cancer-detection-rate-at-triage">IND-09 — Suspected invasive cancer detection rate at triage</h3>
+
+<p><strong>Purpose.</strong> Clinical signal — the rate at which VIA triage flags findings suspicious for invasive cancer rather than treatable precancerous lesions. An unexpectedly low rate may suggest under-identification (quality concern); an unexpectedly high rate may reflect late-stage presentation (programme-coverage concern).</p>
+
+<p><strong>Numerator.</strong> VIA triage encounters in the period with the result coded as "suspicious for invasive cancer" per the operational definition in <a href="cc-003.html">cc-003</a>.</p>
+
+<p><strong>Denominator.</strong> All VIA triage encounters in the period with a recorded result.</p>
+
+<p><strong>Disaggregations.</strong> Standard.</p>
+
+<p><strong>Tier.</strong> A.</p>
+
+<p><strong>Provenance.</strong> Clinical monitoring; <a href="cc-003.html">cc-003</a>.</p>
+
+<h3 id="quality-assurance-cluster">Quality-assurance cluster</h3>
+
+<h3 id="ind-10--via-adequacy-rate">IND-10 — VIA adequacy rate</h3>
+
+<p><strong>Purpose.</strong> Quality assurance for the triage step. VIA's inter-observer variability was the quality-assurance concern that drove the original deprecation of VIA as a <em>primary</em> test (see <a href="algorithm-selection.html#recommendation-1-strong-hpv-dna-as-the-primary-screening-test">Algorithm Selection — Recommendation 1 context</a>); the concern persists at the triage step, though with different clinical stakes. Low adequacy rates indicate training, supervision, or supply-chain issues (e.g., insufficient acetic acid, inadequate lighting).</p>
+
+<p><strong>Numerator.</strong> VIA encounters in the period with an adequate / interpretable result recorded.</p>
+
+<p><strong>Denominator.</strong> All VIA encounters attempted in the period (including those with inadequate, incomplete, or unrecorded results).</p>
+
+<p><strong>Disaggregations.</strong> Standard; additionally by provider / facility to surface training gaps.</p>
+
+<p><strong>Tier.</strong> A.</p>
+
+<p><strong>Provenance.</strong> Quality assurance; links to the <a href="algorithm-selection.html#recommendation-1-strong-hpv-dna-as-the-primary-screening-test">Algorithm Selection analysis</a>'s treatment of VIA quality assurance.</p>
+
+<h2 id="data-element-dependencies">Data element dependencies</h2>
+
+<p>The table below maps each indicator to the data elements it reads. Elements currently in the <a href="dictionary.html">Core Data Dictionary</a> are plain-text; elements <strong>not yet authored</strong> — Phase-2 CDD work — are <strong>bolded</strong>. The gap is real but bounded.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Data element</th>
+      <th>Status</th>
+      <th>Indicators using it</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Age</td>
+      <td>In CDD (Kind 2, harvested from HIV DAK)</td>
+      <td>All</td>
+    </tr>
+    <tr>
+      <td>HIV status (<em>Living with HIV</em>)</td>
+      <td>In CDD (Kind 2)</td>
+      <td>All</td>
+    </tr>
+    <tr>
+      <td>Date of last cervical cancer screening test (<code class="language-plaintext highlighter-rouge">HIV.D.DE656</code>)</td>
+      <td>In CDD (Kind 2)</td>
+      <td>IND-01, IND-02, IND-08</td>
+    </tr>
+    <tr>
+      <td>Prior screen result (<code class="language-plaintext highlighter-rouge">HIV.D.DE664</code>)</td>
+      <td>In CDD (Kind 2)</td>
+      <td>IND-01, IND-02</td>
+    </tr>
+    <tr>
+      <td>VIA result (<code class="language-plaintext highlighter-rouge">HIV.D.DE668</code>)</td>
+      <td>In CDD (Kind 2)</td>
+      <td>IND-04, IND-05, IND-07, IND-09, IND-10</td>
+    </tr>
+    <tr>
+      <td><strong>HPV DNA result (positive / negative / invalid)</strong></td>
+      <td><strong>Phase-2 gap</strong> — candidate Kind-3 proposal</td>
+      <td>IND-01, IND-03, IND-04, IND-06</td>
+    </tr>
+    <tr>
+      <td><strong>HPV sample collection date</strong></td>
+      <td><strong>Phase-2 gap</strong></td>
+      <td>IND-04, IND-06</td>
+    </tr>
+    <tr>
+      <td><strong>Triage encounter date</strong></td>
+      <td><strong>Phase-2 gap</strong></td>
+      <td>IND-04, IND-06</td>
+    </tr>
+    <tr>
+      <td><strong>Treatment type (ablation / LLETZ / CKC / none)</strong></td>
+      <td><strong>Phase-2 gap</strong> — candidate Kind-3 proposal</td>
+      <td>IND-05, IND-07</td>
+    </tr>
+    <tr>
+      <td><strong>Treatment date</strong></td>
+      <td><strong>Phase-2 gap</strong></td>
+      <td>IND-05, IND-07</td>
+    </tr>
+    <tr>
+      <td><strong>Treatment status (delivered / deferred / referred)</strong></td>
+      <td><strong>Phase-2 gap</strong></td>
+      <td>IND-05, IND-07</td>
+    </tr>
+    <tr>
+      <td><strong>Retest scheduled date</strong></td>
+      <td><strong>Phase-2 gap</strong></td>
+      <td>IND-08</td>
+    </tr>
+    <tr>
+      <td><strong>Retest actual date</strong></td>
+      <td><strong>Phase-2 gap</strong></td>
+      <td>IND-08</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Six of the ten indicators (IND-03, IND-04, IND-06 for the A-side HPV result; IND-05, IND-07 for treatment; IND-08 for retest) cannot be computed against the CDD in its current Phase-1 state. Closing this gap is the principal Phase-2 work item for this component and is tightly coupled to Phase-2 CDD work.</p>
+
+<h2 id="relation-to-other-components">Relation to other components</h2>
+
+<ul>
+  <li><strong><a href="interventions-and-recommendations.html">Component 1 — Interventions and recommendations</a>.</strong> Recs 8, 11, 13, 28, 31, 33 underwrite the interval logic that IND-01, IND-04, IND-05, IND-08 depend on for their "within window" phrasing.</li>
+  <li><strong><a href="business-processes.html">Component 4 — Business processes</a>.</strong> Each cascade-integrity indicator (IND-04, IND-05, IND-06, IND-07, IND-08) measures the step-to-step transitions visible in the Overview and Follow-up workflows.</li>
+  <li><strong><a href="dictionary.html">Component 5 — Data dictionary</a>.</strong> The Phase-2 CDD work named above is the principal dependency — without the bolded data elements authored, six of the ten indicators are L2-declarative-only. Kind-3 proposals to a shared canonical dictionary are consistent with the ecosystem contribution framing in the <a href="README.html">Data Dictionary README</a>.</li>
+  <li><strong><a href="decision-logic.html">Component 6 — Decision logic</a>.</strong> The purposive DMN's <em>Due for Screening</em> decision is the computational anchor for IND-01's "within last 5y/3y" numerator. Parallel DMN tables for triage-negative retest and post-treatment retest (flagged Phase-2 in <a href="scheduling-logic.html#status">Scheduling Logic</a>) would similarly anchor IND-08.</li>
+  <li><strong><a href="scheduling-logic.html">Component 7 — Scheduling logic</a>.</strong> The <em>programme-defined window</em> phrasing used in IND-04, IND-05, IND-06, IND-07 resolves against the reminder lead time and overdue threshold parameters declared there as deferred country-adaptation parameters.</li>
+</ul>
+
+<h2 id="status">Status</h2>
+
+<p><em>Draft — Phase 1 of Component 8 authoring (2026-04-22).</em> Ten indicators analytically derived from the Algorithm 5 cascade and the WHO Cervical Cancer Elimination Strategy 90-70-90 targets, organised in four clusters (coverage, cascade follow-through, cascade loss, clinical signal, quality assurance — the first two reflecting the 90-70-90 targets directly). Each indicator carries a numerator-denominator specification, standard disaggregations, a feasibility tier (A or B), and a provenance pointer.</p>
+
+<p><strong>Principal Phase-2 dependency: CDD data element authoring.</strong> Six of the ten indicators read data elements not yet in the <a href="dictionary.html">Core Data Dictionary</a>. Authoring them — either as Kind-1 local elements or Kind-3 proposals to a shared canonical dictionary — is the gate on making this component executable. Until that happens, the indicators on this page are L2-declarative: the <em>intent</em> is specified, the <em>computation</em> is not yet instrumentable.</p>
+
+<p><strong>Phase-2 follow-on work for this component, beyond the CDD dependency:</strong></p>
+
+<ul>
+  <li>L3 Measure / CQL authoring — translating each indicator's prose numerator/denominator into FHIR <code class="language-plaintext highlighter-rouge">Measure</code> resources with population criteria expressed in CQL, in the style of CMS eCQM artifacts. Out of scope for L2 but the natural next artifact once the CDD gap is closed.</li>
+  <li>SME validation — review by a screening programme manager in a low- or middle-income country, particularly on the feasibility tiering (A vs B) and whether the "programme-defined window" phrasing is workable at district-level reporting cadence.</li>
+  <li>Cross-DAK indicator reuse analysis — the WHO HIV DAK and ANC DAK may publish comparable cascade-integrity indicators; harvesting their population-criteria patterns rather than re-authoring is consistent with the Kind-2 pattern already used in the CDD.</li>
+</ul>
+
+
+
+
+</div>
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /row -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-content -->
+
+<script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+<script type="text/javascript" src="assets/js/window-hash.js"> </script>
+<a name="bottom"> </a>
+<div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+<div class="container">  <!-- container -->
+
+<div class="inner-wrapper">
+  <p>
+    IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/dhes">Dan Heslinga</a>.  Package dhes.dak.cervical-cancer#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 24, 2026 00:44+0000">2026-04-24</span>
+    <br/>
+    <span style="color: var(--footer-highlight-text-color)">
+                Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="https://dhes.github.io/smart-dak-cervical-cancer/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
+    </span>
+  </p>
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+<div class="container">  <!-- container -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-post-footer -->
+
+<!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+<script type="text/javascript" src="assets/js/respond.min.js"> </script>
+<script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+<script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+<script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+<script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+<!-- Analytics Below
+================================================== -->
+
+
+
+

@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Home - WHO SMART DAK — Cervical Cancer Screening (L2) v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+    <link href="assets/css/fa-all.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/who.css" rel="stylesheet"/>
+    <link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"1"}
+    h3,h4,h5,h6{--heading-prefix:"1"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">  <!-- container -->
+          <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+            <!--status-bar-->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Components
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="concepts.html">Concepts</a>
+      </li>
+      <li>
+        <a href="interventions-and-recommendations.html">Interventions &amp; Recommendations (1)</a>
+      </li>
+      <li>
+        <a href="generic-personas.html">Generic Personas (2)</a>
+      </li>
+      <li>
+        <a href="user-scenarios.html">User Scenarios (3)</a>
+      </li>
+      <li>
+        <a href="business-processes.html">Business Processes (4)</a>
+      </li>
+      <li>
+        <a href="dictionary.html">Data Dictionary (5)</a>
+      </li>
+      <li>
+        <a href="decision-logic.html">Decision Logic (6)</a>
+      </li>
+      <li>
+        <a href="scheduling-logic.html">Scheduling Logic (7)</a>
+      </li>
+      <li>
+        <a href="indicators.html">Indicators (8)</a>
+      </li>
+      <li>
+        <a href="requirements.html">Requirements (9)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Methodology
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="methodology.html">Methodology</a>
+      </li>
+      <li>
+        <a href="algorithm-selection.html">Algorithm Selection</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Interpretation Register
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="register.html">Overview</a>
+      </li>
+      <li>
+        <a href="cc-000.html">Scope Declaration (cc-000)</a>
+      </li>
+      <li>
+        <a href="cc-001.html">Population and Inclusion (cc-001)</a>
+      </li>
+      <li>
+        <a href="cc-002.html">WLHIV Operationalisation (cc-002)</a>
+      </li>
+      <li>
+        <a href="cc-003.html">Cancer Suspected (cc-003)</a>
+      </li>
+      <li>
+        <a href="cc-004.html">Vaccination Status (cc-004)</a>
+      </li>
+      <li>
+        <a href="cc-005.html">Screening Interval (cc-005)</a>
+      </li>
+      <li>
+        <a href="cc-006.html">Pregnancy Handling (cc-006)</a>
+      </li>
+      <li>
+        <a href="cc-007.html">Sexual Exposure Precondition (cc-007)</a>
+      </li>
+      <li>
+        <a href="cc-008.html">HIV Status Absent/Unknown (cc-008)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Resources
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="changes.html">Change Log</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+      <li>
+        <a href="license.html">License</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+              </div>  <!-- /.nav-collapse -->
+
+              <div class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch" data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;">
+                <!-- This div will be pushed to the right -->
+                <div class="language-selector" style="margin-left: auto; background-color: #00477d; color: white;">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" id="language-selector" name="language-selector">
+                    <option disabled selected>Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <!-- Search Content -->
+              </div>
+            </div>  <!-- /.container -->
+          </nav>  <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+        </div>  <!-- /container -->
+      </div>  <!-- /segment-navbar -->
+      
+
+      <div class="container" style=" justify-content: space-between; align-items: left;">
+
+        <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+    <a id="who-logo" no-external="true" href="index.html">
+        
+    </a>
+</div>
+
+ <div id="family-nav">
+  <a id="fhir-logo" no-external="true" href="http://hl7.org/fhir">  </a>
+</div> 
+
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">WHO SMART DAK — Cervical Cancer Screening (L2)</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Home</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">WHO SMART DAK — Cervical Cancer Screening (L2), published by Dan Heslinga. This guide is not an authorized publication; it is the continuous build for version 0.1.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/dhes/smart-dak-cervical-cancer/tree/main'>https://github.com/dhes/smart-dak-cervical-cancer/tree/main</a> and changes regularly. See the <a href='https://dhes.github.io/smart-dak-cervical-cancer/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Home</h2>
+  
+
+
+
+
+
+
+  <table class="colsd">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">https://dhes.github.io/smart-dak-cervical-cancer/ImplementationGuide/dhes.dak.cervical-cancer<button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://dhes.github.io/smart-dak-cervical-cancer/ImplementationGuide/dhes.dak.cervical-cancer"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">0.1.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://dhes.github.io/smart-dak-cervical-cancer/ImplementationGuide/dhes.dak.cervical-cancer|0.1.0"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Draft
+          
+            as of 2026-04-24
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">CervicalCancerDAK</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#what-this-ig-contains" id="markdown-toc-what-this-ig-contains">What this IG contains</a></li>
+  <li><a href="#what-this-ig-does-not-contain" id="markdown-toc-what-this-ig-does-not-contain">What this IG does not contain</a></li>
+  <li><a href="#reading-order" id="markdown-toc-reading-order">Reading order</a></li>
+  <li><a href="#background" id="markdown-toc-background">Background</a></li>
+  <li><a href="#status" id="markdown-toc-status">Status</a></li>
+</ul>
+
+</div>
+<div class="stu-note">
+
+  <p><strong>Status and Maturity</strong></p>
+
+  <p>This implementation guide is a <strong>draft</strong> (version 0.1.0, CI build) at <strong>FHIR Maturity Model (FMM) level 0</strong> — initial, pre-implementation. The content has not undergone WHO SMART Guidelines submission, has not been reviewed by clinical subject-matter experts, and all register entries are in <code class="language-plaintext highlighter-rouge">proposed</code> status. Material changes are expected in subsequent versions until the first formally-released version is cut.</p>
+
+  <p><strong>Versioning policy</strong></p>
+
+  <p>This IG follows <a href="https://semver.org/spec/v2.0.0.html">Semantic Versioning 2.0.0</a>: <code class="language-plaintext highlighter-rouge">major.minor.patch</code>. All FHIR artifacts defined in the IG inherit the IG's version number. Material changes to any artifact trigger a patch bump; backwards-incompatible changes trigger a major bump. See the <a href="changes.html">Change Log</a> for version history.</p>
+
+</div>
+
+<p>This implementation guide presents Layer 2 (decision logic) artifacts for cervical cancer screening, modelling <strong>Algorithm 5</strong> (HPV DNA primary screening with VIA triage) from the <a href="https://www.who.int/publications/i/item/9789240030824">WHO 2021 Cervical Cancer Screening Guideline (2nd ed.)</a>.</p>
+
+<h3 id="what-this-ig-contains">What this IG contains</h3>
+
+<p>This IG publishes the L2 artifacts of a cervical cancer screening Digital Adaptation Kit (DAK), repackaging the WHO 2021 guideline using textualist and purposive interpretive strategies:</p>
+
+<ul>
+  <li><strong>Interpretation Register</strong> — 8 entries documenting every interpretive decision made in translating the WHO guideline narrative (L1) into decision logic (L2). Each entry records the options considered, the option selected, and the rationale.</li>
+  <li><strong>Core Data Dictionary</strong> — 19 data elements covering every input and output of the decision logic, with linkages to harvested elements from existing WHO SMART DAKs (HIV, ANC, Immunizations).</li>
+  <li><strong>Decision Logic</strong> — Two parallel DMN (Decision Model and Notation) artifacts: a <em>textualist</em> version faithful to the guideline language, and a <em>purposive</em> version encoding the interpretive resolutions from the register.</li>
+  <li><strong>Algorithm Selection Analysis</strong> — A recommendation-by-recommendation walk-through of how the WHO guideline narrows the choice from seven candidate algorithms to Algorithm 5 for countries with the epidemiological profile described in the scope declaration.</li>
+</ul>
+
+<h3 id="what-this-ig-does-not-contain">What this IG does not contain</h3>
+
+<p><strong>L3 (FHIR) artifacts are not yet authored.</strong> This IG does not include FHIR profiles, CQL decision-support libraries, terminology bindings, or value sets. These are deferred to a future L3 authoring pass. The L2 artifacts are designed to be L3-ready: the Core Data Dictionary carries explicit L3-stub columns (ICD-11, SNOMED CT, LOINC, FHIR Resource, FHIR Profile, Canonical URI) that are intentionally blank, awaiting binding by a terminology specialist at country adaptation time.</p>
+
+<p><strong>This is not a clinical recommendation.</strong> The interpretive choices in this DAK belong to a hypothetical jurisdiction exercising a methodology. They are not recommendations for any real screening program. See the <a href="cc-000.html">Scope Declaration (cc-000)</a> for the full disclaimer and the epidemiological regime the case study assumes.</p>
+
+<h3 id="reading-order">Reading order</h3>
+
+<p>The IG is organised by reading order, not by entry number. A reader encountering this material for the first time should proceed:</p>
+
+<ol>
+  <li><strong><a href="algorithm-selection.html">Algorithm Selection Analysis</a></strong> — Why Algorithm 5, and how the guideline narrows the field</li>
+  <li><strong><a href="cc-000.html">Scope Declaration (cc-000)</a></strong> — What the DAK models, what it excludes, and the epidemiological regime</li>
+  <li><strong><a href="register.html">Register overview</a></strong> — The interpretation register catalogue and reading guide</li>
+  <li><strong>Foundation clinical decisions</strong> — <a href="cc-002.html">cc-002</a>, <a href="cc-003.html">cc-003</a>, <a href="cc-004.html">cc-004</a></li>
+  <li><strong>Specification</strong> — <a href="cc-005.html">cc-005</a> (screening interval resolution)</li>
+  <li><strong>Population and inclusion</strong> — <a href="cc-001.html">cc-001</a></li>
+  <li><strong>Inferences over silences</strong> — <a href="cc-006.html">cc-006</a>, <a href="cc-007.html">cc-007</a></li>
+  <li><strong><a href="dictionary.html">Data Dictionary</a></strong> and <strong><a href="decision-logic.html">Decision Logic</a></strong></li>
+</ol>
+
+<h3 id="background">Background</h3>
+
+<p>This DAK repackages and integrates the WHO 2021 Cervical Cancer Screening Guideline into L2 artifacts per <a href="https://smart.who.int/ig-starter-kit/l2_dak_authoring.html">Section 3.1 of the WHO SMART Guidelines IG Starter Kit</a>. The interpretive choices made during repackaging are documented as register entries (<code class="language-plaintext highlighter-rouge">cc-000</code> through <code class="language-plaintext highlighter-rouge">cc-008</code>); the two interpretive strategies applied — textualist and purposive — are explained on the <a href="methodology.html">Methodology</a> page.</p>
+
+<h3 id="status">Status</h3>
+
+<p>This is a <strong>draft</strong> publication (version 0.1.0). All register entries are in <code class="language-plaintext highlighter-rouge">proposed</code> status. The DMN artifacts have been tested against Camunda 8.8 but have not been reviewed by clinical subject-matter experts.</p>
+
+
+
+
+</div>
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /row -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-content -->
+
+<script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+<script type="text/javascript" src="assets/js/window-hash.js"> </script>
+<a name="bottom"> </a>
+<div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+<div class="container">  <!-- container -->
+
+<div class="inner-wrapper">
+  <p>
+    IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/dhes">Dan Heslinga</a>.  Package dhes.dak.cervical-cancer#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 24, 2026 00:44+0000">2026-04-24</span>
+    <br/>
+    <span style="color: var(--footer-highlight-text-color)">
+                Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="https://dhes.github.io/smart-dak-cervical-cancer/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
+    </span>
+  </p>
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+<div class="container">  <!-- container -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-post-footer -->
+
+<!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+<script type="text/javascript" src="assets/js/respond.min.js"> </script>
+<script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+<script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+<script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+<script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+<!-- Analytics Below
+================================================== -->
+
+
+
+

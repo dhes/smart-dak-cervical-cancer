@@ -1,0 +1,14 @@
+[{
+  "id" : "dhes.dak.cervical-cancer",
+  "type" : "ImplementationGuide",
+  "url" : "https://dhes.github.io/smart-dak-cervical-cancer/ImplementationGuide/dhes.dak.cervical-cancer",
+  "version" : "0.1.0",
+  "name" : "CervicalCancerDAK"
+},
+{
+  "id" : "cervical-cancer-decision-logic",
+  "type" : "Library",
+  "url" : "https://dhes.github.io/smart-dak-cervical-cancer/Library/cervical-cancer-decision-logic",
+  "version" : "0.1.0",
+  "name" : "CervicalCancerDecisionLogic"
+}]

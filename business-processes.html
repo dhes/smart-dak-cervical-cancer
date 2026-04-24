@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Business Processes - WHO SMART DAK — Cervical Cancer Screening (L2) v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+    <link href="assets/css/fa-all.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/who.css" rel="stylesheet"/>
+    <link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"7"}
+    h3,h4,h5,h6{--heading-prefix:"7"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">  <!-- container -->
+          <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+            <!--status-bar-->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Components
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="concepts.html">Concepts</a>
+      </li>
+      <li>
+        <a href="interventions-and-recommendations.html">Interventions &amp; Recommendations (1)</a>
+      </li>
+      <li>
+        <a href="generic-personas.html">Generic Personas (2)</a>
+      </li>
+      <li>
+        <a href="user-scenarios.html">User Scenarios (3)</a>
+      </li>
+      <li>
+        <a href="business-processes.html">Business Processes (4)</a>
+      </li>
+      <li>
+        <a href="dictionary.html">Data Dictionary (5)</a>
+      </li>
+      <li>
+        <a href="decision-logic.html">Decision Logic (6)</a>
+      </li>
+      <li>
+        <a href="scheduling-logic.html">Scheduling Logic (7)</a>
+      </li>
+      <li>
+        <a href="indicators.html">Indicators (8)</a>
+      </li>
+      <li>
+        <a href="requirements.html">Requirements (9)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Methodology
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="methodology.html">Methodology</a>
+      </li>
+      <li>
+        <a href="algorithm-selection.html">Algorithm Selection</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Interpretation Register
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="register.html">Overview</a>
+      </li>
+      <li>
+        <a href="cc-000.html">Scope Declaration (cc-000)</a>
+      </li>
+      <li>
+        <a href="cc-001.html">Population and Inclusion (cc-001)</a>
+      </li>
+      <li>
+        <a href="cc-002.html">WLHIV Operationalisation (cc-002)</a>
+      </li>
+      <li>
+        <a href="cc-003.html">Cancer Suspected (cc-003)</a>
+      </li>
+      <li>
+        <a href="cc-004.html">Vaccination Status (cc-004)</a>
+      </li>
+      <li>
+        <a href="cc-005.html">Screening Interval (cc-005)</a>
+      </li>
+      <li>
+        <a href="cc-006.html">Pregnancy Handling (cc-006)</a>
+      </li>
+      <li>
+        <a href="cc-007.html">Sexual Exposure Precondition (cc-007)</a>
+      </li>
+      <li>
+        <a href="cc-008.html">HIV Status Absent/Unknown (cc-008)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Resources
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="changes.html">Change Log</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+      <li>
+        <a href="license.html">License</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+              </div>  <!-- /.nav-collapse -->
+
+              <div class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch" data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;">
+                <!-- This div will be pushed to the right -->
+                <div class="language-selector" style="margin-left: auto; background-color: #00477d; color: white;">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" id="language-selector" name="language-selector">
+                    <option disabled selected>Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <!-- Search Content -->
+              </div>
+            </div>  <!-- /.container -->
+          </nav>  <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+        </div>  <!-- /container -->
+      </div>  <!-- /segment-navbar -->
+      
+
+      <div class="container" style=" justify-content: space-between; align-items: left;">
+
+        <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+    <a id="who-logo" no-external="true" href="index.html">
+        
+    </a>
+</div>
+
+ <div id="family-nav">
+  <a id="fhir-logo" no-external="true" href="http://hl7.org/fhir">  </a>
+</div> 
+
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">WHO SMART DAK — Cervical Cancer Screening (L2)</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Business Processes</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">WHO SMART DAK — Cervical Cancer Screening (L2), published by Dan Heslinga. This guide is not an authorized publication; it is the continuous build for version 0.1.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/dhes/smart-dak-cervical-cancer/tree/main'>https://github.com/dhes/smart-dak-cervical-cancer/tree/main</a> and changes regularly. See the <a href='https://dhes.github.io/smart-dak-cervical-cancer/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Business Processes</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<p><strong>Component 4 of the WHO SMART Guidelines L2 DAK structure.</strong> This page presents the business processes and workflows that operationalise the Algorithm 5 cascade — the sequence of activities, the actors who perform them, the decision points that branch between cascade paths, and the handoffs between actors.</p>
+
+<p>Per <a href="https://smart.who.int/ig-starter-kit/l2_dak_authoring.html">Section 3.1 of the SOP</a>, a business process is <em>"a set of related activities or tasks performed together to achieve the objectives of the health programme area."</em> A workflow is the visual representation of one such process, showing "the progression of activities (tasks, decision points, interactions)" through its participants. The component's two required deliverables are an <strong>overview matrix</strong> of the processes and <strong>workflow diagrams</strong> for each process, annotated, following BPMN 2.0 notation.</p>
+
+<p>The workflows here are the visual spine that Components 5 (data dictionary), 6 (decision logic), and 7 (scheduling logic) will hang their downstream work from — data elements are collected <em>at</em> the points an activity occurs; decision-support logic triggers <em>when</em> the workflow reaches a gateway; scheduling rules apply <em>when</em> the workflow reaches a follow-up activity.</p>
+
+<h2 id="scope-and-authoring-posture">Scope and authoring posture</h2>
+
+<p>The same Phase-1 posture applies as for <a href="generic-personas.html#scope-and-authoring-posture">personas</a> and <a href="user-scenarios.html#scope-and-authoring-posture">user scenarios</a>: the processes below are <em>analytically derived</em> from the Algorithm 5 cascade and the seven scenarios in Component 3. The three SOP-named derivation paths (L1 guidance, SME consultation, facility interviews) yielded skeleton only at this phase; SME validation is deferred with the same stratified closure path — per the personas whose activities each workflow assigns.</p>
+
+<p><strong>Design decisions committed in Component 3.</strong> Four strategic choices were settled during the Component 3 authoring pass and carry forward here:</p>
+
+<ol>
+  <li>
+    <p><strong>Five business processes</strong>, matching the five BPMN modules pre-committed in <a href="user-scenarios.html#planning-for-component-4">Planning for Component 4</a>: <em>Invitation</em>, <em>Primary Screening</em>, <em>Triage</em>, <em>Treatment</em>, <em>Follow-up</em>. Referral for suspected invasive cancer is an exit branch within Treatment, not a separate process. Programme-level oversight is Component 8 territory, not modelled in BPMN.</p>
+  </li>
+  <li>
+    <p><strong>Pool/lane convention.</strong> Pools represent actor groups (Community, Facility, Laboratory, District Hospital, Client); lanes within each pool represent the generic personas. This visualises cross-pool handoffs (sample collection → laboratory; result return → facility) as BPMN message flows, which is the notation's idiom for "one actor hands off to another."</p>
+  </li>
+  <li>
+    <p><strong>80/20 level of detail.</strong> Workflows are modelled at the cascade-general level — activity sequence is declared but visit-boundary grouping (single-visit screen-triage-and-treat versus multi-visit programmes) is not imposed. Both implementation patterns inherit the same BPMN. Activities that are "too specific and don't hold across various settings" (SOP §3.1) — specific device models, national lab network identifiers, country cadre titles — are excluded.</p>
+  </li>
+  <li>
+    <p><strong>Counselling and informed consent — sub-process.</strong> The SOP explicitly asks authors to decide how to model counselling and consent. This DAK declares them as a single reusable sub-process <em>Counselling and informed consent</em>, referenced as a call activity from the three main workflows where they apply (Primary Screening, Triage, Treatment). This keeps the activities visible in the BPMN spine without repeating them inline in each diagram.</p>
+  </li>
+</ol>
+
+<p><strong>Activity vocabulary.</strong> The BPMN activity labels are lifted verbatim from the <a href="user-scenarios.html#action-vocabulary">action vocabulary table</a> in Component 3. No activity is introduced here that isn't already in that table, with the exception of the sub-process-internal activities of <em>Counselling and informed consent</em>, which the SOP flagged as a separate design choice. The vocabulary reuse across Components 3 and 4 makes the scenario-to-workflow handoff mechanical.</p>
+
+<h2 id="overview-matrix">Overview matrix</h2>
+
+<p>The five processes, their purposes, primary personas, and the inter-process transitions that stitch them into the end-to-end cascade:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Process</th>
+      <th>Purpose</th>
+      <th>Primary personas</th>
+      <th>Entry condition</th>
+      <th>Exit condition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Invitation</td>
+      <td>Bring eligible women into the cascade — routine invitation and overdue-rescreen identification</td>
+      <td>Community health worker</td>
+      <td>Eligible woman identified in catchment; or overdue rescreen candidate surfaced by programme list</td>
+      <td>Invitation issued</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Primary Screening</td>
+      <td>Take and assay an HPV DNA sample; return result to the referring facility</td>
+      <td>Nurse/midwife, Laboratory technician, Target client</td>
+      <td>Client attends facility following invitation (or self-presents)</td>
+      <td>HPV result recorded at facility</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Triage</td>
+      <td>Perform VIA on HPV-positive women; record the triage finding as negative, positive (ablation-eligible or not), or suspicious for invasive cancer</td>
+      <td>Nurse/midwife, Target client</td>
+      <td>Prior HPV result is positive</td>
+      <td>Triage result recorded</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Treatment</td>
+      <td>Deliver thermal ablation, LLETZ/LEEP, or CKC per triage finding; defer for pregnancy where indicated; refer for suspected invasive cancer as a terminal cascade exit</td>
+      <td>Nurse/midwife, Advanced clinician, Target client</td>
+      <td>Prior triage result is positive (ablation-eligible, non-ablation-eligible, or suspicious)</td>
+      <td>Treatment delivered, deferred, or referral initiated</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Follow-up</td>
+      <td>Schedule and track the appropriate rescreening interval — routine after HPV-negative, triage-negative retest, or post-treatment retest</td>
+      <td>Nurse/midwife, Target client</td>
+      <td>Prior HPV-negative, triage-negative, or treatment-complete</td>
+      <td>Next encounter scheduled</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Transitions between processes:</p>
+
+<ul>
+  <li>Invitation → Primary Screening (client attends)</li>
+  <li>Primary Screening → <em>HPV result</em> gateway: <strong>negative</strong> → Follow-up (routine); <strong>positive</strong> → Triage</li>
+  <li>Triage → <em>VIA result</em> gateway: <strong>negative</strong> → Follow-up (triage-negative retest); <strong>positive</strong> → Treatment; <strong>suspicious</strong> → Treatment (referral exit)</li>
+  <li>Treatment → <em>treatment disposition</em> gateway: <strong>delivered</strong> → Follow-up (post-treatment retest); <strong>deferred (pregnancy)</strong> → re-entry to Triage after pregnancy; <strong>referred for suspected cancer</strong> → cascade exit</li>
+  <li>Follow-up → Primary Screening (when the scheduled retest interval elapses, a new screening instance begins)</li>
+</ul>
+
+<h2 id="overview-diagram">Overview diagram</h2>
+
+<p>The overview diagram depicts the five processes as BPMN call activities linked by the gateways listed above, with a terminal end event for the suspected-invasive-cancer referral exit. It is the navigational map for the page and the spine from which Components 5–7 will read triggers.</p>
+
+<p><img src="workflow-overview.svg" alt="Algorithm 5 cascade overview — call activities for the five process modules (Invitation, Primary Screening, Triage, Treatment, Follow-up) connected by HPV-result and VIA-result gateways; terminal end events for routine cycle completion and suspected-cancer referral" /></p>
+
+<p><strong>Diagram file:</strong> <code class="language-plaintext highlighter-rouge">input/bpmn/workflow-overview.bpmn</code> (source) → <code class="language-plaintext highlighter-rouge">input/images/workflow-overview.svg</code> (rendered).</p>
+
+<h2 id="workflow-1--invitation">Workflow 1 — Invitation</h2>
+
+<p><strong>Purpose.</strong> The community health worker brings eligible women into the cascade through routine invitation (for first-time and interval-due screening) and through identification of women overdue for rescreening.</p>
+
+<p><strong>Pools and lanes.</strong></p>
+
+<ul>
+  <li><em>Community</em> pool: Community health worker lane</li>
+  <li><em>Client</em> pool: Target client lane</li>
+</ul>
+
+<p><strong>Activities and flow.</strong></p>
+
+<ol>
+  <li>Start event — <em>Invitation cycle begins</em> (triggered by programme schedule, outreach event, or list-based catch-up campaign)</li>
+  <li>Gateway (exclusive) — <em>Routine invitation or overdue rescreen?</em>
+    <ul>
+      <li>Routine path → proceed to step 3</li>
+      <li>Overdue path → <strong>Identify overdue rescreen candidate</strong> (CHW) → proceed to step 3</li>
+    </ul>
+  </li>
+  <li><strong>Issue screening invitation</strong> (CHW)</li>
+  <li>Message flow — CHW → Target client (invitation delivered)</li>
+  <li>End event — <em>Invitation complete</em></li>
+</ol>
+
+<p><strong>Calls sub-process.</strong> None.</p>
+
+<p><strong>Activity references.</strong> <code class="language-plaintext highlighter-rouge">Identify overdue rescreen candidate</code>, <code class="language-plaintext highlighter-rouge">Issue screening invitation</code>.</p>
+
+<p><img src="workflow-invitation.svg" alt="Invitation workflow — Community pool with CHW lane containing start event, routine-or-overdue gateway, identify-overdue-rescreen-candidate task, issue-screening-invitation task, end event; Client pool as recipient of the invitation-delivered message flow" /></p>
+
+<p><strong>Diagram file:</strong> <code class="language-plaintext highlighter-rouge">input/bpmn/workflow-invitation.bpmn</code> → <code class="language-plaintext highlighter-rouge">input/images/workflow-invitation.svg</code>.</p>
+
+<h2 id="workflow-2--primary-screening">Workflow 2 — Primary Screening</h2>
+
+<p><strong>Purpose.</strong> Sample collection, laboratory assay, and result return — the cascade's generative step. All downstream decisions depend on a valid HPV result being recorded at the facility.</p>
+
+<p><strong>Pools and lanes.</strong></p>
+
+<ul>
+  <li><em>Facility</em> pool: Nurse/midwife lane</li>
+  <li><em>Laboratory</em> pool: Laboratory technician lane</li>
+  <li><em>Client</em> pool: Target client lane</li>
+</ul>
+
+<p><strong>Activities and flow.</strong></p>
+
+<ol>
+  <li>Start event — <em>Client attends facility</em></li>
+  <li>Call activity — <em>Counselling and informed consent</em> (sub-process; see below)</li>
+  <li><strong>Collect HPV sample</strong> (Nurse/midwife)</li>
+  <li>Message flow — Nurse/midwife → Laboratory technician (sample handoff with chain-of-custody documentation)</li>
+  <li><strong>Run HPV DNA assay</strong> (Laboratory technician)</li>
+  <li><strong>Report HPV result</strong> (Laboratory technician)</li>
+  <li>Message flow — Laboratory technician → Nurse/midwife (result return)</li>
+  <li>End event — <em>HPV result recorded at facility</em></li>
+</ol>
+
+<p><strong>Calls sub-process.</strong> <em>Counselling and informed consent</em> (between steps 1 and 3).</p>
+
+<p><strong>Activity references.</strong> <code class="language-plaintext highlighter-rouge">Collect HPV sample</code>, <code class="language-plaintext highlighter-rouge">Run HPV DNA assay</code>, <code class="language-plaintext highlighter-rouge">Report HPV result</code>.</p>
+
+<p><img src="workflow-primary-screening.svg" alt="Primary Screening workflow — three pools (Facility, Laboratory, Client); Facility sequence: start, counselling call activity, collect HPV sample, intermediate message-catch for HPV result received, end event; Laboratory sequence: message-start sample-received, run HPV DNA assay, report HPV result, end event; two cross-pool message flows for sample handoff and result return" /></p>
+
+<p><strong>Diagram file:</strong> <code class="language-plaintext highlighter-rouge">input/bpmn/workflow-primary-screening.bpmn</code> → <code class="language-plaintext highlighter-rouge">input/images/workflow-primary-screening.svg</code>.</p>
+
+<h2 id="workflow-3--triage">Workflow 3 — Triage</h2>
+
+<p><strong>Purpose.</strong> For HPV-positive women, VIA triage partitions the path forward into routine follow-up (triage-negative), treatment (triage-positive), or suspected-cancer referral.</p>
+
+<p><strong>Pools and lanes.</strong></p>
+
+<ul>
+  <li><em>Facility</em> pool: Nurse/midwife lane</li>
+  <li><em>Client</em> pool: Target client lane</li>
+</ul>
+
+<p><strong>Activities and flow.</strong></p>
+
+<ol>
+  <li>Start event — <em>Prior HPV result positive</em></li>
+  <li><strong>Schedule triage encounter</strong> (Nurse/midwife)</li>
+  <li>Message flow — Nurse/midwife → Target client (recall for triage)</li>
+  <li><em>Intermediate event</em> — Target client attends triage encounter</li>
+  <li>Call activity — <em>Counselling and informed consent</em></li>
+  <li><strong>Perform VIA triage</strong> (Nurse/midwife)</li>
+  <li><strong>Record triage result</strong> (Nurse/midwife)</li>
+  <li>Gateway (exclusive) — <em>VIA result?</em>
+    <ul>
+      <li>Negative → End event <em>Triage-negative</em> → feeds Follow-up (triage-negative retest)</li>
+      <li>Positive → End event <em>Triage-positive</em> → feeds Treatment</li>
+      <li>Suspicious for invasive cancer → End event <em>Suspected invasive cancer</em> → feeds Treatment (referral exit)</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Calls sub-process.</strong> <em>Counselling and informed consent</em> (between steps 4 and 6).</p>
+
+<p><strong>Activity references.</strong> <code class="language-plaintext highlighter-rouge">Schedule triage encounter</code>, <code class="language-plaintext highlighter-rouge">Perform VIA triage</code>, <code class="language-plaintext highlighter-rouge">Record triage result</code>.</p>
+
+<p><strong>Register references.</strong> <a href="cc-003.html">cc-003</a> (operational definition of "suspected invasive cancer" governing the third gateway branch).</p>
+
+<p><img src="workflow-triage.svg" alt="Triage workflow — Facility pool with Nurse/midwife lane: start event (prior HPV result positive), schedule triage encounter, intermediate event for client attendance, counselling call activity, perform VIA triage, record triage result, three-way exclusive gateway branching to end events for triage-negative, triage-positive, and suspected invasive cancer; Client pool receives recall-for-triage message flow" /></p>
+
+<p><strong>Diagram file:</strong> <code class="language-plaintext highlighter-rouge">input/bpmn/workflow-triage.bpmn</code> → <code class="language-plaintext highlighter-rouge">input/images/workflow-triage.svg</code>.</p>
+
+<h2 id="workflow-4--treatment">Workflow 4 — Treatment</h2>
+
+<p><strong>Purpose.</strong> Deliver treatment appropriate to the triage finding — thermal ablation for ablation-eligible lesions, LLETZ/LEEP or CKC for non-ablation-eligible lesions, referral for suspected invasive cancer. Handle pregnancy-deferral as a distinct branch that returns to Triage after delivery rather than proceeding to Treatment.</p>
+
+<p><strong>Pools and lanes.</strong></p>
+
+<ul>
+  <li><em>Facility</em> pool: Nurse/midwife lane</li>
+  <li><em>District Hospital</em> pool: Advanced clinician lane</li>
+  <li><em>Client</em> pool: Target client lane</li>
+</ul>
+
+<p><strong>Activities and flow.</strong></p>
+
+<ol>
+  <li>Start event — <em>Triage-positive or suspected-invasive-cancer result received</em></li>
+  <li>Gateway (exclusive) — <em>Was the triage result suspected invasive cancer?</em>
+    <ul>
+      <li>Yes → Message flow to District Hospital → <strong>Refer for suspected invasive cancer</strong> (Nurse/midwife or Advanced clinician) → End event <em>Referred — cascade exit</em></li>
+      <li>No → proceed to step 3</li>
+    </ul>
+  </li>
+  <li>Call activity — <em>Counselling and informed consent</em></li>
+  <li><strong>Determine treatment eligibility</strong> (Nurse/midwife)</li>
+  <li>Gateway (exclusive) — <em>Treatment disposition?</em>
+    <ul>
+      <li>Ablation-eligible AND not pregnant → <strong>Perform thermal ablation</strong> (Nurse/midwife) → End event <em>Treatment delivered</em> → feeds Follow-up</li>
+      <li>Non-ablation-eligible AND not pregnant → Message flow to District Hospital → <strong>Perform LLETZ/LEEP</strong> OR <strong>Perform cold-knife conization</strong> (Advanced clinician) → End event <em>Treatment delivered</em> → feeds Follow-up</li>
+      <li>Pregnant (any eligibility) → <strong>Defer treatment (pregnancy)</strong> (Nurse/midwife) → End event <em>Treatment deferred</em> → (after delivery and recovery interval, cascade re-enters Triage for re-evaluation)</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Calls sub-process.</strong> <em>Counselling and informed consent</em> (between steps 2 and 4, when treatment is actually proceeding).</p>
+
+<p><strong>Activity references.</strong> <code class="language-plaintext highlighter-rouge">Determine treatment eligibility</code>, <code class="language-plaintext highlighter-rouge">Perform thermal ablation</code>, <code class="language-plaintext highlighter-rouge">Perform LLETZ/LEEP</code>, <code class="language-plaintext highlighter-rouge">Perform cold-knife conization</code>, <code class="language-plaintext highlighter-rouge">Refer for suspected invasive cancer</code>, <code class="language-plaintext highlighter-rouge">Defer treatment (pregnancy)</code>.</p>
+
+<p><strong>Register references.</strong> <a href="cc-003.html">cc-003</a> (suspected invasive cancer branch), <a href="cc-006.html">cc-006</a> (pregnancy-deferral branch).</p>
+
+<p><img src="workflow-treatment.svg" alt="Treatment workflow — three pools (Facility, District Hospital, Client); Facility branch: start, suspected-cancer gateway routing to refer-for-cancer task and cascade-exit end event OR to counselling call activity, determine treatment eligibility, disposition gateway routing to thermal ablation, sent-for-excision end event, or defer-treatment task; District Hospital: message-start received-for-excision, lesion-type gateway routing to LLETZ/LEEP or cold-knife conization tasks, each to its own end event; cross-pool message flows for cancer referral and excision handoff" /></p>
+
+<p><strong>Diagram file:</strong> <code class="language-plaintext highlighter-rouge">input/bpmn/workflow-treatment.bpmn</code> → <code class="language-plaintext highlighter-rouge">input/images/workflow-treatment.svg</code>.</p>
+
+<h2 id="workflow-5--follow-up">Workflow 5 — Follow-up</h2>
+
+<p><strong>Purpose.</strong> Schedule and track the appropriate rescreening interval per the cascade state that produced the referral to Follow-up — routine rescreening after HPV-negative, triage-negative retest, or post-treatment retest. Each of the three follow-up types carries a different interval, and for women living with HIV the intervals are shorter than for the general population.</p>
+
+<p><strong>Pools and lanes.</strong></p>
+
+<ul>
+  <li><em>Facility</em> pool: Nurse/midwife lane</li>
+  <li><em>Client</em> pool: Target client lane</li>
+</ul>
+
+<p><strong>Activities and flow.</strong></p>
+
+<ol>
+  <li>Start event — <em>Referred to Follow-up from Primary Screening, Triage, or Treatment</em></li>
+  <li>Gateway (exclusive) — <em>Follow-up type?</em>
+    <ul>
+      <li>Post-HPV-negative → <strong>Schedule next routine screening</strong> (Nurse/midwife) → Message flow to Target client (reminder near scheduled date) → <em>Intermediate event</em>: interval elapses → End event <em>Rescreen due</em> → re-enters Primary Screening</li>
+      <li>Post-triage-negative → <strong>Schedule triage-negative retest</strong> (Nurse/midwife) → Message flow to Target client → <em>Intermediate event</em>: interval elapses → End event <em>Retest due</em> → <strong>Attend scheduled retest</strong> (Target client) → re-enters Primary Screening</li>
+      <li>Post-treatment → <strong>Schedule post-treatment retest</strong> (Nurse/midwife) → Message flow to Target client → <em>Intermediate event</em>: interval elapses → End event <em>Retest due</em> → <strong>Attend scheduled retest</strong> (Target client) → re-enters Primary Screening</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Calls sub-process.</strong> None.</p>
+
+<p><strong>Activity references.</strong> <code class="language-plaintext highlighter-rouge">Schedule next routine screening</code>, <code class="language-plaintext highlighter-rouge">Schedule triage-negative retest</code>, <code class="language-plaintext highlighter-rouge">Schedule post-treatment retest</code>, <code class="language-plaintext highlighter-rouge">Attend scheduled retest</code>.</p>
+
+<p><strong>Register references.</strong> <a href="cc-002.html">cc-002</a> (WLHIV intervals), <a href="cc-005.html">cc-005</a> (all three interval values).</p>
+
+<p><img src="workflow-follow-up.svg" alt="Follow-up workflow — Facility pool with Nurse/midwife lane: start event (referred to Follow-up), follow-up-type gateway routing to three parallel schedule tasks (schedule next routine screening, schedule triage-negative retest, schedule post-treatment retest), each leading to a message-throw end event; Client pool receives three reminder message flows from the end events" /></p>
+
+<p><strong>Diagram file:</strong> <code class="language-plaintext highlighter-rouge">input/bpmn/workflow-follow-up.bpmn</code> → <code class="language-plaintext highlighter-rouge">input/images/workflow-follow-up.svg</code>.</p>
+
+<h2 id="sub-process--counselling-and-informed-consent">Sub-process — Counselling and informed consent</h2>
+
+<p><strong>Purpose.</strong> A reusable sub-process capturing the counselling and informed-consent activities that precede any clinical procedure in the cascade — sample collection, VIA triage, or treatment. Modelling this once as a call activity keeps the activities visible in the BPMN spine without repeating them inline in each workflow, and gives a single place to update if country adaptation alters counselling content or consent conventions.</p>
+
+<p><strong>Pool/lane.</strong> Executed within whichever lane invokes it (Nurse/midwife for Primary Screening / Triage / ablation in Treatment; Advanced clinician for LLETZ/LEEP / CKC in Treatment).</p>
+
+<p><strong>Activities.</strong></p>
+
+<ol>
+  <li>Start event</li>
+  <li><em>Explain procedure</em> — the provider explains what will be done, the purpose, the common discomforts, and the alternatives if any</li>
+  <li><em>Confirm understanding</em> — the provider confirms the client has understood, using teach-back or equivalent technique where programme guidance specifies it</li>
+  <li><em>Obtain informed consent</em> — consent is documented per local programme requirements (written, witnessed-verbal, or electronic as applicable)</li>
+  <li>End event</li>
+</ol>
+
+<p><strong>Called from.</strong> Workflow 2 (Primary Screening, before sample collection); Workflow 3 (Triage, before VIA); Workflow 4 (Treatment, before ablation, LLETZ/LEEP, or CKC — not before referral for suspected invasive cancer, which involves a different counselling conversation about suspected malignancy that programmes typically handle in a separate pathway outside the DAK's scope).</p>
+
+<p><strong>Activity references.</strong> Sub-process-internal only — not present in the main action vocabulary, consistent with the SOP's framing of counselling/consent as a cross-cutting concern rather than a cascade-activity-proper.</p>
+
+<p><img src="subprocess-counselling-consent.svg" alt="Counselling and informed consent sub-process — linear sequence of start event, explain procedure, confirm understanding, obtain informed consent, end event" /></p>
+
+<p><strong>Diagram file:</strong> <code class="language-plaintext highlighter-rouge">input/bpmn/subprocess-counselling-consent.bpmn</code> → <code class="language-plaintext highlighter-rouge">input/images/subprocess-counselling-consent.svg</code>.</p>
+
+<h2 id="bpmn-source-files-and-rendering">BPMN source files and rendering</h2>
+
+<p>This DAK commits BPMN source in the IG repository as editable <code class="language-plaintext highlighter-rouge">.bpmn</code> files (BPMN 2.0 XML) and renders them to SVG for IG publication.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Path</th>
+      <th>Contents</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">input/bpmn/workflow-*.bpmn</code></td>
+      <td>BPMN 2.0 source files — the editable canonical representation of each workflow</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">input/images/workflow-*.svg</code></td>
+      <td>Rendered SVG exports — what the IG page embeds</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Tooling.</strong> <a href="https://camunda.com/download/modeler/">Camunda Modeler</a> (free, desktop, offline). Open the <code class="language-plaintext highlighter-rouge">.bpmn</code> file, edit visually, save. Export to SVG via <em>File → Save File As… → .svg</em>, writing to <code class="language-plaintext highlighter-rouge">input/images/</code>. Commit both the updated <code class="language-plaintext highlighter-rouge">.bpmn</code> and the regenerated <code class="language-plaintext highlighter-rouge">.svg</code>.</p>
+
+<p><strong>Why this convention.</strong> BPMN XML is text, diffable under git — though diffs are noisy when visual layout changes, because coordinates move around. Committing the source alongside the rendered image keeps the diagram authoritatively reproducible (re-render at any time) and version-controlled at the semantic level (activity names, flows, gateways are diffable even when coordinates are not). This matches the repository's general rule: <em>commit the format git understands; render the format the audience expects.</em></p>
+
+<h2 id="status">Status</h2>
+
+<p><em>Draft — Phase 1 of Component 4 authoring (2026-04-22).</em> The page declares five workflows and one reusable sub-process, each specified at the level of detail Component 4 requires: pools, lanes, activity sequence, gateways with branch conditions, message flows, sub-process calls, and register-entry references where interpretive choices bear. Activity labels are lifted verbatim from the Component 3 action vocabulary.</p>
+
+<p><strong>BPMN source authoring — pending.</strong> The <code class="language-plaintext highlighter-rouge">.bpmn</code> XML files and their SVG exports are not in the repository yet. The semantic content of each workflow is fully specified above, so the authoring step from here is mechanical: open Camunda Modeler, create one diagram per workflow (and one for the sub-process, and one overview diagram), drop in the pools/lanes/activities exactly as listed, connect with sequence flows and message flows per the descriptions, save to <code class="language-plaintext highlighter-rouge">input/bpmn/</code>, export to <code class="language-plaintext highlighter-rouge">input/images/</code>, and commit. No new design decisions are deferred to that pass — only the visual rendering.</p>
+
+<p><strong>SME validation — pending, inherited.</strong> Each workflow's validation domain is the same as that of the personas whose lanes it contains; the <a href="generic-personas.html#personas">personas page's per-persona SME notes</a> apply by reference.</p>
+
+<p><strong>Cross-DAK reuse — deferred.</strong> Whether to harvest workflow patterns or sub-processes from the WHO ANC or HIV DAKs (which may publish comparable counselling-and-consent patterns, for instance) is a deferred analysis, not blocking this Phase-1 draft.</p>
+
+<p><strong>L3 representation — deferred.</strong> Whether FHIR <code class="language-plaintext highlighter-rouge">PlanDefinition</code> and <code class="language-plaintext highlighter-rouge">ActivityDefinition</code> resources should be authored as L3 machine-readable counterparts to these workflows is a separate decision and is not required by Component 4 itself.</p>
+
+
+
+
+</div>
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /row -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-content -->
+
+<script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+<script type="text/javascript" src="assets/js/window-hash.js"> </script>
+<a name="bottom"> </a>
+<div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+<div class="container">  <!-- container -->
+
+<div class="inner-wrapper">
+  <p>
+    IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/dhes">Dan Heslinga</a>.  Package dhes.dak.cervical-cancer#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 24, 2026 00:44+0000">2026-04-24</span>
+    <br/>
+    <span style="color: var(--footer-highlight-text-color)">
+                Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="https://dhes.github.io/smart-dak-cervical-cancer/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
+    </span>
+  </p>
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+<div class="container">  <!-- container -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-post-footer -->
+
+<!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+<script type="text/javascript" src="assets/js/respond.min.js"> </script>
+<script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+<script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+<script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+<script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+<!-- Analytics Below
+================================================== -->
+
+
+
+

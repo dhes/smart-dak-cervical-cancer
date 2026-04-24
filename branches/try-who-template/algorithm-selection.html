@@ -1,0 +1,701 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Algorithm Selection Analysis - WHO SMART DAK — Cervical Cancer Screening (L2) v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+    <link rel="stylesheet" href="assets/css/fa-all.css" type="text/css"/>
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+    <link rel="stylesheet" href="assets/css/who.css"/>
+    <link rel="stylesheet" href="assets/css/lforms.min.css"/>
+
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"16"}
+    h3,h4,h5,h6{--heading-prefix:"16"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">    <!-- container -->
+            <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+              <!-- status-bar -->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                  <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Business Requirements
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="register.html">Interpretation Register</a>
+      </li>
+      <li>
+        <a href="cc-000.html">Scope Declaration (cc-000)</a>
+      </li>
+      <li>
+        <a href="cc-002.html">WLHIV Operationalisation (cc-002)</a>
+      </li>
+      <li>
+        <a href="cc-003.html">Cancer Suspected (cc-003)</a>
+      </li>
+      <li>
+        <a href="cc-004.html">Vaccination Status (cc-004)</a>
+      </li>
+      <li>
+        <a href="cc-005.html">Screening Interval (cc-005)</a>
+      </li>
+      <li>
+        <a href="cc-001.html">Population and Inclusion (cc-001)</a>
+      </li>
+      <li>
+        <a href="cc-006.html">Pregnancy Handling (cc-006)</a>
+      </li>
+      <li>
+        <a href="cc-007.html">Sexual Exposure Precondition (cc-007)</a>
+      </li>
+      <li>
+        <a href="cc-008.html">HIV Status Absent/Unknown (cc-008)</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="dictionary.html">Data Dictionary</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Decision Logic
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="decision-logic.html">Overview</a>
+      </li>
+      <li>
+        <a href="decision-tables.html">Decision Tables</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="algorithm-selection.html">Algorithm Selection</a>
+  </li>
+  <li>
+    <a href="methodology.html">Methodology</a>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+</ul>
+              </div>    <!-- /.nav-collapse -->
+
+              <div data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;" class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch">
+                  <!-- This div will be pushed to the right -->
+                <div style="margin-left: auto; background-color: #00477d; color: white;" class="language-selector">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" name="language-selector" id="language-selector">
+                    <option disabled="null" selected="null">Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                  <!-- Search Content -->
+              </div>
+            </div>    <!-- /.container -->
+          </nav>    <!-- /.navbar -->
+          <!-- /HEADER CONTENT -->
+        </div>    <!-- /container -->
+      </div>    <!-- /segment-navbar -->
+      
+
+      <div style=" justify-content: space-between; align-items: left;" class="container">
+
+          <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+    <a no-external="true" id="who-logo" href="index.html">
+        
+    </a>
+</div>
+
+ <div id="family-nav">
+  <a no-external="true" id="fhir-logo" href="http://hl7.org/fhir">  </a>
+</div> 
+
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">WHO SMART DAK — Cervical Cancer Screening (L2)</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>Algorithm Selection Analysis</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">WHO SMART DAK — Cervical Cancer Screening (L2), published by Dan Heslinga. This guide is not an authorized publication; it is the continuous build for version 0.1.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href="https://github.com/dhes/smart-dak-cervical-cancer/tree/try-who-template">https://github.com/dhes/smart-dak-cervical-cancer/tree/try-who-template</a> and changes regularly. See the <a href="https://dhes.github.io/smart-dak-cervical-cancer/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>Algorithm Selection Analysis</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#algorithm-selection-analysis-how-the-2021-who-guideline-narrows-the-choice" id="markdown-toc-algorithm-selection-analysis-how-the-2021-who-guideline-narrows-the-choice">Algorithm Selection Analysis: How the 2021 WHO Guideline Narrows the Choice</a>    <ul>
+      <li><a href="#purpose" id="markdown-toc-purpose">Purpose</a></li>
+      <li><a href="#the-seven-algorithms" id="markdown-toc-the-seven-algorithms">The seven algorithms</a></li>
+      <li><a href="#walking-through-the-recommendations" id="markdown-toc-walking-through-the-recommendations">Walking through the recommendations</a>        <ul>
+          <li><a href="#recommendation-1-strong-hpv-dna-as-the-primary-screening-test" id="markdown-toc-recommendation-1-strong-hpv-dna-as-the-primary-screening-test">Recommendation 1 (strong): HPV DNA as the primary screening test</a></li>
+          <li><a href="#recommendation-2-conditional-triage-or-no-triage--general-population" id="markdown-toc-recommendation-2-conditional-triage-or-no-triage--general-population">Recommendation 2 (conditional): Triage or no triage — general population</a></li>
+          <li><a href="#recommendation-22-conditional-triage-required--women-living-with-hiv" id="markdown-toc-recommendation-22-conditional-triage-required--women-living-with-hiv">Recommendation 22 (conditional): Triage required — women living with HIV</a></li>
+          <li><a href="#recommendations-3b-and-23-triage-method--explicitly-left-to-country-discretion" id="markdown-toc-recommendations-3b-and-23-triage-method--explicitly-left-to-country-discretion">Recommendations 3b and 23: Triage method — explicitly left to country discretion</a></li>
+          <li><a href="#recommendation-4--24-self-collection" id="markdown-toc-recommendation-4--24-self-collection">Recommendation 4 / 24: Self-collection</a></li>
+          <li><a href="#recommendations-57--2527-age-thresholds-and-prioritisation" id="markdown-toc-recommendations-57--2527-age-thresholds-and-prioritisation">Recommendations 5–7 / 25–27: Age thresholds and prioritisation</a></li>
+          <li><a href="#recommendations-89--2829-screening-intervals" id="markdown-toc-recommendations-89--2829-screening-intervals">Recommendations 8–9 / 28–29: Screening intervals</a></li>
+          <li><a href="#recommendations-1113--3133-retesting-after-triage-negative-and-post-treatment" id="markdown-toc-recommendations-1113--3133-retesting-after-triage-negative-and-post-treatment">Recommendations 11–13 / 31–33: Retesting after triage-negative and post-treatment</a></li>
+          <li><a href="#recommendation-14--34-transition-guidance" id="markdown-toc-recommendation-14--34-transition-guidance">Recommendation 14 / 34: Transition guidance</a></li>
+          <li><a href="#recommendations-4142-treatment" id="markdown-toc-recommendations-4142-treatment">Recommendations 41–42: Treatment</a></li>
+          <li><a href="#summary-recommendations-pxvi" id="markdown-toc-summary-recommendations-pxvi">Summary recommendations (p.xvi)</a></li>
+        </ul>
+      </li>
+      <li><a href="#mapping-the-narrowed-field-against-infrastructure-reality" id="markdown-toc-mapping-the-narrowed-field-against-infrastructure-reality">Mapping the narrowed field against infrastructure reality</a></li>
+      <li><a href="#what-the-guideline-does-and-does-not-say" id="markdown-toc-what-the-guideline-does-and-does-not-say">What the guideline does and does not say</a></li>
+      <li><a href="#methodology-note-when-does-a-guideline-require-an-algorithm-selection-step" id="markdown-toc-methodology-note-when-does-a-guideline-require-an-algorithm-selection-step">Methodology note: when does a guideline require an algorithm selection step?</a></li>
+      <li><a href="#implications-for-this-case-study" id="markdown-toc-implications-for-this-case-study">Implications for this case study</a></li>
+      <li><a href="#references" id="markdown-toc-references">References</a>        <ul>
+          <li><a href="#primary-guideline-documents" id="markdown-toc-primary-guideline-documents">Primary guideline documents</a></li>
+          <li><a href="#implementation-experience" id="markdown-toc-implementation-experience">Implementation experience</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<h1 id="algorithm-selection-analysis-how-the-2021-who-guideline-narrows-the-choice">Algorithm Selection Analysis: How the 2021 WHO Guideline Narrows the Choice</h1>
+
+<p><strong>Date:</strong> 2026-04-13
+<strong>Authors:</strong> Dan Heslinga, with Claude (Anthropic)
+<strong>Status:</strong> Draft</p>
+
+<h2 id="purpose">Purpose</h2>
+
+<p>This document walks through the WHO 2021 cervical cancer screening guideline's recommendations in sequence, asking the question a Ministry of Health from a country like Ethiopia, Ghana, Malawi, Zambia, or Zimbabwe might ask at the start of guideline implementation discussions:</p>
+
+<blockquote>
+  <p>"Given what you know about our country, which of the seven screening algorithms should we look at first?"</p>
+</blockquote>
+
+<p>The answer is not a single algorithm. The guideline deliberately leaves the triage method to country discretion. But it narrows the field systematically, and this document traces the narrowing logic so that it is visible rather than implicit in the case study's choice of Algorithm 5.</p>
+
+<p>This document supports the scope declaration in <a href="cc-000.html"><code class="language-plaintext highlighter-rouge">../interpretation-register/cc-000-scope-declaration.md</code></a>, which discloses the choice of Algorithm 5 and its biases. That entry summarises; this document shows the work.</p>
+
+<h2 id="the-seven-algorithms">The seven algorithms</h2>
+
+<p>The 2021 guideline (Table 2.2, p.xi) presents seven screening algorithms in two groups:</p>
+
+<p><strong>Screen-and-treat approaches</strong> (primary test → treatment, no intermediate triage step):</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Algorithm</th>
+      <th>Primary Test</th>
+      <th>Triage</th>
+      <th>Treatment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>VIA</td>
+      <td>none</td>
+      <td>direct</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>HPV DNA (self- or clinician-collected)</td>
+      <td>none</td>
+      <td>direct</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Screen, triage and treat approaches</strong> (primary test → triage → treatment):</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Algorithm</th>
+      <th>Primary Test</th>
+      <th>Triage</th>
+      <th>Treatment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>3</td>
+      <td>Cytology</td>
+      <td>colposcopy</td>
+      <td>treatment</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>HPV DNA</td>
+      <td>HPV16/18 genotyping (with VIA for HPV16/18-negative)</td>
+      <td>treatment</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>HPV DNA</td>
+      <td>VIA</td>
+      <td>treatment</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>HPV DNA</td>
+      <td>colposcopy</td>
+      <td>treatment</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>HPV DNA</td>
+      <td>cytology + colposcopy</td>
+      <td>treatment</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The algorithms sit on an infrastructure gradient. Algorithm 1 requires no laboratory; Algorithms 2, 4, and 5 require HPV DNA testing; Algorithms 3, 6, and 7 require cytology labs and/or colposcopy. A country's position on this gradient determines which algorithms are feasible before it determines which are preferred.</p>
+
+<h2 id="walking-through-the-recommendations">Walking through the recommendations</h2>
+
+<h3 id="recommendation-1-strong-hpv-dna-as-the-primary-screening-test">Recommendation 1 (strong): HPV DNA as the primary screening test</h3>
+
+<blockquote>
+  <p>"WHO recommends using HPV DNA detection as the primary screening test rather than VIA or cytology in screening and treatment approaches among both the general population of women and women living with HIV."</p>
+</blockquote>
+
+<p>This is a strong recommendation. It creates a clear preference for HPV DNA as the primary test, favouring Algorithms 2, 4, 5, 6, and 7.</p>
+
+<p>Algorithms 1 (VIA primary) and 3 (cytology primary) are not eliminated but deprecated, with an asymmetry in urgency:</p>
+
+<ul>
+  <li><strong>VIA primary (Algorithm 1):</strong> "existing programmes using VIA as the primary screening test should transition rapidly because of the inherent challenges with quality assurance." Active deprecation.</li>
+  <li><strong>Cytology primary (Algorithm 3):</strong> "existing programmes with quality-assured cytology as the primary screening test should be continued until HPV DNA testing is operational." Tolerated transitionally, conditional on existing quality assurance.</li>
+</ul>
+
+<p><strong>After Rec 1:</strong> Algorithms 2, 4, 5, 6, 7 preferred. Algorithm 1 deprecated with urgency. Algorithm 3 tolerated transitionally.</p>
+
+<h3 id="recommendation-2-conditional-triage-or-no-triage--general-population">Recommendation 2 (conditional): Triage or no triage — general population</h3>
+
+<blockquote>
+  <p>"WHO suggests using an HPV DNA primary screening test either with triage or without triage to prevent cervical cancer among the general population of women."</p>
+</blockquote>
+
+<p>This does not narrow the field among the five HPV DNA algorithms for the general population. Both screen-and-treat (Algorithm 2) and screen-triage-treat (Algorithms 4–7) remain viable.</p>
+
+<p>Note the GRADE strength: "suggests" (conditional), not "recommends" (strong). Countries have latitude here.</p>
+
+<h3 id="recommendation-22-conditional-triage-required--women-living-with-hiv">Recommendation 22 (conditional): Triage required — women living with HIV</h3>
+
+<blockquote>
+  <p>"WHO suggests using an HPV DNA primary screening test with triage rather than without triage to prevent cervical cancer among women living with HIV."</p>
+</blockquote>
+
+<p>This is the critical fork for countries with significant HIV prevalence. Unlike Rec 2, this is directional: <strong>triage is recommended for WLHIV</strong>, not optional.</p>
+
+<p>For Ethiopia, Ghana, Malawi, Zambia, and Zimbabwe — all countries with moderate-to-high HIV prevalence in the screening-age population — a meaningful fraction of women presenting for screening will be living with HIV. Rec 22 means any algorithm selected must include a triage pathway for the WLHIV subpopulation.</p>
+
+<p>A country could in principle run two parallel pathways: screen-and-treat (Algorithm 2) for the general population, and a separate triage pathway for WLHIV. But a unified single-pathway approach using a triage algorithm for all women is operationally simpler and avoids the need to bifurcate the screening workflow at the point of care based on HIV status.</p>
+
+<p><strong>After Recs 1–2 and 21–22:</strong> For countries with significant HIV prevalence, the practical field narrows to Algorithms 4, 5, 6, and 7 (HPV DNA primary with triage).</p>
+
+<h3 id="recommendations-3b-and-23-triage-method--explicitly-left-to-country-discretion">Recommendations 3b and 23: Triage method — explicitly left to country discretion</h3>
+
+<blockquote>
+  <p>"In a screen, triage and treat approach using HPV DNA detection as the primary screening test among [the general population of women / women living with HIV], WHO suggests using partial genotyping, colposcopy, VIA or cytology to triage women after a positive HPV DNA test."</p>
+</blockquote>
+
+<p>The remarks are significant: "The benefits, harms and programmatic costs of the triage options are similar; therefore, <strong>the choice of triage method will be dependent on feasibility, training, programme quality assurance and resources in countries.</strong>"</p>
+
+<p>This is WHO explicitly declining to pick a triage method on evidence grounds and delegating the choice to infrastructure and capacity assessment. The four triage options map directly to the four remaining algorithms:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Triage method</th>
+      <th>Algorithm</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HPV16/18 partial genotyping</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>VIA</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>Colposcopy</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>Cytology (then colposcopy)</td>
+      <td>7</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>After Recs 3b/23:</strong> All four triage algorithms remain viable. The choice is infrastructure-dependent.</p>
+
+<h3 id="recommendation-4--24-self-collection">Recommendation 4 / 24: Self-collection</h3>
+
+<blockquote>
+  <p>"When providing HPV DNA testing, WHO suggests using either samples taken by a health-care provider or self-collected samples among both the general population of women and women living with HIV."</p>
+</blockquote>
+
+<p>Algorithm-neutral — this affects the logistics of HPV DNA primary testing, not which algorithm is selected. But operationally significant: self-collection reduces the need for facility visits for the primary screen, which matters in countries where facility access is the binding constraint on screening coverage.</p>
+
+<h3 id="recommendations-57--2527-age-thresholds-and-prioritisation">Recommendations 5–7 / 25–27: Age thresholds and prioritisation</h3>
+
+<p>Start at 30 (general population) or 25 (WLHIV). Prioritise 30–49 / 25–49. Stop after 50 with two consecutive negatives. These apply to all algorithms and do not affect algorithm selection.</p>
+
+<p>The good practice statement (Rec 10/30) — "screening even just twice in a lifetime is beneficial" — acknowledges the low-coverage reality in many of these countries.</p>
+
+<h3 id="recommendations-89--2829-screening-intervals">Recommendations 8–9 / 28–29: Screening intervals</h3>
+
+<ul>
+  <li>HPV DNA primary: every 5–10 years (general population) or 3–5 years (WLHIV).</li>
+  <li>VIA or cytology primary: every 3 years (both populations).</li>
+</ul>
+
+<p>These do not directly select an algorithm, but they create a <strong>resource efficiency argument for HPV DNA primary testing</strong>: a 5–10 year screening interval requires far fewer lifetime encounters than a 3-year VIA interval. For countries with limited screening capacity and a large unscreened backlog, HPV DNA primary saves resources over the programme lifetime even if the per-test cost is higher. This reinforces the Rec 1 preference for HPV DNA and further weakens the case for remaining on Algorithm 1 (VIA primary, 3-year interval).</p>
+
+<h3 id="recommendations-1113--3133-retesting-after-triage-negative-and-post-treatment">Recommendations 11–13 / 31–33: Retesting after triage-negative and post-treatment</h3>
+
+<ul>
+  <li>Triage-negative retest: 24 months (general population) or 12 months (WLHIV).</li>
+  <li>Post-treatment retest: 12 months (general population, single retest) or 12 months × 2 (WLHIV, "double follow-up").</li>
+</ul>
+
+<p>Algorithm-neutral but these create a higher follow-up burden for WLHIV — further reinforcing Rec 22's insistence on triage for that population, as the follow-up cascade requires a robust pathway.</p>
+
+<h3 id="recommendation-14--34-transition-guidance">Recommendation 14 / 34: Transition guidance</h3>
+
+<blockquote>
+  <p>"As programmes introduce HPV DNA testing, use this test at the woman's next routine screening date regardless of the test that was used at prior screening."</p>
+</blockquote>
+
+<p>Practical transition instruction acknowledging that countries will run mixed programmes during the shift from VIA or cytology to HPV DNA. Does not affect algorithm selection.</p>
+
+<h3 id="recommendations-4142-treatment">Recommendations 41–42: Treatment</h3>
+
+<p>Treat within 6 months. Defer during pregnancy. LLETZ or CKC for AIS. Algorithm-neutral.</p>
+
+<h3 id="summary-recommendations-pxvi">Summary recommendations (p.xvi)</h3>
+
+<p>The guideline concludes with explicit summary strategies:</p>
+
+<p><strong>General population:</strong></p>
+<blockquote>
+  <p>"WHO suggests using <strong>either</strong> of the following strategies:</p>
+  <ul>
+    <li>HPV DNA detection in a screen-and-treat approach starting at the age of 30 years with regular screening every 5 to 10 years.</li>
+    <li>HPV DNA detection in a screen, triage and treat approach starting at the age of 30 years with regular screening every 5 to 10 years."</li>
+  </ul>
+</blockquote>
+
+<p><strong>Women living with HIV:</strong></p>
+<blockquote>
+  <p>"WHO suggests using <strong>the following</strong> strategy:</p>
+  <ul>
+    <li>HPV DNA detection in a screen, triage and treat approach starting at the age of 25 years with regular screening every 3 to 5 years."</li>
+  </ul>
+</blockquote>
+
+<p>Note the asymmetry: "either of the following" (general population) versus "the following" singular (WLHIV). Screen-and-treat is explicitly offered as an option for the general population but excluded for WLHIV.</p>
+
+<h2 id="mapping-the-narrowed-field-against-infrastructure-reality">Mapping the narrowed field against infrastructure reality</h2>
+
+<p>After the full recommendation walk-through, the MOH's question has been narrowed to: <strong>which triage method can our health system support?</strong></p>
+
+<p>The infrastructure constraints relevant to this question, informed by published implementation experience in these countries (see <a href="#references">References</a>), include the following. <strong>A caveat:</strong> the Muliokela and Tamrat publications document implementation of ANC, family planning, and HIV DAKs — not cervical cancer screening. No cervical cancer SMART DAK has been implemented in these countries to date. The papers are cited here for what they reveal about the digital health infrastructure and implementation capacity these countries actually have, which is relevant to algorithm selection regardless of the clinical domain.</p>
+
+<p><strong>Fragmented digital health ecosystems.</strong> Ethiopia, Ghana, Malawi, Zambia, and Zimbabwe each have multiple digital health platforms at varying maturity levels (Bahmni, DHIS2 Tracker, SmartCare, Impilo). Integration between systems is limited, documentation of existing system architecture is often inadequate, and interoperability standards are inconsistently adopted (Muliokela et al. 2024a, Tamrat et al. 2025).</p>
+
+<p><strong>Device and infrastructure shortages.</strong> Health workers face challenges using digital systems in real time at the point of service due to device shortages and infrastructure limitations (Tamrat et al. 2025). This affects the feasibility of algorithms that depend on laboratory results being available at the point of triage.</p>
+
+<p><strong>Workforce constraints.</strong> VIA is performed by nurses with variable training and limited routine quality assurance. Colposcopy and cytology require specialist skills and equipment that are scarce at peripheral facilities. Genotyping capability depends on the HPV DNA testing platform deployed.</p>
+
+<p><strong>Existing VIA experience.</strong> Many of these countries have been running VIA-based screening programmes (Algorithm 1), meaning a trained VIA workforce already exists — but the quality assurance challenges that prompted Rec 1's deprecation of VIA as a <em>primary</em> test also apply to VIA as a <em>triage</em> test, though the clinical stakes are different (triage of a known HPV-positive woman rather than population-level screening).</p>
+
+<p>This infrastructure picture affects the four remaining algorithms differently:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Algorithm</th>
+      <th>Triage</th>
+      <th>Infrastructure requirement</th>
+      <th>Feasibility in these countries</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>4</td>
+      <td>HPV16/18 genotyping</td>
+      <td>Integrated into HPV DNA platform</td>
+      <td>Feasible if the HPV DNA platform supports genotyping; no additional clinical skill required at point of care</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>VIA</td>
+      <td>Trained nurse, acetic acid, adequate light</td>
+      <td>Feasible — existing VIA workforce from Algorithm 1 programmes; quality assurance remains a concern</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Colposcopy</td>
+      <td>Colposcope, trained colposcopist</td>
+      <td>Not feasible at peripheral facilities; limited to referral-level facilities</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Cytology + colposcopy</td>
+      <td>Cytology lab, colposcope, trained personnel</td>
+      <td>Not feasible at scale; requires infrastructure these countries are not deploying</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Algorithms 6 and 7 are infrastructure-excluded</strong> for peripheral-level deployment in these countries. They remain viable at referral hospitals but cannot anchor a national screening programme that needs to reach women at primary care facilities.</p>
+
+<p><strong>Algorithm 4 is viable if the HPV DNA platform supports genotyping.</strong> Its advantage is that triage happens at the laboratory level (genotyping is part of the HPV test), reducing the clinical skill required at the point of care. Its constraint is platform-dependent: not all HPV DNA testing platforms support HPV16/18 partial genotyping.</p>
+
+<p><strong>Algorithm 5 is viable with the existing workforce.</strong> Its advantage is that VIA is a clinical skill these countries already deploy. Its constraint is the well-documented inter-observer variability of VIA, which is the same quality assurance challenge that prompted Rec 1's deprecation of VIA as a <em>primary</em> test.</p>
+
+<h2 id="what-the-guideline-does-and-does-not-say">What the guideline does and does not say</h2>
+
+<p>The guideline does not say "use Algorithm 5." It says:</p>
+
+<ol>
+  <li>Use HPV DNA as the primary test (strong recommendation).</li>
+  <li>For WLHIV, use triage (conditional recommendation, directional).</li>
+  <li>The triage method is a country decision based on feasibility and resources (conditional recommendation, explicitly non-prescriptive).</li>
+</ol>
+
+<p>For countries with moderate-to-high HIV prevalence, limited laboratory infrastructure, and existing VIA-trained workforces, the guideline's narrowing logic lands the conversation on <strong>Algorithm 5 (VIA triage) or Algorithm 4 (genotyping triage)</strong> — not because the evidence prefers them clinically, but because the infrastructure constraints select for them.</p>
+
+<p>The choice between Algorithms 4 and 5 is then a platform question (does the HPV DNA test support genotyping?) and a workforce question (is the existing VIA workforce adequate for triage-level performance?), not an evidence question. The guideline explicitly declines to answer it.</p>
+
+<h2 id="methodology-note-when-does-a-guideline-require-an-algorithm-selection-step">Methodology note: when does a guideline require an algorithm selection step?</h2>
+
+<p>The cervical cancer guideline's multi-algorithm structure is not unique among WHO guidelines — but the fact that it <strong>leaves the selection open</strong> may be. A comparison across three DAK domains illustrates the point.</p>
+
+<p><strong>ANC (2016 guideline, oldest DAK).</strong> The WHO 2016 ANC guideline faced a structurally comparable fork: the 4-visit focused ANC (FANC) model versus an 8-contact model. Both were alternative models of care with different resource implications. But unlike the cervical cancer guideline, WHO resolved the fork with a strong recommendation: "the four-visit focused ANC (FANC) model does not offer women adequate contact with health-care practitioners and is no longer recommended" (Recommendation E.7). The ANC DAK therefore did not need an upstream model-selection step — all 38 of its L2 decision tables operate within the single recommended 8-contact model.</p>
+
+<p><strong>HIV (2024 repo, newest DAK).</strong> The WHO smart-hiv DAK (created April 2024, actively maintained) presents a different structure entirely. Rather than alternative pathways, it is organised around ten additive business processes (Registration, Testing, PrEP, Care &amp; Treatment, PMTCT, Infant Diagnosis, Diagnostics, Follow-up, Referral, Reporting) with approximately 11 decision tables that each handle a specific clinical question within the HIV care cascade. The source material is not a single guideline but a synthesis across multiple WHO publications (2016 consolidated ARV guidelines, 2017 PrEP implementation tool, 2019 testing services guidelines, 2021 consolidated guidelines). Countries make choices within this cascade — which ART regimen to stock, which testing strategy to deploy, whether to offer PrEP — but these are parameter-level decisions within a single pathway, not selections among alternative clinical cascades. There is no upstream algorithm selection decision comparable to the cervical cancer case.</p>
+
+<p><strong>Cervical cancer (2021 guideline).</strong> As documented in the analysis above, the guideline presents seven discrete algorithms and explicitly delegates the selection to countries based on infrastructure and capacity.</p>
+
+<p>The three cases represent three distinct structural patterns:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pattern</th>
+      <th>Example</th>
+      <th>Source structure</th>
+      <th>Upstream selection needed?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Guideline selects</strong></td>
+      <td>ANC (2016)</td>
+      <td>Single guideline, alternative models considered, one recommended</td>
+      <td>No — DAK proceeds within the selected model</td>
+    </tr>
+    <tr>
+      <td><strong>Additive composition</strong></td>
+      <td>HIV (2024)</td>
+      <td>Multiple guidelines, single cascade with parameter-level country choices</td>
+      <td>No — no structural alternatives to choose among</td>
+    </tr>
+    <tr>
+      <td><strong>Guideline delegates</strong></td>
+      <td>Cervical cancer (2021)</td>
+      <td>Single guideline, multiple algorithms, selection delegated to country</td>
+      <td><strong>Yes</strong> — DAK must scope to one algorithm and document the choice</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The distinction that matters for DAK authoring methodology is not whether the source guideline considered alternative pathways — most do — but whether the guideline <strong>selects among them or delegates the selection to countries</strong>. When the guideline selects (as ANC did), the DAK can proceed directly to interpretive work within the chosen pathway. When the source material composes additively (as HIV does), there is no structural fork to resolve. When the guideline delegates (as cervical cancer does), the DAK authoring process needs an explicit upstream step to document which pathway was chosen, on what grounds, and with what consequences for the DAK's scope.</p>
+
+<p>The current DAK authoring methodology (<a href="https://github.com/dhes/dak-authoring-methodology/blob/main/methodology/authoring-workflow.md"><code class="language-plaintext highlighter-rouge">authoring-workflow.md</code> (see [Methodology](methodology.html))</a>) does not include such a step, and the register schema (<a href="https://github.com/dhes/dak-authoring-methodology/blob/main/methodology/register-schema.md"><code class="language-plaintext highlighter-rouge">register-schema.md</code> (see [Methodology](methodology.html))</a>) has no interpretive category for it. The <code class="language-plaintext highlighter-rouge">scope</code> category introduced for <code class="language-plaintext highlighter-rouge">cc-000</code> is the closest approximation, but it treats the selection as a scoping boundary rather than as a structured decision with documented alternatives and selection criteria. The three-DAK comparison suggests the gap is real but narrow: it surfaces only for guidelines that present discrete alternative pathways and decline to choose among them. Whether this pattern recurs in other WHO guideline domains (STI, immunisations, family planning) has not been verified in this analysis.</p>
+
+<h2 id="implications-for-this-case-study">Implications for this case study</h2>
+
+<p>This analysis supports the choice of Algorithm 5 as the case study's modelled algorithm, while making the reasoning path explicit. The choice is not arbitrary and not driven by evidence-preference — it is driven by the infrastructure-dependent narrowing the guideline itself prescribes.</p>
+
+<p>However, Algorithm 4 is an equally defensible choice for the same countries, and a complete methodology exercise might eventually model both. The difference between the two is not in the screening or treatment cascade but in the triage step, which affects the data inputs required (genotyping result versus VIA finding) and the point-of-care workflow (laboratory triage versus clinical triage).</p>
+
+<p>The scope declaration in <code class="language-plaintext highlighter-rouge">cc-000</code> should be read with this analysis as background. The disclosure of biases in that entry — the case study author's high-resource-setting perspective, the selection of a "comfortable middle ground" — remains valid but can now be understood alongside the systematic narrowing that makes Algorithm 5 a reasonable choice on infrastructure grounds, not just a convenient one.</p>
+
+<h2 id="references">References</h2>
+
+<h3 id="primary-guideline-documents">Primary guideline documents</h3>
+
+<ul>
+  <li><strong>WHO 2021 (July):</strong> WHO guideline for screening and treatment of cervical pre-cancer lesions for cervical cancer prevention, second edition. Geneva: World Health Organization; 2021. ISBN 9789240030824. <a href="https://www.who.int/publications/i/item/9789240030824">WHO publication page</a></li>
+  <li><strong>WHO 2021 (December):</strong> WHO guideline for screening and treatment of cervical pre-cancer lesions for cervical cancer prevention, second edition: use of mRNA tests for human papillomavirus (HPV). Geneva: World Health Organization; 2021. ISBN 9789240040434. <a href="https://www.who.int/publications/i/item/9789240040434">WHO publication page</a></li>
+  <li><strong>WHO 2024 (June):</strong> WHO guideline for screening and treatment of cervical pre-cancer lesions for cervical cancer prevention: use of dual-stain cytology to triage women after a positive test for human papillomavirus (HPV). Geneva: World Health Organization; 2024. ISBN 9789240091658. <a href="https://www.who.int/publications/i/item/9789240091658">WHO publication page</a></li>
+</ul>
+
+<h3 id="implementation-experience">Implementation experience</h3>
+
+<ul>
+  <li><strong>Muliokela et al. 2024a:</strong> Muliokela RK, Banda K, Hussen AM, et al. Implementation of WHO SMART Guidelines-Digital Adaptation Kits in Pathfinder Countries in Africa: Processes and Early Lessons Learned. <em>JMIR Medical Informatics</em>. <a href="https://github.com/dhes/dak-authoring-methodology/blob/main/methodology/publications/3-muliokela.pdf"><code class="language-plaintext highlighter-rouge">../../../methodology/publications/3-muliokela.pdf</code></a>. Countries: Ethiopia, Ghana, Malawi, Zambia, Zimbabwe.</li>
+  <li><strong>Muliokela et al. 2022:</strong> Muliokela R, Uwayezu G, Tran Ngoc C, et al. Integration of new digital antenatal care tools using the WHO SMART guideline approach: Experiences from Rwanda and Zambia. <em>Digital Health</em>. 2022;8. DOI: 10.1177/20552076221076256. <a href="https://github.com/dhes/dak-authoring-methodology/blob/main/methodology/publications/4-muliokela.pdf"><code class="language-plaintext highlighter-rouge">../../../methodology/publications/4-muliokela.pdf</code></a>. Countries: Rwanda, Zambia.</li>
+  <li><strong>Tamrat et al. 2025:</strong> Tamrat T, Muliokela RK, Hussen AM, et al. The Guideline Uptake in Digital Ecosystems (GUIDE) study: protocol for implementation research on the impact of WHO SMART guidelines digital adaptation kits to improve quality of care. <em>Health Research Policy and Systems</em>. 2025;23:122. DOI: 10.1186/s12961-025-01397-7. <a href="https://github.com/dhes/dak-authoring-methodology/blob/main/methodology/publications/5-tamrat-et-al.pdf"><code class="language-plaintext highlighter-rouge">../../../methodology/publications/5-tamrat-et-al.pdf</code></a>. Countries: Ethiopia, Ghana.</li>
+</ul>
+
+
+
+
+</div>
+</div>    <!-- /inner-wrapper -->
+</div>    <!-- /row -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-content -->
+
+<script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+<script src="assets/js/window-hash.js" type="text/javascript"> </script>
+<a name="bottom"> </a>
+<div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+<div class="container">    <!-- container -->
+
+<div class="inner-wrapper">
+  <p>
+    IG &copy; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/dhes">Dan Heslinga</a>.  Package dhes.dak.cervical-cancer#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 21, 2026 20:10+0000">2026-04-21</span>
+    <br/>
+    <span style="color: var(--footer-highlight-text-color)"><a name="l1406">​</a>
+                Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" href="https://dhes.github.io/smart-dak-cervical-cancer/history.html" target="_blank">Version History</a> | <a rel="license" style="color: #81BEF7" href="license.html">License</a>
+    </span>
+  </p>
+</div>    <!-- /inner-wrapper -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+<div class="container">    <!-- container -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+<script src="assets/js/respond.min.js" type="text/javascript"> </script>
+<script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+<script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+<script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+<script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+  <!-- Analytics Below
+================================================== -->
+
+
+
+
+</body></html>

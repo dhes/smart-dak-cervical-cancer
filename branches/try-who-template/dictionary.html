@@ -1,0 +1,914 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Data Dictionary - WHO SMART DAK — Cervical Cancer Screening (L2) v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+    <link rel="stylesheet" href="assets/css/fa-all.css" type="text/css"/>
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+    <link rel="stylesheet" href="assets/css/who.css"/>
+    <link rel="stylesheet" href="assets/css/lforms.min.css"/>
+
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"12"}
+    h3,h4,h5,h6{--heading-prefix:"12"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">    <!-- container -->
+            <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+              <!-- status-bar -->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                  <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Business Requirements
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="register.html">Interpretation Register</a>
+      </li>
+      <li>
+        <a href="cc-000.html">Scope Declaration (cc-000)</a>
+      </li>
+      <li>
+        <a href="cc-002.html">WLHIV Operationalisation (cc-002)</a>
+      </li>
+      <li>
+        <a href="cc-003.html">Cancer Suspected (cc-003)</a>
+      </li>
+      <li>
+        <a href="cc-004.html">Vaccination Status (cc-004)</a>
+      </li>
+      <li>
+        <a href="cc-005.html">Screening Interval (cc-005)</a>
+      </li>
+      <li>
+        <a href="cc-001.html">Population and Inclusion (cc-001)</a>
+      </li>
+      <li>
+        <a href="cc-006.html">Pregnancy Handling (cc-006)</a>
+      </li>
+      <li>
+        <a href="cc-007.html">Sexual Exposure Precondition (cc-007)</a>
+      </li>
+      <li>
+        <a href="cc-008.html">HIV Status Absent/Unknown (cc-008)</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="dictionary.html">Data Dictionary</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Decision Logic
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="decision-logic.html">Overview</a>
+      </li>
+      <li>
+        <a href="decision-tables.html">Decision Tables</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="algorithm-selection.html">Algorithm Selection</a>
+  </li>
+  <li>
+    <a href="methodology.html">Methodology</a>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+</ul>
+              </div>    <!-- /.nav-collapse -->
+
+              <div data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;" class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch">
+                  <!-- This div will be pushed to the right -->
+                <div style="margin-left: auto; background-color: #00477d; color: white;" class="language-selector">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" name="language-selector" id="language-selector">
+                    <option disabled="null" selected="null">Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                  <!-- Search Content -->
+              </div>
+            </div>    <!-- /.container -->
+          </nav>    <!-- /.navbar -->
+          <!-- /HEADER CONTENT -->
+        </div>    <!-- /container -->
+      </div>    <!-- /segment-navbar -->
+      
+
+      <div style=" justify-content: space-between; align-items: left;" class="container">
+
+          <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+    <a no-external="true" id="who-logo" href="index.html">
+        
+    </a>
+</div>
+
+ <div id="family-nav">
+  <a no-external="true" id="fhir-logo" href="http://hl7.org/fhir">  </a>
+</div> 
+
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">WHO SMART DAK — Cervical Cancer Screening (L2)</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>Data Dictionary</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">WHO SMART DAK — Cervical Cancer Screening (L2), published by Dan Heslinga. This guide is not an authorized publication; it is the continuous build for version 0.1.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href="https://github.com/dhes/smart-dak-cervical-cancer/tree/try-who-template">https://github.com/dhes/smart-dak-cervical-cancer/tree/try-who-template</a> and changes regularly. See the <a href="https://dhes.github.io/smart-dak-cervical-cancer/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>Data Dictionary</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#cervical-cancer-case-study--core-data-dictionary-minimum-viable" id="markdown-toc-cervical-cancer-case-study--core-data-dictionary-minimum-viable">Cervical Cancer Case Study — Core Data Dictionary (minimum-viable)</a>    <ul>
+      <li><a href="#summary-table" id="markdown-toc-summary-table">Summary table</a></li>
+      <li><a href="#detailed-rows" id="markdown-toc-detailed-rows">Detailed rows</a>        <ul>
+          <li><a href="#row-1--age-in-years" id="markdown-toc-row-1--age-in-years">Row 1 — Age in years</a></li>
+          <li><a href="#row-2--sex-populates-textualist-clientiswoman" id="markdown-toc-row-2--sex-populates-textualist-clientiswoman">Row 2 — Sex (populates textualist <code class="language-plaintext highlighter-rouge">ClientIsWoman</code>)</a></li>
+          <li><a href="#row-3--living-with-hiv" id="markdown-toc-row-3--living-with-hiv">Row 3 — Living With HIV</a></li>
+          <li><a href="#row-4--date-of-last-cervical-cancer-screening-test" id="markdown-toc-row-4--date-of-last-cervical-cancer-screening-test">Row 4 — Date of last cervical cancer screening test</a></li>
+          <li><a href="#row-5--years-since-last-screen-derived" id="markdown-toc-row-5--years-since-last-screen-derived">Row 5 — Years since last screen (derived)</a></li>
+          <li><a href="#row-6--prior-screen-result" id="markdown-toc-row-6--prior-screen-result">Row 6 — Prior screen result</a></li>
+          <li><a href="#row-7--via-result" id="markdown-toc-row-7--via-result">Row 7 — VIA result</a></li>
+          <li><a href="#row-8--suspicion-of-cancer" id="markdown-toc-row-8--suspicion-of-cancer">Row 8 — Suspicion of cancer</a></li>
+          <li><a href="#row-9--transformation-zone-type" id="markdown-toc-row-9--transformation-zone-type">Row 9 — Transformation zone type</a></li>
+          <li><a href="#row-10--histology-result" id="markdown-toc-row-10--histology-result">Row 10 — Histology result</a></li>
+          <li><a href="#row-11--eligible-for-screening-output" id="markdown-toc-row-11--eligible-for-screening-output">Row 11 — Eligible for screening (output)</a></li>
+          <li><a href="#row-12--screening-interval-output" id="markdown-toc-row-12--screening-interval-output">Row 12 — Screening interval (output)</a></li>
+          <li><a href="#row-13--screening-status-output" id="markdown-toc-row-13--screening-status-output">Row 13 — Screening status (output)</a></li>
+          <li><a href="#row-14--triage-status-output" id="markdown-toc-row-14--triage-status-output">Row 14 — Triage status (output)</a></li>
+          <li><a href="#row-15--ablation-eligible-output" id="markdown-toc-row-15--ablation-eligible-output">Row 15 — Ablation eligible (output)</a></li>
+          <li><a href="#row-16--treatment-plan-output" id="markdown-toc-row-16--treatment-plan-output">Row 16 — Treatment plan (output)</a></li>
+          <li><a href="#row-17--follow-up-plan-output" id="markdown-toc-row-17--follow-up-plan-output">Row 17 — Follow-up plan (output)</a></li>
+          <li><a href="#row-18--pregnancy-status-treatment-decision-input-purposive-only" id="markdown-toc-row-18--pregnancy-status-treatment-decision-input-purposive-only">Row 18 — Pregnancy status (Treatment Decision input, purposive only)</a></li>
+          <li><a href="#row-19--vaccination-status-deferred-stub" id="markdown-toc-row-19--vaccination-status-deferred-stub">Row 19 — Vaccination status (deferred stub)</a></li>
+        </ul>
+      </li>
+      <li><a href="#deferred-as-purposive-refinement-hascervix" id="markdown-toc-deferred-as-purposive-refinement-hascervix">Deferred as purposive refinement: <code class="language-plaintext highlighter-rouge">HasCervix</code></a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<h1 id="cervical-cancer-case-study--core-data-dictionary-minimum-viable">Cervical Cancer Case Study — Core Data Dictionary (minimum-viable)</h1>
+
+<p><strong>Scope.</strong> L2 face of every input and output of <a href="downloads.html"><code class="language-plaintext highlighter-rouge">../textualist.dmn</code></a>, plus two deferred rows (pregnancy, vaccination) that map to planned register entries. The column structure follows the SMART Guidelines DAK template as closely as markdown permits. See the <a href="README.html">CDD README</a> for the column semantics, the Kind classification, the L2/L3 boundary, and the tri-purpose framing that motivates the partition.</p>
+
+<p><strong>Status.</strong> First pass, 2026-04-11. Drafted from the harvest snapshot at <a href="https://github.com/dhes/dak-authoring-methodology/blob/main/case-studies/cervical-cancer/narrative/harvested-cdes-from-existing-daks.md"><code class="language-plaintext highlighter-rouge">../narrative/harvested-cdes-from-existing-daks.md</code></a> (harvested 2026-04-10). Kind 2 rows do not carry source commit hashes in this first pass; the commit-hash backfill is Phase B work per <code class="language-plaintext highlighter-rouge">silly-gathering-flamingo.md</code> (local plan file, not published) (the plan file in the user's local Claude state — not a committed project artifact, but the decision record for this work).</p>
+
+<p><strong>L2/L3 boundary discipline.</strong> Every L3 column below (ICD-11, SNOMED CT, LOINC, ICHI, ICF, FHIR Resource, FHIR Profile, Canonical URI) is intentionally blank. These are L3 concerns — to be bound by a terminology specialist or FHIR implementer at the point of country adaptation — and leaving them blank is a feature, not an omission. The per-row <code class="language-plaintext highlighter-rouge">Terminology Intent</code> column carries natural-language meaning to inform but not prescribe the L3 binding. See <a href="https://github.com/dhes/dak-authoring-methodology/blob/main/methodology/authoring-workflow.md"><code class="language-plaintext highlighter-rouge">../../../methodology/authoring-workflow.md#the-l2-boundary-rule</code></a> lines 113–142.</p>
+
+<h2 id="summary-table">Summary table</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Element</th>
+      <th>Data Element ID</th>
+      <th>Data Type</th>
+      <th>Kind</th>
+      <th>Source / Linkage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Age in years</td>
+      <td><code class="language-plaintext highlighter-rouge">HIV.A.DE-age</code> (demographic)</td>
+      <td>number</td>
+      <td>2</td>
+      <td>HIV demographic; textualist input <code class="language-plaintext highlighter-rouge">AgeInYears</code></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Sex</td>
+      <td><code class="language-plaintext highlighter-rouge">HIV.A.DE25</code></td>
+      <td>Coding</td>
+      <td>2</td>
+      <td>HIV.A Registration; textualist input <code class="language-plaintext highlighter-rouge">ClientIsWoman</code> via <code class="language-plaintext highlighter-rouge">Sex = Female</code>; see <a href="cc-001.html"><code class="language-plaintext highlighter-rouge">cc-001</code></a></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Living With HIV</td>
+      <td><code class="language-plaintext highlighter-rouge">HIV.B.DE-hiv-status</code></td>
+      <td>boolean</td>
+      <td>2</td>
+      <td>HIV.B HIV-status cluster; textualist input <code class="language-plaintext highlighter-rouge">LivingWithHIV</code>; see <a href="cc-002.html"><code class="language-plaintext highlighter-rouge">cc-002</code></a></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Date of last cervical cancer screening test</td>
+      <td><code class="language-plaintext highlighter-rouge">HIV.D.DE656</code></td>
+      <td>DateTime</td>
+      <td>2</td>
+      <td>HIV.D Care-Treatment; upstream source of textualist-derived <code class="language-plaintext highlighter-rouge">YearsSinceLastScreen</code></td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Years since last screen (derived)</td>
+      <td><code class="language-plaintext highlighter-rouge">CC.B.DE01</code></td>
+      <td>number</td>
+      <td>1</td>
+      <td>derived from row 4; textualist input <code class="language-plaintext highlighter-rouge">YearsSinceLastScreen</code></td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Prior screen result</td>
+      <td><code class="language-plaintext highlighter-rouge">HIV.D.DE664</code></td>
+      <td>Coding</td>
+      <td>2</td>
+      <td>HIV.D Care-Treatment ("HPV-DNA cervical cancer screening test result"); textualist input <code class="language-plaintext highlighter-rouge">PriorResult</code></td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>VIA result</td>
+      <td><code class="language-plaintext highlighter-rouge">HIV.D.DE668</code></td>
+      <td>Coding</td>
+      <td>2</td>
+      <td>HIV.D Care-Treatment ("VIA cervical cancer screening test result"); textualist input <code class="language-plaintext highlighter-rouge">VIAResult</code></td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Suspicion of cancer (clinical judgment)</td>
+      <td><code class="language-plaintext highlighter-rouge">CC.C.DE01</code></td>
+      <td>boolean</td>
+      <td>1</td>
+      <td>novel; textualist input <code class="language-plaintext highlighter-rouge">SuspicionOfCancer</code>; see <a href="cc-003.html"><code class="language-plaintext highlighter-rouge">cc-003</code></a></td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Transformation zone type</td>
+      <td><code class="language-plaintext highlighter-rouge">CC.D.DE01</code></td>
+      <td>Coding</td>
+      <td>1</td>
+      <td>novel; textualist input <code class="language-plaintext highlighter-rouge">TZType</code></td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Histology result</td>
+      <td><code class="language-plaintext highlighter-rouge">CC.E.DE01</code></td>
+      <td>Coding</td>
+      <td>1</td>
+      <td>novel; textualist input <code class="language-plaintext highlighter-rouge">HistologyResult</code></td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Eligible for screening</td>
+      <td><code class="language-plaintext highlighter-rouge">CC.A.DE01</code></td>
+      <td>boolean</td>
+      <td>1</td>
+      <td>textualist output of Eligible For Screening decision</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Screening interval</td>
+      <td><code class="language-plaintext highlighter-rouge">CC.A.DE02</code></td>
+      <td>string</td>
+      <td>1</td>
+      <td>textualist output (range string); purposive output (point estimate per <a href="cc-005.html"><code class="language-plaintext highlighter-rouge">cc-005</code></a>)</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Screening status</td>
+      <td><code class="language-plaintext highlighter-rouge">CC.B.DE02</code></td>
+      <td>string</td>
+      <td>1</td>
+      <td>textualist output (3-bucket); purposive output (2-bucket "due"/"not yet due" per <a href="cc-005.html"><code class="language-plaintext highlighter-rouge">cc-005</code></a>)</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>Triage status</td>
+      <td><code class="language-plaintext highlighter-rouge">CC.C.DE02</code></td>
+      <td>string</td>
+      <td>1</td>
+      <td>textualist output of Triage Decision</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>Ablation eligible</td>
+      <td><code class="language-plaintext highlighter-rouge">CC.D.DE02</code></td>
+      <td>boolean</td>
+      <td>1</td>
+      <td>textualist output of Ablation Eligibility decision</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>Treatment plan</td>
+      <td><code class="language-plaintext highlighter-rouge">CC.D.DE03</code></td>
+      <td>string</td>
+      <td>1</td>
+      <td>textualist output of Treatment Decision</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>Follow-up plan</td>
+      <td><code class="language-plaintext highlighter-rouge">CC.E.DE02</code></td>
+      <td>string</td>
+      <td>1</td>
+      <td>textualist output of Follow-up Decision</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>Pregnancy status</td>
+      <td><code class="language-plaintext highlighter-rouge">HIV.B.DE160</code>-family (candidate)</td>
+      <td>boolean</td>
+      <td>2</td>
+      <td>purposive-only input to Treatment Decision per <a href="cc-006.html"><code class="language-plaintext highlighter-rouge">cc-006</code></a>; not consumed by textualist</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>Vaccination status</td>
+      <td><code class="language-plaintext highlighter-rouge">IMMZ.*</code> (candidate cluster)</td>
+      <td>Coding</td>
+      <td>2 (defer)</td>
+      <td>not consumed by textualist; stub for <a href="cc-004.html"><code class="language-plaintext highlighter-rouge">cc-004</code></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr/>
+
+<h2 id="detailed-rows">Detailed rows</h2>
+
+<p>Each row below carries the full L2 column set. L3 columns are shown but left blank by design. The summary table above is the quick-scan view; this is the authoritative per-row content.</p>
+
+<h3 id="row-1--age-in-years">Row 1 — Age in years</h3>
+
+<ul>
+  <li><strong>Activity ID:</strong> <code class="language-plaintext highlighter-rouge">CC.A</code> (Eligible For Screening) and <code class="language-plaintext highlighter-rouge">CC.B</code> (Due for Screening)</li>
+  <li><strong>Data Element ID:</strong> <code class="language-plaintext highlighter-rouge">HIV.A.DE-age</code> (placeholder; in the harvest snapshot, HIV.A Registration contains the date-of-birth and age elements; exact DE ID to be fixed in a re-harvest with commit capture in Phase B)</li>
+  <li><strong>Label:</strong> Age in years</li>
+  <li><strong>Description:</strong> The client's age in years, derived from date of birth.</li>
+  <li><strong>Data Type:</strong> number</li>
+  <li><strong>Input Options:</strong> N/A (continuous)</li>
+  <li><strong>Required:</strong> R</li>
+  <li><strong>Linkages (DMN):</strong> <code class="language-plaintext highlighter-rouge">textualist.dmn#CC.A.eligibility_t</code> (Eligible For Screening); used as the second input <code class="language-plaintext highlighter-rouge">AgeInYears</code> in rules <code class="language-plaintext highlighter-rouge">DecisionRule_1yry35i</code> (30–49 general population), <code class="language-plaintext highlighter-rouge">DecisionRule_17r1uyq</code> (&lt;30), <code class="language-plaintext highlighter-rouge">DecisionRule_1l3rrvn</code> (&gt;49), <code class="language-plaintext highlighter-rouge">DecisionRule_1925hkc</code> (25–49 WLHIV), <code class="language-plaintext highlighter-rouge">DecisionRule_1gyepae</code> (&lt;25 WLHIV), and the null catch-all <code class="language-plaintext highlighter-rouge">DecisionRule_catchall_s_nullage</code></li>
+  <li><strong>Annotations:</strong> The textualist computes <code class="language-plaintext highlighter-rouge">AgeInYears</code> from a date-of-birth input at evaluation time. Countries whose EHR only carries a date field will need to compute the derivation; countries whose EHR exposes a derived age may populate directly.</li>
+  <li><strong>Terminology Intent:</strong> Age at the time of screening evaluation, calibrated in completed years, expressed as a non-negative integer.</li>
+  <li><strong>Kind:</strong> 2 (harvested)</li>
+  <li><strong>Source DAK:</strong> HIV</li>
+  <li><strong>Source DE ID:</strong> HIV.A Registration (date-of-birth / age cluster — exact DE ID pending commit-captured re-harvest)</li>
+  <li><strong>Source Commit:</strong> <em>(blank; backfill planned in Phase B)</em></li>
+  <li><strong>Reuse Intent:</strong> reuse-as-is</li>
+  <li><strong>ICD-11 / SNOMED CT / LOINC / ICHI / ICF:</strong> <em>(blank — L3)</em></li>
+  <li><strong>FHIR Resource / FHIR Profile / Canonical URI:</strong> <em>(blank — L3)</em></li>
+</ul>
+
+<h3 id="row-2--sex-populates-textualist-clientiswoman">Row 2 — Sex (populates textualist <code class="language-plaintext highlighter-rouge">ClientIsWoman</code>)</h3>
+
+<ul>
+  <li><strong>Activity ID:</strong> <code class="language-plaintext highlighter-rouge">CC.A</code> (Eligible For Screening)</li>
+  <li><strong>Data Element ID:</strong> <code class="language-plaintext highlighter-rouge">HIV.A.DE25</code></li>
+  <li><strong>Label:</strong> Sex</li>
+  <li><strong>Description:</strong> Sex of the client assigned at birth.</li>
+  <li><strong>Data Type:</strong> Coding</li>
+  <li><strong>Input Options:</strong> Female (<code class="language-plaintext highlighter-rouge">HIV.A.DE26</code>), Male (<code class="language-plaintext highlighter-rouge">HIV.A.DE27</code>), Other (<code class="language-plaintext highlighter-rouge">HIV.A.DE28</code>)</li>
+  <li><strong>Required:</strong> R</li>
+  <li><strong>Linkages (DMN):</strong> <code class="language-plaintext highlighter-rouge">textualist.dmn#CC.A.eligibility_t</code> (Eligible For Screening); populates the first input <code class="language-plaintext highlighter-rouge">ClientIsWoman</code> as <code class="language-plaintext highlighter-rouge">ClientIsWoman = (Sex = Female)</code>. Used by rules <code class="language-plaintext highlighter-rouge">DecisionRule_1yry35i</code>, <code class="language-plaintext highlighter-rouge">DecisionRule_17r1uyq</code>, <code class="language-plaintext highlighter-rouge">DecisionRule_1l3rrvn</code>, <code class="language-plaintext highlighter-rouge">DecisionRule_1925hkc</code>, <code class="language-plaintext highlighter-rouge">DecisionRule_1gyepae</code>, <code class="language-plaintext highlighter-rouge">DecisionRule_05t3z2o</code>, and the null catch-all <code class="language-plaintext highlighter-rouge">DecisionRule_catchall_s_nullwoman</code>. The textualist rule <code class="language-plaintext highlighter-rouge">DecisionRule_05t3z2o</code> carries the description <code class="language-plaintext highlighter-rouge">"Per L1 terminology; see Interpretation Register"</code> as a forward reference to <code class="language-plaintext highlighter-rouge">cc-001</code>.</li>
+  <li><strong>Linkages (Register):</strong> <a href="cc-001.html"><code class="language-plaintext highlighter-rouge">cc-001</code></a> — this row is the first-case-study resolution of the population-definition question. See the "Deferred as purposive refinement: <code class="language-plaintext highlighter-rouge">HasCervix</code>" section below for the candidate element's shape and the conditions under which it would become a row.</li>
+  <li><strong>Annotations:</strong> The textualist input name <code class="language-plaintext highlighter-rouge">ClientIsWoman</code> is preserved as-is; a future purposive DMN authoring pass may rename it to <code class="language-plaintext highlighter-rouge">ClientSex</code> or similar to reduce the sex/gender/identity conflation implicit in the current name. That rename is not bundled into this documentary CDD addition because it has test-suite impact.</li>
+  <li><strong>Terminology Intent:</strong> The patient attribute representing sex as recorded in the EHR at registration. In the textualist, <code class="language-plaintext highlighter-rouge">ClientIsWoman = true</code> whenever <code class="language-plaintext highlighter-rouge">Sex = Female</code>, consistent with the 2021-07 guideline's Recommendation 1 language ("women") and with deployment reality in LMIC public-sector EHRs that do not carry anatomical-inventory fields. The guideline's Section 3.1 broader population (transgender men and non-binary / intersex individuals with a cervix) is served by targeted outreach in a parallel workflow and is not represented in this element; see the "Deferred as purposive refinement: <code class="language-plaintext highlighter-rouge">HasCervix</code>" block below for the register-level treatment of the broader and narrower refinements this element does not encode. See <a href="cc-001.html"><code class="language-plaintext highlighter-rouge">cc-001</code></a> for the interpretive reasoning and its first-case-study resolution.</li>
+  <li><strong>Kind:</strong> 2 (harvested)</li>
+  <li><strong>Source DAK:</strong> HIV</li>
+  <li><strong>Source DE ID:</strong> <code class="language-plaintext highlighter-rouge">HIV.A.DE25</code></li>
+  <li><strong>Source Commit:</strong> <em>(blank; backfill planned in Phase B)</em></li>
+  <li><strong>Reuse Intent:</strong> reuse-as-is</li>
+  <li><strong>ICD-11 / SNOMED CT / LOINC / ICHI / ICF:</strong> <em>(blank — L3)</em></li>
+  <li><strong>FHIR Resource / FHIR Profile / Canonical URI:</strong> <em>(blank — L3; <code class="language-plaintext highlighter-rouge">Patient.gender</code> is the obvious L3 FHIR target but that decision is deferred to the L3 binding step at country adaptation time)</em></li>
+</ul>
+
+<h3 id="row-3--living-with-hiv">Row 3 — Living With HIV</h3>
+
+<ul>
+  <li><strong>Activity ID:</strong> <code class="language-plaintext highlighter-rouge">CC.A</code> (Eligible For Screening), <code class="language-plaintext highlighter-rouge">CC.C</code> (Triage Decision)</li>
+  <li><strong>Data Element ID:</strong> <code class="language-plaintext highlighter-rouge">HIV.B.DE-hiv-status</code> (placeholder; exact DE ID for the generic HIV-status boolean pending commit-captured re-harvest)</li>
+  <li><strong>Label:</strong> Living with HIV</li>
+  <li><strong>Description:</strong> Whether the client is a person living with HIV.</li>
+  <li><strong>Data Type:</strong> boolean</li>
+  <li><strong>Input Options:</strong> true / false / null</li>
+  <li><strong>Input Option Semantics:</strong> <code class="language-plaintext highlighter-rouge">true</code> = the client is documented or disclosed as living with HIV at the time of the screening encounter. <code class="language-plaintext highlighter-rouge">false</code> = the client is documented-negative for HIV, <em>or</em> presumed-negative at the encounter per the country's operational convention for absent HIV records; the boolean does not distinguish these two cases. <code class="language-plaintext highlighter-rouge">null</code> = HIV status is not available at the screening decision point (never tested, records incomplete, or linkage to the HIV care system failed); handling is governed by <a href="cc-008.html"><code class="language-plaintext highlighter-rouge">cc-008</code></a>.</li>
+  <li><strong>Required:</strong> R</li>
+  <li><strong>Linkages (DMN):</strong> <code class="language-plaintext highlighter-rouge">textualist.dmn#CC.A.eligibility_t</code> (Eligible For Screening) rules <code class="language-plaintext highlighter-rouge">DecisionRule_1yry35i</code>, <code class="language-plaintext highlighter-rouge">DecisionRule_1925hkc</code>, <code class="language-plaintext highlighter-rouge">DecisionRule_1gyepae</code> (the former null-HIV catch-all <code class="language-plaintext highlighter-rouge">DecisionRule_catchall_s_nullhiv</code> was removed per <a href="cc-008.html"><code class="language-plaintext highlighter-rouge">cc-008</code></a> to restore guideline-silence fidelity for absent HIV status). <code class="language-plaintext highlighter-rouge">purposive.dmn#CC.A.eligibility_p</code> (Eligible For Screening) retains a narrowed catch-all <code class="language-plaintext highlighter-rouge">DecisionRule_catchall_s_nullhiv</code> encoding the fail-closed policy per <a href="cc-008.html"><code class="language-plaintext highlighter-rouge">cc-008</code></a>; the above-age-range rule <code class="language-plaintext highlighter-rouge">DecisionRule_1l3rrvn</code> is correspondingly narrowed to <code class="language-plaintext highlighter-rouge">LivingWithHIV = not(null)</code> to avoid overlap. Also <code class="language-plaintext highlighter-rouge">textualist.dmn#CC.C.triage_t</code> (Triage Decision) rules <code class="language-plaintext highlighter-rouge">DecisionRule_triage_neg_gen</code> and <code class="language-plaintext highlighter-rouge">DecisionRule_triage_neg_hiv</code> (population-specific re-screen interval after VIA-negative triage).</li>
+  <li><strong>Linkages (Register):</strong> <a href="cc-002.html"><code class="language-plaintext highlighter-rouge">cc-002-wlhiv-operationalisation.md</code></a> — this row is the data element the WLHIV register entry operates on. The <code class="language-plaintext highlighter-rouge">evidence_volatile: true</code> flag on <code class="language-plaintext highlighter-rouge">cc-002</code> applies to this element: the encoding as a single boolean is a deliberate simplification over the finer-grained HIV-status stratification (CD4, viral suppression, ART duration) that the evidence base is moving toward. <a href="cc-008.html"><code class="language-plaintext highlighter-rouge">cc-008-hiv-status-absent.md</code></a> — covers the distinct question of how the cascade behaves when this element is absent or unknown at the screening decision point; selects fail-closed in the purposive and guideline-silence-revealing in the textualist.</li>
+  <li><strong>Annotations:</strong> The textualist treats this as a patient-level boolean throughout the cascade. The boolean's three input options map to more than three real-world states: <code class="language-plaintext highlighter-rouge">false</code> collapses "documented-negative" and "presumed-negative-at-encounter," and <code class="language-plaintext highlighter-rouge">null</code> covers at least three distinct missingness modes (never tested, records incomplete, linkage failed). The stratification question is addressed by <a href="cc-002.html"><code class="language-plaintext highlighter-rouge">cc-002</code></a>; the missingness question is addressed by <a href="cc-008.html"><code class="language-plaintext highlighter-rouge">cc-008</code></a>. Countries where HIV status is held in a separate HIV-care system (HIV-specific EMR module or standalone system like SmartCare) need an L3 data-linkage step to populate this at the screening encounter. A future register entry may refine the encoding to a finer-grained element or to a set of related elements covering viral-suppression status.</li>
+  <li><strong>Terminology Intent:</strong> Whether the client is a person living with HIV at the time of the screening encounter. A <code class="language-plaintext highlighter-rouge">true</code> value triggers the WLHIV-specific screening-age threshold (25 rather than 30) and interval (3–5 years rather than 5–10 years) per 2021-07 Recommendations 21 and 22, and the WLHIV-specific post-treatment follow-up schedule per Recommendation 33 (the "double follow-up" — see <a href="https://github.com/dhes/dak-authoring-methodology/blob/main/case-studies/cervical-cancer/narrative/addendum-2021-12-reconciliation.md"><code class="language-plaintext highlighter-rouge">addendum-2021-12-reconciliation.md</code> (see [source repo](https://github.com/dhes/dak-authoring-methodology/blob/main/case-studies/cervical-cancer/narrative/addendum-2021-12-reconciliation.md))</a>).</li>
+  <li><strong>Kind:</strong> 2 (harvested)</li>
+  <li><strong>Source DAK:</strong> HIV</li>
+  <li><strong>Source DE ID:</strong> HIV.B HIV-status cluster (exact DE ID pending commit-captured re-harvest)</li>
+  <li><strong>Source Commit:</strong> <em>(blank)</em></li>
+  <li><strong>Reuse Intent:</strong> reuse-as-is</li>
+  <li><strong>ICD-11 / SNOMED CT / LOINC / ICHI / ICF:</strong> <em>(blank — L3)</em></li>
+  <li><strong>FHIR Resource / FHIR Profile / Canonical URI:</strong> <em>(blank — L3)</em></li>
+</ul>
+
+<h3 id="row-4--date-of-last-cervical-cancer-screening-test">Row 4 — Date of last cervical cancer screening test</h3>
+
+<ul>
+  <li><strong>Activity ID:</strong> <code class="language-plaintext highlighter-rouge">CC.B</code> (Due for Screening — upstream source for the derived input)</li>
+  <li><strong>Data Element ID:</strong> <code class="language-plaintext highlighter-rouge">HIV.D.DE656</code></li>
+  <li><strong>Label:</strong> Date of cervical cancer screening test</li>
+  <li><strong>Description:</strong> The date on which the client's most recent cervical cancer screening test was performed.</li>
+  <li><strong>Data Type:</strong> DateTime</li>
+  <li><strong>Input Options:</strong> N/A</li>
+  <li><strong>Required:</strong> O</li>
+  <li><strong>Linkages (DMN):</strong> Upstream source of the textualist-derived input <code class="language-plaintext highlighter-rouge">YearsSinceLastScreen</code> (row 5). Not consumed directly by any DMN decision rule; the derivation <code class="language-plaintext highlighter-rouge">YearsSinceLastScreen = now() - DateOfLastScreening</code> is performed outside the decision table.</li>
+  <li><strong>Annotations:</strong> Included as a row so the data lineage from harvested upstream source to derived textualist input is documented. Countries whose EHR stores the last screen date can populate this directly; countries whose EHR only stores a years-since-last-screen computation can skip this row and populate row 5 directly.</li>
+  <li><strong>Terminology Intent:</strong> The calendar date on which the most recent cervical cancer screening test was performed for this client. If the client has never been screened, this element is null and the textualist <code class="language-plaintext highlighter-rouge">YearsSinceLastScreen</code> is also null.</li>
+  <li><strong>Kind:</strong> 2 (harvested)</li>
+  <li><strong>Source DAK:</strong> HIV</li>
+  <li><strong>Source DE ID:</strong> <code class="language-plaintext highlighter-rouge">HIV.D.DE656</code></li>
+  <li><strong>Source Commit:</strong> <em>(blank)</em></li>
+  <li><strong>Reuse Intent:</strong> reuse-as-is</li>
+  <li><strong>ICD-11 / SNOMED CT / LOINC / ICHI / ICF:</strong> <em>(blank — L3)</em></li>
+  <li><strong>FHIR Resource / FHIR Profile / Canonical URI:</strong> <em>(blank — L3)</em></li>
+</ul>
+
+<h3 id="row-5--years-since-last-screen-derived">Row 5 — Years since last screen (derived)</h3>
+
+<ul>
+  <li><strong>Activity ID:</strong> <code class="language-plaintext highlighter-rouge">CC.B</code> (Due for Screening)</li>
+  <li><strong>Data Element ID:</strong> <code class="language-plaintext highlighter-rouge">CC.B.DE01</code></li>
+  <li><strong>Label:</strong> Years since last screen</li>
+  <li><strong>Description:</strong> Years elapsed between the date of the client's most recent cervical cancer screening test and the current screening evaluation.</li>
+  <li><strong>Data Type:</strong> number</li>
+  <li><strong>Input Options:</strong> N/A (continuous; null if never screened)</li>
+  <li><strong>Required:</strong> C (conditional — null when <code class="language-plaintext highlighter-rouge">DateOfLastScreening</code> is null)</li>
+  <li><strong>Linkages (DMN):</strong> <code class="language-plaintext highlighter-rouge">textualist.dmn#CC.B.due_screening_t</code> (Due for Screening); third input <code class="language-plaintext highlighter-rouge">YearsSinceLastScreen</code> in rules <code class="language-plaintext highlighter-rouge">DecisionRule_0hrknh0</code> (never screened), <code class="language-plaintext highlighter-rouge">DecisionRule_1kowjor</code> (<code class="language-plaintext highlighter-rouge">&lt;5</code> general pop), <code class="language-plaintext highlighter-rouge">DecisionRule_1623wc6</code> (<code class="language-plaintext highlighter-rouge">[5..10]</code>), <code class="language-plaintext highlighter-rouge">DecisionRule_0d7mryk</code> (<code class="language-plaintext highlighter-rouge">&gt;10</code>), <code class="language-plaintext highlighter-rouge">DecisionRule_0v20651</code> (<code class="language-plaintext highlighter-rouge">&lt;3</code> WLHIV), <code class="language-plaintext highlighter-rouge">DecisionRule_0esotny</code> (<code class="language-plaintext highlighter-rouge">[3..5]</code>), <code class="language-plaintext highlighter-rouge">DecisionRule_018yt1f</code> (<code class="language-plaintext highlighter-rouge">&gt;5</code>).</li>
+  <li><strong>Annotations:</strong> Derived from row 4 at evaluation time. The textualist takes this as a direct input; the derivation happens upstream.</li>
+  <li><strong>Terminology Intent:</strong> The elapsed time in completed years between the date stored in row 4 and the date of the current evaluation. Null when no prior screen exists.</li>
+  <li><strong>Kind:</strong> 1 (derived)</li>
+  <li><strong>Source DAK:</strong> N/A (novel, derived)</li>
+  <li><strong>Source DE ID:</strong> N/A</li>
+  <li><strong>ICD-11 / SNOMED CT / LOINC / ICHI / ICF:</strong> <em>(blank — L3)</em></li>
+  <li><strong>FHIR Resource / FHIR Profile / Canonical URI:</strong> <em>(blank — L3)</em></li>
+</ul>
+
+<h3 id="row-6--prior-screen-result">Row 6 — Prior screen result</h3>
+
+<ul>
+  <li><strong>Activity ID:</strong> <code class="language-plaintext highlighter-rouge">CC.B</code> (Due for Screening)</li>
+  <li><strong>Data Element ID:</strong> <code class="language-plaintext highlighter-rouge">HIV.D.DE664</code></li>
+  <li><strong>Label:</strong> HPV-DNA cervical cancer screening test result (case study label: Prior screen result)</li>
+  <li><strong>Description:</strong> The result of the client's most recent cervical cancer screening test. In Algorithm 5 (HPV DNA primary screening), this is the HPV DNA test result; in a purposive that uses a different primary test (cytology, HPV mRNA, dual-stain), the same slot holds the result of whichever primary test was used.</li>
+  <li><strong>Data Type:</strong> Coding (textualist uses string: "positive" / "negative" / null)</li>
+  <li><strong>Input Options:</strong> positive / negative / (null)</li>
+  <li><strong>Required:</strong> C (null when no prior screen)</li>
+  <li><strong>Linkages (DMN):</strong> <code class="language-plaintext highlighter-rouge">textualist.dmn#CC.B.due_screening_t</code> (Due for Screening); fourth input <code class="language-plaintext highlighter-rouge">PriorResult</code> in rules <code class="language-plaintext highlighter-rouge">DecisionRule_1kowjor</code> through <code class="language-plaintext highlighter-rouge">DecisionRule_018yt1f</code> (all checking <code class="language-plaintext highlighter-rouge">"negative"</code> to partition the screening window) and <code class="language-plaintext highlighter-rouge">DecisionRule_1cti1wm</code> (checking <code class="language-plaintext highlighter-rouge">"positive"</code> to route to triage pathway).</li>
+  <li><strong>Annotations:</strong> The textualist's abstract <code class="language-plaintext highlighter-rouge">PriorResult</code> string corresponds to the HIV DAK's <code class="language-plaintext highlighter-rouge">HIV.D.DE664</code> "HPV-DNA cervical cancer screening test result" under Algorithm 5. If a purposive DMN is authored for Algorithm 2 or 6 (cytology or colposcopy triage), the same slot would be filled from <code class="language-plaintext highlighter-rouge">HIV.D.DE673</code> (cytology) or similar. A more complete CC DAK CDD would carry a <code class="language-plaintext highlighter-rouge">PrimaryScreeningTestType</code> element alongside this and partition the result rows by primary-test type; that expansion is out of scope for the minimum-viable first pass.</li>
+  <li><strong>Terminology Intent:</strong> The binary result of the client's most recent primary cervical cancer screening test, where "positive" triggers the triage pathway and "negative" supports the rescreen-window calculation.</li>
+  <li><strong>Kind:</strong> 2 (harvested)</li>
+  <li><strong>Source DAK:</strong> HIV</li>
+  <li><strong>Source DE ID:</strong> <code class="language-plaintext highlighter-rouge">HIV.D.DE664</code></li>
+  <li><strong>Source Commit:</strong> <em>(blank)</em></li>
+  <li><strong>Reuse Intent:</strong> extend (the CC DAK may need a broader type that covers all primary-test results across Algorithms 1–7, not only HPV DNA)</li>
+  <li><strong>ICD-11 / SNOMED CT / LOINC / ICHI / ICF:</strong> <em>(blank — L3)</em></li>
+  <li><strong>FHIR Resource / FHIR Profile / Canonical URI:</strong> <em>(blank — L3)</em></li>
+</ul>
+
+<h3 id="row-7--via-result">Row 7 — VIA result</h3>
+
+<ul>
+  <li><strong>Activity ID:</strong> <code class="language-plaintext highlighter-rouge">CC.C</code> (Triage Decision)</li>
+  <li><strong>Data Element ID:</strong> <code class="language-plaintext highlighter-rouge">HIV.D.DE668</code></li>
+  <li><strong>Label:</strong> VIA cervical cancer screening test result</li>
+  <li><strong>Description:</strong> The result of visual inspection with acetic acid (VIA), performed as a triage test after a positive HPV screening result in Algorithm 5.</li>
+  <li><strong>Data Type:</strong> Coding (textualist uses string: "positive" / "negative" / "suspected cancer" / null)</li>
+  <li><strong>Input Options:</strong> positive / negative / suspected cancer / (null)</li>
+  <li><strong>Required:</strong> C (null when not yet performed)</li>
+  <li><strong>Linkages (DMN):</strong> <code class="language-plaintext highlighter-rouge">textualist.dmn#CC.C.triage_t</code> (Triage Decision); first input <code class="language-plaintext highlighter-rouge">VIAResult</code> in rules <code class="language-plaintext highlighter-rouge">DecisionRule_triage_pos</code>, <code class="language-plaintext highlighter-rouge">DecisionRule_triage_neg_gen</code>, <code class="language-plaintext highlighter-rouge">DecisionRule_triage_neg_hiv</code>, <code class="language-plaintext highlighter-rouge">DecisionRule_triage_cancer</code>, and catch-all <code class="language-plaintext highlighter-rouge">DecisionRule_triage_catchall</code>.</li>
+  <li><strong>Linkages (Register):</strong> The "suspected cancer" category within VIA result is the clinical-judgment boolean that <a href="cc-003.html"><code class="language-plaintext highlighter-rouge">cc-003</code></a> flags. See row 8 (Suspicion of cancer) for the separated-out boolean that the Ablation Eligibility decision consumes; the two are related but distinct — row 7 is the triage result category, row 8 is the standalone clinical judgment the Ablation Eligibility table uses.</li>
+  <li><strong>Annotations:</strong> VIA triage has well-documented inter-observer variability; <code class="language-plaintext highlighter-rouge">cc-003</code> names this as the most clinically loaded boolean input the DAK takes as given. The element itself is straightforward; the variability is in the clinical act of performing the VIA and interpreting the acetowhite reaction.</li>
+  <li><strong>Terminology Intent:</strong> The provider's interpretation of the VIA triage step: positive (acetowhite lesion; route to treatment), negative (no acetowhite lesion; route to re-screen), or suspected cancer (findings concerning for invasive disease; route to referral).</li>
+  <li><strong>Kind:</strong> 2 (harvested)</li>
+  <li><strong>Source DAK:</strong> HIV</li>
+  <li><strong>Source DE ID:</strong> <code class="language-plaintext highlighter-rouge">HIV.D.DE668</code></li>
+  <li><strong>Source Commit:</strong> <em>(blank)</em></li>
+  <li><strong>Reuse Intent:</strong> reuse-as-is</li>
+  <li><strong>ICD-11 / SNOMED CT / LOINC / ICHI / ICF:</strong> <em>(blank — L3)</em></li>
+  <li><strong>FHIR Resource / FHIR Profile / Canonical URI:</strong> <em>(blank — L3)</em></li>
+</ul>
+
+<h3 id="row-8--suspicion-of-cancer">Row 8 — Suspicion of cancer</h3>
+
+<ul>
+  <li><strong>Activity ID:</strong> <code class="language-plaintext highlighter-rouge">CC.D</code> (Ablation Eligibility)</li>
+  <li><strong>Data Element ID:</strong> <code class="language-plaintext highlighter-rouge">CC.D.DE01</code></li>
+  <li><strong>Label:</strong> Suspicion of cancer</li>
+  <li><strong>Description:</strong> A boolean representing the clinician's judgment that invasive cervical cancer is suspected from the current examination (visual inspection, lesion characteristics, bleeding pattern, or symptomatic presentation), independent of histopathology confirmation.</li>
+  <li><strong>Data Type:</strong> boolean</li>
+  <li><strong>Input Options:</strong> true / false / null</li>
+  <li><strong>Required:</strong> R (at the Ablation Eligibility decision point)</li>
+  <li><strong>Linkages (DMN):</strong> <code class="language-plaintext highlighter-rouge">textualist.dmn#CC.D.ablation_t</code> (Ablation Eligibility); first input <code class="language-plaintext highlighter-rouge">SuspicionOfCancer</code> in rules <code class="language-plaintext highlighter-rouge">DecisionRule_ablation_cancer</code> (any suspicion → not ablation-eligible), <code class="language-plaintext highlighter-rouge">DecisionRule_ablation_tz1</code>, <code class="language-plaintext highlighter-rouge">DecisionRule_ablation_tz2</code>, <code class="language-plaintext highlighter-rouge">DecisionRule_ablation_tz3</code>, and catch-all <code class="language-plaintext highlighter-rouge">DecisionRule_ablation_ca_nullsusp</code>.</li>
+  <li><strong>Linkages (Register):</strong> <a href="cc-003.html"><code class="language-plaintext highlighter-rouge">cc-003-cancer-suspected.md</code></a> — this row is the data element the "cancer suspected" register entry operates on.</li>
+  <li><strong>Annotations:</strong> A clinically loaded boolean. <code class="language-plaintext highlighter-rouge">cc-003</code> documents what it hides: training, experience, time pressure, and systematic under- or over-calling of "suspected cancer" across providers. The DAK treats it as given input; upstream clinical quality assurance is a deployment-context concern, not a DAK decision rule.</li>
+  <li><strong>Terminology Intent:</strong> The clinician's determination, made at the time of the screening or triage encounter, that invasive cervical cancer is suspected and further evaluation (biopsy, colposcopy, oncology referral) is warranted instead of or in addition to the ablation-vs-excision treatment pathway.</li>
+  <li><strong>Kind:</strong> 1 (novel to CC)</li>
+  <li><strong>ICD-11 / SNOMED CT / LOINC / ICHI / ICF:</strong> <em>(blank — L3)</em></li>
+  <li><strong>FHIR Resource / FHIR Profile / Canonical URI:</strong> <em>(blank — L3)</em></li>
+</ul>
+
+<h3 id="row-9--transformation-zone-type">Row 9 — Transformation zone type</h3>
+
+<ul>
+  <li><strong>Activity ID:</strong> <code class="language-plaintext highlighter-rouge">CC.D</code> (Ablation Eligibility)</li>
+  <li><strong>Data Element ID:</strong> <code class="language-plaintext highlighter-rouge">CC.D.DE02</code></li>
+  <li><strong>Label:</strong> Transformation zone type</li>
+  <li><strong>Description:</strong> The anatomical classification of the cervical transformation zone, per the 2021-07 guideline's Annex 5 Section 5.1.1 typology.</li>
+  <li><strong>Data Type:</strong> Coding</li>
+  <li><strong>Input Options:</strong> <code class="language-plaintext highlighter-rouge">Type 1</code> (entirely visible, ectocervical), <code class="language-plaintext highlighter-rouge">Type 2</code> (entirely visible, endocervical component), <code class="language-plaintext highlighter-rouge">Type 3</code> (not entirely visible, extends into endocervical canal), null</li>
+  <li><strong>Required:</strong> R (at Ablation Eligibility)</li>
+  <li><strong>Linkages (DMN):</strong> <code class="language-plaintext highlighter-rouge">textualist.dmn#CC.D.ablation_t</code> (Ablation Eligibility); second input <code class="language-plaintext highlighter-rouge">TZType</code> in rules <code class="language-plaintext highlighter-rouge">DecisionRule_ablation_tz1</code>, <code class="language-plaintext highlighter-rouge">DecisionRule_ablation_tz2</code>, <code class="language-plaintext highlighter-rouge">DecisionRule_ablation_tz3</code>, and catch-all <code class="language-plaintext highlighter-rouge">DecisionRule_ablation_ca_nulltz</code>.</li>
+  <li><strong>Annotations:</strong> Cervical-cancer-specific anatomical typology; does not exist in any harvested DAK as a reusable element. Novel to the CC DAK.</li>
+  <li><strong>Terminology Intent:</strong> The classification of the cervical transformation zone based on its visibility and position on the ectocervix/endocervical canal, determining whether the lesion can be treated by ablation (Types 1 and 2) or requires excision (Type 3).</li>
+  <li><strong>Kind:</strong> 1 (novel to CC)</li>
+  <li><strong>ICD-11 / SNOMED CT / LOINC / ICHI / ICF:</strong> <em>(blank — L3)</em></li>
+  <li><strong>FHIR Resource / FHIR Profile / Canonical URI:</strong> <em>(blank — L3)</em></li>
+</ul>
+
+<h3 id="row-10--histology-result">Row 10 — Histology result</h3>
+
+<ul>
+  <li><strong>Activity ID:</strong> <code class="language-plaintext highlighter-rouge">CC.E</code> (Follow-up Decision)</li>
+  <li><strong>Data Element ID:</strong> <code class="language-plaintext highlighter-rouge">CC.E.DE01</code></li>
+  <li><strong>Label:</strong> Histology result</li>
+  <li><strong>Description:</strong> The histopathological finding from the tissue specimen obtained during ablation or LLETZ treatment, used at the Follow-up Decision to route women with invasive cancer to further management and women with CIN3 or less to post-treatment follow-up.</li>
+  <li><strong>Data Type:</strong> Coding</li>
+  <li><strong>Input Options:</strong> <code class="language-plaintext highlighter-rouge">CIN3 or less</code> / <code class="language-plaintext highlighter-rouge">cancer</code> / (null; histology unavailable in some settings per the 2021-07 Annex 4 footnote)</li>
+  <li><strong>Required:</strong> C</li>
+  <li><strong>Linkages (DMN):</strong> <code class="language-plaintext highlighter-rouge">textualist.dmn#CC.E.followup_t</code> (Follow-up Decision); second input <code class="language-plaintext highlighter-rouge">HistologyResult</code> in rules <code class="language-plaintext highlighter-rouge">DecisionRule_followup_ablation_cin</code>, <code class="language-plaintext highlighter-rouge">DecisionRule_followup_ablation_cancer</code>, <code class="language-plaintext highlighter-rouge">DecisionRule_followup_lletz_cin</code>, <code class="language-plaintext highlighter-rouge">DecisionRule_followup_lletz_cancer</code>.</li>
+  <li><strong>Annotations:</strong> Histopathology may not be available in some settings; the 2021-07 guideline's post-treatment follow-up flow (p.71, general pop; p.72, WLHIV) explicitly handles the "treated with ablation or LLETZ without histopathology results available" case. The textualist does not currently model the null-histology branch explicitly; this is a fidelity gap independent of this first-pass CDD and is adjacent to the pre-existing WLHIV double-follow-up gap confirmed in <a href="https://github.com/dhes/dak-authoring-methodology/blob/main/case-studies/cervical-cancer/narrative/addendum-2021-12-reconciliation.md"><code class="language-plaintext highlighter-rouge">addendum-2021-12-reconciliation.md</code> (see [source repo](https://github.com/dhes/dak-authoring-methodology/blob/main/case-studies/cervical-cancer/narrative/addendum-2021-12-reconciliation.md))</a>.</li>
+  <li><strong>Terminology Intent:</strong> The histopathologist's reading of the tissue specimen: presence or absence of invasive cancer, and if non-invasive, the CIN grade.</li>
+  <li><strong>Kind:</strong> 1 (novel to CC)</li>
+  <li><strong>ICD-11 / SNOMED CT / LOINC / ICHI / ICF:</strong> <em>(blank — L3)</em></li>
+  <li><strong>FHIR Resource / FHIR Profile / Canonical URI:</strong> <em>(blank — L3)</em></li>
+</ul>
+
+<h3 id="row-11--eligible-for-screening-output">Row 11 — Eligible for screening (output)</h3>
+
+<ul>
+  <li><strong>Activity ID:</strong> <code class="language-plaintext highlighter-rouge">CC.A</code> (Eligible For Screening)</li>
+  <li><strong>Data Element ID:</strong> <code class="language-plaintext highlighter-rouge">CC.A.DE01</code></li>
+  <li><strong>Label:</strong> Eligible for screening</li>
+  <li><strong>Description:</strong> Output boolean of the Eligible For Screening decision, indicating whether the client meets the age and population criteria for cervical cancer screening under the guideline.</li>
+  <li><strong>Data Type:</strong> boolean</li>
+  <li><strong>Input Options:</strong> true / false / null</li>
+  <li><strong>Required:</strong> R (output)</li>
+  <li><strong>Linkages (DMN):</strong> <code class="language-plaintext highlighter-rouge">textualist.dmn#CC.A.eligibility_t</code> output <code class="language-plaintext highlighter-rouge">EligibleForScreening</code>; consumed as first input of <code class="language-plaintext highlighter-rouge">textualist.dmn#CC.B.due_screening_t</code> (Due for Screening) via <code class="language-plaintext highlighter-rouge">ScreeningDecision.EligibleForScreening</code>.</li>
+  <li><strong>Annotations:</strong> This is an output data element — the result of the first decision table's evaluation. It is not populated from any EHR; it is computed by the DAK.</li>
+  <li><strong>Terminology Intent:</strong> A DAK-computed judgment on whether the client is in scope for the cervical cancer screening program at this encounter.</li>
+  <li><strong>Kind:</strong> 1 (DAK output)</li>
+  <li><strong>ICD-11 / SNOMED CT / LOINC / ICHI / ICF:</strong> <em>(blank — L3)</em></li>
+  <li><strong>FHIR Resource / FHIR Profile / Canonical URI:</strong> <em>(blank — L3)</em></li>
+</ul>
+
+<h3 id="row-12--screening-interval-output">Row 12 — Screening interval (output)</h3>
+
+<ul>
+  <li><strong>Activity ID:</strong> <code class="language-plaintext highlighter-rouge">CC.A</code> (Eligible For Screening)</li>
+  <li><strong>Data Element ID:</strong> <code class="language-plaintext highlighter-rouge">CC.A.DE02</code></li>
+  <li><strong>Label:</strong> Screening interval</li>
+  <li><strong>Description:</strong> Output string of the Eligible For Screening decision, carrying the recommended rescreen interval. Textualist preserves the guideline's range language; purposive resolves to a point estimate per <a href="cc-005.html"><code class="language-plaintext highlighter-rouge">cc-005</code></a>.</li>
+  <li><strong>Data Type:</strong> string</li>
+  <li><strong>Input Options (textualist):</strong> <code class="language-plaintext highlighter-rouge">"every 5 to 10 years"</code> (general population), <code class="language-plaintext highlighter-rouge">"every 3 to 5 years"</code> (WLHIV), null (not eligible)</li>
+  <li><strong>Input Options (purposive):</strong> <code class="language-plaintext highlighter-rouge">"every 10 years"</code> (general population), <code class="language-plaintext highlighter-rouge">"every 5 years"</code> (WLHIV), null (not eligible)</li>
+  <li><strong>Required:</strong> R (output; paired with row 11)</li>
+  <li><strong>Linkages (DMN):</strong> <code class="language-plaintext highlighter-rouge">textualist.dmn#CC.A.eligibility_t</code> output <code class="language-plaintext highlighter-rouge">ScreeningInterval</code>; <code class="language-plaintext highlighter-rouge">purposive.dmn#CC.A.eligibility_p</code> output <code class="language-plaintext highlighter-rouge">ScreeningInterval</code> (point estimate per cc-005). Consumed as second input of <code class="language-plaintext highlighter-rouge">CC.B.due_screening_{t,p}</code> (Due for Screening) via <code class="language-plaintext highlighter-rouge">ScreeningDecision.ScreeningInterval</code>.</li>
+  <li><strong>Linkages (Register):</strong> <a href="cc-005.html"><code class="language-plaintext highlighter-rouge">cc-005</code></a> (proposed) — screening interval resolution. Resolves both populations to the upper bound of their respective WHO ranges based on the epidemiological regime declared in <code class="language-plaintext highlighter-rouge">cc-000</code> (first-time-screenee backlog as binding resource constraint).</li>
+  <li><strong>Annotations:</strong> The textualist preserves the guideline range verbatim; the purposive encodes the resolved point estimate. The per-population resolutions are documented in <code class="language-plaintext highlighter-rouge">cc-005</code>, including the reasoning for landing at the upper bound and the conditions under which a future regime change would flip the resolution to the lower bound.</li>
+  <li><strong>Terminology Intent:</strong> The WHO-recommended rescreen interval, expressed as a range rather than a scalar, reflecting the evidence base's uncertainty over the optimal rescreen frequency.</li>
+  <li><strong>Kind:</strong> 1 (DAK output; preserved range)</li>
+  <li><strong>ICD-11 / SNOMED CT / LOINC / ICHI / ICF:</strong> <em>(blank — L3)</em></li>
+  <li><strong>FHIR Resource / FHIR Profile / Canonical URI:</strong> <em>(blank — L3)</em></li>
+</ul>
+
+<h3 id="row-13--screening-status-output">Row 13 — Screening status (output)</h3>
+
+<ul>
+  <li><strong>Activity ID:</strong> <code class="language-plaintext highlighter-rouge">CC.B</code> (Due for Screening)</li>
+  <li><strong>Data Element ID:</strong> <code class="language-plaintext highlighter-rouge">CC.B.DE02</code></li>
+  <li><strong>Label:</strong> Screening status</li>
+  <li><strong>Description:</strong> Output string of the Due for Screening decision, categorising where the client sits in the screening schedule.</li>
+  <li><strong>Data Type:</strong> string</li>
+  <li><strong>Input Options (textualist):</strong> <code class="language-plaintext highlighter-rouge">"never screened — screen now"</code>, <code class="language-plaintext highlighter-rouge">"not yet due"</code>, <code class="language-plaintext highlighter-rouge">"within screening window"</code>, <code class="language-plaintext highlighter-rouge">"past screening window"</code>, <code class="language-plaintext highlighter-rouge">"prior positive — enter triage pathway"</code>, <code class="language-plaintext highlighter-rouge">"not eligible"</code></li>
+  <li><strong>Input Options (purposive):</strong> <code class="language-plaintext highlighter-rouge">"never screened — screen now"</code>, <code class="language-plaintext highlighter-rouge">"not yet due"</code>, <code class="language-plaintext highlighter-rouge">"due"</code>, <code class="language-plaintext highlighter-rouge">"prior positive — enter triage pathway"</code>, <code class="language-plaintext highlighter-rouge">"not eligible"</code></li>
+  <li><strong>Required:</strong> R (output)</li>
+  <li><strong>Linkages (DMN):</strong> <code class="language-plaintext highlighter-rouge">textualist.dmn#CC.B.due_screening_t</code> output <code class="language-plaintext highlighter-rouge">ScreeningStatus</code>; <code class="language-plaintext highlighter-rouge">purposive.dmn#CC.B.due_screening_p</code> output <code class="language-plaintext highlighter-rouge">ScreeningStatus</code> (two-bucket encoding per <a href="cc-005.html"><code class="language-plaintext highlighter-rouge">cc-005</code></a>).</li>
+  <li><strong>Annotations:</strong> The output value set is declared in the DMN via a <code class="language-plaintext highlighter-rouge">&lt;outputValues&gt;</code> element; see <code class="language-plaintext highlighter-rouge">DecisionTable_1jr7lzl</code> <code class="language-plaintext highlighter-rouge">UnaryTests_1h5h3n3</code>. The purposive encoding collapses the textualist's <code class="language-plaintext highlighter-rouge">"within screening window"</code> and <code class="language-plaintext highlighter-rouge">"past screening window"</code> into a single <code class="language-plaintext highlighter-rouge">"due"</code> value, reflecting cc-005's point-estimate resolution of the screening interval range. Downstream schedulers that need to distinguish "just-barely due" from "substantially overdue" should read <code class="language-plaintext highlighter-rouge">YearsSinceLastScreen</code> directly rather than pattern-matching on <code class="language-plaintext highlighter-rouge">ScreeningStatus</code>.</li>
+  <li><strong>Terminology Intent:</strong> A categorical label summarising the client's position in the screening schedule at this encounter.</li>
+  <li><strong>Kind:</strong> 1 (DAK output)</li>
+  <li><strong>ICD-11 / SNOMED CT / LOINC / ICHI / ICF:</strong> <em>(blank — L3)</em></li>
+  <li><strong>FHIR Resource / FHIR Profile / Canonical URI:</strong> <em>(blank — L3)</em></li>
+</ul>
+
+<h3 id="row-14--triage-status-output">Row 14 — Triage status (output)</h3>
+
+<ul>
+  <li><strong>Activity ID:</strong> <code class="language-plaintext highlighter-rouge">CC.C</code> (Triage Decision)</li>
+  <li><strong>Data Element ID:</strong> <code class="language-plaintext highlighter-rouge">CC.C.DE01</code></li>
+  <li><strong>Label:</strong> Triage status</li>
+  <li><strong>Description:</strong> Output string of the Triage Decision, routing HPV-positive women based on their VIA triage result and HIV status.</li>
+  <li><strong>Data Type:</strong> string</li>
+  <li><strong>Input Options:</strong> <code class="language-plaintext highlighter-rouge">"VIA positive — eligible for treatment"</code>, <code class="language-plaintext highlighter-rouge">"VIA negative — repeat HPV test in 2 years"</code> (general population), <code class="language-plaintext highlighter-rouge">"VIA negative — repeat HPV test in 1 year"</code> (WLHIV), <code class="language-plaintext highlighter-rouge">"suspected cancer — refer for evaluation and biopsy"</code>, <code class="language-plaintext highlighter-rouge">"unknown VIA result"</code></li>
+  <li><strong>Required:</strong> R (output)</li>
+  <li><strong>Linkages (DMN):</strong> <code class="language-plaintext highlighter-rouge">textualist.dmn#CC.C.triage_t</code> output <code class="language-plaintext highlighter-rouge">TriageStatus</code>; consumed as input <code class="language-plaintext highlighter-rouge">TriageDecision</code> in <code class="language-plaintext highlighter-rouge">CC.D.treatment_{t,p}</code> (Treatment Decision).</li>
+  <li><strong>Annotations:</strong> The population-specific re-screen intervals ("in 2 years" / "in 1 year") after VIA-negative triage are the rows that <a href="cc-002.html"><code class="language-plaintext highlighter-rouge">cc-002</code></a> observes and that the pre-existing WLHIV follow-up gap should be examined against when <code class="language-plaintext highlighter-rouge">cc-002</code> is drafted.</li>
+  <li><strong>Terminology Intent:</strong> A categorical routing outcome for HPV-positive women based on their VIA triage step.</li>
+  <li><strong>Kind:</strong> 1 (DAK output)</li>
+  <li><strong>ICD-11 / SNOMED CT / LOINC / ICHI / ICF:</strong> <em>(blank — L3)</em></li>
+  <li><strong>FHIR Resource / FHIR Profile / Canonical URI:</strong> <em>(blank — L3)</em></li>
+</ul>
+
+<h3 id="row-15--ablation-eligible-output">Row 15 — Ablation eligible (output)</h3>
+
+<ul>
+  <li><strong>Activity ID:</strong> <code class="language-plaintext highlighter-rouge">CC.D</code> (Ablation Eligibility)</li>
+  <li><strong>Data Element ID:</strong> <code class="language-plaintext highlighter-rouge">CC.D.DE03</code></li>
+  <li><strong>Label:</strong> Ablation eligible</li>
+  <li><strong>Description:</strong> Output boolean of the Ablation Eligibility decision.</li>
+  <li><strong>Data Type:</strong> boolean</li>
+  <li><strong>Input Options:</strong> true / false</li>
+  <li><strong>Required:</strong> R (output)</li>
+  <li><strong>Linkages (DMN):</strong> <code class="language-plaintext highlighter-rouge">textualist.dmn#CC.D.ablation_t</code> output <code class="language-plaintext highlighter-rouge">AblationEligible</code>; consumed as second input of <code class="language-plaintext highlighter-rouge">CC.D.treatment_{t,p}</code> (Treatment Decision) via <code class="language-plaintext highlighter-rouge">AblationDecision</code>.</li>
+  <li><strong>Terminology Intent:</strong> Whether the client's lesion is suitable for ablative treatment (cryotherapy or thermal ablation) given transformation zone type and absence of suspicion of cancer, per the 2021-07 Annex 5 Section 5.1.2 criteria.</li>
+  <li><strong>Kind:</strong> 1 (DAK output)</li>
+  <li><strong>ICD-11 / SNOMED CT / LOINC / ICHI / ICF:</strong> <em>(blank — L3)</em></li>
+  <li><strong>FHIR Resource / FHIR Profile / Canonical URI:</strong> <em>(blank — L3)</em></li>
+</ul>
+
+<h3 id="row-16--treatment-plan-output">Row 16 — Treatment plan (output)</h3>
+
+<ul>
+  <li><strong>Activity ID:</strong> <code class="language-plaintext highlighter-rouge">CC.D</code> (Treatment Decision)</li>
+  <li><strong>Data Element ID:</strong> <code class="language-plaintext highlighter-rouge">CC.D.DE04</code></li>
+  <li><strong>Label:</strong> Treatment plan</li>
+  <li><strong>Description:</strong> Output string of the Treatment Decision, naming the selected treatment modality.</li>
+  <li><strong>Data Type:</strong> string</li>
+  <li><strong>Input Options:</strong> <code class="language-plaintext highlighter-rouge">"ablative treatment"</code>, <code class="language-plaintext highlighter-rouge">"LLETZ"</code>, <code class="language-plaintext highlighter-rouge">"no treatment — repeat HPV in 2 years"</code>, <code class="language-plaintext highlighter-rouge">"no treatment — repeat HPV in 1 year"</code>, <code class="language-plaintext highlighter-rouge">"refer for evaluation, biopsy and further management"</code>, <code class="language-plaintext highlighter-rouge">"unknown triage status"</code></li>
+  <li><strong>Required:</strong> R (output)</li>
+  <li><strong>Linkages (DMN):</strong> <code class="language-plaintext highlighter-rouge">textualist.dmn#CC.D.treatment_t</code> output <code class="language-plaintext highlighter-rouge">TreatmentPlan</code>; consumed as first input of <code class="language-plaintext highlighter-rouge">CC.E.followup_{t,p}</code> (Follow-up Decision) via <code class="language-plaintext highlighter-rouge">TreatmentDecision</code>.</li>
+  <li><strong>Terminology Intent:</strong> The DAK-computed treatment modality for this encounter, which may be an active treatment (ablation or LLETZ), a deferred-with-re-screen plan (VIA-negative follow-up), or a referral (suspected cancer).</li>
+  <li><strong>Kind:</strong> 1 (DAK output)</li>
+  <li><strong>ICD-11 / SNOMED CT / LOINC / ICHI / ICF:</strong> <em>(blank — L3)</em></li>
+  <li><strong>FHIR Resource / FHIR Profile / Canonical URI:</strong> <em>(blank — L3)</em></li>
+</ul>
+
+<h3 id="row-17--follow-up-plan-output">Row 17 — Follow-up plan (output)</h3>
+
+<ul>
+  <li><strong>Activity ID:</strong> <code class="language-plaintext highlighter-rouge">CC.E</code> (Follow-up Decision)</li>
+  <li><strong>Data Element ID:</strong> <code class="language-plaintext highlighter-rouge">CC.E.DE02</code></li>
+  <li><strong>Label:</strong> Follow-up plan</li>
+  <li><strong>Description:</strong> Output string of the Follow-up Decision, naming the post-treatment follow-up schedule or the further-management routing for suspected cancer.</li>
+  <li><strong>Data Type:</strong> string</li>
+  <li><strong>Input Options:</strong> <code class="language-plaintext highlighter-rouge">"post-treatment follow-up after 1 year"</code>, <code class="language-plaintext highlighter-rouge">"cancer — further management"</code>, <code class="language-plaintext highlighter-rouge">"repeat HPV test after 2 years"</code>, <code class="language-plaintext highlighter-rouge">"repeat HPV test after 1 year"</code>, <code class="language-plaintext highlighter-rouge">"evaluation, biopsy and further management"</code>, <code class="language-plaintext highlighter-rouge">"unknown treatment plan"</code></li>
+  <li><strong>Required:</strong> R (output)</li>
+  <li><strong>Linkages (DMN):</strong> <code class="language-plaintext highlighter-rouge">textualist.dmn#CC.E.followup_t</code> output <code class="language-plaintext highlighter-rouge">FollowUpPlan</code>.</li>
+  <li><strong>Annotations:</strong> The "post-treatment follow-up after 1 year" output is the first 12-month check after treatment; for the general population this returns to routine on negative, for WLHIV there is a second 12-month check per 2021-07 Rec 33 ("double follow-up") that the textualist does not currently encode — see <a href="https://github.com/dhes/dak-authoring-methodology/blob/main/case-studies/cervical-cancer/narrative/addendum-2021-12-reconciliation.md"><code class="language-plaintext highlighter-rouge">addendum-2021-12-reconciliation.md</code> (see [source repo](https://github.com/dhes/dak-authoring-methodology/blob/main/case-studies/cervical-cancer/narrative/addendum-2021-12-reconciliation.md))</a> for the confirmed fidelity gap.</li>
+  <li><strong>Terminology Intent:</strong> The DAK-computed next-encounter schedule for the client after the Treatment Decision has fired.</li>
+  <li><strong>Kind:</strong> 1 (DAK output)</li>
+  <li><strong>ICD-11 / SNOMED CT / LOINC / ICHI / ICF:</strong> <em>(blank — L3)</em></li>
+  <li><strong>FHIR Resource / FHIR Profile / Canonical URI:</strong> <em>(blank — L3)</em></li>
+</ul>
+
+<h3 id="row-18--pregnancy-status-treatment-decision-input-purposive-only">Row 18 — Pregnancy status (Treatment Decision input, purposive only)</h3>
+
+<ul>
+  <li><strong>Activity ID:</strong> <code class="language-plaintext highlighter-rouge">CC.D</code> (Treatment Decision, purposive only — no corresponding input in the textualist)</li>
+  <li><strong>Data Element ID:</strong> <code class="language-plaintext highlighter-rouge">HIV.B.DE160</code>-family (candidate; the HIV DAK has multiple "check pregnancy status" elements across visit types; the correct CDD reuse target may ultimately be an ANC DAK element rather than an HIV check-flag; pending re-harvest)</li>
+  <li><strong>Label:</strong> Pregnancy status</li>
+  <li><strong>Description:</strong> Whether the client is currently pregnant at the time of the Treatment Decision. Consumed only at the Treatment Decision in the purposive DMN to implement GPS 41's treatment-deferral-in-pregnancy per <a href="cc-006.html"><code class="language-plaintext highlighter-rouge">cc-006</code></a>.</li>
+  <li><strong>Data Type:</strong> boolean</li>
+  <li><strong>Input Options:</strong> <code class="language-plaintext highlighter-rouge">true</code> (pregnant), <code class="language-plaintext highlighter-rouge">false</code> (not pregnant), <code class="language-plaintext highlighter-rouge">null</code> (unknown — treated as not-pregnant per cc-006 null-handling)</li>
+  <li><strong>Required:</strong> C (conditional — required at the Treatment Decision only; not consulted elsewhere in the cascade)</li>
+  <li><strong>Linkages (DMN):</strong> <code class="language-plaintext highlighter-rouge">purposive.dmn#CC.D.treatment_p</code> input <code class="language-plaintext highlighter-rouge">IsPregnant</code> via <code class="language-plaintext highlighter-rouge">InputData_pregnancy</code>. Not present in <code class="language-plaintext highlighter-rouge">textualist.dmn</code>. Rule <code class="language-plaintext highlighter-rouge">DecisionRule_treatment_pregnancy_defer</code> fires when <code class="language-plaintext highlighter-rouge">IsPregnant = true</code> and triage is <code class="language-plaintext highlighter-rouge">"VIA positive — eligible for treatment"</code>, emitting <code class="language-plaintext highlighter-rouge">"defer treatment until after pregnancy"</code>. Cancer-suspected referrals are not deferred (see cc-006 rationale).</li>
+  <li><strong>Linkages (Register):</strong> <a href="cc-006.html"><code class="language-plaintext highlighter-rouge">cc-006</code></a> (proposed) — pregnancy handling across the cascade. Selects <code class="language-plaintext highlighter-rouge">add-input-at-treatment-only</code> option, encoding GPS 41 at the Treatment Decision while leaving other cascade points pregnancy-unaware.</li>
+  <li><strong>Annotations:</strong> The purposive DMN changes the Treatment Decision's hit policy from <code class="language-plaintext highlighter-rouge">UNIQUE</code> to <code class="language-plaintext highlighter-rouge">FIRST</code> to permit the pregnancy deferral rule to precede the ablate/LLETZ rules. L3 implementers should confirm their EHR reliably populates pregnancy status for screening-age women at the Treatment Decision point; unknown status defaults to the pregnancy-unaware path for safety-vs-fidelity reasons documented in cc-006.</li>
+  <li><strong>Terminology Intent:</strong> Current-pregnancy boolean at the moment the Treatment Decision is made. Post-delivery re-entry into the cascade is a country-level operational concern (not a DAK concern) and does not need a separate data element here.</li>
+  <li><strong>Kind:</strong> 2 (harvested, candidate pending re-harvest)</li>
+  <li><strong>Source DAK:</strong> HIV (candidate; pending re-harvest with a broader search for ANC and FP pregnancy-status elements that may be better reuse targets)</li>
+  <li><strong>Source DE ID:</strong> <code class="language-plaintext highlighter-rouge">HIV.B.DE160</code> (candidate; may be replaced when a re-harvest identifies an ANC pregnancy-status element as the canonical reuse source)</li>
+  <li><strong>Source Commit:</strong> <em>(blank; backfill planned in Phase B)</em></li>
+  <li><strong>Reuse Intent:</strong> reuse-pending (re-harvest needed to confirm the right source DAK element)</li>
+  <li><strong>ICD-11 / SNOMED CT / LOINC / ICHI / ICF:</strong> <em>(blank — L3)</em></li>
+  <li><strong>FHIR Resource / FHIR Profile / Canonical URI:</strong> <em>(blank — L3; <code class="language-plaintext highlighter-rouge">Observation</code> with SNOMED <code class="language-plaintext highlighter-rouge">77386006 | Pregnant</code> or an equivalent ANC-DAK-sourced binding are the obvious L3 candidates, deferred to country adaptation)</em></li>
+</ul>
+
+<h3 id="row-19--vaccination-status-deferred-stub">Row 19 — Vaccination status (deferred stub)</h3>
+
+<ul>
+  <li><strong>Activity ID:</strong> <em>(out of scope for current textualist)</em></li>
+  <li><strong>Data Element ID:</strong> <code class="language-plaintext highlighter-rouge">IMMZ.*</code> (candidate cluster; pending specific harvest)</li>
+  <li><strong>Label:</strong> HPV vaccination status</li>
+  <li><strong>Description:</strong> Whether and how the client has been vaccinated against HPV, including dose count, vaccine type, and age at vaccination.</li>
+  <li><strong>Data Type:</strong> Coding or compound (candidate; actual shape pending cc-004 drafting)</li>
+  <li><strong>Input Options:</strong> <em>(to be determined by cc-004)</em></li>
+  <li><strong>Required:</strong> O (unless/until the guideline catches up)</li>
+  <li><strong>Linkages (DMN):</strong> Not yet in <code class="language-plaintext highlighter-rouge">textualist.dmn</code>. The 2021-07 guideline pre-dates the large-scale arrival of HPV-vaccinated cohorts at screening age and does not model vaccination status as a screening input.</li>
+  <li><strong>Linkages (Register):</strong> <a href="cc-004.html"><code class="language-plaintext highlighter-rouge">cc-004-vaccination-status.md</code></a>.</li>
+  <li><strong>Annotations:</strong> This row is a stub reserved for a future vaccination-modulated screening refinement. The evidence update that would populate this row is the 2022 SAGE single-dose HPV vaccination position paper plus ongoing cohort follow-up, not any of the three 2021–2024 WHO cervical cancer documents. Re-visit this row when <code class="language-plaintext highlighter-rouge">cc-004</code> is drafted.</li>
+  <li><strong>Kind:</strong> 2 (defer)</li>
+  <li><strong>Source DAK:</strong> IMMZ (candidate; pending re-harvest)</li>
+  <li><strong>Source DE ID:</strong> <code class="language-plaintext highlighter-rouge">IMMZ.*</code> (candidate cluster)</li>
+  <li><strong>Source Commit:</strong> <em>(blank)</em></li>
+  <li><strong>Reuse Intent:</strong> pending</li>
+  <li><strong>ICD-11 / SNOMED CT / LOINC / ICHI / ICF:</strong> <em>(blank — L3)</em></li>
+  <li><strong>FHIR Resource / FHIR Profile / Canonical URI:</strong> <em>(blank — L3)</em></li>
+</ul>
+
+<hr/>
+
+<h2 id="deferred-as-purposive-refinement-hascervix">Deferred as purposive refinement: <code class="language-plaintext highlighter-rouge">HasCervix</code></h2>
+
+<p>This section documents an element that is <strong>not</strong> a row in the current CDD but is retained in the case study's thinking for a future purposive refinement and as a candidate contribution to a future smart-core Kind-3 entry.</p>
+
+<p><strong>The element.</strong> A boolean (<code class="language-plaintext highlighter-rouge">HasCervix</code>) representing whether the client has a cervix anatomically present, regardless of sex assigned at birth or gender identity. The purpose is to encode, at the L2, the two naive-reader instincts that the current <code class="language-plaintext highlighter-rouge">Sex = Female</code> encoding leaves unanswered: <strong>broader</strong>, to admit transgender men and non-binary and intersex individuals with a cervix per the 2021-07 guideline's Section 3.1 "Programme considerations" body narrative (p. 21); and <strong>narrower</strong>, to exclude women who have had a total hysterectomy, a filter the 2021-07 guideline does not address and which today lives at the encounter as clinical common sense rather than as a DAK rule. A single <code class="language-plaintext highlighter-rouge">HasCervix</code> element addresses both instincts at the same input slot. See <a href="cc-001.html"><code class="language-plaintext highlighter-rouge">cc-001</code></a> for the register-level deferral record.</p>
+
+<p><strong>Why not a row in the first-pass CDD.</strong> Three reasons, in descending order of weight:</p>
+
+<ol>
+  <li><strong>Deployment reality (shared ground, both directions).</strong> <code class="language-plaintext highlighter-rouge">Sex = Female</code> passes the Muliokela premapping test in every LMIC pathfinder country; <code class="language-plaintext highlighter-rouge">HasCervix</code> fails it because no current public-sector EHR (Bahmni, eTracker, SmartCare, Impilo, iHRIS, OpenMRS-based systems) carries <code class="language-plaintext highlighter-rouge">BodyStructure</code> or anatomical-inventory fields, and hysterectomy history is not reliably surfaced at registration in the way <code class="language-plaintext highlighter-rouge">Sex</code> is. This is the binding implementability constraint and applies equally to the broader and narrower refinements.</li>
+  <li><strong>Source-document grounding (per direction, not shared).</strong> <em>For the broader refinement:</em> Recommendation 1 is the output of a GRADE process whose trial base — HPV primary screening trials — enrolled predominantly cisgender women, and the 2021-07 guideline's Section 3.1 broader-population language sits in programme-considerations body narrative at lower evidential stringency than Rec 1; the split between numbered recommendations and Section 3.1 prose was a deliberate GDG compromise, not an inconsistency to be resolved at the L2. Committing the first-pass CDD to a <code class="language-plaintext highlighter-rouge">HasCervix</code> row in the broader role would assert a claim at higher stringency than the trial base currently supports. <em>For the narrower refinement:</em> the 2021-07 guideline is silent on hysterectomy as a screening-eligibility criterion ("hysterectom-" appears only in Annex 5 as a surgical specimen type and as a rare treatment complication), and the L2 mirrors what the guideline asserts rather than what it assumes to be too clinically obvious to say.</li>
+  <li><strong>Textualist/CDD consistency.</strong> The textualist DMN uses <code class="language-plaintext highlighter-rouge">ClientIsWoman</code>, not <code class="language-plaintext highlighter-rouge">HasCervix</code>. The CDD documents what the DMN actually consumes; a <code class="language-plaintext highlighter-rouge">HasCervix</code> row would describe a hypothetical purposive refinement, not the textualist.</li>
+</ol>
+
+<p><strong>Why document it at all.</strong> Because the three-Kind classification in this CDD has Kind 3 (proposed-to-core) as a framework category, and no row in the first pass exercises Kind 3. Rather than pretend a row demonstrates Kind 3 that doesn't, the CDD carries <code class="language-plaintext highlighter-rouge">HasCervix</code> as the named candidate contribution to a future smart-core Kind-3 entry. When a Phase B triangulation artifact is produced (per the plan file), or when a future purposive DMN authoring pass pursues the convergent refinement, <code class="language-plaintext highlighter-rouge">HasCervix</code> is the first element that would be lifted into that Kind-3 slot.</p>
+
+<p><strong>Expected candidate shape, if it were populated:</strong></p>
+
+<ul>
+  <li><strong>Label:</strong> Has cervix</li>
+  <li><strong>Description:</strong> Whether the client has a cervix anatomically present.</li>
+  <li><strong>Data Type:</strong> boolean</li>
+  <li><strong>Terminology Intent:</strong> Anatomical presence of a cervix, independent of sex assigned at birth or gender identity, used to determine screening eligibility across the two naive-reader instincts the current <code class="language-plaintext highlighter-rouge">Sex = Female</code> encoding leaves unanswered: broader admission of transgender men and non-binary and intersex individuals with a cervix per the 2021-07 guideline's Section 3.1 programme-considerations narrative, and narrower exclusion of post-total-hysterectomy women which the 2021-07 guideline does not address.</li>
+  <li><strong>Kind:</strong> 3 (proposed to smart-core)</li>
+  <li><strong>Source DAK:</strong> None at present in any harvested DAK; the HIV DAK and maternal-health DAK may have adjacent elements (hysterectomy history, genital examination findings) that would need to be reviewed for reuse rather than inventing fresh.</li>
+  <li><strong>L3 work deferred:</strong> A <code class="language-plaintext highlighter-rouge">HasCervix</code> element at the smart-core level would need <code class="language-plaintext highlighter-rouge">BodyStructure</code> FHIR resource selection, SNOMED binding (e.g. <code class="language-plaintext highlighter-rouge">71854001</code> as the historical starting point, subject to terminology specialist review), and null-handling semantics for systems that cannot express anatomical inventory. None of that is L2 work and none of it is in scope for the methodology's CC case study. See <a href="cc-001.html"><code class="language-plaintext highlighter-rouge">cc-001</code></a> for the register-level record of the deferral decision.</li>
+</ul>
+
+<p><strong>When this deferred element would become a row.</strong> Two conditions:</p>
+
+<ol>
+  <li>A future purposive DMN authoring pass chooses to rename <code class="language-plaintext highlighter-rouge">ClientIsWoman</code> → <code class="language-plaintext highlighter-rouge">HasCervix</code> as a semantic refinement. The register entry <a href="cc-001.html"><code class="language-plaintext highlighter-rouge">cc-001</code></a> would update its <code class="language-plaintext highlighter-rouge">selected</code> value to record both the textualist's <code class="language-plaintext highlighter-rouge">sex-female</code> and the purposive's <code class="language-plaintext highlighter-rouge">has-cervix</code>, and this CDD would gain a row 20 for <code class="language-plaintext highlighter-rouge">HasCervix</code> (Kind 1 + Kind 3) alongside row 2 (<code class="language-plaintext highlighter-rouge">Sex</code>, Kind 2) with the textualist continuing to use row 2 and the purposive using row 20.</li>
+  <li>Or: a Phase B smart-core-candidates triangulation artifact picks up <code class="language-plaintext highlighter-rouge">HasCervix</code> as a proposed-to-core element, at which point the CDD would add it as a Kind-3 row with a pointer to the candidate artifact.</li>
+</ol>
+
+<p>Neither condition is met in this first pass; the section above is the full documentation of the deferral.</p>
+
+
+
+
+</div>
+</div>    <!-- /inner-wrapper -->
+</div>    <!-- /row -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-content -->
+
+<script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+<script src="assets/js/window-hash.js" type="text/javascript"> </script>
+<a name="bottom"> </a>
+<div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+<div class="container">    <!-- container -->
+
+<div class="inner-wrapper">
+  <p>
+    IG &copy; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/dhes">Dan Heslinga</a>.  Package dhes.dak.cervical-cancer#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 21, 2026 20:10+0000">2026-04-21</span>
+    <br/>
+    <span style="color: var(--footer-highlight-text-color)"><a name="l3759">​</a>
+                Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" href="https://dhes.github.io/smart-dak-cervical-cancer/history.html" target="_blank">Version History</a> | <a rel="license" style="color: #81BEF7" href="license.html">License</a>
+    </span>
+  </p>
+</div>    <!-- /inner-wrapper -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+<div class="container">    <!-- container -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+<script src="assets/js/respond.min.js" type="text/javascript"> </script>
+<script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+<script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+<script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+<script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+  <!-- Analytics Below
+================================================== -->
+
+
+
+
+</body></html>

@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>User Scenarios - WHO SMART DAK — Cervical Cancer Screening (L2) v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+    <link href="assets/css/fa-all.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/who.css" rel="stylesheet"/>
+    <link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"6"}
+    h3,h4,h5,h6{--heading-prefix:"6"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">  <!-- container -->
+          <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+            <!--status-bar-->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Components
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="concepts.html">Concepts</a>
+      </li>
+      <li>
+        <a href="interventions-and-recommendations.html">Interventions &amp; Recommendations (1)</a>
+      </li>
+      <li>
+        <a href="generic-personas.html">Generic Personas (2)</a>
+      </li>
+      <li>
+        <a href="user-scenarios.html">User Scenarios (3)</a>
+      </li>
+      <li>
+        <a href="business-processes.html">Business Processes (4)</a>
+      </li>
+      <li>
+        <a href="dictionary.html">Data Dictionary (5)</a>
+      </li>
+      <li>
+        <a href="decision-logic.html">Decision Logic (6)</a>
+      </li>
+      <li>
+        <a href="scheduling-logic.html">Scheduling Logic (7)</a>
+      </li>
+      <li>
+        <a href="indicators.html">Indicators (8)</a>
+      </li>
+      <li>
+        <a href="requirements.html">Requirements (9)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Methodology
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="methodology.html">Methodology</a>
+      </li>
+      <li>
+        <a href="algorithm-selection.html">Algorithm Selection</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Interpretation Register
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="register.html">Overview</a>
+      </li>
+      <li>
+        <a href="cc-000.html">Scope Declaration (cc-000)</a>
+      </li>
+      <li>
+        <a href="cc-001.html">Population and Inclusion (cc-001)</a>
+      </li>
+      <li>
+        <a href="cc-002.html">WLHIV Operationalisation (cc-002)</a>
+      </li>
+      <li>
+        <a href="cc-003.html">Cancer Suspected (cc-003)</a>
+      </li>
+      <li>
+        <a href="cc-004.html">Vaccination Status (cc-004)</a>
+      </li>
+      <li>
+        <a href="cc-005.html">Screening Interval (cc-005)</a>
+      </li>
+      <li>
+        <a href="cc-006.html">Pregnancy Handling (cc-006)</a>
+      </li>
+      <li>
+        <a href="cc-007.html">Sexual Exposure Precondition (cc-007)</a>
+      </li>
+      <li>
+        <a href="cc-008.html">HIV Status Absent/Unknown (cc-008)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Resources
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="changes.html">Change Log</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+      <li>
+        <a href="license.html">License</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+              </div>  <!-- /.nav-collapse -->
+
+              <div class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch" data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;">
+                <!-- This div will be pushed to the right -->
+                <div class="language-selector" style="margin-left: auto; background-color: #00477d; color: white;">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" id="language-selector" name="language-selector">
+                    <option disabled selected>Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <!-- Search Content -->
+              </div>
+            </div>  <!-- /.container -->
+          </nav>  <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+        </div>  <!-- /container -->
+      </div>  <!-- /segment-navbar -->
+      
+
+      <div class="container" style=" justify-content: space-between; align-items: left;">
+
+        <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+    <a id="who-logo" no-external="true" href="index.html">
+        
+    </a>
+</div>
+
+ <div id="family-nav">
+  <a id="fhir-logo" no-external="true" href="http://hl7.org/fhir">  </a>
+</div> 
+
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">WHO SMART DAK — Cervical Cancer Screening (L2)</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>User Scenarios</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">WHO SMART DAK — Cervical Cancer Screening (L2), published by Dan Heslinga. This guide is not an authorized publication; it is the continuous build for version 0.1.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/dhes/smart-dak-cervical-cancer/tree/main'>https://github.com/dhes/smart-dak-cervical-cancer/tree/main</a> and changes regularly. See the <a href='https://dhes.github.io/smart-dak-cervical-cancer/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>User Scenarios</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#scope-and-authoring-posture" id="markdown-toc-scope-and-authoring-posture">Scope and authoring posture</a></li>
+  <li><a href="#planning-for-component-4" id="markdown-toc-planning-for-component-4">Planning for Component 4</a>    <ul>
+      <li><a href="#bpmn-module-decomposition" id="markdown-toc-bpmn-module-decomposition">BPMN module decomposition</a></li>
+      <li><a href="#action-vocabulary" id="markdown-toc-action-vocabulary">Action vocabulary</a></li>
+    </ul>
+  </li>
+  <li><a href="#scenarios" id="markdown-toc-scenarios">Scenarios</a>    <ul>
+      <li><a href="#1-golden-path--hpv-negative-result-routine-rescreening" id="markdown-toc-1-golden-path--hpv-negative-result-routine-rescreening">1. Golden path — HPV-negative result, routine rescreening</a></li>
+      <li><a href="#2-hpv-positive-triage-negative--retest-scheduled" id="markdown-toc-2-hpv-positive-triage-negative--retest-scheduled">2. HPV-positive, triage-negative — retest scheduled</a></li>
+      <li><a href="#3-ablation-eligible-lesion--thermal-ablation-and-post-treatment-retest" id="markdown-toc-3-ablation-eligible-lesion--thermal-ablation-and-post-treatment-retest">3. Ablation-eligible lesion — thermal ablation and post-treatment retest</a></li>
+      <li><a href="#4-non-ablation-eligible-lesion--lletz-and-post-treatment-retest" id="markdown-toc-4-non-ablation-eligible-lesion--lletz-and-post-treatment-retest">4. Non-ablation-eligible lesion — LLETZ and post-treatment retest</a></li>
+      <li><a href="#5-suspected-invasive-cancer--referral-out-of-cascade" id="markdown-toc-5-suspected-invasive-cancer--referral-out-of-cascade">5. Suspected invasive cancer — referral out of cascade</a></li>
+      <li><a href="#6-woman-living-with-hiv--shorter-interval-mandatory-triage" id="markdown-toc-6-woman-living-with-hiv--shorter-interval-mandatory-triage">6. Woman living with HIV — shorter interval, mandatory triage</a></li>
+      <li><a href="#7-pregnant-woman-triage-positive--treatment-deferred-until-after-pregnancy" id="markdown-toc-7-pregnant-woman-triage-positive--treatment-deferred-until-after-pregnancy">7. Pregnant woman, triage-positive — treatment deferred until after pregnancy</a></li>
+    </ul>
+  </li>
+  <li><a href="#scenario-to-module-coverage" id="markdown-toc-scenario-to-module-coverage">Scenario-to-module coverage</a></li>
+  <li><a href="#status" id="markdown-toc-status">Status</a></li>
+</ul>
+
+</div>
+<p><strong>Component 3 of the WHO SMART Guidelines L2 DAK structure.</strong> This page presents narrative user scenarios illustrating how the <a href="generic-personas.html">generic personas</a> interact with one another — and with a digital system implementing this DAK — to carry a woman through the Algorithm 5 cascade (HPV DNA primary screening with VIA triage, treatment by ablation or excision, referral for suspected invasive cancer).</p>
+
+<p>A user scenario, in SMART DAK terms, is an illustrative narrative — not a formal use case with preconditions and postconditions. Per <a href="https://smart.who.int/ig-starter-kit/l2_dak_authoring.html">Section 3.1 of the SOP</a>, scenarios "describe typical interactions that one would expect to happen in the specific health programme area" and are "only illustrative and intended to give an idea of a typical workflow." Their authoring weight sits on <em>typicality</em> and <em>realism</em>, not on taxonomic completeness.</p>
+
+<p>The SOP also states the structural handoff that shapes how this page is written: <em>"the actions performed by the generic personas in the user scenarios define the activities and their sequence"</em> in Component 4 (BPMN workflows). Scenarios are therefore not free-form storytelling; the actions named in them are the canonical activity vocabulary Component 4 will lift unchanged.</p>
+
+<h2 id="scope-and-authoring-posture">Scope and authoring posture</h2>
+
+<p>The same three derivation paths apply here as for the <a href="generic-personas.html#scope-and-authoring-posture">personas page</a>: L1 normative guidance (sparse — the 2021-07 guideline narrates the cascade in the abstract but names no scenarios), SME consultation (none to date), facility interviews (none to date).</p>
+
+<p><strong>Phase-1 posture.</strong> The seven scenarios below are therefore <em>analytically derived</em> from the Algorithm 5 cascade structure, using the six personas already enumerated in Component 2. Each scenario enumerates the subset of cascade actions it exercises. Each one carries a deferred SME validation closure path by inheritance from the personas it involves — a scenario is validated when the personas it depicts are validated and when a practising cascade operator reviews the action sequence and confirms it matches working reality.</p>
+
+<h2 id="planning-for-component-4">Planning for Component 4</h2>
+
+<p>This section is an authoring discipline the SOP does not prescribe but which this DAK adds deliberately. The SOP only requires that the scenarios exist; it does not require that they share a canonical action vocabulary. But because Component 4 lifts scenario actions into BPMN as-is, and because Component 5 (decision logic) further references those activities as decision inputs and outputs, any inconsistency introduced at the Component 3 layer propagates downstream. Settling the vocabulary once, here, pays dividends in Components 4 and 5.</p>
+
+<h3 id="bpmn-module-decomposition">BPMN module decomposition</h3>
+
+<p>Component 4 (BPMN workflows) will consist of five modules, corresponding to the natural cascade decomposition of Algorithm 5:</p>
+
+<ol>
+  <li><strong>Invitation</strong> — community-health-worker-led outreach; screening invitations; rescreen reminders</li>
+  <li><strong>Primary Screening</strong> — facility encounter, HPV DNA sample collection, laboratory assay, result return</li>
+  <li><strong>Triage</strong> — VIA triage for HPV-positive women</li>
+  <li><strong>Treatment</strong> — thermal ablation, LLETZ/LEEP, cold-knife conization, or referral for suspected invasive cancer</li>
+  <li><strong>Follow-up</strong> — triage-negative retest, post-treatment retest, routine rescreening</li>
+</ol>
+
+<p>Referral for suspected invasive cancer does not get its own module — it is an exit branch from Treatment, not a separate process flow. Programme-level oversight (cohort tracking, indicator reporting, recall campaigns) is deferred to Component 8's indicator work rather than modelled as a BPMN process.</p>
+
+<h3 id="action-vocabulary">Action vocabulary</h3>
+
+<p>One canonical action name per cascade step. Scenarios use these names verbatim; Component 4 lifts them as BPMN activity labels; Component 5 references them as decision-logic anchors.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Module</th>
+      <th>Action</th>
+      <th>Performing persona(s)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Invitation</td>
+      <td>Issue screening invitation</td>
+      <td>Community health worker</td>
+    </tr>
+    <tr>
+      <td>Invitation</td>
+      <td>Identify overdue rescreen candidate</td>
+      <td>Community health worker</td>
+    </tr>
+    <tr>
+      <td>Primary Screening</td>
+      <td>Collect HPV sample</td>
+      <td>Nurse/midwife (or Target client, self-collection)</td>
+    </tr>
+    <tr>
+      <td>Primary Screening</td>
+      <td>Run HPV DNA assay</td>
+      <td>Laboratory technician</td>
+    </tr>
+    <tr>
+      <td>Primary Screening</td>
+      <td>Report HPV result</td>
+      <td>Laboratory technician</td>
+    </tr>
+    <tr>
+      <td>Triage</td>
+      <td>Schedule triage encounter</td>
+      <td>Nurse/midwife</td>
+    </tr>
+    <tr>
+      <td>Triage</td>
+      <td>Perform VIA triage</td>
+      <td>Nurse/midwife</td>
+    </tr>
+    <tr>
+      <td>Triage</td>
+      <td>Record triage result</td>
+      <td>Nurse/midwife</td>
+    </tr>
+    <tr>
+      <td>Treatment</td>
+      <td>Determine treatment eligibility</td>
+      <td>Nurse/midwife</td>
+    </tr>
+    <tr>
+      <td>Treatment</td>
+      <td>Perform thermal ablation</td>
+      <td>Nurse/midwife</td>
+    </tr>
+    <tr>
+      <td>Treatment</td>
+      <td>Perform LLETZ/LEEP</td>
+      <td>Advanced clinician</td>
+    </tr>
+    <tr>
+      <td>Treatment</td>
+      <td>Perform cold-knife conization</td>
+      <td>Advanced clinician</td>
+    </tr>
+    <tr>
+      <td>Treatment</td>
+      <td>Refer for suspected invasive cancer</td>
+      <td>Nurse/midwife or Advanced clinician</td>
+    </tr>
+    <tr>
+      <td>Treatment</td>
+      <td>Defer treatment (pregnancy)</td>
+      <td>Nurse/midwife or Advanced clinician</td>
+    </tr>
+    <tr>
+      <td>Follow-up</td>
+      <td>Schedule next routine screening</td>
+      <td>Nurse/midwife</td>
+    </tr>
+    <tr>
+      <td>Follow-up</td>
+      <td>Schedule triage-negative retest</td>
+      <td>Nurse/midwife</td>
+    </tr>
+    <tr>
+      <td>Follow-up</td>
+      <td>Schedule post-treatment retest</td>
+      <td>Nurse/midwife</td>
+    </tr>
+    <tr>
+      <td>Follow-up</td>
+      <td>Attend scheduled retest</td>
+      <td>Target client</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Self-collection of HPV samples is listed parenthetically against "Collect HPV sample" for vocabulary-completeness reasons; no scenario below exercises it, consistent with <a href="interventions-and-recommendations.html#recommendations">rec 4 being Not encoded as upstream of the DAK cascade</a>.</p>
+
+<h2 id="scenarios">Scenarios</h2>
+
+<p>Seven scenarios below. Each names personas inline, closes with an explicit action sequence using the vocabulary above, and lists the modules traversed and any interpretation register entries the scenario depends on.</p>
+
+<h3 id="1-golden-path--hpv-negative-result-routine-rescreening">1. Golden path — HPV-negative result, routine rescreening</h3>
+
+<p>Amina is a woman in the general-population age band (35 years old). A community health worker visits her neighbourhood during a screening outreach campaign and issues her a screening invitation. Amina attends her primary-care facility the following week.</p>
+
+<p>At the facility, the nurse/midwife counsels Amina on the screening procedure and consent, performs a speculum examination, and collects an HPV DNA sample. The sample is couriered with the week's batch to the district laboratory. A laboratory technician runs the HPV DNA assay; Amina's result is negative. The laboratory reports the result back to the facility.</p>
+
+<p>The nurse/midwife contacts Amina, communicates the negative result, and schedules her next routine screening per the 5–10 year interval for the general population (see <a href="cc-005.html">cc-005</a>).</p>
+
+<p><strong>Actions (in sequence):</strong></p>
+
+<ol>
+  <li>Issue screening invitation — Community health worker</li>
+  <li>Collect HPV sample — Nurse/midwife</li>
+  <li>Run HPV DNA assay — Laboratory technician</li>
+  <li>Report HPV result — Laboratory technician</li>
+  <li>Schedule next routine screening — Nurse/midwife</li>
+</ol>
+
+<p><strong>Modules traversed:</strong> Invitation → Primary Screening → Follow-up
+<strong>Register references:</strong> <a href="cc-005.html">cc-005</a> (screening interval)</p>
+
+<h3 id="2-hpv-positive-triage-negative--retest-scheduled">2. HPV-positive, triage-negative — retest scheduled</h3>
+
+<p>Blessing is a 42-year-old woman in the general population. She attends her primary-care facility for screening following a community invitation. The nurse/midwife collects an HPV DNA sample; the laboratory technician runs the assay and reports a positive result.</p>
+
+<p>The nurse/midwife contacts Blessing and schedules her triage encounter. Blessing attends. The nurse performs VIA triage; the result is negative — no acetowhite lesions visible. The nurse records the negative triage result, counsels Blessing, and schedules her triage-negative retest at 24 months per the general-population interval (<a href="cc-005.html">cc-005</a>).</p>
+
+<p><strong>Actions (in sequence):</strong></p>
+
+<ol>
+  <li>Collect HPV sample — Nurse/midwife</li>
+  <li>Run HPV DNA assay — Laboratory technician</li>
+  <li>Report HPV result — Laboratory technician</li>
+  <li>Schedule triage encounter — Nurse/midwife</li>
+  <li>Perform VIA triage — Nurse/midwife</li>
+  <li>Record triage result — Nurse/midwife</li>
+  <li>Schedule triage-negative retest — Nurse/midwife</li>
+</ol>
+
+<p><strong>Modules traversed:</strong> Primary Screening → Triage → Follow-up
+<strong>Register references:</strong> <a href="cc-005.html">cc-005</a> (triage-negative retest interval)</p>
+
+<h3 id="3-ablation-eligible-lesion--thermal-ablation-and-post-treatment-retest">3. Ablation-eligible lesion — thermal ablation and post-treatment retest</h3>
+
+<p>Chipo is a 38-year-old woman in the general population. Her HPV DNA test returned positive. She attends triage; the nurse/midwife performs VIA and identifies a small acetowhite lesion, fully visible on the ectocervix, with clearly defined margins — meeting ablation-eligibility criteria.</p>
+
+<p>The nurse records the positive triage result and determines treatment eligibility: ablation-eligible. The facility is configured for single-visit screen-triage-and-treat, so the nurse counsels Chipo, obtains consent, and performs thermal ablation in the same encounter. She counsels Chipo on post-treatment expectations and schedules her post-treatment retest at 12 months (<a href="cc-005.html">cc-005</a>).</p>
+
+<p>Twelve months later Chipo attends her scheduled post-treatment retest. (The retest itself begins a new instance of Primary Screening; it is not depicted further in this scenario.)</p>
+
+<p><strong>Actions (in sequence):</strong></p>
+
+<ol>
+  <li>Collect HPV sample — Nurse/midwife</li>
+  <li>Run HPV DNA assay — Laboratory technician</li>
+  <li>Report HPV result — Laboratory technician</li>
+  <li>Schedule triage encounter — Nurse/midwife</li>
+  <li>Perform VIA triage — Nurse/midwife</li>
+  <li>Record triage result — Nurse/midwife</li>
+  <li>Determine treatment eligibility — Nurse/midwife</li>
+  <li>Perform thermal ablation — Nurse/midwife</li>
+  <li>Schedule post-treatment retest — Nurse/midwife</li>
+  <li>Attend scheduled retest — Target client</li>
+</ol>
+
+<p><strong>Modules traversed:</strong> Primary Screening → Triage → Treatment → Follow-up
+<strong>Register references:</strong> <a href="cc-005.html">cc-005</a> (post-treatment retest interval)</p>
+
+<h3 id="4-non-ablation-eligible-lesion--lletz-and-post-treatment-retest">4. Non-ablation-eligible lesion — LLETZ and post-treatment retest</h3>
+
+<p>Dafu is a 44-year-old woman in the general population. Her HPV DNA test returned positive; she attended triage. The nurse/midwife performed VIA and identified a larger acetowhite lesion extending into the endocervical canal, with margins that could not be fully visualised — not ablation-eligible.</p>
+
+<p>The nurse records the positive triage result, determines treatment eligibility as non-ablation-eligible, and refers Dafu to the district hospital. At the district hospital an advanced clinician reviews Dafu's findings, confirms the indication for excision, and performs LLETZ under local anaesthesia.</p>
+
+<p>The advanced clinician (or the nurse on return to the primary-care facility, depending on local follow-up practice) schedules Dafu's post-treatment retest at 12 months. Twelve months later Dafu attends her scheduled retest.</p>
+
+<p><strong>Actions (in sequence):</strong></p>
+
+<ol>
+  <li>Collect HPV sample — Nurse/midwife</li>
+  <li>Run HPV DNA assay — Laboratory technician</li>
+  <li>Report HPV result — Laboratory technician</li>
+  <li>Schedule triage encounter — Nurse/midwife</li>
+  <li>Perform VIA triage — Nurse/midwife</li>
+  <li>Record triage result — Nurse/midwife</li>
+  <li>Determine treatment eligibility — Nurse/midwife</li>
+  <li>Perform LLETZ/LEEP — Advanced clinician</li>
+  <li>Schedule post-treatment retest — Nurse/midwife or Advanced clinician</li>
+  <li>Attend scheduled retest — Target client</li>
+</ol>
+
+<p><strong>Modules traversed:</strong> Primary Screening → Triage → Treatment → Follow-up
+<strong>Register references:</strong> <a href="cc-005.html">cc-005</a> (post-treatment retest interval)</p>
+
+<h3 id="5-suspected-invasive-cancer--referral-out-of-cascade">5. Suspected invasive cancer — referral out of cascade</h3>
+
+<p>Esi is a 49-year-old woman in the general population. Her HPV DNA test was positive; she attended triage. On VIA the nurse/midwife observed a large, friable, bleeding lesion with irregular margins and abnormal surface vasculature — findings suspicious for invasive cancer rather than a treatable precancerous lesion.</p>
+
+<p>The nurse recorded the triage result with the "suspected invasive cancer" designation per the operational definition this DAK uses (see <a href="cc-003.html">cc-003</a>) and initiated referral to the advanced clinician for specialist evaluation — rather than attempting triage-based treatment, which is contraindicated in the presence of suspicious findings.</p>
+
+<p>The advanced clinician examined Esi, performed a cervical biopsy, and referred her onward to tertiary oncology services pending histopathology. Esi's subsequent care — confirmation, staging, treatment of invasive disease — falls outside the DAK's cascade scope.</p>
+
+<p><strong>Actions (in sequence):</strong></p>
+
+<ol>
+  <li>Collect HPV sample — Nurse/midwife</li>
+  <li>Run HPV DNA assay — Laboratory technician</li>
+  <li>Report HPV result — Laboratory technician</li>
+  <li>Schedule triage encounter — Nurse/midwife</li>
+  <li>Perform VIA triage — Nurse/midwife</li>
+  <li>Record triage result — Nurse/midwife</li>
+  <li>Refer for suspected invasive cancer — Nurse/midwife</li>
+</ol>
+
+<p><strong>Modules traversed:</strong> Primary Screening → Triage → Treatment (referral exit)
+<strong>Register references:</strong> <a href="cc-003.html">cc-003</a> (suspected invasive cancer — operational definition)</p>
+
+<h3 id="6-woman-living-with-hiv--shorter-interval-mandatory-triage">6. Woman living with HIV — shorter interval, mandatory triage</h3>
+
+<p>Fatima is a 32-year-old woman living with HIV, attending her primary-care facility for routine ART follow-up. She is within the WLHIV screening age range (25+) defined in <a href="cc-002.html">cc-002</a> and due for cervical screening under the WLHIV 3–5 year interval (<a href="cc-005.html">cc-005</a>).</p>
+
+<p>The nurse/midwife integrates the screening into Fatima's ART visit, counsels her, and collects an HPV DNA sample. The lab result returns positive. The nurse contacts Fatima to return for triage — mandatory for WLHIV per rec 22, not optional as for the general population.</p>
+
+<p>Fatima attends triage. The nurse performs VIA; no acetowhite lesion is visible. The nurse records the negative triage result and schedules Fatima's triage-negative retest at <strong>12 months</strong> — the shorter WLHIV interval per rec 31, compared to 24 months for the general population (<a href="cc-005.html">cc-005</a>).</p>
+
+<p><em>Interpretive note — textualist versus purposive divergence.</em> This scenario does not exercise the post-treatment follow-up path. If it did, the WLHIV "double follow-up" (retest at 12 <em>and</em> 24 months) specified in rec 33 would apply in the textualist reading; this DAK's purposive posture collapses that to a single 12-month retest, a divergence documented in <a href="cc-002.html">cc-002</a>. Any future scenario covering WLHIV treatment and follow-up carries that interpretive choice forward.</p>
+
+<p><strong>Actions (in sequence):</strong></p>
+
+<ol>
+  <li>Collect HPV sample — Nurse/midwife</li>
+  <li>Run HPV DNA assay — Laboratory technician</li>
+  <li>Report HPV result — Laboratory technician</li>
+  <li>Schedule triage encounter — Nurse/midwife</li>
+  <li>Perform VIA triage — Nurse/midwife</li>
+  <li>Record triage result — Nurse/midwife</li>
+  <li>Schedule triage-negative retest — Nurse/midwife (12-month WLHIV interval)</li>
+</ol>
+
+<p><strong>Modules traversed:</strong> Primary Screening → Triage → Follow-up
+<strong>Register references:</strong> <a href="cc-002.html">cc-002</a> (WLHIV operationalisation), <a href="cc-005.html">cc-005</a> (intervals)</p>
+
+<h3 id="7-pregnant-woman-triage-positive--treatment-deferred-until-after-pregnancy">7. Pregnant woman, triage-positive — treatment deferred until after pregnancy</h3>
+
+<p>Grace is a 29-year-old woman in the general population. Her HPV DNA test was positive. At triage the nurse/midwife performs VIA and identifies an ablation-eligible lesion.</p>
+
+<p>During the counselling preceding treatment, Grace discloses that she is 16 weeks pregnant — confirmed in her ANC record. The nurse determines treatment eligibility as ablation-eligible in principle, but per the pregnancy-deferral good practice statement (rec 41 GPS; see <a href="cc-006.html">cc-006</a>) does not treat. She defers treatment, counsels Grace on the importance of returning after delivery, and documents the deferred-treatment status in Grace's record so that programme follow-up captures her as pending treatment rather than closing the cascade.</p>
+
+<p>After delivery and the programme-defined post-partum recovery interval, Grace returns. The nurse re-evaluates the lesion — repeating VIA to confirm findings are unchanged — re-determines treatment eligibility, and performs thermal ablation. The post-treatment retest is scheduled at 12 months as in the non-deferred ablation path.</p>
+
+<p><strong>Actions (in sequence):</strong></p>
+
+<ol>
+  <li>Collect HPV sample — Nurse/midwife</li>
+  <li>Run HPV DNA assay — Laboratory technician</li>
+  <li>Report HPV result — Laboratory technician</li>
+  <li>Schedule triage encounter — Nurse/midwife</li>
+  <li>Perform VIA triage — Nurse/midwife</li>
+  <li>Record triage result — Nurse/midwife</li>
+  <li>Determine treatment eligibility — Nurse/midwife</li>
+  <li>Defer treatment (pregnancy) — Nurse/midwife</li>
+</ol>
+
+<p><em>After delivery and recovery interval:</em></p>
+
+<ol>
+  <li>Perform VIA triage — Nurse/midwife (re-evaluation)</li>
+  <li>Determine treatment eligibility — Nurse/midwife</li>
+  <li>Perform thermal ablation — Nurse/midwife</li>
+  <li>Schedule post-treatment retest — Nurse/midwife</li>
+</ol>
+
+<p><strong>Modules traversed:</strong> Primary Screening → Triage → Treatment (deferral) → Triage (re-evaluation) → Treatment → Follow-up
+<strong>Register references:</strong> <a href="cc-006.html">cc-006</a> (pregnancy handling)</p>
+
+<h2 id="scenario-to-module-coverage">Scenario-to-module coverage</h2>
+
+<p>The matrix below shows which BPMN modules each scenario exercises. All five modules have at least one scenario exercising them, confirming that the seven scenarios between them give Component 4 complete coverage of the cascade.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Scenario</th>
+      <th>Invitation</th>
+      <th>Primary Screening</th>
+      <th>Triage</th>
+      <th>Treatment</th>
+      <th>Follow-up</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1. Golden path (HPV−)</td>
+      <td>✓</td>
+      <td>✓</td>
+      <td>—</td>
+      <td>—</td>
+      <td>✓</td>
+    </tr>
+    <tr>
+      <td>2. HPV+ / VIA−</td>
+      <td>—</td>
+      <td>✓</td>
+      <td>✓</td>
+      <td>—</td>
+      <td>✓</td>
+    </tr>
+    <tr>
+      <td>3. Ablation</td>
+      <td>—</td>
+      <td>✓</td>
+      <td>✓</td>
+      <td>✓</td>
+      <td>✓</td>
+    </tr>
+    <tr>
+      <td>4. LLETZ</td>
+      <td>—</td>
+      <td>✓</td>
+      <td>✓</td>
+      <td>✓</td>
+      <td>✓</td>
+    </tr>
+    <tr>
+      <td>5. Suspected cancer</td>
+      <td>—</td>
+      <td>✓</td>
+      <td>✓</td>
+      <td>✓ (referral exit)</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>6. WLHIV</td>
+      <td>—</td>
+      <td>✓</td>
+      <td>✓</td>
+      <td>—</td>
+      <td>✓</td>
+    </tr>
+    <tr>
+      <td>7. Pregnancy deferral</td>
+      <td>—</td>
+      <td>✓</td>
+      <td>✓</td>
+      <td>✓</td>
+      <td>✓</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The Invitation module is exercised only by Scenario 1. A future pass could broaden Invitation coverage with a rescreen-reminder scenario (the "identify overdue rescreen candidate" action is in the vocabulary but unexercised by the current set). This is a coverage gap, not an authoring error — the cascade's initiation modalities are genuinely under-modelled in the first pass.</p>
+
+<h2 id="status">Status</h2>
+
+<p><em>Draft — Phase 1 of Component 3 authoring (2026-04-22).</em> Seven scenarios analytically derived from the Algorithm 5 cascade, using the six personas enumerated in <a href="generic-personas.html">Component 2</a> and a canonical action vocabulary settled deliberately before scenario drafting to prepay the handoff to Component 4. SME validation inherits the stratified deferral pattern from the personas page. Known coverage gap: Invitation module exercised by only one scenario; a rescreen-invitation scenario is a candidate Phase-2 addition. Self-collection of HPV samples (rec 4) is listed in the action vocabulary but unexercised, consistent with its <em>Not encoded — upstream of DAK cascade</em> classification in Component 1.</p>
+
+
+
+
+</div>
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /row -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-content -->
+
+<script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+<script type="text/javascript" src="assets/js/window-hash.js"> </script>
+<a name="bottom"> </a>
+<div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+<div class="container">  <!-- container -->
+
+<div class="inner-wrapper">
+  <p>
+    IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/dhes">Dan Heslinga</a>.  Package dhes.dak.cervical-cancer#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 24, 2026 00:44+0000">2026-04-24</span>
+    <br/>
+    <span style="color: var(--footer-highlight-text-color)">
+                Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="https://dhes.github.io/smart-dak-cervical-cancer/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
+    </span>
+  </p>
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+<div class="container">  <!-- container -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-post-footer -->
+
+<!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+<script type="text/javascript" src="assets/js/respond.min.js"> </script>
+<script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+<script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+<script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+<script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+<!-- Analytics Below
+================================================== -->
+
+
+
+

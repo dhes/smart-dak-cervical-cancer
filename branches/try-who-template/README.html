@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Data Dictionary — README - WHO SMART DAK — Cervical Cancer Screening (L2) v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+    <link rel="stylesheet" href="assets/css/fa-all.css" type="text/css"/>
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+    <link rel="stylesheet" href="assets/css/who.css"/>
+    <link rel="stylesheet" href="assets/css/lforms.min.css"/>
+
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"13"}
+    h3,h4,h5,h6{--heading-prefix:"13"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">    <!-- container -->
+            <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+              <!-- status-bar -->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                  <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Business Requirements
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="register.html">Interpretation Register</a>
+      </li>
+      <li>
+        <a href="cc-000.html">Scope Declaration (cc-000)</a>
+      </li>
+      <li>
+        <a href="cc-002.html">WLHIV Operationalisation (cc-002)</a>
+      </li>
+      <li>
+        <a href="cc-003.html">Cancer Suspected (cc-003)</a>
+      </li>
+      <li>
+        <a href="cc-004.html">Vaccination Status (cc-004)</a>
+      </li>
+      <li>
+        <a href="cc-005.html">Screening Interval (cc-005)</a>
+      </li>
+      <li>
+        <a href="cc-001.html">Population and Inclusion (cc-001)</a>
+      </li>
+      <li>
+        <a href="cc-006.html">Pregnancy Handling (cc-006)</a>
+      </li>
+      <li>
+        <a href="cc-007.html">Sexual Exposure Precondition (cc-007)</a>
+      </li>
+      <li>
+        <a href="cc-008.html">HIV Status Absent/Unknown (cc-008)</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="dictionary.html">Data Dictionary</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Decision Logic
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="decision-logic.html">Overview</a>
+      </li>
+      <li>
+        <a href="decision-tables.html">Decision Tables</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="algorithm-selection.html">Algorithm Selection</a>
+  </li>
+  <li>
+    <a href="methodology.html">Methodology</a>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+</ul>
+              </div>    <!-- /.nav-collapse -->
+
+              <div data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;" class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch">
+                  <!-- This div will be pushed to the right -->
+                <div style="margin-left: auto; background-color: #00477d; color: white;" class="language-selector">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" name="language-selector" id="language-selector">
+                    <option disabled="null" selected="null">Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                  <!-- Search Content -->
+              </div>
+            </div>    <!-- /.container -->
+          </nav>    <!-- /.navbar -->
+          <!-- /HEADER CONTENT -->
+        </div>    <!-- /container -->
+      </div>    <!-- /segment-navbar -->
+      
+
+      <div style=" justify-content: space-between; align-items: left;" class="container">
+
+          <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+    <a no-external="true" id="who-logo" href="index.html">
+        
+    </a>
+</div>
+
+ <div id="family-nav">
+  <a no-external="true" id="fhir-logo" href="http://hl7.org/fhir">  </a>
+</div> 
+
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">WHO SMART DAK — Cervical Cancer Screening (L2)</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>Data Dictionary — README</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">WHO SMART DAK — Cervical Cancer Screening (L2), published by Dan Heslinga. This guide is not an authorized publication; it is the continuous build for version 0.1.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href="https://github.com/dhes/smart-dak-cervical-cancer/tree/try-who-template">https://github.com/dhes/smart-dak-cervical-cancer/tree/try-who-template</a> and changes regularly. See the <a href="https://dhes.github.io/smart-dak-cervical-cancer/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>Data Dictionary — README</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div>
+  <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown. -->
+</div>
+<h1 id="cervical-cancer-case-study--core-data-dictionary">Cervical Cancer Case Study — Core Data Dictionary</h1>
+
+<p>This IG contains the minimum-viable Core Data Dictionary (CDD) for the cervical cancer case study. The CDD itself is in <a href="dictionary.html"><code class="language-plaintext highlighter-rouge">dictionary</code></a>; this README explains what the CDD is, how its columns are organised, what the Kind classification means, what the L2/L3 boundary does, and why the framing of that boundary is tri-purpose — layer, cross-DAK, and country-adaptation.</p>
+
+<h2 id="what-this-cdd-is">What this CDD is</h2>
+
+<p>A structured L2 face of every input and output exercised by <a href="l2/textualist.dmn"><code class="language-plaintext highlighter-rouge">textualist.dmn</code></a>, plus two deferred stub rows (pregnancy, vaccination) that reserve slots for planned register entries (<a href="cc-006.html"><code class="language-plaintext highlighter-rouge">cc-006</code></a>, <a href="cc-004.html"><code class="language-plaintext highlighter-rouge">cc-004</code></a>). Nineteen rows total. The row selection principle is strict: every row in the CDD must be traceable to either (a) a decision input/output in <code class="language-plaintext highlighter-rouge">textualist.dmn</code>, or (b) a register entry — anything else is out of scope for this minimum-viable first pass.</p>
+
+<p>The harvest script at <a href="https://github.com/dhes/dak-authoring-methodology/blob/main/tools/dak-harvest/harvest-cdes.py"><code class="language-plaintext highlighter-rouge">dak-harvest/harvest-cdes.py</code></a> produced a flat per-DAK filtered index at <a href="https://github.com/dhes/dak-authoring-methodology/blob/main/case-studies/cervical-cancer/narrative/harvested-cdes-from-existing-daks.md"><code class="language-plaintext highlighter-rouge">harvested-cdes-from-existing-daks.md</code></a> (harvest timestamp 2026-04-10). That index is the raw material; this CDD is the curated, structured, L2/L3-partitioned product that a country adaptation team could consume.</p>
+
+<h2 id="column-structure">Column structure</h2>
+
+<p>The CDD mirrors the SMART Guidelines DAK template column order as closely as markdown permits. See <a href="https://github.com/dhes/dak-authoring-methodology/blob/main/methodology/authoring-workflow.md"><code class="language-plaintext highlighter-rouge">authoring-workflow.md</code></a> lines 113–142 for the underlying boundary rule and <a href="https://github.com/dhes/dak-authoring-methodology/blob/main/methodology/cross-dak-data-harmonization.md"><code class="language-plaintext highlighter-rouge">cross-dak-data-harmonization.md</code></a> line 50 for the canonical column list the template uses.</p>
+
+<p><strong>L2 columns</strong> (populated by every row):</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Activity ID</code> — which decision table / workflow stage</li>
+  <li><code class="language-plaintext highlighter-rouge">Data Element ID</code> — <code class="language-plaintext highlighter-rouge">HIV.*.DE*</code> / <code class="language-plaintext highlighter-rouge">STI.*.DE*</code> / etc. for harvested (Kind 2), <code class="language-plaintext highlighter-rouge">CC.*.DE*</code> for novel (Kind 1)</li>
+  <li><code class="language-plaintext highlighter-rouge">Label</code> — short human-readable name</li>
+  <li><code class="language-plaintext highlighter-rouge">Description</code> — natural-language meaning</li>
+  <li><code class="language-plaintext highlighter-rouge">Data Type</code> — Boolean / Coding / Date / DateTime / Quantity / String / number</li>
+  <li><code class="language-plaintext highlighter-rouge">Input Options</code> — allowed values (for Coding)</li>
+  <li><code class="language-plaintext highlighter-rouge">Required</code> — R / C / O</li>
+  <li><code class="language-plaintext highlighter-rouge">Linkages (DMN)</code> — references to <code class="language-plaintext highlighter-rouge">textualist.dmn</code> decisions and rules</li>
+  <li><code class="language-plaintext highlighter-rouge">Linkages (Register)</code> — references to interpretation register entries</li>
+  <li><code class="language-plaintext highlighter-rouge">Annotations</code> — free-text notes</li>
+</ul>
+
+<p><strong>L2/L3 bridge column</strong> (populated by every row):</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Terminology Intent</code> — natural-language description of what the element means, to inform L3 binding without prescribing it. This column is where the "what does this element represent" question is answered without making terminology-binding decisions.</li>
+</ul>
+
+<p><strong>L3 columns</strong> (intentionally blank on every row):</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">ICD-11</code>, <code class="language-plaintext highlighter-rouge">SNOMED CT</code>, <code class="language-plaintext highlighter-rouge">LOINC</code>, <code class="language-plaintext highlighter-rouge">ICHI</code>, <code class="language-plaintext highlighter-rouge">ICF</code></li>
+  <li><code class="language-plaintext highlighter-rouge">FHIR Resource</code>, <code class="language-plaintext highlighter-rouge">FHIR Profile</code>, <code class="language-plaintext highlighter-rouge">Canonical URI</code></li>
+</ul>
+
+<p><strong>Kind classification column</strong> (populated by every row):</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Kind</code> — 1 (novel to CC), 2 (harvested with provenance), 3 (proposed to smart-core)</li>
+</ul>
+
+<p><strong>Kind 2 provenance columns</strong> (populated on Kind 2 rows only):</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Source DAK</code> — e.g., <code class="language-plaintext highlighter-rouge">HIV</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Source DE ID</code> — e.g., <code class="language-plaintext highlighter-rouge">HIV.D.DE664</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Source Commit</code> — commit hash of the source DAK at harvest time (blank in this first pass; see Phase B note below)</li>
+  <li><code class="language-plaintext highlighter-rouge">Reuse Intent</code> — <code class="language-plaintext highlighter-rouge">reuse-as-is</code> / <code class="language-plaintext highlighter-rouge">extend</code> / <code class="language-plaintext highlighter-rouge">propose-to-core</code></li>
+</ul>
+
+<h2 id="kind-classification">Kind classification</h2>
+
+<p>Three kinds of entries, per <a href="https://github.com/dhes/dak-authoring-methodology/blob/main/tools/smart-core-comments.md"><code class="language-plaintext highlighter-rouge">smart-core-comments.md</code></a> Option 4 hybrid:</p>
+
+<p><strong>Kind 1 — Locally-novel.</strong> Elements genuinely novel to cervical cancer screening. Not found in any existing DAK's data dictionary. Authored fresh with CC-domain IDs (<code class="language-plaintext highlighter-rouge">CC.*.DE*</code>). In this CDD: transformation zone type, ablation eligibility, treatment plan, follow-up plan, suspicion of cancer, years since last screen, and the DAK-computed outputs.</p>
+
+<p><strong>Kind 2 — Harvested with provenance.</strong> Elements that already exist in another SMART Guidelines DAK and can be referenced rather than reinvented. The CDD row records the source DAK, source DE ID, source commit hash (blank in this first pass), and reuse intent (reuse-as-is / extend / propose-to-core). The snapshot approach — copy the L2-face at harvest time — gives point-in-time provenance and decouples the CC CDD from upstream drift, analogous to how <code class="language-plaintext highlighter-rouge">package-lock.json</code> works in the Node.js ecosystem. In this CDD: age, sex, living with HIV, date of last screening, prior screen result, VIA result, pregnancy status (stub), vaccination status (stub).</p>
+
+<p><strong>Kind 3 — Proposed to smart-core.</strong> Elements that should eventually live in the smart-core shared data dictionary (or its successor) and be referenced by every DAK that needs them, rather than being duplicated across domain DAKs. <strong>Kind 3 is not exercised by any row in this first pass.</strong> See the "Deferred as purposive refinement" section at the end of <a href="dictionary.html"><code class="language-plaintext highlighter-rouge">dictionary</code></a> for the <code class="language-plaintext highlighter-rouge">HasCervix</code> candidate that would populate Kind 3 if and when a Phase B triangulation artifact or a future purposive DMN authoring pass opens the venue for it.</p>
+
+<h2 id="the-l2l3-boundary">The L2/L3 boundary</h2>
+
+<p>The methodology's <a href="https://github.com/dhes/dak-authoring-methodology/blob/main/methodology/authoring-workflow.md"><code class="language-plaintext highlighter-rouge">authoring-workflow.md</code></a> lines 113–142 prescribes a column-level boundary between L2 (what a clinical SME can validate) and L3 (what a terminology specialist or FHIR implementer binds). This CDD is the first artifact that exercises the boundary on real data rather than asserting it rhetorically.</p>
+
+<p><strong>What L2 contains.</strong> Element identity, semantics, data type, allowed values, conditionality, decision-table linkages, free-text annotations, and the <code class="language-plaintext highlighter-rouge">Terminology Intent</code> bridge column. Everything a clinical SME or country adaptation team can read and validate without requiring FHIR or terminology expertise.</p>
+
+<p><strong>What L3 contains.</strong> Terminology bindings (ICD-11, SNOMED CT, LOINC, ICHI, ICF) and FHIR implementation mappings (resource type, profile, extension, canonical URI). Everything that requires a terminology specialist or a FHIR implementer to land correctly in a country's EHR.</p>
+
+<p><strong>Why the L3 columns are blank in this CDD.</strong> Not because the L3 work is unimportant but because the L3 work is <em>context-dependent</em>. A country deploying the CC DAK against Bahmni has different FHIR binding targets than a country deploying against eTracker or SmartCare or Impilo. A country whose national terminology server speaks SNOMED CT Global Patient Set has different binding paths than one that uses ICD-11 primary. Baking one country's L3 bindings into the generic CDD would force every other country to undo them. Leaving L3 blank and supplying <code class="language-plaintext highlighter-rouge">Terminology Intent</code> as a bridge lets every country's L3 implementers start from the same clinically-validated L2 content.</p>
+
+<h2 id="the-tri-purpose-framing">The tri-purpose framing</h2>
+
+<p>The L2/L3 boundary does three jobs at once, not one. Naming all three is the conceptual contribution this CDD is trying to make; it is also what makes the CDD valuable to country adaptation teams, not only to methodology reviewers.</p>
+
+<p><strong>Job 1 — Layer separation.</strong> The one the methodology's <a href="https://github.com/dhes/dak-authoring-methodology/blob/main/methodology/authoring-workflow.md"><code class="language-plaintext highlighter-rouge">authoring-workflow.md</code></a> already articulates: clinical content (L2) is separable from FHIR and terminology binding (L3), so interpretive decisions made at L2 are not distorted by downstream implementation concerns. The register entries in the <a href="https://github.com/dhes/dak-authoring-methodology/tree/main/case-studies/cervical-cancer/interpretation-register">interpretation register</a> respect this rule; <a href="cc-001.html"><code class="language-plaintext highlighter-rouge">cc-001</code></a> is the exemplar, with its inline terminology guidance deliberately omitted in favour of the per-row <code class="language-plaintext highlighter-rouge">Terminology Intent</code> bridge column.</p>
+
+<p><strong>Job 2 — Cross-DAK harmonization.</strong> The one the published literature points at without a fully functioning mechanism: Pretty et al. (2023) recommend a "master spreadsheet that standardises data elements repeated across sections, to reduce the time and potential inconsistencies in coding"; <a href="https://github.com/dhes/dak-authoring-methodology/blob/main/tools/smart-core-comments.md"><code class="language-plaintext highlighter-rouge">smart-core-comments.md</code></a> observes that the smart-core repo was set up by the right people (Rhodes, Leitner, Costa Teixeira, Stevenson) but has been dormant since ~2021, so cross-DAK harmonization happens accidentally via per-DAK harvests rather than deliberately via a canonical shared dictionary. The L2/L3 boundary is what makes harvest-based sharing tractable: the L2 side of a harvested element is the portable part, and each DAK that references it can do its own L3 binding if needed.</p>
+
+<p><strong>Job 3 — Country-adaptation workflow.</strong> The one Muliokela et al. (2025) implicitly surface but don't name explicitly. Their <a href="https://github.com/dhes/dak-authoring-methodology/blob/main/methodology/publications/3-muliokela.pdf"><code class="language-plaintext highlighter-rouge">3-muliokela.pdf</code></a> describes five-country pathfinder DAK adaptation work in Ethiopia, Ghana, Malawi, Zambia, and Zimbabwe. Their Table 2 names "the initial content adaptation process might require more time due to the volume of DAK elements" as a core challenge, and recommends "conducting preparatory steps, such as guideline extraction and premapping, to assess/select initial areas for adaptation, prior to stakeholder validation." Their Premapping Tool (Tool 3 in their Table 1) asks three questions of each DAK data element: does it already exist in the country's protocols/guidelines/registers; should it be added to the country-adapted DAK; does it need modifications.</p>
+
+<p><strong>The connection.</strong> Muliokela's premapping workshops have two audiences with different concerns. Clinicians and MOH program staff care about whether a data element matches the country's clinical workflow (the L2 question). Digital-health implementers and terminology specialists care about how the element maps to the country's EHR schema and terminology server (the L3 question). Running both audiences through one wide table with mixed L2 and L3 content is exactly the "volume of DAK elements" overwhelm Muliokela names as a core challenge.</p>
+
+<p>An L2-only view of the CDD — exactly what this CDD presents, with L3 columns blank — is what a clinical-review premapping workshop would consume. A L3-binding workshop, held separately with different participants and a narrower scope, would take the validated L2 subset and populate the L3 columns per the country's EHR and terminology infrastructure. Splitting the workshop along the L2/L3 line is a strict improvement over running one wide workshop, and it maps cleanly onto the methodology's boundary rule without requiring Muliokela's tool to be rewritten.</p>
+
+<p><strong>The unification.</strong> Jobs 2 and 3 are the same problem from different angles. Cross-DAK harmonization asks "how do we reuse an HIV DAK element in a CC DAK without copying its terminology binding and creating drift"; country adaptation asks "how does a country adopt a generic DAK element and bind it to their EMR." Both want a stable clinical spec (L2) separated from a re-doable layer of binding (L3). The L2/L3 boundary delivers that, and once articulated as tri-purpose, it positions the methodology's contribution as a bridge between the published literature (Pretty et al., Tamrat et al., the smart-core aspiration) and the field literature (Muliokela et al.'s country pathfinder experience).</p>
+
+<h2 id="scope-limits">Scope limits</h2>
+
+<p>This is a minimum-viable CDD, not a complete CC DAK data dictionary. Explicitly out of scope:</p>
+
+<ul>
+  <li><strong>Elements not consumed by the current <code class="language-plaintext highlighter-rouge">textualist.dmn</code>.</strong> The plan file for this work (<code class="language-plaintext highlighter-rouge">silly-gathering-flamingo.md</code> in the user's local Claude state) originally listed <code class="language-plaintext highlighter-rouge">LifetimeScreeningTestNumber</code>, <code class="language-plaintext highlighter-rouge">PrimaryScreeningTestType</code>, and <code class="language-plaintext highlighter-rouge">TriageTestType</code> as candidate Kind 2 rows. Close reading of the textualist revealed that none of those are consumed by any current decision rule, and none map to a current register entry; by the plan's own verification rule ("every row traceable to a textualist decision input/output OR a register entry") they should not be in the CDD. They may be added in a more complete CC DAK CDD when the textualist or the register grows to cover them.</li>
+  <li><strong>Algorithms 1–4, 6, 7 of the 2021-07 guideline.</strong> The case study's scope declaration in <a href="cc-000.html"><code class="language-plaintext highlighter-rouge">cc-000</code></a> limits the DAK to Algorithm 5 (HPV DNA primary screening with VIA triage). Data elements specific to the other six algorithms (cytology, colposcopy, HPV16/18 genotyping triage, HPV mRNA, dual-stain cytology) are out of scope.</li>
+  <li><strong>Programme-level / facility-readiness elements.</strong> LBC capability, laboratory infrastructure, workforce training status. These are not patient-level decision inputs and belong in a facility-readiness dataset, not the clinical decision table CDD.</li>
+  <li><strong>Upstream data-acquisition details.</strong> The clinical acts that populate the boolean inputs (how a VIA reading is made, how TZ type is visually determined, how "cancer suspected" is decided in the clinic) are out of scope per the scope declaration. See <a href="cc-003.html"><code class="language-plaintext highlighter-rouge">cc-003</code></a> for the register entry that documents what the "cancer suspected" boolean hides.</li>
+  <li><strong>L3 binding decisions.</strong> The core of the tri-purpose framing: L3 work is deferred to country-adaptation implementers. This CDD deliberately does not prescribe SNOMED CT codes, FHIR resource types, or canonical URIs.</li>
+</ul>
+
+<h2 id="versioning-and-the-source-commit-gap">Versioning and the Source Commit gap</h2>
+
+<p>The Kind 2 rows in this first pass have blank <code class="language-plaintext highlighter-rouge">Source Commit</code> fields. This is a known gap inherited from the harvest script's current behaviour: <a href="https://github.com/dhes/dak-authoring-methodology/blob/main/tools/dak-harvest/harvest-cdes.py"><code class="language-plaintext highlighter-rouge">harvest-cdes.py</code></a> ingests xlsx files from a local <code class="language-plaintext highlighter-rouge">xlsx/</code> directory and does not capture the source repository commit hashes at harvest time. The Option 4 hybrid in <a href="https://github.com/dhes/dak-authoring-methodology/blob/main/tools/smart-core-comments.md"><code class="language-plaintext highlighter-rouge">smart-core-comments.md</code></a> names this as a required capability for versioning-discipline ("periodic re-harvest to detect upstream drift"), and the plan file for this work scopes the harvest-script extension as Phase B tooling. Until Phase B is undertaken, the Kind 2 rows in this CDD reference the source DAKs by DE ID and label only, and the snapshot is dated 2026-04-10 via the harvest file header.</p>
+
+<p>Consumers of this CDD should treat the Kind 2 rows as "current as of 2026-04-10 and subject to upstream drift detection when commit-capture is added." This is an honest acknowledgment of the current ecosystem's lack of a cross-DAK dependency management layer; it is not a claim that the methodology has solved the versioning problem.</p>
+
+<h2 id="how-to-read-the-cdd">How to read the CDD</h2>
+
+<p>Two entry points, depending on why you're reading:</p>
+
+<ul>
+  <li><strong>Quick scan.</strong> Read the summary table at the top of <a href="dictionary.html"><code class="language-plaintext highlighter-rouge">dictionary</code></a>. Nineteen rows, each with its DE ID, data type, kind, and source/linkage. Suitable for a country team evaluating whether the DAK's data surface maps to their EHR at all.</li>
+  <li><strong>Detailed review.</strong> Read the per-row blocks below the summary table. Each block carries the full L2 column set with decision-rule linkages, terminology intent, and annotations. Suitable for a clinical SME workshop reviewing the CC DAK's data-element-level content element by element.</li>
+</ul>
+
+<p>Cross-references from the CDD to the interpretation register are bidirectional: every register entry that references a data element is cited in the corresponding CDD row's <code class="language-plaintext highlighter-rouge">Linkages (Register)</code> field. The CDD is intended to be navigable alongside the register, not as a replacement for it.</p>
+
+<h2 id="relationship-to-other-methodology-artifacts">Relationship to other methodology artifacts</h2>
+
+<ul>
+  <li><a href="https://github.com/dhes/dak-authoring-methodology/blob/main/methodology/authoring-workflow.md"><code class="language-plaintext highlighter-rouge">authoring-workflow.md</code></a> lines 113–142 — the underlying L2/L3 boundary rule.</li>
+  <li><a href="https://github.com/dhes/dak-authoring-methodology/blob/main/methodology/cross-dak-data-harmonization.md"><code class="language-plaintext highlighter-rouge">cross-dak-data-harmonization.md</code></a> — the published-literature synthesis on cross-DAK harmonization (Pretty, Tamrat, Mehl, Muliokela, GUIDE).</li>
+  <li><a href="https://github.com/dhes/dak-authoring-methodology/blob/main/tools/smart-core-comments.md"><code class="language-plaintext highlighter-rouge">smart-core-comments.md</code></a> — the Option 4 hybrid and the dormant-smart-core observation.</li>
+  <li><a href="https://github.com/dhes/dak-authoring-methodology/blob/main/tools/dak-harvest/harvest-cdes.py"><code class="language-plaintext highlighter-rouge">harvest-cdes.py</code></a> — the harvest script that produced the raw per-DAK index this CDD curates.</li>
+  <li><a href="https://github.com/dhes/dak-authoring-methodology/blob/main/case-studies/cervical-cancer/narrative/harvested-cdes-from-existing-daks.md"><code class="language-plaintext highlighter-rouge">harvested-cdes-from-existing-daks.md</code></a> — the harvest snapshot (2026-04-10) that the Kind 2 rows draw from.</li>
+  <li><a href="https://github.com/dhes/dak-authoring-methodology/tree/main/case-studies/cervical-cancer/interpretation-register">Interpretation register</a> — the interpretation register, which this CDD cross-references row-by-row. Its IG-rendered counterparts are <a href="cc-000.html"><code class="language-plaintext highlighter-rouge">cc-000</code></a> through <a href="cc-007.html"><code class="language-plaintext highlighter-rouge">cc-007</code></a>.</li>
+  <li><a href="l2/textualist.dmn"><code class="language-plaintext highlighter-rouge">textualist.dmn</code></a> — the decision logic this CDD documents the L2 face of.</li>
+</ul>
+
+
+
+
+</div>
+</div>    <!-- /inner-wrapper -->
+</div>    <!-- /row -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-content -->
+
+<script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+<script src="assets/js/window-hash.js" type="text/javascript"> </script>
+<a name="bottom"> </a>
+<div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+<div class="container">    <!-- container -->
+
+<div class="inner-wrapper">
+  <p>
+    IG &copy; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/dhes">Dan Heslinga</a>.  Package dhes.dak.cervical-cancer#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 21, 2026 20:10+0000">2026-04-21</span>
+    <br/>
+    <span style="color: var(--footer-highlight-text-color)"><a name="l954">​</a>
+                Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" href="https://dhes.github.io/smart-dak-cervical-cancer/history.html" target="_blank">Version History</a> | <a rel="license" style="color: #81BEF7" href="license.html">License</a>
+    </span>
+  </p>
+</div>    <!-- /inner-wrapper -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+<div class="container">    <!-- container -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+<script src="assets/js/respond.min.js" type="text/javascript"> </script>
+<script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+<script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+<script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+<script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+  <!-- Analytics Below
+================================================== -->
+
+
+
+
+</body></html>

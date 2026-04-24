@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>cc-007: Sexual Exposure Precondition - WHO SMART DAK — Cervical Cancer Screening (L2) v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+    <link rel="stylesheet" href="assets/css/fa-all.css" type="text/css"/>
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+    <link rel="stylesheet" href="assets/css/who.css"/>
+    <link rel="stylesheet" href="assets/css/lforms.min.css"/>
+
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"10"}
+    h3,h4,h5,h6{--heading-prefix:"10"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">    <!-- container -->
+            <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+              <!-- status-bar -->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                  <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Business Requirements
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="register.html">Interpretation Register</a>
+      </li>
+      <li>
+        <a href="cc-000.html">Scope Declaration (cc-000)</a>
+      </li>
+      <li>
+        <a href="cc-002.html">WLHIV Operationalisation (cc-002)</a>
+      </li>
+      <li>
+        <a href="cc-003.html">Cancer Suspected (cc-003)</a>
+      </li>
+      <li>
+        <a href="cc-004.html">Vaccination Status (cc-004)</a>
+      </li>
+      <li>
+        <a href="cc-005.html">Screening Interval (cc-005)</a>
+      </li>
+      <li>
+        <a href="cc-001.html">Population and Inclusion (cc-001)</a>
+      </li>
+      <li>
+        <a href="cc-006.html">Pregnancy Handling (cc-006)</a>
+      </li>
+      <li>
+        <a href="cc-007.html">Sexual Exposure Precondition (cc-007)</a>
+      </li>
+      <li>
+        <a href="cc-008.html">HIV Status Absent/Unknown (cc-008)</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="dictionary.html">Data Dictionary</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Decision Logic
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="decision-logic.html">Overview</a>
+      </li>
+      <li>
+        <a href="decision-tables.html">Decision Tables</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="algorithm-selection.html">Algorithm Selection</a>
+  </li>
+  <li>
+    <a href="methodology.html">Methodology</a>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+</ul>
+              </div>    <!-- /.nav-collapse -->
+
+              <div data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;" class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch">
+                  <!-- This div will be pushed to the right -->
+                <div style="margin-left: auto; background-color: #00477d; color: white;" class="language-selector">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" name="language-selector" id="language-selector">
+                    <option disabled="null" selected="null">Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                  <!-- Search Content -->
+              </div>
+            </div>    <!-- /.container -->
+          </nav>    <!-- /.navbar -->
+          <!-- /HEADER CONTENT -->
+        </div>    <!-- /container -->
+      </div>    <!-- /segment-navbar -->
+      
+
+      <div style=" justify-content: space-between; align-items: left;" class="container">
+
+          <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+    <a no-external="true" id="who-logo" href="index.html">
+        
+    </a>
+</div>
+
+ <div id="family-nav">
+  <a no-external="true" id="fhir-logo" href="http://hl7.org/fhir">  </a>
+</div> 
+
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">WHO SMART DAK — Cervical Cancer Screening (L2)</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>cc-007: Sexual Exposure Precondition</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">WHO SMART DAK — Cervical Cancer Screening (L2), published by Dan Heslinga. This guide is not an authorized publication; it is the continuous build for version 0.1.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href="https://github.com/dhes/smart-dak-cervical-cancer/tree/try-who-template">https://github.com/dhes/smart-dak-cervical-cancer/tree/try-who-template</a> and changes regularly. See the <a href="https://dhes.github.io/smart-dak-cervical-cancer/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>cc-007: Sexual Exposure Precondition</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div>
+  <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown. -->
+</div>
+<h1 id="cc-007--sexual-exposure-precondition-implicit-in-age-thresholds-deliberate-simplification">cc-007 — Sexual exposure precondition implicit in age thresholds (deliberate simplification)</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Entry ID</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">cc-007</code></td>
+    </tr>
+    <tr>
+      <td><strong>Category</strong></td>
+      <td>inference</td>
+    </tr>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td>Sexual exposure precondition implicit in age thresholds (deliberate simplification)</td>
+    </tr>
+    <tr>
+      <td><strong>Status</strong></td>
+      <td>proposed</td>
+    </tr>
+    <tr>
+      <td><strong>Date</strong></td>
+      <td>2026-04-14</td>
+    </tr>
+    <tr>
+      <td><strong>Authors</strong></td>
+      <td>dan-heslinga</td>
+    </tr>
+    <tr>
+      <td><strong>Selected</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">accept-simplification</code></td>
+    </tr>
+    <tr>
+      <td><strong>L1 source</strong></td>
+      <td>WHO 2021 Cervical Cancer Screening Guideline (2nd ed.)</td>
+    </tr>
+    <tr>
+      <td><strong>Related entries</strong></td>
+      <td><a href="cc-000.html">cc-000</a>, <a href="cc-004.html">cc-004</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="rationale">Rationale</h2>
+
+<p>The 2021 guideline's age thresholds (30 for general population, 25 for WLHIV) encode a probabilistic assumption about sexual exposure: most women have had sufficient time since sexual debut by these ages for meaningful HPV exposure and progression. The guideline does not say this explicitly in recommendation language, but it is the clinical rationale underlying the age choices, and IARC Handbook Vol. 18 references it in the epidemiology chapters. Individual-level sexual history is not operationalised anywhere in the cascade — there is no recommendation to capture it, no input for it in any decision, no rule conditioned on it.</p>
+
+<p>The DAK's non-handling of sexual history is therefore faithful to the guideline. But it produces a small population of never-sexually-active individuals above the age threshold who are over-screened: the DAK marks them eligible, they receive HPV testing, and the test is near-universally negative. The harms are minor (an HPV test, possibly a VIA triage if HPV-positive which is vanishingly rare in this population) and the operational simplification is substantial. This is the prototypical <code class="language-plaintext highlighter-rouge">deliberate_simplification</code> pattern: a choice to <em>not</em> add an input that could have been added, on the grounds that the simplification is preferable to the elaboration.</p>
+
+<p><strong>The selected resolution is <code class="language-plaintext highlighter-rouge">accept-simplification</code>.</strong> Three reasons.</p>
+
+<p><strong>First, the guideline supports the simplification.</strong> WHO did not recommend capturing sexual history for cervical cancer screening despite the question being clinically salient. The 2021 guideline's age-threshold approach is the evidence-informed choice, and a DAK that added a sexual-history exclusion would be departing from the guideline's operationalisation.</p>
+
+<p><strong>Second, deployment and privacy considerations.</strong> Capturing individual-level sexual history at the point of screening adds a sensitive data element with privacy, stigma, and adolescent/unmarried-woman disclosure implications that the screening workflow does not currently manage well. In the epidemiological regime declared in cc-000 (moderate-to-high HIV prevalence, public-sector primary care, limited privacy infrastructure in paper registers and shared-terminal EMRs), requiring a sexual-history disclosure as a screening precondition creates harms that outweigh the yield benefit of excluding a small never-sexually-active subpopulation.</p>
+
+<p><strong>Third, harm profile is asymmetric.</strong> The harm of over-screening a never-sexually-active individual above the age threshold (one HPV test with a near-certain-negative result) is substantially smaller than the harm of a false-exclusion of a sexually-active individual who under-discloses history to avoid stigma (missed screening, delayed cancer diagnosis). The <code class="language-plaintext highlighter-rouge">add-sexual-history-input</code> option creates a disclosure pathway whose false-negative mode is clinically worse than the over-screening it prevents.</p>
+
+<p><strong>Why not <code class="language-plaintext highlighter-rouge">add-as-deferral-not-exclusion</code>.</strong> The soft-deferral option seems attractive — it flags the question for clinician review rather than making an automated exclusion. But it adds workflow complexity (the clinician now has to handle the flag) in exchange for addressing a clinically minor over-screening problem. The workflow cost is not justified by the clinical benefit.</p>
+
+<p><strong>Why this is <code class="language-plaintext highlighter-rouge">inference</code> rather than <code class="language-plaintext highlighter-rouge">deliberate_simplification</code>.</strong> The register schema currently has <code class="language-plaintext highlighter-rouge">deliberate_simplification</code> as a candidate category (see <a href="register.html"><code class="language-plaintext highlighter-rouge">index.md</code></a> Open Methodology Questions), with cc-007 named as the entry that would exercise it. The entry-level distinction is that <code class="language-plaintext highlighter-rouge">inference</code> fills a silence while <code class="language-plaintext highlighter-rouge">deliberate_simplification</code> preserves a silence. cc-007 preserves the guideline's silence on sexual history, which is closer to <code class="language-plaintext highlighter-rouge">deliberate_simplification</code> than to <code class="language-plaintext highlighter-rouge">inference</code> — the DAK is not inferring a rule from the silence, it is choosing to leave the silence intact.</p>
+
+<p>This entry files under <code class="language-plaintext highlighter-rouge">inference</code> pending the methodology decision about whether to adopt <code class="language-plaintext highlighter-rouge">deliberate_simplification</code> as a distinct category. If the category is adopted, cc-007 should be recategorised. The rationale above is written to support either categorisation; the only change would be the category label and a minor adjustment to the framing in this section.</p>
+
+<p><strong>Relationship to cc-000's inherited assumptions.</strong> cc-000 explicitly names the sexual exposure precondition as an inherited assumption:</p>
+
+<blockquote>
+  <p>"The 2021 guideline assumes prior sexual exposure as an implicit precondition for screening, operationalised via the age thresholds… The DAK inherits this assumption and does not model sexual history as an input."</p>
+</blockquote>
+
+<p>cc-007 is the register entry that documents the interpretive act of inheriting the assumption. cc-000 says "we inherit it"; cc-007 says "here is what we considered and why we inherited rather than elaborated."</p>
+
+<h2 id="implementation-notes">Implementation Notes</h2>
+
+<ul>
+  <li><strong>No purposive DMN change on account of this entry.</strong> The textualist's absence of a sexual-history input transfers to the purposive DMN unchanged. No new input, no new rule, no CDD addition.</li>
+  <li><strong>Documentation for country adaptation teams.</strong> A country deploying this DAK should be aware that:
+    <ul>
+      <li>The DAK will mark never-sexually-active individuals above the age threshold as eligible for screening.</li>
+      <li>The resulting HPV test will be near-universally negative for these individuals.</li>
+      <li>Clinicians may choose to exercise judgment in declining to perform the test when history is disclosed spontaneously, but this is outside the DAK's logic.</li>
+      <li>The over-screening cost is small; the simplification is the right choice at the DAK level.</li>
+    </ul>
+  </li>
+  <li><strong>If a future jurisdiction wants to model sexual history explicitly.</strong> A deployment-specific purposive refinement could add the input. The refinement should address the privacy, stigma, and false-negative harms above before adding the input; those harms are not DAK-logic concerns but they are deployment-safety concerns.</li>
+  <li><strong>Interaction with cc-004 (vaccination).</strong> In a high-vaccination-coverage regime, the never-sexually-active subpopulation's over-screening cost is slightly larger because HPV exposure yield is even lower. This is a second-order effect that does not change cc-007's resolution but is noted for readers working through both entries.</li>
+  <li><strong>Methodology feedback.</strong> This entry is the first (and currently only) case of the <code class="language-plaintext highlighter-rouge">deliberate_simplification</code> pattern in the register. If the methodology adopts the category formally, cc-007 will be the category's exemplar. Feedback on whether the category label meaningfully differs from <code class="language-plaintext highlighter-rouge">inference</code> in practice should be recorded against this entry.</li>
+</ul>
+
+
+
+
+</div>
+</div>    <!-- /inner-wrapper -->
+</div>    <!-- /row -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-content -->
+
+<script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+<script src="assets/js/window-hash.js" type="text/javascript"> </script>
+<a name="bottom"> </a>
+<div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+<div class="container">    <!-- container -->
+
+<div class="inner-wrapper">
+  <p>
+    IG &copy; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/dhes">Dan Heslinga</a>.  Package dhes.dak.cervical-cancer#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 21, 2026 20:10+0000">2026-04-21</span>
+    <br/>
+    <span style="color: var(--footer-highlight-text-color)"><a name="l704">​</a>
+                Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" href="https://dhes.github.io/smart-dak-cervical-cancer/history.html" target="_blank">Version History</a> | <a rel="license" style="color: #81BEF7" href="license.html">License</a>
+    </span>
+  </p>
+</div>    <!-- /inner-wrapper -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+<div class="container">    <!-- container -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+<script src="assets/js/respond.min.js" type="text/javascript"> </script>
+<script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+<script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+<script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+<script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+  <!-- Analytics Below
+================================================== -->
+
+
+
+
+</body></html>

@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>cc-006: Pregnancy Handling - WHO SMART DAK — Cervical Cancer Screening (L2) v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+    <link href="assets/css/fa-all.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/who.css" rel="stylesheet"/>
+    <link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"20"}
+    h3,h4,h5,h6{--heading-prefix:"20"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">  <!-- container -->
+          <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+            <!--status-bar-->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Components
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="concepts.html">Concepts</a>
+      </li>
+      <li>
+        <a href="interventions-and-recommendations.html">Interventions &amp; Recommendations (1)</a>
+      </li>
+      <li>
+        <a href="generic-personas.html">Generic Personas (2)</a>
+      </li>
+      <li>
+        <a href="user-scenarios.html">User Scenarios (3)</a>
+      </li>
+      <li>
+        <a href="business-processes.html">Business Processes (4)</a>
+      </li>
+      <li>
+        <a href="dictionary.html">Data Dictionary (5)</a>
+      </li>
+      <li>
+        <a href="decision-logic.html">Decision Logic (6)</a>
+      </li>
+      <li>
+        <a href="scheduling-logic.html">Scheduling Logic (7)</a>
+      </li>
+      <li>
+        <a href="indicators.html">Indicators (8)</a>
+      </li>
+      <li>
+        <a href="requirements.html">Requirements (9)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Methodology
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="methodology.html">Methodology</a>
+      </li>
+      <li>
+        <a href="algorithm-selection.html">Algorithm Selection</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Interpretation Register
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="register.html">Overview</a>
+      </li>
+      <li>
+        <a href="cc-000.html">Scope Declaration (cc-000)</a>
+      </li>
+      <li>
+        <a href="cc-001.html">Population and Inclusion (cc-001)</a>
+      </li>
+      <li>
+        <a href="cc-002.html">WLHIV Operationalisation (cc-002)</a>
+      </li>
+      <li>
+        <a href="cc-003.html">Cancer Suspected (cc-003)</a>
+      </li>
+      <li>
+        <a href="cc-004.html">Vaccination Status (cc-004)</a>
+      </li>
+      <li>
+        <a href="cc-005.html">Screening Interval (cc-005)</a>
+      </li>
+      <li>
+        <a href="cc-006.html">Pregnancy Handling (cc-006)</a>
+      </li>
+      <li>
+        <a href="cc-007.html">Sexual Exposure Precondition (cc-007)</a>
+      </li>
+      <li>
+        <a href="cc-008.html">HIV Status Absent/Unknown (cc-008)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Resources
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="changes.html">Change Log</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+      <li>
+        <a href="license.html">License</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+              </div>  <!-- /.nav-collapse -->
+
+              <div class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch" data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;">
+                <!-- This div will be pushed to the right -->
+                <div class="language-selector" style="margin-left: auto; background-color: #00477d; color: white;">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" id="language-selector" name="language-selector">
+                    <option disabled selected>Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <!-- Search Content -->
+              </div>
+            </div>  <!-- /.container -->
+          </nav>  <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+        </div>  <!-- /container -->
+      </div>  <!-- /segment-navbar -->
+      
+
+      <div class="container" style=" justify-content: space-between; align-items: left;">
+
+        <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+    <a id="who-logo" no-external="true" href="index.html">
+        
+    </a>
+</div>
+
+ <div id="family-nav">
+  <a id="fhir-logo" no-external="true" href="http://hl7.org/fhir">  </a>
+</div> 
+
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">WHO SMART DAK — Cervical Cancer Screening (L2)</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>cc-006: Pregnancy Handling</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">WHO SMART DAK — Cervical Cancer Screening (L2), published by Dan Heslinga. This guide is not an authorized publication; it is the continuous build for version 0.1.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/dhes/smart-dak-cervical-cancer/tree/main'>https://github.com/dhes/smart-dak-cervical-cancer/tree/main</a> and changes regularly. See the <a href='https://dhes.github.io/smart-dak-cervical-cancer/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>cc-006: Pregnancy Handling</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<h1 id="cc-006--pregnancy-handling-across-the-cascade">cc-006 — Pregnancy handling across the cascade</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Entry ID</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">cc-006</code></td>
+    </tr>
+    <tr>
+      <td><strong>Category</strong></td>
+      <td>inference</td>
+    </tr>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td>Pregnancy handling across the cascade</td>
+    </tr>
+    <tr>
+      <td><strong>Status</strong></td>
+      <td>proposed</td>
+    </tr>
+    <tr>
+      <td><strong>Date</strong></td>
+      <td>2026-04-14</td>
+    </tr>
+    <tr>
+      <td><strong>Authors</strong></td>
+      <td>dan-heslinga</td>
+    </tr>
+    <tr>
+      <td><strong>Selected</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">add-input-at-treatment-only</code></td>
+    </tr>
+    <tr>
+      <td><strong>L1 source</strong></td>
+      <td>WHO 2021 Cervical Cancer Screening Guideline (2nd ed.)</td>
+    </tr>
+    <tr>
+      <td><strong>Related entries</strong></td>
+      <td><a href="cc-000.html">cc-000</a>, <a href="cc-003.html">cc-003</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="rationale">Rationale</h2>
+
+<p>The 2021 guideline addresses pregnancy once, in Good Practice Statement 41: "in women who are pregnant, good practice includes deferral until after pregnancy" for treatment. Everywhere else in the cascade — eligibility, due-for-screening, triage, follow-up — the guideline is silent on pregnancy as a modifier. This is the prototypical <code class="language-plaintext highlighter-rouge">inference</code> entry shape: the guideline takes a position on one decision point (Treatment) and is silent on the others, and the DAK must decide what to do with the silence.</p>
+
+<p><strong>The selected resolution is <code class="language-plaintext highlighter-rouge">add-input-at-treatment-only</code>.</strong> This encodes GPS 41 where the guideline addresses pregnancy and leaves the guideline's silence everywhere else intact. Three considerations.</p>
+
+<p><strong>First, GPS 41 is explicit and the DAK should encode it.</strong> Continuing the textualist's complete silence on pregnancy (<code class="language-plaintext highlighter-rouge">no-input-clinician-judgment</code>) pushes GPS 41 into an extra-DAK clinical workflow, which works in practice but loses an interpretive act the guideline has actually made. A purposive DAK that does not encode a good practice statement when it has a clean place to do so is abdicating interpretive work it could do.</p>
+
+<p><strong>Second, cascade-wide pregnancy handling goes beyond the guideline.</strong> The <code class="language-plaintext highlighter-rouge">add-input-cascade-wide</code> option is tempting because pregnancy has real clinical considerations at other cascade points — VIA triage can be performed in pregnancy (cervix is more vascular, interpretation may be harder), screening eligibility in early pregnancy is typically unchanged, and post-delivery follow-up timing is a distinct clinical question. But WHO has not issued guidance on these pregnancy-specific considerations in the 2021 guideline, and encoding them would be the DAK inventing clinical policy. Where the guideline is silent, cc-006 mirrors the silence — the <code class="language-plaintext highlighter-rouge">inference</code> category exists for exactly this kind of choice.</p>
+
+<p><strong>Third, the layer discipline argument from cc-003 applies here too.</strong> Pregnancy's interaction with VIA interpretation, with ablation safety, and with follow-up scheduling is clinical judgment that the DMN does not model well as discrete rules over a boolean. The trained clinician handles these considerations; the DAK handles the one explicit guideline statement (defer treatment). Pushing clinical-judgment-laden pregnancy handling into the DMN rule tables would repeat the layer confusion cc-003 rejects.</p>
+
+<p><strong>Why <code class="language-plaintext highlighter-rouge">inference</code> and not <code class="language-plaintext highlighter-rouge">scope</code>.</strong> cc-000 names "treatment delivery and complications" as out-of-scope for the DAK, but the specific question of whether to encode GPS 41's deferral in the Treatment Decision is narrower than the scope declaration and lives inside the cascade. It is an interpretive choice about how the DAK handles a guideline-acknowledged clinical modifier, not a scoping boundary.</p>
+
+<h2 id="implementation-notes">Implementation Notes</h2>
+
+<ul>
+  <li><strong>Purposive DMN changes required.</strong> Add <code class="language-plaintext highlighter-rouge">IsPregnant</code> as an input to the Treatment Decision (<code class="language-plaintext highlighter-rouge">CC.D.treatment_p</code>). Add a rule: if <code class="language-plaintext highlighter-rouge">IsPregnant = true</code>, output <code class="language-plaintext highlighter-rouge">TreatmentPlan = "defer treatment until after pregnancy"</code> and set the cascade to exit (no further triage or follow-up pending post-pregnancy re-entry). The textualist does not currently have this rule; adding it to the purposive DMN is the functional change cc-006 produces.</li>
+  <li><strong>Null-handling for <code class="language-plaintext highlighter-rouge">IsPregnant</code>.</strong> A catch-all rule for <code class="language-plaintext highlighter-rouge">IsPregnant = null</code> should default to the pregnancy-unaware path (treat as not-pregnant) rather than blocking treatment on unknown pregnancy status. This is a safety-vs-fidelity trade-off: a pregnant woman with null pregnancy status who proceeds to treatment is harmed more than a non-pregnant woman whose treatment is deferred. L3 implementers should confirm their EHR reliably populates pregnancy status for screening-age women at the Treatment Decision point.</li>
+  <li><strong>CDD addition.</strong> Row 18 of the current CDD (<code class="language-plaintext highlighter-rouge">Pregnancy status</code>, <code class="language-plaintext highlighter-rouge">HIV.B.DE160</code>-family candidate) is currently a stub deferred to this entry. When the purposive DMN is authored, row 18 should transition from stub to a real row with Activity ID <code class="language-plaintext highlighter-rouge">CC.D</code> (Treatment Decision), Data Type <code class="language-plaintext highlighter-rouge">boolean</code> or <code class="language-plaintext highlighter-rouge">Coding</code>, and Linkages pointing at the new Treatment Decision rule.</li>
+  <li><strong>Post-pregnancy re-entry is out of scope.</strong> The DAK deferring treatment during pregnancy implies the woman re-enters the cascade post-delivery to complete treatment. The workflow for that re-entry (who tracks her, what the trigger is, how the prior screening and triage results are preserved) is a country-level operational question, not a DAK concern. Country adaptation teams should ensure their screening register supports flagging pregnancy-deferred cases for post-delivery follow-up.</li>
+  <li><strong>Relationship to cc-003.</strong> The <code class="language-plaintext highlighter-rouge">IsPregnant</code> input is clinician-populated (from ANC records or by direct inquiry), making it another case of a clinical fact taken as a given input rather than decomposed into a DMN determination. cc-003's layer-discipline reasoning supports this framing.</li>
+  <li><strong>Rec 41's 6-month treatment window.</strong> GPS 41 says "treat as soon as possible within six months to reduce the risk of loss to follow-up. However, in women who are pregnant, good practice includes deferral until after pregnancy. In circumstances when treatment is not provided within this time frame, it is good practice to re-evaluate the woman before treatment." The 6-month window and the re-evaluation requirement apply to the cascade regardless of pregnancy and are separate operational concerns; cc-006 does not encode them. They may warrant a separate entry if the DAK grows a time-in-cascade tracking capability.</li>
+  <li><strong>Interaction with cc-002 (WLHIV).</strong> WLHIV in pregnancy is a distinct clinical population with specific PMTCT considerations that live in the HIV DAK rather than this one. cc-006's pregnancy deferral applies to WLHIV as it does to the general population; the cervical cancer DAK does not add WLHIV-pregnancy-specific logic.</li>
+</ul>
+
+
+
+
+</div>
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /row -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-content -->
+
+<script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+<script type="text/javascript" src="assets/js/window-hash.js"> </script>
+<a name="bottom"> </a>
+<div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+<div class="container">  <!-- container -->
+
+<div class="inner-wrapper">
+  <p>
+    IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/dhes">Dan Heslinga</a>.  Package dhes.dak.cervical-cancer#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 24, 2026 00:44+0000">2026-04-24</span>
+    <br/>
+    <span style="color: var(--footer-highlight-text-color)">
+                Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="https://dhes.github.io/smart-dak-cervical-cancer/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
+    </span>
+  </p>
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+<div class="container">  <!-- container -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-post-footer -->
+
+<!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+<script type="text/javascript" src="assets/js/respond.min.js"> </script>
+<script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+<script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+<script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+<script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+<!-- Analytics Below
+================================================== -->
+
+
+
+

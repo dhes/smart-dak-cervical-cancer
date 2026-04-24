@@ -1,0 +1,7 @@
+[{
+  "id" : "dhes.dak.cervical-cancer",
+  "type" : "ImplementationGuide",
+  "url" : "https://dhes.github.io/smart-dak-cervical-cancer/ImplementationGuide/dhes.dak.cervical-cancer",
+  "version" : "0.1.0",
+  "name" : "CervicalCancerDAK"
+}]

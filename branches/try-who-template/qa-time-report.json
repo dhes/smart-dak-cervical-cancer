@@ -1,0 +1,235 @@
+{
+  "date" : "Tue, 21 Apr, 2026 20:10:53 +0000",
+  "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
+  "files" : [{
+    "name" : "/fsh-generated/resources/ImplementationGuide-dhes.dak.cervical-cancer.json",
+    "size" : 3794,
+    "processes" : [{
+      "activity" : "load",
+      "start" : 35,
+      "length" : 23
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 35,
+      "length" : 14
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 35,
+      "length" : 79
+    },
+    {
+      "activity" : "validate",
+      "start" : 35,
+      "length" : 2294
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 38,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 38,
+      "length" : 79
+    },
+    {
+      "activity" : "generate2",
+      "start" : 39,
+      "length" : 77
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 43,
+      "length" : 4
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 46,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "/fsh-generated/includes/menu.xml",
+    "size" : 2661,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 39,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/README.md",
+    "size" : 17261,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 39,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/cc-001.md",
+    "size" : 5119
+  },
+  {
+    "name" : "/input/pagecontent/register.md",
+    "size" : 2442
+  },
+  {
+    "name" : "/input/pagecontent/methodology.md",
+    "size" : 3649,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 39,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/index.md",
+    "size" : 3740
+  },
+  {
+    "name" : "/input/pagecontent/cc-000.md",
+    "size" : 19524,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 39,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/dictionary.md",
+    "size" : 45968,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 39,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/algorithm-selection.md",
+    "size" : 22939,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 39,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/cc-002.md",
+    "size" : 6456
+  },
+  {
+    "name" : "/input/pagecontent/decision-logic.md",
+    "size" : 4243,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 39,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/cc-006.md",
+    "size" : 6337
+  },
+  {
+    "name" : "/input/pagecontent/cc-004.md",
+    "size" : 6821,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 39,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/cc-003.md",
+    "size" : 6041
+  },
+  {
+    "name" : "/input/pagecontent/decision-tables.md",
+    "size" : 14932,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 39,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/cc-008.md",
+    "size" : 11801,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 39,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/cc-007.md",
+    "size" : 7170,
+    "processes" : [{
+      "activity" : "generateExampleZip",
+      "start" : 43,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/cc-005.md",
+    "size" : 11491,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 39,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/downloads.md",
+    "size" : 1537
+  },
+  {
+    "name" : "/template/config",
+    "size" : 0,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 39,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/template/config/_config.yml",
+    "size" : 140
+  },
+  {
+    "name" : "/input/images",
+    "size" : 0
+  },
+  {
+    "name" : "/input/images/drd-purposive.svg",
+    "size" : 10248
+  },
+  {
+    "name" : "/input/images/drd-textualist.svg",
+    "size" : 9848
+  },
+  {
+    "name" : "/input/images/l2",
+    "size" : 0
+  },
+  {
+    "name" : "/input/images/l2/purposive.dmn",
+    "size" : 41929
+  },
+  {
+    "name" : "/input/images/l2/textualist.dmn",
+    "size" : 40603
+  },
+  {
+    "name" : "/temp/pages/_includes/artifacts.xml",
+    "size" : 630,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 39,
+      "length" : 1
+    }]
+  }]
+}

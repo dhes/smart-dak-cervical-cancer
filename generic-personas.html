@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Generic Personas - WHO SMART DAK — Cervical Cancer Screening (L2) v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+    <link href="assets/css/fa-all.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/who.css" rel="stylesheet"/>
+    <link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"5"}
+    h3,h4,h5,h6{--heading-prefix:"5"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">  <!-- container -->
+          <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+            <!--status-bar-->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Components
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="concepts.html">Concepts</a>
+      </li>
+      <li>
+        <a href="interventions-and-recommendations.html">Interventions &amp; Recommendations (1)</a>
+      </li>
+      <li>
+        <a href="generic-personas.html">Generic Personas (2)</a>
+      </li>
+      <li>
+        <a href="user-scenarios.html">User Scenarios (3)</a>
+      </li>
+      <li>
+        <a href="business-processes.html">Business Processes (4)</a>
+      </li>
+      <li>
+        <a href="dictionary.html">Data Dictionary (5)</a>
+      </li>
+      <li>
+        <a href="decision-logic.html">Decision Logic (6)</a>
+      </li>
+      <li>
+        <a href="scheduling-logic.html">Scheduling Logic (7)</a>
+      </li>
+      <li>
+        <a href="indicators.html">Indicators (8)</a>
+      </li>
+      <li>
+        <a href="requirements.html">Requirements (9)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Methodology
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="methodology.html">Methodology</a>
+      </li>
+      <li>
+        <a href="algorithm-selection.html">Algorithm Selection</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Interpretation Register
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="register.html">Overview</a>
+      </li>
+      <li>
+        <a href="cc-000.html">Scope Declaration (cc-000)</a>
+      </li>
+      <li>
+        <a href="cc-001.html">Population and Inclusion (cc-001)</a>
+      </li>
+      <li>
+        <a href="cc-002.html">WLHIV Operationalisation (cc-002)</a>
+      </li>
+      <li>
+        <a href="cc-003.html">Cancer Suspected (cc-003)</a>
+      </li>
+      <li>
+        <a href="cc-004.html">Vaccination Status (cc-004)</a>
+      </li>
+      <li>
+        <a href="cc-005.html">Screening Interval (cc-005)</a>
+      </li>
+      <li>
+        <a href="cc-006.html">Pregnancy Handling (cc-006)</a>
+      </li>
+      <li>
+        <a href="cc-007.html">Sexual Exposure Precondition (cc-007)</a>
+      </li>
+      <li>
+        <a href="cc-008.html">HIV Status Absent/Unknown (cc-008)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Resources
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="changes.html">Change Log</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+      <li>
+        <a href="license.html">License</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+              </div>  <!-- /.nav-collapse -->
+
+              <div class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch" data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;">
+                <!-- This div will be pushed to the right -->
+                <div class="language-selector" style="margin-left: auto; background-color: #00477d; color: white;">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" id="language-selector" name="language-selector">
+                    <option disabled selected>Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <!-- Search Content -->
+              </div>
+            </div>  <!-- /.container -->
+          </nav>  <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+        </div>  <!-- /container -->
+      </div>  <!-- /segment-navbar -->
+      
+
+      <div class="container" style=" justify-content: space-between; align-items: left;">
+
+        <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+    <a id="who-logo" no-external="true" href="index.html">
+        
+    </a>
+</div>
+
+ <div id="family-nav">
+  <a id="fhir-logo" no-external="true" href="http://hl7.org/fhir">  </a>
+</div> 
+
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">WHO SMART DAK — Cervical Cancer Screening (L2)</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Generic Personas</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">WHO SMART DAK — Cervical Cancer Screening (L2), published by Dan Heslinga. This guide is not an authorized publication; it is the continuous build for version 0.1.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/dhes/smart-dak-cervical-cancer/tree/main'>https://github.com/dhes/smart-dak-cervical-cancer/tree/main</a> and changes regularly. See the <a href='https://dhes.github.io/smart-dak-cervical-cancer/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Generic Personas</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#scope-and-authoring-posture" id="markdown-toc-scope-and-authoring-posture">Scope and authoring posture</a></li>
+  <li><a href="#cascade-to-persona-map" id="markdown-toc-cascade-to-persona-map">Cascade-to-persona map</a></li>
+  <li><a href="#personas" id="markdown-toc-personas">Personas</a>    <ul>
+      <li><a href="#1-target-client--woman-being-screened" id="markdown-toc-1-target-client--woman-being-screened">1. Target client — woman being screened</a></li>
+      <li><a href="#2-community-health-worker" id="markdown-toc-2-community-health-worker">2. Community health worker</a></li>
+      <li><a href="#3-nurse--midwife" id="markdown-toc-3-nurse--midwife">3. Nurse / midwife</a></li>
+      <li><a href="#4-laboratory-technician" id="markdown-toc-4-laboratory-technician">4. Laboratory technician</a></li>
+      <li><a href="#5-advanced-clinician" id="markdown-toc-5-advanced-clinician">5. Advanced clinician</a></li>
+      <li><a href="#6-screening-programme-manager" id="markdown-toc-6-screening-programme-manager">6. Screening programme manager</a></li>
+    </ul>
+  </li>
+  <li><a href="#cross-dak-reuse" id="markdown-toc-cross-dak-reuse">Cross-DAK reuse</a></li>
+  <li><a href="#status" id="markdown-toc-status">Status</a></li>
+</ul>
+
+</div>
+<p><strong>Component 2 of the WHO SMART Guidelines L2 DAK structure.</strong> This page enumerates the generic personas — the composite role profiles for the end users and stakeholders who participate in the Algorithm 5 cascade this DAK operationalises (HPV DNA primary screening with VIA triage, treatment by ablation or excision, referral for suspected invasive cancer).</p>
+
+<p>A persona is not a specific person. It is a generic, composite role description synthesised from many lived working contexts — what that role typically knows (competencies), what that role typically does in the cascade (essential interventions performed), and where that role fits in the care pathway (description). Each entry on this page follows the three content elements required by Section 3.1 of the <a href="https://smart.who.int/ig-starter-kit/l2_dak_authoring.html">WHO SMART Guidelines L2 DAK SOP</a>: description, competencies, and essential interventions performed.</p>
+
+<h2 id="scope-and-authoring-posture">Scope and authoring posture</h2>
+
+<p>The SOP identifies three paths for identifying personas: <em>L1 normative guidance, SME consultations, and in-person interviews at facilities.</em> Being honest about each of those paths for this DAK:</p>
+
+<ul>
+  <li><strong>L1 guidance.</strong> The <a href="interventions-and-recommendations.html#source-documents">2021-07 WHO cervical cancer guideline</a> is recommendation-structured, not role-structured. It names actors in passing (screener, triage provider, treatment provider) but does not enumerate personas as discrete operational profiles. The L1 path yields skeleton only.</li>
+  <li><strong>SME consultation.</strong> No subject matter experts have been consulted in the authoring of this DAK.</li>
+  <li><strong>Facility interviews.</strong> No in-person facility interviews have been conducted.</li>
+</ul>
+
+<p><strong>Phase-1 posture.</strong> The six personas on this page are therefore <em>analytically derived</em> from the cascade structure of Algorithm 5 — each persona corresponds to a distinct cascade role implied by the intervention flow from invitation through primary screening, triage, treatment or referral, follow-up, and programme oversight. The cascade gives us a defensible skeleton. SME consultation is what clothes that skeleton in realistic competency detail and confirms whether the division of responsibilities the DAK assumes actually matches working practice in the countries where it would be implemented.</p>
+
+<p><strong>Stratified deferral.</strong> "Pending SME validation" is not one gap — it is six. The SOP's singular <em>SME</em> is shorthand for what is in practice a plural, domain-stratified consultation, because no single expert holds authoritative knowledge across community outreach, facility nursing, laboratory operations, advanced clinical treatment, and programme management. Each persona below closes with a named SME domain whose consultation would validate that specific persona. Six personas, six validation domains, six unclosed rows on the ledger.</p>
+
+<p><strong>Who is not a persona.</strong> Stakeholders who sit <em>above</em> the cascade rather than inside it — ministry of health policy advisors, WHO country office staff, DAK adaptation coordinators, implementation scientists using this DAK to produce a country-adapted variant — are informants and audiences for this DAK, not cascade actors. They do not appear as personas.</p>
+
+<h2 id="cascade-to-persona-map">Cascade-to-persona map</h2>
+
+<p>The derivation from Algorithm 5 is made visible by mapping each cascade step to the persona(s) primarily responsible:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cascade step</th>
+      <th>Primary persona(s)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Screening invitation; rescreen reminder; follow-up support</td>
+      <td>Community health worker</td>
+    </tr>
+    <tr>
+      <td>HPV DNA sample collection</td>
+      <td>Target client (self-collection); Nurse/midwife (clinician-collected)</td>
+    </tr>
+    <tr>
+      <td>HPV DNA assay and result reporting</td>
+      <td>Laboratory technician</td>
+    </tr>
+    <tr>
+      <td>VIA triage</td>
+      <td>Nurse/midwife</td>
+    </tr>
+    <tr>
+      <td>Thermal ablation (ablation-eligible lesions)</td>
+      <td>Nurse/midwife</td>
+    </tr>
+    <tr>
+      <td>LLETZ/LEEP; cold-knife conization (non-ablation-eligible lesions and AIS)</td>
+      <td>Advanced clinician</td>
+    </tr>
+    <tr>
+      <td>Evaluation of suspected invasive cancer; onward referral</td>
+      <td>Advanced clinician</td>
+    </tr>
+    <tr>
+      <td>Programme coverage tracking; indicator reporting; recall campaigns</td>
+      <td>Screening programme manager</td>
+    </tr>
+    <tr>
+      <td>Being screened; consenting; attending follow-up</td>
+      <td>Target client</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="personas">Personas</h2>
+
+<h3 id="1-target-client--woman-being-screened">1. Target client — woman being screened</h3>
+
+<p><strong>Description.</strong> An adult woman in the age range defined by the screening programme — 30 years or older in the general population, 25 years or older if living with HIV — presenting at a primary-care facility for routine, invited, or opportunistic cervical cancer screening, or receiving screening-related communications from a community health worker. The target client is the subject of the cascade and, where self-collection of HPV samples is offered, also the collector of her own primary screening sample.</p>
+
+<p><strong>Competencies.</strong></p>
+
+<ul>
+  <li>Understanding of the screening invitation and the purpose of the test.</li>
+  <li>Ability to give informed consent for speculum examination and VIA triage.</li>
+  <li>Where self-collection is offered: ability to collect a vaginal sample correctly per the provided instructions.</li>
+  <li>Ability to attend scheduled follow-up encounters (triage, treatment, post-treatment retest).</li>
+</ul>
+
+<p><strong>Essential interventions performed.</strong></p>
+
+<ul>
+  <li>Attending the primary screening encounter (clinician-collected) or performing self-collection of an HPV DNA sample.</li>
+  <li>Attending triage (VIA) when HPV-positive.</li>
+  <li>Attending treatment (thermal ablation, LLETZ/LEEP, or CKC) when triage-positive.</li>
+  <li>Attending referral services if suspected invasive cancer is identified.</li>
+  <li>Attending scheduled post-treatment or triage-negative rescreening.</li>
+</ul>
+
+<p><em>SME validation — pending. The domain whose consultation would validate this persona is qualitative research with women who have passed through a cervical screening cascade in a low- or middle-income country setting, or with cervical cancer patient-advocate groups in such settings.</em></p>
+
+<h3 id="2-community-health-worker">2. Community health worker</h3>
+
+<p><strong>Description.</strong> A community-based health worker, typically not facility-based, responsible for outreach, health promotion, and linkage between community and primary-care facility. In the cervical cancer cascade the community health worker issues or reinforces screening invitations, identifies women in the eligible age range who have not been screened, reminds women whose rescreening interval has elapsed, and supports adherence to treatment and follow-up encounters.</p>
+
+<p><strong>Competencies.</strong></p>
+
+<ul>
+  <li>Community-level health communication and basic cervical cancer awareness.</li>
+  <li>Identification of screening-eligible women in the catchment population.</li>
+  <li>Use of simple digital tools (feature phone, tablet) for invitation tracking and reminder logging, where the programme provides them.</li>
+  <li>Recording visit outcomes and reporting to the facility.</li>
+  <li>Referral of complex questions to facility clinical staff.</li>
+</ul>
+
+<p><strong>Essential interventions performed.</strong></p>
+
+<ul>
+  <li>Issuing and following up on screening invitations.</li>
+  <li>Identifying and listing women overdue for rescreening.</li>
+  <li>Supporting adherence to follow-up encounters after treatment.</li>
+  <li>Reporting outreach outcomes to the facility programme.</li>
+</ul>
+
+<p><em>SME validation — pending. The domain whose consultation would validate this persona is an active community health worker in a functioning cervical cancer screening programme, or a community-health-systems researcher working on cancer screening outreach in a low- or middle-income country.</em></p>
+
+<h3 id="3-nurse--midwife">3. Nurse / midwife</h3>
+
+<p><strong>Description.</strong> A clinically-trained nurse or midwife operating at primary-care facility level, responsible for the majority of direct-contact screening tasks. In Algorithm 5 the nurse/midwife is the primary cascade operator: collecting HPV DNA samples, performing VIA triage when trained and supervised, and delivering thermal ablation treatment to ablation-eligible lesions. In most low- and middle-income country settings the availability, workload, and quality assurance of this cadre is the binding constraint on programme coverage.</p>
+
+<p><strong>Competencies.</strong></p>
+
+<ul>
+  <li>Speculum examination and HPV DNA sample collection.</li>
+  <li>VIA technique, with training and routine quality assurance.</li>
+  <li>Thermal ablation procedure, with training and access to a functioning device.</li>
+  <li>Patient counselling before and after screening, triage, and treatment procedures.</li>
+  <li>Cascade follow-up scheduling (triage-negative retest, post-treatment retest).</li>
+  <li>Clinical documentation of encounters and results.</li>
+  <li>Escalation to an advanced clinician where findings exceed the nurse's scope (non-ablation-eligible lesions, suspected invasive cancer, AIS).</li>
+</ul>
+
+<p><strong>Essential interventions performed.</strong></p>
+
+<ul>
+  <li>HPV DNA sample collection (clinician-collected pathway).</li>
+  <li>VIA triage of HPV-positive women.</li>
+  <li>Thermal ablation of ablation-eligible precancerous lesions.</li>
+  <li>Referral decisions for findings beyond the ablation-eligible category.</li>
+  <li>Patient counselling and cascade documentation.</li>
+</ul>
+
+<p><em>SME validation — pending. The domain whose consultation would validate this persona is a nurse or midwife currently practising in a cervical cancer screening programme that has implemented, or is transitioning to, HPV DNA primary screening with VIA triage — ideally one trained in both VIA and thermal ablation.</em></p>
+
+<h3 id="4-laboratory-technician">4. Laboratory technician</h3>
+
+<p><strong>Description.</strong> A trained laboratory technician operating the HPV DNA assay platform that serves the primary screening programme. Typically located at district, regional, or national laboratory level and receiving samples from multiple primary-care facilities. The laboratory technician is upstream of all triage and treatment decisions — the cascade cannot proceed for a given woman until her HPV DNA result is available to the referring facility.</p>
+
+<p><strong>Competencies.</strong></p>
+
+<ul>
+  <li>Operation of the specific HPV DNA assay platform deployed by the programme, per manufacturer and programme SOPs.</li>
+  <li>Sample accession, chain-of-custody tracking, and batch management.</li>
+  <li>Running quality control samples and interpreting QC outputs.</li>
+  <li>Reporting results via the laboratory information system or its paper-based equivalent, including turnaround-time monitoring.</li>
+  <li>Identifying and communicating assay failures, invalid results, or sample quality issues.</li>
+</ul>
+
+<p><strong>Essential interventions performed.</strong></p>
+
+<ul>
+  <li>Running the HPV DNA assay on submitted samples.</li>
+  <li>Reporting valid results back to the referring facility.</li>
+  <li>Flagging invalid results, sample failures, or turnaround-time exceptions to the referring facility and the programme manager.</li>
+</ul>
+
+<p><em>SME validation — pending. The domain whose consultation would validate this persona is a laboratory technician actively operating an HPV DNA primary screening assay in a low- or middle-income country screening programme — ideally one familiar with the platform's genotyping configuration, since that governs whether the programme can migrate from Algorithm 5 (VIA triage) to Algorithm 4 (genotyping triage) without re-sourcing its laboratory capacity.</em></p>
+
+<h3 id="5-advanced-clinician">5. Advanced clinician</h3>
+
+<p><strong>Description.</strong> A doctor or appropriately-trained advanced clinician — typically a medical officer, gynaecologist, or advanced nurse practitioner with specialist training — responsible for treatments beyond the primary-care nurse's scope and for the initial evaluation of suspected invasive cervical cancer. Operates at district or referral hospital level. In Algorithm 5 this persona handles LLETZ/LEEP for non-ablation-eligible precancerous lesions, cold-knife conization for adenocarcinoma in situ (AIS), and the clinical evaluation and onward referral of women with lesions suspicious for invasive cancer.</p>
+
+<p><strong>Competencies.</strong></p>
+
+<ul>
+  <li>LLETZ/LEEP (large-loop excision of the transformation zone).</li>
+  <li>Cold-knife conization, including the clinical judgement of when CKC is indicated over LLETZ.</li>
+  <li>Clinical evaluation of lesions suspicious for invasive cervical cancer, including biopsy.</li>
+  <li>Management of procedure complications (bleeding, infection, cervical stenosis).</li>
+  <li>Onward referral to oncology, surgical, or tertiary services for confirmed or suspected invasive disease.</li>
+  <li>Supervision, mentorship, and quality assurance for nurse-level VIA triage and thermal ablation services.</li>
+</ul>
+
+<p><strong>Essential interventions performed.</strong></p>
+
+<ul>
+  <li>LLETZ/LEEP treatment for non-ablation-eligible precancerous lesions.</li>
+  <li>CKC for AIS.</li>
+  <li>Clinical evaluation and biopsy of lesions suspicious for invasive cancer.</li>
+  <li>Referral to oncology or tertiary services for confirmed or suspected invasive disease.</li>
+  <li>Clinical supervision and quality assurance of nurse-led components of the cascade.</li>
+</ul>
+
+<p><em>SME validation — pending. The domain whose consultation would validate this persona is a gynaecologist or senior medical officer currently working at district or referral hospital level in a low- or middle-income country cervical screening programme.</em></p>
+
+<h3 id="6-screening-programme-manager">6. Screening programme manager</h3>
+
+<p><strong>Description.</strong> A public health professional responsible for coordinating the cervical cancer screening programme at district, regional, or national level. Does not typically see individual women but consumes data generated throughout the cascade — coverage by age band, HPV positivity rate, triage attendance, treatment completion, post-treatment follow-up adherence — to track programme performance, coordinate recall campaigns, plan training, and report against the Cervical Cancer Elimination Strategy's 70-70-90 targets.</p>
+
+<p><strong>Competencies.</strong></p>
+
+<ul>
+  <li>Programme management — planning, budgeting, stakeholder engagement.</li>
+  <li>Indicator interpretation, including the programmatic indicators this DAK's Component 8 will eventually specify.</li>
+  <li>Data quality review across facility reporting.</li>
+  <li>Coordination of in-service training and refresher cycles for nurses and community health workers.</li>
+  <li>Coordination of catch-up and recall campaigns for under-screened populations.</li>
+  <li>Reporting to the national cancer control programme and to WHO country-office elimination-strategy monitoring.</li>
+</ul>
+
+<p><strong>Essential interventions performed.</strong></p>
+
+<ul>
+  <li>Monitoring screening coverage by age band and HIV status.</li>
+  <li>Monitoring cascade attrition (HPV-positive not attending triage; triage-positive not attending treatment; post-treatment not attending retest).</li>
+  <li>Identifying facilities requiring clinical or operational support.</li>
+  <li>Coordinating recall and catch-up campaigns.</li>
+  <li>Reporting to the national cancer control programme.</li>
+</ul>
+
+<p><em>SME validation — pending. The domain whose consultation would validate this persona is a district or national cervical cancer screening programme manager in a low- or middle-income country, or an implementation scientist whose research focuses on screening programme performance in such settings.</em></p>
+
+<h2 id="cross-dak-reuse">Cross-DAK reuse</h2>
+
+<p>Some of these personas — plausibly the community health worker, nurse/midwife, laboratory technician, and advanced clinician — exist in other WHO SMART DAKs as FHIR <code class="language-plaintext highlighter-rouge">ActorDefinition</code> resources. The <a href="dictionary.html">Core Data Dictionary</a> already harvests six data elements from the WHO HIV DAK with provenance (the "Kind 2" pattern). The same pattern applies here: before minting persona definitions de novo, a forthcoming reuse analysis will check the HIV, ANC, and related DAKs for role equivalents that can be referenced rather than re-authored.</p>
+
+<p>That analysis is a deferred task, not done yet. It is named here so that the reuse opportunity is visible — consistent with the contribution-to-a-shared-canonical-dictionary framing of the <a href="README.html">Data Dictionary README</a> — and so that future versions of this page can replace analytically-derived narrative entries with references to governed, cross-DAK persona definitions where those exist.</p>
+
+<h2 id="status">Status</h2>
+
+<p><em>Draft — Phase 1 of Component 2 authoring (2026-04-22).</em> Six personas analytically derived from the Algorithm 5 cascade. Each entry carries an explicit, stratified <em>pending SME validation</em> closure path naming the domain of expertise whose consultation would validate that specific persona. Cross-DAK reuse analysis and any L3 FHIR <code class="language-plaintext highlighter-rouge">ActorDefinition</code> representation are deferred to subsequent phases.</p>
+
+
+
+
+</div>
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /row -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-content -->
+
+<script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+<script type="text/javascript" src="assets/js/window-hash.js"> </script>
+<a name="bottom"> </a>
+<div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+<div class="container">  <!-- container -->
+
+<div class="inner-wrapper">
+  <p>
+    IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/dhes">Dan Heslinga</a>.  Package dhes.dak.cervical-cancer#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 24, 2026 00:44+0000">2026-04-24</span>
+    <br/>
+    <span style="color: var(--footer-highlight-text-color)">
+                Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="https://dhes.github.io/smart-dak-cervical-cancer/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
+    </span>
+  </p>
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+<div class="container">  <!-- container -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-post-footer -->
+
+<!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+<script type="text/javascript" src="assets/js/respond.min.js"> </script>
+<script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+<script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+<script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+<script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+<!-- Analytics Below
+================================================== -->
+
+
+
+

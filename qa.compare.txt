@@ -1,0 +1,15 @@
+CervicalCancerDAK : Validation Results
+=========================================
+
+err = 2, warn = 0, info = 0
+$--
+Generated $--. FHIR version $-- for dhes.dak.cervical-cancer#$-- (canonical = https://dhes.github.io/smart-dak-cervical-cancer)
+ Build Errors : 0 / 0 / 0
+ /github/workspace/fsh-generated/resources/ImplementationGuide-dhes.dak.cervical-cancer : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/Library-cervical-cancer-decision-logic : 0 / 0 / 1
+</table>
+== n/a ==
+== fsh-generated/resources/ImplementationGuide-dhes.dak.cervical-cancer.json ==
+ERROR: ImplementationGuide/dhes.dak.cervical-cancer: ImplementationGuide.dependsOn[0]: The packageId hl7.terminology.r4 points to the canonical https://packages2.fhir.org/web/hl7.terminology.r4b-6.0.2.tgz which is inconsistent with the stated canonical of http://terminology.hl7.org/ImplementationGuide/hl7.terminology
+ERROR: ImplementationGuide/dhes.dak.cervical-cancer: ImplementationGuide.dependsOn[1]: The packageId hl7.fhir.uv.extensions.r4 points to the canonical https://packages2.fhir.org/web/hl7.fhir.uv.extensions.r4b-5.3.0-ballot-tc.tgz which is inconsistent with the stated canonical of http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions
+== fsh-generated/resources/Library-cervical-cancer-decision-logic.json ==

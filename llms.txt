@@ -1,0 +1,44 @@
+# dhes.dak.cervical-cancer#0.1.0: WHO SMART DAK — Cervical Cancer Screening (L2)
+
+## Pages
+
+* [Home](index.md)
+* [cc-003: Cancer Suspected](cc-003.md)
+* [Downloads](downloads.md)
+* [Decision Tables](decision-tables.md)
+* [Change Log](changes.md)
+* [cc-001: Population and Inclusion](cc-001.md)
+* [Requirements](requirements.md)
+* [cc-004: Vaccination Status](cc-004.md)
+* [Interventions & Recommendations](interventions-and-recommendations.md)
+* [cc-005: Screening Interval](cc-005.md)
+* [Algorithm Selection Analysis](algorithm-selection.md)
+* [Scheduling Logic](scheduling-logic.md)
+* [Artifacts Summary](artifacts.md)
+* [Data Dictionary — README](README.md)
+* [Decision Logic](decision-logic.md)
+* [Generic Personas](generic-personas.md)
+* [cc-002: WLHIV Operationalisation](cc-002.md)
+* [Methodology](methodology.md)
+* [Business Processes](business-processes.md)
+* [cc-008: HIV Status Absent/Unknown](cc-008.md)
+* [cc-000: Scope Declaration](cc-000.md)
+* [Concepts](concepts.md)
+* [Dependencies](dependencies.md)
+* [cc-006: Pregnancy Handling](cc-006.md)
+* [cc-007: Sexual Exposure Precondition](cc-007.md)
+* [Indicators](indicators.md)
+* [Data Dictionary](dictionary.md)
+* [License](license.md)
+* [User Scenarios](user-scenarios.md)
+* [Interpretation Register](register.md)
+
+## Resources
+
+### ImplementationGuides
+
+* [WHO SMART DAK — Cervical Cancer Screening (L2)](index.md)
+
+### Libraries
+
+* [Cervical Cancer DAK — Decision Logic (placeholder)](Library-cervical-cancer-decision-logic.md)

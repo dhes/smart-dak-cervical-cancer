@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>cc-003: Cancer Suspected - WHO SMART DAK — Cervical Cancer Screening (L2) v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+    <link rel="stylesheet" href="assets/css/fa-all.css" type="text/css"/>
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+    <link rel="stylesheet" href="assets/css/who.css"/>
+    <link rel="stylesheet" href="assets/css/lforms.min.css"/>
+
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"6"}
+    h3,h4,h5,h6{--heading-prefix:"6"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">    <!-- container -->
+            <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+              <!-- status-bar -->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                  <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Business Requirements
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="register.html">Interpretation Register</a>
+      </li>
+      <li>
+        <a href="cc-000.html">Scope Declaration (cc-000)</a>
+      </li>
+      <li>
+        <a href="cc-002.html">WLHIV Operationalisation (cc-002)</a>
+      </li>
+      <li>
+        <a href="cc-003.html">Cancer Suspected (cc-003)</a>
+      </li>
+      <li>
+        <a href="cc-004.html">Vaccination Status (cc-004)</a>
+      </li>
+      <li>
+        <a href="cc-005.html">Screening Interval (cc-005)</a>
+      </li>
+      <li>
+        <a href="cc-001.html">Population and Inclusion (cc-001)</a>
+      </li>
+      <li>
+        <a href="cc-006.html">Pregnancy Handling (cc-006)</a>
+      </li>
+      <li>
+        <a href="cc-007.html">Sexual Exposure Precondition (cc-007)</a>
+      </li>
+      <li>
+        <a href="cc-008.html">HIV Status Absent/Unknown (cc-008)</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="dictionary.html">Data Dictionary</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Decision Logic
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="decision-logic.html">Overview</a>
+      </li>
+      <li>
+        <a href="decision-tables.html">Decision Tables</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="algorithm-selection.html">Algorithm Selection</a>
+  </li>
+  <li>
+    <a href="methodology.html">Methodology</a>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+</ul>
+              </div>    <!-- /.nav-collapse -->
+
+              <div data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;" class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch">
+                  <!-- This div will be pushed to the right -->
+                <div style="margin-left: auto; background-color: #00477d; color: white;" class="language-selector">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" name="language-selector" id="language-selector">
+                    <option disabled="null" selected="null">Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                  <!-- Search Content -->
+              </div>
+            </div>    <!-- /.container -->
+          </nav>    <!-- /.navbar -->
+          <!-- /HEADER CONTENT -->
+        </div>    <!-- /container -->
+      </div>    <!-- /segment-navbar -->
+      
+
+      <div style=" justify-content: space-between; align-items: left;" class="container">
+
+          <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+    <a no-external="true" id="who-logo" href="index.html">
+        
+    </a>
+</div>
+
+ <div id="family-nav">
+  <a no-external="true" id="fhir-logo" href="http://hl7.org/fhir">  </a>
+</div> 
+
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">WHO SMART DAK — Cervical Cancer Screening (L2)</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>cc-003: Cancer Suspected</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">WHO SMART DAK — Cervical Cancer Screening (L2), published by Dan Heslinga. This guide is not an authorized publication; it is the continuous build for version 0.1.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href="https://github.com/dhes/smart-dak-cervical-cancer/tree/try-who-template">https://github.com/dhes/smart-dak-cervical-cancer/tree/try-who-template</a> and changes regularly. See the <a href="https://dhes.github.io/smart-dak-cervical-cancer/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>cc-003: Cancer Suspected</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div>
+  <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown. -->
+</div>
+<h1 id="cc-003--cancer-suspected-as-boolean-input-hiding-clinical-judgment">cc-003 — "Cancer suspected" as boolean input hiding clinical judgment</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Entry ID</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">cc-003</code></td>
+    </tr>
+    <tr>
+      <td><strong>Category</strong></td>
+      <td>inference</td>
+    </tr>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td>"Cancer suspected" as boolean input hiding clinical judgment</td>
+    </tr>
+    <tr>
+      <td><strong>Status</strong></td>
+      <td>proposed</td>
+    </tr>
+    <tr>
+      <td><strong>Date</strong></td>
+      <td>2026-04-09</td>
+    </tr>
+    <tr>
+      <td><strong>Revised</strong></td>
+      <td>2026-04-14</td>
+    </tr>
+    <tr>
+      <td><strong>Authors</strong></td>
+      <td>dan-heslinga</td>
+    </tr>
+    <tr>
+      <td><strong>Selected</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">boolean-as-given</code></td>
+    </tr>
+    <tr>
+      <td><strong>Evidence volatile</strong></td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <td><strong>L1 source</strong></td>
+      <td>WHO 2021 Cervical Cancer Screening Guideline (2nd ed.)</td>
+    </tr>
+    <tr>
+      <td><strong>Related entries</strong></td>
+      <td><a href="cc-000.html">cc-000</a>, <a href="cc-002.html">cc-002</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="rationale">Rationale</h2>
+
+<p><code class="language-plaintext highlighter-rouge">CancerSuspected</code> is a clinical determination — not a data-layer query. Behind the boolean is a trained clinician's visual assessment of whether a VIA-positive finding is "suspicious for invasive cancer" (which routes to referral) rather than "positive but eligible for ablation or excision" (which routes to treatment). The determination depends on visual features that require training to assess reliably: lesion extent beyond the transformation zone, ulceration, friability, contact bleeding, irregular surface, raised/exophytic masses, fornix involvement. The inter-observer variability of VIA is well-documented in IARC Handbook Vol. 18; the "cancer suspected" sub-determination likely has even higher variability because it is rarer and the consequences of misclassification are more severe in both directions.</p>
+
+<p><strong>The DAK cannot model this clinical judgment and should not try to.</strong> The <code class="language-plaintext highlighter-rouge">boolean-as-given</code> option is the right choice for three reasons.</p>
+
+<p><strong>First, layer discipline.</strong> Decomposing <code class="language-plaintext highlighter-rouge">CancerSuspected</code> into its component visual features would push a clinical judgment into the rule table — converting a boolean input into a DMN-computed output with visual feature inputs. This would be layer confusion: the DMN is a decision-logic layer, not a clinical-reasoning layer, and the kind of weighted pattern-recognition a trained clinician performs is not well-represented as discrete rules over discrete boolean features. Any rule decomposition would be simultaneously wrong (missing features the clinician considers) and too aggressive (implying a formalism the evidence does not support).</p>
+
+<p><strong>Second, the guideline takes the judgment as given.</strong> Algorithm 5 (p.68) shows "Suspected cancer → Refer" as a single branch, not a decomposition. The guideline does not provide a computable clinical rule for suspicion of cancer, and the DAK should not invent one. Encoding the clinician's judgment as a boolean is faithful to how the guideline itself frames the step.</p>
+
+<p><strong>Third, deployment reality.</strong> The decomposed encoding would require capturing each visual feature as a data element, which most LMIC EHRs do not currently do (per the same deployment reality argument in cc-001). A DAK that required clinicians to document six visual-feature booleans at VIA assessment would add documentation burden and create new inter-observer variability at the sub-feature level without necessarily improving the aggregate suspicion determination.</p>
+
+<p><strong>Why not <code class="language-plaintext highlighter-rouge">boolean-with-qa-wrapper</code>.</strong> The QA-provenance option is attractive — it creates a deployment hook for quality assurance without changing the DMN logic. But the L2 register is not the right place to mandate it. L3 implementers in different jurisdictions will have different supervision infrastructures, and a single provenance schema prescribed from the L2 layer would over-constrain deployments. The QA concern is real and is flagged in implementation notes below, but it belongs as a deployment-time recommendation, not as a schema-level requirement.</p>
+
+<p><strong>Why <code class="language-plaintext highlighter-rouge">evidence_volatile: true</code>.</strong> The triage strategy (VIA vs dual-stain cytology vs AI-assisted visual assessment) is the component of Algorithm 5 most likely to change in the next guideline revision. If VIA is replaced by an AI-assisted triage modality, the "cancer suspected" determination may take a different form (e.g., a model-derived risk score) and the DAK's input structure would need to accommodate that. The flag signals this is an entry to revisit when the triage landscape shifts.</p>
+
+<h2 id="implementation-notes">Implementation Notes</h2>
+
+<ul>
+  <li><strong>No purposive DMN change on account of this entry.</strong> The <code class="language-plaintext highlighter-rouge">CancerSuspected</code> boolean input and all downstream rules (in Triage, Ablation Eligibility, Treatment, Follow-up) transfer to the purposive DMN unchanged.</li>
+  <li><strong>Quality assurance is the deployment-time concern the L2 cannot solve.</strong> Country adaptation teams deploying this DAK should be aware that the "cancer suspected" branch assumes competent VIA assessment. Deployments should pair the DAK with:
+    <ul>
+      <li>VIA provider training aligned with IARC/WHO training standards</li>
+      <li>Routine supervisory review of a sample of VIA assessments (including cancer-suspected determinations)</li>
+      <li>A referral pathway that can handle the volume of cancer-suspected routes without excessive wait times</li>
+      <li>Monitoring of the cancer-suspected rate as a programme indicator; large variations across facilities or providers are a quality signal</li>
+    </ul>
+  </li>
+  <li><strong>This is the weakest link in Algorithm 5 by most measures of evidence quality.</strong> The DAK respects the guideline by encoding the boolean as the guideline does, but the underlying clinical determination is not well-characterised in the evidence. A country adaptation team should read this entry as a caveat on the DAK's overall performance: the cascade's aggregate accuracy is bounded by the accuracy of the clinical suspicion determination, and that accuracy is not uniformly high.</li>
+  <li><strong>Downstream rule audit.</strong> The rules <code class="language-plaintext highlighter-rouge">DecisionRule_triage_cancer</code>, <code class="language-plaintext highlighter-rouge">DecisionRule_ablation_cancer</code>, <code class="language-plaintext highlighter-rouge">DecisionRule_treatment_refer</code>, and <code class="language-plaintext highlighter-rouge">DecisionRule_followup_refer</code> should be confirmed during purposive authoring to produce clinically appropriate referral outputs. They are not changed by this entry but they are the rules where the suspicion-boolean becomes consequential.</li>
+  <li><strong>Future-revision trigger.</strong> If WHO introduces AI-assisted triage guidance or replaces VIA in Algorithm 5, this entry becomes <code class="language-plaintext highlighter-rouge">superseded</code>. The <code class="language-plaintext highlighter-rouge">evidence_volatile</code> flag is the signal.</li>
+</ul>
+
+
+
+
+</div>
+</div>    <!-- /inner-wrapper -->
+</div>    <!-- /row -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-content -->
+
+<script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+<script src="assets/js/window-hash.js" type="text/javascript"> </script>
+<a name="bottom"> </a>
+<div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+<div class="container">    <!-- container -->
+
+<div class="inner-wrapper">
+  <p>
+    IG &copy; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/dhes">Dan Heslinga</a>.  Package dhes.dak.cervical-cancer#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 21, 2026 20:10+0000">2026-04-21</span>
+    <br/>
+    <span style="color: var(--footer-highlight-text-color)"><a name="l687">​</a>
+                Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" href="https://dhes.github.io/smart-dak-cervical-cancer/history.html" target="_blank">Version History</a> | <a rel="license" style="color: #81BEF7" href="license.html">License</a>
+    </span>
+  </p>
+</div>    <!-- /inner-wrapper -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+<div class="container">    <!-- container -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+<script src="assets/js/respond.min.js" type="text/javascript"> </script>
+<script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+<script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+<script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+<script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+  <!-- Analytics Below
+================================================== -->
+
+
+
+
+</body></html>

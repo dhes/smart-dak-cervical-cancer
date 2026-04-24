@@ -1,0 +1,29 @@
+# dhes.dak.cervical-cancer#0.1.0: WHO SMART DAK — Cervical Cancer Screening (L2)
+
+## Pages
+
+* [Home](index.md)
+* [cc-003: Cancer Suspected](cc-003.md)
+* [Downloads](downloads.md)
+* [Decision Tables](decision-tables.md)
+* [cc-001: Population and Inclusion](cc-001.md)
+* [cc-004: Vaccination Status](cc-004.md)
+* [cc-005: Screening Interval](cc-005.md)
+* [Algorithm Selection Analysis](algorithm-selection.md)
+* [Artifacts Summary](artifacts.md)
+* [Data Dictionary — README](README.md)
+* [Decision Logic](decision-logic.md)
+* [cc-002: WLHIV Operationalisation](cc-002.md)
+* [Methodology](methodology.md)
+* [cc-008: HIV Status Absent/Unknown](cc-008.md)
+* [cc-000: Scope Declaration](cc-000.md)
+* [cc-006: Pregnancy Handling](cc-006.md)
+* [cc-007: Sexual Exposure Precondition](cc-007.md)
+* [Data Dictionary](dictionary.md)
+* [Interpretation Register](register.md)
+
+## Resources
+
+### ImplementationGuides
+
+* [WHO SMART DAK — Cervical Cancer Screening (L2)](index.md)

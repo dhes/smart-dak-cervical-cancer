@@ -1,0 +1,389 @@
+{
+  "date" : "Fri, 24 Apr, 2026 00:44:21 +0000",
+  "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
+  "files" : [{
+    "name" : "/fsh-generated/resources/ImplementationGuide-dhes.dak.cervical-cancer.json",
+    "size" : 6033,
+    "processes" : [{
+      "activity" : "load",
+      "start" : 47,
+      "length" : 20
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 48,
+      "length" : 15
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 48,
+      "length" : 85
+    },
+    {
+      "activity" : "validate",
+      "start" : 48,
+      "length" : 5520
+    },
+    {
+      "activity" : "generate1",
+      "start" : 54,
+      "length" : 87
+    },
+    {
+      "activity" : "generate2",
+      "start" : 56,
+      "length" : 98
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 60,
+      "length" : 4
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 62,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Library-cervical-cancer-decision-logic.json",
+    "size" : 1068,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 47,
+      "length" : 2
+    },
+    {
+      "activity" : "load",
+      "start" : 47,
+      "length" : 9
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 48,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 48,
+      "length" : 26
+    },
+    {
+      "activity" : "validate",
+      "start" : 53,
+      "length" : 13
+    },
+    {
+      "activity" : "generate1",
+      "start" : 54,
+      "length" : 14
+    },
+    {
+      "activity" : "generate2",
+      "start" : 56,
+      "length" : 14
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 60,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/fsh-generated/includes/fsh-link-references.md",
+    "size" : 77
+  },
+  {
+    "name" : "/fsh-generated/includes/menu.xml",
+    "size" : 3903
+  },
+  {
+    "name" : "/input/pagecontent/README.md",
+    "size" : 17261,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 56,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/generic-personas.md",
+    "size" : 15793,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 56,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/cc-001.md",
+    "size" : 5119
+  },
+  {
+    "name" : "/input/pagecontent/register.md",
+    "size" : 2442,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 56,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/indicators.md",
+    "size" : 19225,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 56,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/methodology.md",
+    "size" : 3368
+  },
+  {
+    "name" : "/input/pagecontent/index.md",
+    "size" : 4767
+  },
+  {
+    "name" : "/input/pagecontent/user-scenarios.md",
+    "size" : 18635,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 56,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/business-processes.md",
+    "size" : 22163,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 56,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/cc-000.md",
+    "size" : 19530,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 56,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/dictionary.md",
+    "size" : 45945,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 48,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 56,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/algorithm-selection.md",
+    "size" : 21970,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 56,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/license.md",
+    "size" : 1942
+  },
+  {
+    "name" : "/input/pagecontent/dependencies.md",
+    "size" : 650,
+    "processes" : [{
+      "activity" : "scan",
+      "start" : 48,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/cc-002.md",
+    "size" : 6456
+  },
+  {
+    "name" : "/input/pagecontent/decision-logic.md",
+    "size" : 4231,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 56,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/cc-006.md",
+    "size" : 6337
+  },
+  {
+    "name" : "/input/pagecontent/cc-004.md",
+    "size" : 6821,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 56,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/interventions-and-recommendations.md",
+    "size" : 15415
+  },
+  {
+    "name" : "/input/pagecontent/cc-003.md",
+    "size" : 6041,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 56,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/decision-tables.md",
+    "size" : 14932,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 56,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/scheduling-logic.md",
+    "size" : 6320
+  },
+  {
+    "name" : "/input/pagecontent/concepts.md",
+    "size" : 8794
+  },
+  {
+    "name" : "/input/pagecontent/changes.md",
+    "size" : 2615,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 56,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/requirements.md",
+    "size" : 28021,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 56,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/cc-008.md",
+    "size" : 11801,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 56,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/cc-007.md",
+    "size" : 7170
+  },
+  {
+    "name" : "/input/pagecontent/cc-005.md",
+    "size" : 11491,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 56,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/downloads.md",
+    "size" : 1537
+  },
+  {
+    "name" : "/template/config",
+    "size" : 0
+  },
+  {
+    "name" : "/template/config/_config.yml",
+    "size" : 140
+  },
+  {
+    "name" : "/input/images",
+    "size" : 0
+  },
+  {
+    "name" : "/input/images/drd-purposive.svg",
+    "size" : 10248,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 56,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/images/drd-textualist.svg",
+    "size" : 9848
+  },
+  {
+    "name" : "/input/images/workflow-primary-screening.svg",
+    "size" : 29177
+  },
+  {
+    "name" : "/input/images/l2",
+    "size" : 0
+  },
+  {
+    "name" : "/input/images/l2/purposive.dmn",
+    "size" : 41929
+  },
+  {
+    "name" : "/input/images/l2/textualist.dmn",
+    "size" : 40603
+  },
+  {
+    "name" : "/input/images/workflow-invitation.svg",
+    "size" : 19719
+  },
+  {
+    "name" : "/input/images/workflow-triage.svg",
+    "size" : 29717
+  },
+  {
+    "name" : "/input/images/workflow-follow-up.svg",
+    "size" : 30756
+  },
+  {
+    "name" : "/input/images/workflow-treatment.svg",
+    "size" : 54196,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 56,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/images/subprocess-counselling-consent.svg",
+    "size" : 7837
+  },
+  {
+    "name" : "/input/images/subprocess-counselling-consent.png",
+    "size" : 49030
+  },
+  {
+    "name" : "/input/images/workflow-overview.svg",
+    "size" : 27560
+  },
+  {
+    "name" : "/temp/pages/_includes/artifacts.xml",
+    "size" : 1874
+  }]
+}

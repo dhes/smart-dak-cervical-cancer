@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Requirements - WHO SMART DAK — Cervical Cancer Screening (L2) v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+    <link href="assets/css/fa-all.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/who.css" rel="stylesheet"/>
+    <link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"10"}
+    h3,h4,h5,h6{--heading-prefix:"10"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">  <!-- container -->
+          <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+            <!--status-bar-->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Components
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="concepts.html">Concepts</a>
+      </li>
+      <li>
+        <a href="interventions-and-recommendations.html">Interventions &amp; Recommendations (1)</a>
+      </li>
+      <li>
+        <a href="generic-personas.html">Generic Personas (2)</a>
+      </li>
+      <li>
+        <a href="user-scenarios.html">User Scenarios (3)</a>
+      </li>
+      <li>
+        <a href="business-processes.html">Business Processes (4)</a>
+      </li>
+      <li>
+        <a href="dictionary.html">Data Dictionary (5)</a>
+      </li>
+      <li>
+        <a href="decision-logic.html">Decision Logic (6)</a>
+      </li>
+      <li>
+        <a href="scheduling-logic.html">Scheduling Logic (7)</a>
+      </li>
+      <li>
+        <a href="indicators.html">Indicators (8)</a>
+      </li>
+      <li>
+        <a href="requirements.html">Requirements (9)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Methodology
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="methodology.html">Methodology</a>
+      </li>
+      <li>
+        <a href="algorithm-selection.html">Algorithm Selection</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Interpretation Register
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="register.html">Overview</a>
+      </li>
+      <li>
+        <a href="cc-000.html">Scope Declaration (cc-000)</a>
+      </li>
+      <li>
+        <a href="cc-001.html">Population and Inclusion (cc-001)</a>
+      </li>
+      <li>
+        <a href="cc-002.html">WLHIV Operationalisation (cc-002)</a>
+      </li>
+      <li>
+        <a href="cc-003.html">Cancer Suspected (cc-003)</a>
+      </li>
+      <li>
+        <a href="cc-004.html">Vaccination Status (cc-004)</a>
+      </li>
+      <li>
+        <a href="cc-005.html">Screening Interval (cc-005)</a>
+      </li>
+      <li>
+        <a href="cc-006.html">Pregnancy Handling (cc-006)</a>
+      </li>
+      <li>
+        <a href="cc-007.html">Sexual Exposure Precondition (cc-007)</a>
+      </li>
+      <li>
+        <a href="cc-008.html">HIV Status Absent/Unknown (cc-008)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Resources
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="changes.html">Change Log</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+      <li>
+        <a href="license.html">License</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+              </div>  <!-- /.nav-collapse -->
+
+              <div class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch" data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;">
+                <!-- This div will be pushed to the right -->
+                <div class="language-selector" style="margin-left: auto; background-color: #00477d; color: white;">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" id="language-selector" name="language-selector">
+                    <option disabled selected>Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <!-- Search Content -->
+              </div>
+            </div>  <!-- /.container -->
+          </nav>  <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+        </div>  <!-- /container -->
+      </div>  <!-- /segment-navbar -->
+      
+
+      <div class="container" style=" justify-content: space-between; align-items: left;">
+
+        <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+    <a id="who-logo" no-external="true" href="index.html">
+        
+    </a>
+</div>
+
+ <div id="family-nav">
+  <a id="fhir-logo" no-external="true" href="http://hl7.org/fhir">  </a>
+</div> 
+
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">WHO SMART DAK — Cervical Cancer Screening (L2)</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Requirements</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">WHO SMART DAK — Cervical Cancer Screening (L2), published by Dan Heslinga. This guide is not an authorized publication; it is the continuous build for version 0.1.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/dhes/smart-dak-cervical-cancer/tree/main'>https://github.com/dhes/smart-dak-cervical-cancer/tree/main</a> and changes regularly. See the <a href='https://dhes.github.io/smart-dak-cervical-cancer/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Requirements</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#scope-and-authoring-posture" id="markdown-toc-scope-and-authoring-posture">Scope and authoring posture</a></li>
+  <li><a href="#functional-requirements" id="markdown-toc-functional-requirements">Functional requirements</a>    <ul>
+      <li><a href="#cross-cutting-capabilities" id="markdown-toc-cross-cutting-capabilities">Cross-cutting capabilities</a></li>
+      <li><a href="#invitation" id="markdown-toc-invitation">Invitation</a></li>
+      <li><a href="#primary-screening" id="markdown-toc-primary-screening">Primary Screening</a></li>
+      <li><a href="#triage" id="markdown-toc-triage">Triage</a></li>
+      <li><a href="#treatment" id="markdown-toc-treatment">Treatment</a></li>
+      <li><a href="#follow-up" id="markdown-toc-follow-up">Follow-up</a></li>
+      <li><a href="#indicators-and-reporting" id="markdown-toc-indicators-and-reporting">Indicators and reporting</a></li>
+      <li><a href="#operational-capabilities" id="markdown-toc-operational-capabilities">Operational capabilities</a></li>
+    </ul>
+  </li>
+  <li><a href="#non-functional-requirements" id="markdown-toc-non-functional-requirements">Non-functional requirements</a></li>
+  <li><a href="#relation-to-other-components" id="markdown-toc-relation-to-other-components">Relation to other components</a></li>
+  <li><a href="#status" id="markdown-toc-status">Status</a></li>
+</ul>
+
+</div>
+<p><strong>Component 9 of the WHO SMART Guidelines L2 DAK structure.</strong> This page enumerates the high-level functional and non-functional requirements that a digital system must satisfy in order to implement this DAK — that is, the software capabilities that would let a country programme actually run Algorithm 5 with clinical decision support, scheduling, and indicator reporting in place.</p>
+
+<p>Per <a href="https://smart.who.int/ig-starter-kit/l2_dak_authoring.html">Section 3.1 of the SOP</a>, Component 9 is <em>"a high-level list of core functions and capabilities that the system must have to meet the end users' needs and achieve tasks within the business process."</em> Its purpose is <em>"system design to know what the system should be able to do."</em></p>
+
+<p><strong>Important framing.</strong> Component 9 is about the target digital system that <em>implements</em> this DAK — not about the DAK itself. If a country decides to deploy this DAK, their IT team (or their software vendor) needs a specification they can build or procure against. Without Component 9, that team has to derive the system specification themselves by reading Components 1–8, with predictable drift and omissions. Component 9 does that derivation work once, for them.</p>
+
+<h2 id="scope-and-authoring-posture">Scope and authoring posture</h2>
+
+<p><strong>Algorithm-5 scope.</strong> Consistent with the discipline of the preceding components, these requirements reference Algorithm 5 cascade vocabulary. Capabilities that would be required for a different algorithm family (dual-stain cytology module, HPV mRNA primary platform, cytology lab integration for cytology-primary programmes) are out of scope — a programme running a different algorithm would author its own Component 9.</p>
+
+<p><strong>Phase-1 derivation.</strong> The requirements below are analytically derived from Components 1–8. No implementer-panel or vendor consultation has occurred. SME validation for this component would ideally come from a national or regional digital health architect with experience implementing WHO SMART DAKs; the same stratified deferral pattern as earlier components applies.</p>
+
+<p><strong>Cross-reference approach.</strong> Each requirement carries a pointer to the originating component(s). Component 9 is in substantial part a restatement of Components 1–8 in <em>"the system SHALL…"</em> language pivoted to the implementer reader. That restatement is not redundancy — it's the delivery form the SOP asks for.</p>
+
+<p><strong>Conventions.</strong></p>
+
+<ul>
+  <li><em>SHALL</em> denotes a hard requirement — an implementation that does not satisfy the requirement is non-conformant to this DAK.</li>
+  <li><em>SHOULD</em> denotes a strong preference with room for justified deviation in a particular deployment.</li>
+  <li><em>MAY</em> denotes an optional capability.</li>
+</ul>
+
+<p>Requirement identifiers use <code class="language-plaintext highlighter-rouge">FR-NN</code> for functional and <code class="language-plaintext highlighter-rouge">NFR-NN</code> for non-functional. Numbering is sequential within each category and stable — a given ID refers to the same capability across all versions of this page.</p>
+
+<h2 id="functional-requirements">Functional requirements</h2>
+
+<p>Twenty functional requirements, organised by the cascade module they support, plus a cross-cutting cluster for capabilities that underwrite the whole cascade.</p>
+
+<h3 id="cross-cutting-capabilities">Cross-cutting capabilities</h3>
+
+<p>These requirements are foundational — every downstream module depends on them.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Requirement</th>
+      <th>Personas served</th>
+      <th>Rationale</th>
+      <th>Cross-refs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>FR-01</strong></td>
+      <td>The system SHALL assign or consume a <strong>stable patient identifier</strong> that uniquely identifies a woman across all her encounters in the cascade, and SHALL persist that identifier across device replacement, facility transfer, and client-app reinstallation.</td>
+      <td>All cascade personas</td>
+      <td>Without a stable patient identifier, Tier-B indicators (IND-04 through IND-08), cascade-attrition tracking, and cross-visit scheduling are not instrumentable. SPI is the foundation on which almost every other requirement rests.</td>
+      <td><a href="cc-000.html">cc-000</a>; <a href="indicators.html#scope-and-authoring-posture">Indicators — Tier A/B</a>; <a href="scheduling-logic.html">Scheduling Logic</a>; NFR-06</td>
+    </tr>
+    <tr>
+      <td><strong>FR-02</strong></td>
+      <td>The system SHALL evaluate the decision tables published under <a href="decision-logic.html">Decision Logic</a> given the current cascade state of a given woman, and SHALL return the decision output (e.g., due-for-screening, triage-disposition, treatment-eligibility) at the point of care in time to inform clinician action.</td>
+      <td>Nurse/midwife; Advanced clinician</td>
+      <td>The decision logic is this DAK's principal clinical artifact; a system that cannot evaluate it cannot provide the decision support Algorithm 5 requires.</td>
+      <td><a href="decision-logic.html">Component 6</a>; NFR-08</td>
+    </tr>
+    <tr>
+      <td><strong>FR-03</strong></td>
+      <td>The system SHALL capture every data element listed in the <a href="dictionary.html">Core Data Dictionary</a>, in the format and with the value set defined there, at the cascade step where the CDD and the BPMN workflows indicate the element is collected.</td>
+      <td>All data-entry personas (CHW, Nurse/midwife, Laboratory technician, Advanced clinician)</td>
+      <td>Indicators, decision logic, and cascade-state tracking all depend on CDD elements being present and well-formed. Capture is the foundation beneath all derived capability.</td>
+      <td><a href="dictionary.html">Component 5</a>; <a href="business-processes.html">Component 4</a></td>
+    </tr>
+    <tr>
+      <td><strong>FR-04</strong></td>
+      <td>The system SHALL maintain, for each woman, her current <strong>cascade state</strong> — at minimum: <em>eligible-not-screened</em>, <em>screened-HPV-negative</em>, <em>screened-HPV-positive-awaiting-triage</em>, <em>triage-negative</em>, <em>triage-positive-awaiting-treatment</em>, <em>treated-awaiting-retest</em>, <em>referred-for-suspected-cancer</em>, <em>treatment-deferred-pregnancy</em>, <em>lost-to-follow-up</em> — and SHALL update state on every cascade-affecting event.</td>
+      <td>Nurse/midwife; Screening programme manager</td>
+      <td>Cascade state drives workflow routing, scheduling triggers, and attrition indicators. Without an explicit state model, the system can render individual events but cannot derive aggregate cascade position.</td>
+      <td><a href="business-processes.html">Component 4</a>; <a href="indicators.html#cascade-loss-cluster--the-inverse-of-follow-through-programme-manager-facing">Indicators — cascade-loss cluster</a></td>
+    </tr>
+    <tr>
+      <td><strong>FR-05</strong></td>
+      <td>The system SHALL compute the indicators enumerated in <a href="indicators.html">Component 8</a>, stratified by the standard disaggregations declared there, and SHALL expose them for programme-manager review and for aggregate export to national health information systems.</td>
+      <td>Screening programme manager</td>
+      <td>Indicator values that cannot be extracted from the system have no programmatic use. Exposure — both human-readable and machine-exportable — is what makes indicator definitions operational.</td>
+      <td><a href="indicators.html">Component 8</a>; NFR-05</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="invitation">Invitation</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Requirement</th>
+      <th>Personas served</th>
+      <th>Rationale</th>
+      <th>Cross-refs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>FR-06</strong></td>
+      <td>The system SHALL produce a list of women in the facility catchment who meet the screening-eligibility criteria but have no valid primary-screen record within the applicable interval, AND SHALL flag subsets of that list that have passed the programme-defined overdue threshold.</td>
+      <td>Community health worker</td>
+      <td>The <em>Identify overdue rescreen candidate</em> activity in the <a href="business-processes.html#workflow-1--invitation">Invitation workflow</a> depends on a system-generated list. A CHW equipped with only a paper register will miss women systematically.</td>
+      <td><a href="business-processes.html#workflow-1--invitation">Component 4 — Invitation</a>; <a href="scheduling-logic.html#programme-level-parameters-deferred">Scheduling Logic — overdue threshold</a></td>
+    </tr>
+    <tr>
+      <td><strong>FR-07</strong></td>
+      <td>The system SHALL record an issued screening invitation with invitation date, issuing CHW identifier, the targeted woman's stable patient identifier, and the channel by which the invitation was delivered.</td>
+      <td>CHW</td>
+      <td>Tracks outreach for programme accountability, supports reminder-cadence adjustment, and distinguishes invited-and-attended from spontaneous presentation.</td>
+      <td><a href="business-processes.html#workflow-1--invitation">Component 4 — Invitation</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="primary-screening">Primary Screening</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Requirement</th>
+      <th>Personas served</th>
+      <th>Rationale</th>
+      <th>Cross-refs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>FR-08</strong></td>
+      <td>The system SHALL record an HPV sample collection event with sample date, collecting provider, sample type (clinician-collected or self-collected), and link to the woman's stable patient identifier.</td>
+      <td>Nurse/midwife; Target client (if self-collection)</td>
+      <td>Provides one side of the Primary Screening laboratory message exchange; is the cascade-state-changing event that moves a woman from <em>eligible-not-screened</em> to <em>sample-collected-awaiting-result</em>.</td>
+      <td><a href="business-processes.html#workflow-2--primary-screening">Component 4 — Primary Screening</a>; <a href="dictionary.html">Component 5</a></td>
+    </tr>
+    <tr>
+      <td><strong>FR-09</strong></td>
+      <td>The system SHALL record an HPV DNA result as <strong>positive</strong>, <strong>negative</strong>, or <strong>invalid</strong>, with result date, laboratory identifier, and an explicit link to the originating sample collection event recorded under FR-08.</td>
+      <td>Laboratory technician</td>
+      <td>The HPV DNA result is the cascade's generative fact — it triggers either routine follow-up (negative) or the triage pathway (positive). It is the input to indicators IND-01, IND-03, IND-04, and IND-06.</td>
+      <td><a href="business-processes.html#workflow-2--primary-screening">Component 4</a>; <a href="indicators.html#data-element-dependencies">Component 5 Phase-2 gap</a>; <a href="indicators.html">Component 8</a></td>
+    </tr>
+    <tr>
+      <td><strong>FR-10</strong></td>
+      <td>The system SHALL convey HPV DNA results from the laboratory context to the originating primary-care facility context, and SHALL notify the facility when a new result becomes available for a registered woman.</td>
+      <td>Lab tech (sender); Nurse/midwife (receiver)</td>
+      <td>Operationalises the Primary Screening workflow's <code class="language-plaintext highlighter-rouge">MessageFlow_ResultReturn</code>. Without an automated result-return mechanism, facilities must poll the lab, which creates routine delays that reduce IND-04 triage attendance.</td>
+      <td><a href="business-processes.html#workflow-2--primary-screening">Component 4 — Primary Screening message flows</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="triage">Triage</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Requirement</th>
+      <th>Personas served</th>
+      <th>Rationale</th>
+      <th>Cross-refs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>FR-11</strong></td>
+      <td>The system SHALL record a VIA triage encounter with date, performing provider, and result coded as one of: <strong>triage-negative</strong>, <strong>ablation-eligible positive</strong>, <strong>non-ablation-eligible positive</strong>, <strong>suspicious for invasive cancer</strong>, or <strong>inadequate</strong>.</td>
+      <td>Nurse/midwife</td>
+      <td>Captures the triage classification that drives the Treatment workflow's disposition gateway and that feeds indicators IND-04, IND-05, IND-09, and IND-10. The five-value result vocabulary is what makes Algorithm 5 operationalise cc-003's suspected-cancer branch and IND-10's adequacy concept.</td>
+      <td><a href="business-processes.html#workflow-3--triage">Component 4 — Triage</a>; <a href="dictionary.html">Component 5</a>; <a href="decision-logic.html">Component 6</a>; <a href="cc-003.html">cc-003</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="treatment">Treatment</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Requirement</th>
+      <th>Personas served</th>
+      <th>Rationale</th>
+      <th>Cross-refs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>FR-12</strong></td>
+      <td>The system SHALL support a treatment-eligibility decision that takes as input the triage result (FR-11), the ablation-eligibility lesion description where applicable, and the woman's pregnancy status (FR-15), and SHALL route the subsequent workflow to ablation, excision referral, pregnancy deferral, or suspected-cancer referral accordingly.</td>
+      <td>Nurse/midwife</td>
+      <td>Drives the Treatment workflow's disposition gateway. Without this decision, the cascade cannot differentiate ablation-in-facility from excision-at-district-hospital, nor respect the pregnancy-deferral GPS.</td>
+      <td><a href="business-processes.html#workflow-4--treatment">Component 4 — Treatment</a>; <a href="decision-logic.html">Component 6</a>; <a href="cc-006.html">cc-006</a></td>
+    </tr>
+    <tr>
+      <td><strong>FR-13</strong></td>
+      <td>The system SHALL record a treatment event with date, treatment type (<strong>thermal ablation</strong> / <strong>LLETZ-LEEP</strong> / <strong>cold-knife conization</strong>), performing provider, facility (primary-care or district-hospital), and outcome coded as <strong>delivered</strong> / <strong>deferred</strong> / <strong>referred-onward</strong>.</td>
+      <td>Nurse/midwife; Advanced clinician</td>
+      <td>Drives post-treatment retest scheduling (FR-16) and indicators IND-05 and IND-07. The separation of treatment-type from outcome makes the pregnancy-deferred case and the suspected-cancer-referred case distinguishable in indicator numerators.</td>
+      <td><a href="business-processes.html#workflow-4--treatment">Component 4 — Treatment</a>; <a href="indicators.html#data-element-dependencies">Component 5 Phase-2 gap</a></td>
+    </tr>
+    <tr>
+      <td><strong>FR-14</strong></td>
+      <td>The system SHALL convey a cross-facility referral from the primary-care facility to the district hospital — for non-ablation-eligible precancer (LLETZ/CKC) and for suspected invasive cancer — carrying sufficient clinical context (triage findings, screening history, contact details) for the receiving advanced clinician to evaluate and act.</td>
+      <td>Nurse/midwife (initiating); Advanced clinician (receiving)</td>
+      <td>Operationalises the two cross-pool message flows in the Treatment workflow. A referral that arrives context-free forces duplicate history-taking, delays care, and produces cascade attrition between FR-13's <em>referred-onward</em> outcome and the actual excision event.</td>
+      <td><a href="business-processes.html#workflow-4--treatment">Component 4 — Treatment message flows</a></td>
+    </tr>
+    <tr>
+      <td><strong>FR-15</strong></td>
+      <td>The system SHALL capture the target client's pregnancy status at the treatment-eligibility decision step (FR-12), and SHALL invoke the pregnancy-deferral branch of the disposition gateway when pregnant, routing the workflow to the <em>treatment-deferred-pregnancy</em> cascade state (FR-04) with a scheduled post-pregnancy re-evaluation.</td>
+      <td>Nurse/midwife</td>
+      <td>Operationalises the rec 41 good practice statement on pregnancy deferral, which is the principal purposive-textualist divergence encoded in <a href="cc-006.html">cc-006</a>. Without pregnancy capture at this step, the cascade would proceed to contraindicated ablation in pregnant women.</td>
+      <td><a href="cc-006.html">cc-006</a>; <a href="business-processes.html#workflow-4--treatment">Component 4 — Treatment</a>; <a href="decision-logic.html">Component 6</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="follow-up">Follow-up</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Requirement</th>
+      <th>Personas served</th>
+      <th>Rationale</th>
+      <th>Cross-refs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>FR-16</strong></td>
+      <td>The system SHALL schedule the next encounter for a woman based on her current cascade state and the applicable interval rule — routine rescreening after HPV-negative result, triage-negative retest, or post-treatment retest — and SHALL compute the scheduled date using the interval values owned by <a href="cc-005.html">cc-005</a> and <a href="cc-002.html">cc-002</a>.</td>
+      <td>Nurse/midwife</td>
+      <td>Operationalises the Follow-up workflow's three schedule activities. Hard-coding the interval values in application logic rather than reading them from the interpretation register would create country-adaptation debt; the system must read interval values as configuration, not code.</td>
+      <td><a href="business-processes.html#workflow-5--follow-up">Component 4 — Follow-up</a>; <a href="scheduling-logic.html">Component 7</a>; FR-20</td>
+    </tr>
+    <tr>
+      <td><strong>FR-17</strong></td>
+      <td>The system SHALL issue a reminder to the target client (by SMS or alternative channel configured per facility) in advance of the scheduled encounter, and SHALL flag the record for CHW outreach when the encounter is not attended within the programme-defined overdue threshold.</td>
+      <td>Target client (recipient); CHW (outreach trigger)</td>
+      <td>Operationalises the three message flows from Follow-up schedule activities to the Client pool. The reminder lead time and overdue threshold are country-adaptation parameters declared in Component 7 and configurable per FR-20.</td>
+      <td><a href="business-processes.html#workflow-5--follow-up">Component 4 — Follow-up</a>; <a href="scheduling-logic.html#programme-level-parameters-deferred">Scheduling Logic — deferred parameters</a>; FR-20</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="indicators-and-reporting">Indicators and reporting</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Requirement</th>
+      <th>Personas served</th>
+      <th>Rationale</th>
+      <th>Cross-refs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>FR-18</strong></td>
+      <td>The system SHALL produce aggregate reports of the indicators defined in <a href="indicators.html">Component 8</a>, stratified by the standard disaggregations declared there, and SHALL export the aggregates in a form consumable by national aggregate-reporting systems (DHIS2 or equivalent).</td>
+      <td>Screening programme manager</td>
+      <td>Individual indicator values confined to per-patient records have no programmatic use. Export to DHIS2 or equivalent is what makes the indicator work reach subnational and national decision-makers.</td>
+      <td><a href="indicators.html">Component 8</a>; NFR-05</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="operational-capabilities">Operational capabilities</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Requirement</th>
+      <th>Personas served</th>
+      <th>Rationale</th>
+      <th>Cross-refs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>FR-19</strong></td>
+      <td>The system SHALL record an audit trail of all cascade-state-changing events (HPV results posted, triage decisions recorded, treatments delivered, encounters scheduled, cascade-state transitions) with timestamp, actor, and (for updates) the prior value.</td>
+      <td>Screening programme manager; quality-assurance reviewer</td>
+      <td>Supports retrospective quality review, indicator validation, and accountability under the data-protection framework (NFR-07). Audit-trail presence is also a standard requirement of most country health-data-governance frameworks.</td>
+      <td>NFR-07; <a href="indicators.html">Component 8</a></td>
+    </tr>
+    <tr>
+      <td><strong>FR-20</strong></td>
+      <td>The system SHALL provide an administrative interface by which a country programme can <strong>configure</strong> the country-adaptation parameters named in Components 7 and 8 — at minimum: reminder lead time, overdue threshold, the three screening interval bands (HPV-negative rescreen, triage-negative retest, post-treatment retest), age-band definitions, HIV-status value set, and the treatment-within-6-months tracking convention (rec 41 GPS).</td>
+      <td>Screening programme manager; national IT administrator</td>
+      <td>Operationalises the SOP's 80/20 adaptation boundary and this DAK's explicit declaration of country-adaptation parameters. Without a configuration UI, every adaptation requires code deployment, which is the opposite of the reusability principle this DAK commits to.</td>
+      <td><a href="scheduling-logic.html">Scheduling Logic</a>; <a href="indicators.html">Indicators</a>; <a href="cc-000.html">cc-000</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="non-functional-requirements">Non-functional requirements</h2>
+
+<p>Twelve non-functional requirements focused on LMIC-deployment realities — the quality-attribute commitments a digital system must make for Algorithm 5 to actually run in the settings the DAK targets.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Requirement</th>
+      <th>Personas served</th>
+      <th>Rationale</th>
+      <th>Cross-refs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>NFR-01</strong></td>
+      <td>The system SHALL support <strong>offline operation</strong> at the point of care for at least 72 hours of continuous facility activity, with automatic synchronisation to the central record upon restored connectivity.</td>
+      <td>Nurse/midwife; Laboratory technician; CHW</td>
+      <td>LMIC peripheral facilities routinely experience multi-day connectivity outages. Requiring online operation renders the DAK unimplementable at exactly the deployment level Algorithm 5 targets.</td>
+      <td><a href="cc-000.html">cc-000</a>; <a href="algorithm-selection.html">Algorithm Selection</a></td>
+    </tr>
+    <tr>
+      <td><strong>NFR-02</strong></td>
+      <td>Synchronisation SHALL function over low-bandwidth connections (sustained throughput of 64 kbps or less) and SHALL tolerate connection interruptions, resuming from the last successfully synchronised state without data loss.</td>
+      <td>Nurse/midwife; IT administrator</td>
+      <td>Cellular and satellite connectivity at peripheral facilities is commonly bandwidth-constrained and intermittent. A sync design that assumes broadband will fail in deployment.</td>
+      <td>NFR-01</td>
+    </tr>
+    <tr>
+      <td><strong>NFR-03</strong></td>
+      <td>The system SHALL operate on <strong>tablet-class devices</strong> (7-inch and larger) for clinical documentation, and SHALL provide client variants (web, native, or USSD) appropriate for CHW outreach on <strong>feature-phone-class devices</strong> where tablets are not distributed to community health workers.</td>
+      <td>Nurse/midwife (tablet); CHW (feature-phone or tablet)</td>
+      <td>Device provisioning is a major cost driver. A single-device-class assumption either over-provisions or under-supports.</td>
+      <td><a href="generic-personas.html#2-community-health-worker">Component 2 — CHW persona</a>; NFR-04</td>
+    </tr>
+    <tr>
+      <td><strong>NFR-04</strong></td>
+      <td>The system SHALL present user interfaces in the <strong>local language(s)</strong> of the deployment country, and SHALL support extension to additional languages without application redeployment.</td>
+      <td>All end-user personas</td>
+      <td>Language adaptation without redeployment is what makes the system deployable across multilingual countries (the ministry cannot wait for a vendor release cycle to add a new provincial language).</td>
+      <td><a href="generic-personas.html">Component 2</a></td>
+    </tr>
+    <tr>
+      <td><strong>NFR-05</strong></td>
+      <td>The system SHALL exchange clinical data using <strong>FHIR R4 or R5</strong> resources using the data-element semantics defined in the <a href="dictionary.html">Core Data Dictionary</a>, and SHALL export aggregate indicator data in a form consumable by DHIS2 or equivalent aggregate-reporting systems.</td>
+      <td>IT architect; Screening programme manager; cross-DAK integration consumers</td>
+      <td>Interoperability is the concrete commitment behind the WHO SMART ecosystem. FHIR-based exchange also prepays L3 Measure / CQL authoring for indicators (Phase-2 indicator follow-on).</td>
+      <td><a href="dictionary.html">Component 5</a>; <a href="indicators.html">Component 8</a>; FR-05; FR-18</td>
+    </tr>
+    <tr>
+      <td><strong>NFR-06</strong></td>
+      <td>The system SHALL encrypt personally identifiable and clinical data at rest and in transit, and SHALL comply with the data-protection framework of the deployment country (or equivalent international standard where no country framework is in force).</td>
+      <td>Target client (data subject); IT administrator</td>
+      <td>Basic data-protection hygiene is both an ethical baseline and increasingly a regulatory requirement. Framing compliance country-by-country avoids over-committing to a single standard while still setting a floor.</td>
+      <td>FR-19</td>
+    </tr>
+    <tr>
+      <td><strong>NFR-07</strong></td>
+      <td>Interactive responses to cascade-state queries and decision-logic evaluations (FR-02, FR-04) SHALL return within <strong>2 seconds</strong> under typical facility load; batch indicator computations (FR-05) SHALL return within 30 seconds for a single facility's monthly cohort.</td>
+      <td>Nurse/midwife; Screening programme manager</td>
+      <td>Point-of-care decision support that takes 10 seconds will be bypassed; programme-manager indicator review that takes 10 minutes will be delayed. Interactive and batch thresholds need to be stated separately.</td>
+      <td>FR-02; FR-04; FR-05</td>
+    </tr>
+    <tr>
+      <td><strong>NFR-08</strong></td>
+      <td>System availability at the point of care during facility operating hours SHALL be at least <strong>99.0%</strong> aggregating local-client availability and the offline mode specified in NFR-01. A nurse unable to document an encounter is a scheduling and indicator-integrity incident.</td>
+      <td>Nurse/midwife; Screening programme manager</td>
+      <td>The 99% floor is softer than typical SaaS SLAs because it already accounts for offline operation. Without the floor, intermittent-system-outage excuses begin to compete with clinical work.</td>
+      <td>NFR-01</td>
+    </tr>
+    <tr>
+      <td><strong>NFR-09</strong></td>
+      <td>A trained nurse/midwife SHALL be able to complete cascade documentation for a typical encounter (primary screen or triage) within <strong>5 minutes</strong>.</td>
+      <td>Nurse/midwife</td>
+      <td>Documentation time is a direct cost on clinical throughput. A system that extends encounter time materially reduces daily screening throughput and defeats the 70% coverage target.</td>
+      <td><a href="generic-personas.html#3-nurse--midwife">Component 2 — Nurse/midwife persona</a>; <a href="indicators.html#ind-01--screening-coverage-within-recommended-interval">Indicators — IND-01</a></td>
+    </tr>
+    <tr>
+      <td><strong>NFR-10</strong></td>
+      <td>The system SHALL provide context-sensitive help and onboarding materials appropriate to each persona — CHW, nurse/midwife, laboratory technician, advanced clinician, screening programme manager.</td>
+      <td>All end-user personas</td>
+      <td>New-hire onboarding is continuous in LMIC health workforces. The system must support self-paced learning without requiring in-person training for every cohort.</td>
+      <td><a href="generic-personas.html">Component 2</a></td>
+    </tr>
+    <tr>
+      <td><strong>NFR-11</strong></td>
+      <td>The system SHALL permit <strong>migration between cervical cancer screening algorithms</strong> (most plausibly from Algorithm 5 to Algorithm 4 as HPV DNA platforms add genotyping) without requiring re-authorisation of existing patient records or loss of historical cascade state.</td>
+      <td>IT architect; Screening programme manager</td>
+      <td>The Algorithm Selection analysis explicitly identifies Algorithm 4 as the most likely future migration target. A system that hard-codes Algorithm 5 into its data model forecloses that migration path and creates long-term technical debt.</td>
+      <td><a href="algorithm-selection.html">Algorithm Selection</a>; FR-20</td>
+    </tr>
+    <tr>
+      <td><strong>NFR-12</strong></td>
+      <td>The system SHALL support <strong>bulk data import</strong> of existing patient records from predecessor systems (paper registers digitised; predecessor EHR module; predecessor VIA-programme tracker), preserving historical cascade events where recoverable.</td>
+      <td>Screening programme manager; IT administrator</td>
+      <td>Few countries deploy a DAK-conformant system greenfield. Bulk-import support converts the pre-DAK patient record base into a starting corpus rather than a discarded history.</td>
+      <td>NFR-06; FR-03</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="relation-to-other-components">Relation to other components</h2>
+
+<ul>
+  <li><strong><a href="interventions-and-recommendations.html">Component 1</a></strong> — Recs 41 (GPS on pregnancy deferral) grounds FR-15; rec 3b / 23 (triage method delegation) grounds the Algorithm-5 specificity of FR-11 and FR-14.</li>
+  <li><strong><a href="generic-personas.html">Component 2</a></strong> — Every functional requirement names at least one persona from the generic persona set. NFR-03, NFR-04, NFR-09, NFR-10 are particularly persona-driven.</li>
+  <li><strong><a href="user-scenarios.html">Component 3</a></strong> — The seven user scenarios are the demonstration set against which these requirements should be walked end-to-end; a requirement gap is most visible when a scenario cannot be narrated against a candidate system.</li>
+  <li><strong><a href="business-processes.html">Component 4</a></strong> — The five BPMN workflows plus the counselling sub-process determine the cluster structure of the functional requirements.</li>
+  <li><strong><a href="dictionary.html">Component 5</a></strong> — FR-03 is the blanket commitment that every CDD element is captureable. The Phase-2 CDD gaps flagged on the <a href="indicators.html#data-element-dependencies">Indicators page</a> are requirements on the CDD, not on the system implementing FR-03.</li>
+  <li><strong><a href="decision-logic.html">Component 6</a></strong> — FR-02 is the blanket commitment that every decision table is evaluable. Future DMN additions for triage-negative and post-treatment retest scheduling (flagged Phase-2 in <a href="cc-005.html">cc-005</a> and <a href="scheduling-logic.html">Scheduling Logic</a>) inherit FR-02 by extension.</li>
+  <li><strong><a href="scheduling-logic.html">Component 7</a></strong> — FR-16, FR-17, and FR-20 are the scheduling-logic-facing capabilities. The three country-adaptation parameters named in Component 7 are enumerated concretely in FR-20.</li>
+  <li><strong><a href="indicators.html">Component 8</a></strong> — FR-05, FR-18, NFR-05 are the indicator-computation-and-export chain. The Tier A / Tier B feasibility split on Component 8 maps directly onto whether a requirement's dependencies are already in the CDD (Tier A) or pending (Tier B).</li>
+</ul>
+
+<h2 id="status">Status</h2>
+
+<p><em>Draft — Phase 1 of Component 9 authoring (2026-04-22).</em> Twenty functional requirements organised by cascade module plus a cross-cutting cluster; twelve non-functional requirements focused on LMIC-deployment realities. Each requirement carries a statement, served personas, rationale, and cross-references back to the originating component(s). SME validation — from a national or regional digital health architect with SMART DAK implementation experience — is deferred with the same stratified pattern applied to earlier components.</p>
+
+<p><strong>Phase-2 follow-on work for this component:</strong></p>
+
+<ul>
+  <li><strong>Implementer / vendor review.</strong> Requirements of this form benefit from review by someone who has actually configured or built an EHR or screening registry; blind spots in Phase-1 analytical derivation (particularly in NFRs on performance, offline sync, and bulk import) often only surface against lived implementation experience.</li>
+  <li><strong>Test-case derivation.</strong> Each functional requirement corresponds to one or more acceptance criteria / test cases that a procurement or conformance exercise would use. Those test cases are a Phase-2 artifact that the Component 3 user scenarios naturally feed into.</li>
+  <li><strong>L3 conformance test suite.</strong> Once CDD Phase-2 work closes the data-element gaps and L3 Measure / CQL artifacts are authored, the requirements on this page become an input to a conformance test suite against which candidate implementing systems can be evaluated.</li>
+  <li><strong>Cross-DAK harmonisation.</strong> Many of these requirements — especially the cross-cutting and NFR sets — are generic across WHO SMART DAKs. A shared canonical-requirements catalogue (analogous to the shared-dictionary aspiration of the <a href="README.html">Data Dictionary README</a>) would reduce per-DAK authoring burden and improve cross-DAK consistency.</li>
+</ul>
+
+
+
+
+</div>
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /row -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-content -->
+
+<script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+<script type="text/javascript" src="assets/js/window-hash.js"> </script>
+<a name="bottom"> </a>
+<div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+<div class="container">  <!-- container -->
+
+<div class="inner-wrapper">
+  <p>
+    IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/dhes">Dan Heslinga</a>.  Package dhes.dak.cervical-cancer#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 24, 2026 00:44+0000">2026-04-24</span>
+    <br/>
+    <span style="color: var(--footer-highlight-text-color)">
+                Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="https://dhes.github.io/smart-dak-cervical-cancer/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
+    </span>
+  </p>
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+<div class="container">  <!-- container -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-post-footer -->
+
+<!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+<script type="text/javascript" src="assets/js/respond.min.js"> </script>
+<script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+<script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+<script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+<script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+<!-- Analytics Below
+================================================== -->
+
+
+
+

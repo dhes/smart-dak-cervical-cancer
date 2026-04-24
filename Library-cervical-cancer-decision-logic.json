@@ -1,0 +1,30 @@
+{
+  "resourceType" : "Library",
+  "id" : "cervical-cancer-decision-logic",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<div>\n    <table class=\"grid dict\">\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Title: </b></th>\n            <td style=\"padding-left: 4px;\">Cervical Cancer DAK — Decision Logic (placeholder)</td>\n        </tr>\n        \n\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Id: </b></th>\n            <td style=\"padding-left: 4px;\">cervical-cancer-decision-logic</td>\n        </tr>\n        \n\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Version: </b></th>\n            <td style=\"padding-left: 4px;\">0.1.0</td>\n        </tr>\n        \n\n        \n        <tr>\n            <th scope=\"row\"><b>Url: </b></th>\n            <td style=\"padding-left: 4px;\"><a href=\"Library-cervical-cancer-decision-logic.html\">Cervical Cancer DAK — Decision Logic (placeholder)</a></td>\n        </tr>\n        \n\n        \n\n        \n\n        \n        <tr>\n            <th scope=\"row\"><b>Status: </b></th>\n            <td style=\"padding-left: 4px;\">draft</td>\n        </tr>\n        \n\n        \n\n        \n        <tr>\n            <th scope=\"row\"><b>Type: </b></th>\n            <td style=\"padding-left: 4px;\">\n                \n                    \n                        \n                        <p style=\"margin-bottom: 5px;\">\n                            <b>system: </b> <span><a href=\"http://terminology.hl7.org/7.1.0/CodeSystem-library-type.html\">http://terminology.hl7.org/CodeSystem/library-type</a></span>\n                        </p>\n                        \n                        \n                        <p style=\"margin-bottom: 5px;\">\n                            <b>code: </b> <span>logic-library</span>\n                        </p>\n                        \n                        \n                    \n                \n                \n            </td>\n        </tr>\n        \n\n        \n\n        \n        <tr>\n            <th scope=\"row\"><b>Date: </b></th>\n            <td style=\"padding-left: 4px;\">2026-04-23</td>\n        </tr>\n        \n\n        \n        <tr>\n            <th scope=\"row\"><b>Publisher: </b></th>\n            <td style=\"padding-left: 4px;\">Dan Heslinga</td>\n        </tr>\n        \n\n        \n        <tr>\n            <th scope=\"row\"><b>Description: </b></th>\n            <td style=\"padding-left: 4px;\"><div><p>Placeholder FHIR Library resource for the Cervical Cancer DAK's decision logic. L3 CQL authoring is deferred to Phase 2; the current L2 artifacts are the DMN files at input/l2/purposive.dmn and input/l2/textualist.dmn, rendered on the Decision Logic page. This placeholder exists to satisfy the FHIR ImplementationGuide validation requirement that at least one resource be present in the IG definition, and it declares a commitment to author the CQL library in a subsequent L3 phase.</p>\n</div></td>\n        </tr>\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n\n        \n    </table>\n</div>\n</div>"
+  },
+  "url" : "https://dhes.github.io/smart-dak-cervical-cancer/Library/cervical-cancer-decision-logic",
+  "version" : "0.1.0",
+  "name" : "CervicalCancerDecisionLogic",
+  "title" : "Cervical Cancer DAK — Decision Logic (placeholder)",
+  "status" : "draft",
+  "experimental" : false,
+  "type" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/library-type",
+      "code" : "logic-library"
+    }]
+  },
+  "date" : "2026-04-23",
+  "publisher" : "Dan Heslinga",
+  "contact" : [{
+    "name" : "Dan Heslinga",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://github.com/dhes"
+    }]
+  }],
+  "description" : "Placeholder FHIR Library resource for the Cervical Cancer DAK's decision logic. L3 CQL authoring is deferred to Phase 2; the current L2 artifacts are the DMN files at input/l2/purposive.dmn and input/l2/textualist.dmn, rendered on the Decision Logic page. This placeholder exists to satisfy the FHIR ImplementationGuide validation requirement that at least one resource be present in the IG definition, and it declares a commitment to author the CQL library in a subsequent L3 phase."
+}
